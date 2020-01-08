@@ -34,14 +34,14 @@
   - 일반 사용자(Hauler와 Generator)는 모바일 앱을 통해 매칭 서비스를 이용
   - 관리자(쓰레기 수거 회사들)는 Back Office 웹을 통해 쓰레기 수거 서비스를 모니터링 및 관리를 함
 
-<p align="center"><img src="./ecubelabs/img/haulla.png" width="50%" /></p>
+<p align="center"><img src="./ecubelabs/img/haulla.png" width="60%" /></p>
 
 #### CleanScaleNetworks (CSN) 개발
 
 - 기간: 2018.10 - 2019.04
 - 설명: 쓰레기 매립지에서 무게를 측정하는 계근 작업을 자동화, 온라인화
 
-<p align="center"><img src="./ecubelabs/img/csn.png" width="50%" /></p>
+<p align="center"><img src="./ecubelabs/img/csn.png" width="60%" /></p>
 
 ### [**UNIST**](./unist/README.md)
 

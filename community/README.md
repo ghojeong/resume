@@ -2,14 +2,14 @@
 
 고정완이 참여한 커뮤니티 활동들에 대한 상세 설명입니다.
 
-<p align="center"><img src="./img/java_cafe.jpeg" width="50%" /></p>
+<p align="center"><img src="./img/java_cafe.jpeg" width="60%" /></p>
 
 ## 현재 회원으로 활동중인 커뮤니티
 
 - [자바 카페](http://tech.javacafe.io/about/)
 - [소프트웨어 캠퍼스](https://www.facebook.com/softwarecamp/)
 
-<p align="center"><img src="./img/softwarecampus.png" width="50%" /></p>
+<p align="center"><img src="./img/softwarecampus.png" width="60%" /></p>
 
 ## 알고리즘 스터디
 
@@ -22,7 +22,7 @@
   - 연말에 육군 훈련소에 가게 되어 스터디가 일시중지되었는데, 훈련소를 수료하자 마자 스터디가 언제 다시 열리냐는 연락들을 받아서 감동했습니다.
   - 스터디원들을 위해 더 열심히 공부해야겠다는 새해 다짐을 했습니다.
 
-    <p align="center"><img src="./img/algorithm.jpeg" width="50%" /></p>
+    <p align="center"><img src="./img/algorithm.jpeg" width="60%" /></p>
 
 ## <모던 자바스크립트 입문> 책 스터디
 
@@ -36,7 +36,7 @@
   - 자바를 본업으로 삼고 계시는 경력직 개발자 분들도, 언제나 새로운 학습에 목말라 있다는 열정이 참 대단하다고 느꼈습니다.
   - 스스로가 본받고 싶은 분들을 많이 만나 행복했습니다.
 
-   <p align="center"><img src="./img/javascript_study.jpeg" width="50%" /></p>
+   <p align="center"><img src="./img/javascript_study.jpeg" width="60%" /></p>
 
 ## 공감 세미나 주니어
 
@@ -55,4 +55,4 @@
   - 행사가 끝나고 긴장이 풀리자, 화장실로 가서 헛구역질 했던게 기억납니다.
   - 이때부터 커뮤니티 활동이라는 스릴에 중독이 된 것 같습니다.
 
-<p align="center"><img src="./img/gonggam.jpeg" width="50%" /></p>
+<p align="center"><img src="./img/gonggam.jpeg" width="60%" /></p>
