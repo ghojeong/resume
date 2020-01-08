@@ -64,6 +64,8 @@
 
 ## Haulla Back Office 웹 프론트 개발
 
+<img src="./img/haulla.png" width="50%" />
+
 - 기간: 2019.07 -
 - 제품 소개 페이지: https://www.haulla.com/
 - 설명
@@ -84,27 +86,29 @@
   - 가령 시작할 때는 Next.js 를 이용해 만들었는데, 이후 설계가 바뀌어서 바벨과 웹펙만을 이용한 리액트 프로젝트로 다시 만들어야 했습니다.
   - 신중하고 단단한 설계가 얼마나 중요한지 몸소 느꼈습니다.
 
-![haulla](./img/haulla.png)
-
 ## CCNx 유지보수
 
+<img src="./img/ccnx.png" width="50%" />
+
 - 기간: 2019.06
+- 설명: https://www.ecubelabs.com/fleet-management-platform/
 - 사용기술
   - Angular 7
   - Koa
   - Swagger
 
-![ccnx](./img/ccnx.png)
-
 ## CleanCityNetworks (CCN) 유지보수
 
+<img src="./img/ccn.png" width="50%" />
+
 - 기간: 2019.05
+- 설명:https://www.ecubelabs.com/waste-analytics-platform/
 - 사용기술
   - Angular JS
 
-![ccn](./img/ccn.png)
-
 ## CleanScaleNetworks (CSN) 개발
+
+<img src="./img/csn.png" width="50%" />
 
 - 기간: 2018.10 - 2019.04
 - 설명
@@ -113,8 +117,6 @@
   - Partner Scale API 를 통해 하드웨어로 측정된 계근 데이터를 등록, 수정, 삭제합니다.
   - 대시 보드를 통해 API 사용량을 확인하고, 외부 업체에게 요금을 청구합니다.
   - 회사 서버의 계근 데이터를 시각화하여, CCN 의 추가 기능으로 제공합니다.
-
-![csn](./img/csn.png)
 
 ### Partner Scale API 대시보드 개발
 

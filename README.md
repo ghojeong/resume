@@ -19,7 +19,7 @@
 
 #### Haulla Back Office 개발
 
-<img src="./ecubelabs/img/haulla.png" width="300px" />
+<img src="./ecubelabs/img/haulla.png" width="50%" />
 
 - 기간: 2019.07 -
 - 제품 소개 페이지: https://www.haulla.com/
@@ -31,7 +31,7 @@
 
 #### CleanScaleNetworks (CSN) 개발
 
-<img src="./ecubelabs/img/csn.png" width="300px" />
+<img src="./ecubelabs/img/csn.png" width="50%" />
 
 - 기간: 2018.10 - 2019.04
 - 설명: 쓰레기 매립지에서 무게를 측정하는 계근 작업을 자동화, 온라인화
@@ -44,13 +44,13 @@
 - [Detail](./unist/classmate.md)
 - 설명: 스마트폰 카메라 및 스크린을 방송하는 앱
 
-<img src="./img/classmate.png" width="300px" />
+<img src="./img/classmate.png" width="50%" />
 
 #### 발음 교정 앱 (개인 프로젝트)
 
 - 설명: TTS 와 STT 를 통해, 자신의 발음과 말 빠르기가 얼마나 적절한지 텍스트로 확인할 수 있는 앱
 
-<img src="./img/pronunciation.png" width="300px" />
+<img src="./img/pronunciation.png" width="50%" />
 
 <!-- ## 지인 평가
 
