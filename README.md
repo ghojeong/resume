@@ -11,12 +11,8 @@
 
 ## 이력
 
-- [**Ecube Labs**](./ecubelabs/README.md)
-
-  - 기간: 2018.10 - 재직중
-
-- [**UNIST**](./unist/README.md)
-  - 기간: 2013.03 - 2018.09
+- [**Ecube Labs**](./ecubelabs/README.md): 2018.10 - 재직중
+- [**UNIST**](./unist/README.md): 2013.03 - 2018.09
 
 ## 프로젝트
 
@@ -26,7 +22,7 @@
 
 #### Haulla Back Office 개발
 
-- 기간: 2019.07 -
+- 기간: 2019.07 - 진행중
 - 제품 소개 페이지: https://www.haulla.com/
 - 설명
   - Haulla 란?
