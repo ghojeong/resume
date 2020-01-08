@@ -88,7 +88,7 @@
 
 ## CCNx 유지보수
 
-<img src="./img/ccnx.png" width="50%" />
+<p align="center"><img src="./img/ccnx.png" width="50%" /></p>
 
 - 기간: 2019.06
 - 설명: https://www.ecubelabs.com/fleet-management-platform/
@@ -99,7 +99,7 @@
 
 ## CleanCityNetworks (CCN) 유지보수
 
-<img src="./img/ccn.png" width="50%" />
+<p align="center"><img src="./img/ccn.png" width="50%" /></p>
 
 - 기간: 2019.05
 - 설명:https://www.ecubelabs.com/waste-analytics-platform/
@@ -108,7 +108,7 @@
 
 ## CleanScaleNetworks (CSN) 개발
 
-<img src="./img/csn.png" width="50%" />
+<p align="center"><img src="./img/csn.png" width="50%" /></p>
 
 - 기간: 2018.10 - 2019.04
 - 설명
