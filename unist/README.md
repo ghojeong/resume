@@ -21,52 +21,46 @@
 
 [Source Code](https://github.com/JVHE/ClassMate)
 
-![classmate_1](./img/classmate_1.png)
+<p align="center"><img src="./img/classmate_2.png" width="90%" /></p>
 
-![classmate_3](./img/classmate_3.png)
-
-교수님께서 애플 펜슬로 빔 프로젝터에 연결된 아이 패드를 칠판 대신 사용하며 수업하는 것을 보고, 안드로이드에서도 같은 방식으로 과외방송을 할 수 있도록 하고 싶은 마음에 시작한 팀 프로젝트입니다. 스마트 폰의 카메라 혹은 스크린을 실시간으로 방송하고, 방송되고 있는 화면 위에 방송자가 펜으로 수업을 할 수 있는 안드로이드 앱입니다. 우분투 서버에서 Java, php, JavaScript, Perl을 통해 개발했으며 HTTP, WebRTC, Mpeg-DASH 프로토콜을 사용했습니다. 주요 기능으로 Adaptive Streaming을 실현해, 네트워크 환경에 따라 동영상의 bitrate가 변할 수 있도록 했습니다.
-
-저는 이 프로젝트에서 설계와 개발, 그리고 역할 분배를 해주는 역할을 맡았습니다. 저는 프로젝트를 진행하며 팀원들이 자유롭게 의견을 교류할 수 있도록 노력했습니다. 매주 두세번씩 정기적으로 회의를 할 때마다 사회자와 서기를 자처하여 회의한 내용을 기록했으며, 팀원들이 방향을 잃을 때마다 진행 상황을 정리하고 요약해 다음 단계로 나아갈 수 있도록 발판을 마련했습니다. WebRTC와 DASH 프로토콜을 팀원들이 구현할 수 있도록 관련 논문들과 기술문서들을 읽고 정리해, 팀원들에게 제공했습니다. 또한, 팀원들이 개발하는 도중 문제가 생기면 그에 대한 해결책을 제시해 진행이 늦춰지는 상황을 막았습니다.
-
-제가 팀 프로젝트를 하며 겪은 가장 큰 어려움은, 팀원들의 사기와 단결력을 유지하는 일이었습니다. 팀원들과 같이 시도한 공부량과 작업량은 결코 적은 양이 아니었습니다. 팀원들이 지속적으로 시간을 성실하게 쓰도록 하기 위해서는, 팀원들에게 자신이 하고 있는 일의 가치를 스스로 대단하게 느끼게끔 해야 했습니다. 저는 팀원들이 큰 꿈을 갖고 행동할 수 있도록, 여러 IT 기업들의 성장과 성공 사례들을 매주 있는 회의시간에 들려주었습니다. 하나의 꿈과 목표라는 열정을 갖고, 그 불길이 꺼지지 않도록 계속 관리하는 일은 무척 힘들었지만, 저에게 잊을 수 없는 기억을 많이 남겼습니다.
+<p align="center"><img src="./img/classmate_3.png" width="90%" /></p>
 
 ## Indoor Tracker
 
 교수님의 의뢰로 만든 개인 프로젝트입니다. GPS의 기능 없이 실내에서 자신이 어디에 위치하고 있는지 알려주는 안드로이드 앱입니다. Wi-Fi 신호의 Finger Printing 기법을 이용했으며, Finger Printing 된 노드들을 Sparse Matrix 자료구조 형태로 연결했습니다. Finger Printing을 하기 위해서 각 노드에서 수집된 Wi-Fi 신호들을 로컬 데이터베이스에 SQLite를 통하여 저장했습니다. 각 노드의 Finger Printing 값과 현재 측정된 Wi-Fi 신호 값을 상대적으로 비교하여, 자신의 현재 위치를 실시간으로 알아냅니다. 현재 위치에서 이동할 경우, 변경된 위치와 이동 경로를 새롭게 표시해줍니다. 이동 경로가 벽을 통과하거나, 존재하지 않는 길을 지나가지 않도록 예외처리를 하였습니다.
 
-![indoor_tracker_1](./img/indoor_tracker_1.png)
+<p align="center"><img src="./img/indoor_tracker_1.png" width="90%" /></p>
 
-![indoor_tracker_2](./img/indoor_tracker_2.png)
+<p align="center"><img src="./img/indoor_tracker_2.png" width="90%" /></p>
 
 ## Web Server
 
 HTTP Request와 Response를 공부하기 위해 만든 개인 프로젝트입니다. C언어로 소켓 프로그래밍을 하여 직접 만든 간단한 웹서버입니다. 브라우저가 요청한 HTTP Request에 맞추어 적절한 형식으로 HTML, CSS, JavaScript, 이미지 파일에 대한 데이터를 다시 브라우저에게 Response 해줍니다. 다수의 클라이언트 요청을 PThread를 사용한 멀티 스레드로 처리했습니다. 개발은 우분투 서버의 터미널에서 vim, gcc, gdb를 이용해 코딩했습니다.
 
-![web_server](./img/web_server.png)
+<p align="center"><img src="./img/web_server.png" width="90%" /></p>
 
 ## 고-Shop
 
 웹 개발을 익히기 위해 만든 개인 프로젝트입니다. 서버에 centOS, Apache, MariaDB, php를 직접 소스 설치한 후, HTML, php, JavaScript, CSS 파일을 만들었습니다. 로그인, 회원가입, 회원정보 수정, 장바구니 기능이 있으며 관리자 모드와 유저 모드가 있습니다. 관리자 아이디로 로그인할 경우 관리자 모드가 되며, 상품과 유저를 관리할 수 있는 기능이 추가됩니다. 상품 목록은 페이징 처리가 되어있으며, 상품을 검색, 분류, 정렬하더라도 페이징 처리가 유지되도록 했습니다.
 
-![shop](./img/shop.png)
+<p align="center"><img src="./img/shop.png" width="90%" /></p>
 
 ## Tetris
 
 테트리스 게임이 재밌어서 만든 개인 프로젝트입니다. 다른 플레이어와 멀티 플레이와 기록 경쟁이 가능한 안드로이드 게임 앱입니다. 로그인, 회원가입, 회원정보 수정이 가능하며, 로그인 정보는 SharedPreference로 저장되고, 게임의 기록은 로컬 데이터베이스에 SQLite를 통해 저장됩니다. 회원 정보와 게임 기록은 서버에 HTTP Request로 전송되어 저장됩니다. 백엔드 서버는 centOS, Apache, MySQL, php로 구축했습니다. 멀티 플레이시에는 자신의 게임 상태가 다른 플레이어에게 Java의 TCP 소켓 통신으로 서버를 경유해 실시간으로 전송됩니다. 매초마다 실시간으로 전송되는 데이터는 JSON 형식으로 보냈습니다.
 
-![tetris_1](./img/tetris_1.png)
+<p align="center"><img src="./img/tetris_1.png" width="90%" /></p>
 
-![tetris_2](./img/tetris_2.png)
+<p align="center"><img src="./img/tetris_2.png" width="90%" /></p>
 
 ## Pronunciation App
 
 스스로 발음과 말 빠르기를 교정하기 위해 만든 개인 프로젝트입니다. 안드로이드 앱이며, 자신이 연습하고 싶은 텍스트를 로컬 데이터베이스에 SQLite를 통해 저장할 수 있습니다. TTS(Text To Speech) 기술로 등록된 텍스트를 음성으로 변환하여, 사용자는 자신이 목표로 해야 할 적절한 발음과 말 빠르기를 들을 수 있습니다. 또한 STT(Speech To Text) 기술로 녹음된 음성을 텍스트로 변환하여, 사용자의 발성이 실제로는 어떻게 들렸는지 텍스트로 직접 보여줍니다.
 
-![pronunciation_app](./img/pronunciation_app.png)
+<p align="center"><img src="./img/pronunciation_app.png" width="90%" /></p>
 
 ## Gho Map
 
 다른 안드로이드 지도 앱에서 한가지 검색 결과만이 뜨는 것이 아쉬워 만든 개인 프로젝트입니다. 자신이 좋아하는 장소와, 싫어하는 장소 두 가지를 동시에 검색하여 결과를 보여주는 안드로이드 앱입니다. 구글 MAPS API를 사용했으며, JSON과 HTTP를 통해 검색을 요청하고 검색 결과를 받았습니다. Marker와 Info Window를 직접 커스텀하여 자신이 좋아하는 장소는 하트로, 싫어하는 장소는 Heat Map으로 나타나게 했습니다. 한 곳에 집중된 Marker에 대해 마커 클러스터링 처리를 하였습니다.
 
-![map_app](./img/map_app.png)
+<p align="center"><img src="./img/map_app.png" width="90%" /></p>
