@@ -2,6 +2,6 @@
 
 ![army](./img/army.jpeg)
 
-![mountain](./img/mountain.jpeg)
-
 ![sky](./img/sky.jpeg)
+
+![mountain](./img/mountain.jpeg)
