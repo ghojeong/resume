@@ -18,7 +18,7 @@
 
 ## 프로젝트
 
-보다 많은 프로젝트들의 상세 정보를 보고 싶다면 [Ecube Labs](./ecubelabs/README.md) 와 [UNIST](./unist/README.md) 링크를 꼭! 클릭해주세요.
+보다 많은 프로젝트들의 상세 정보를 보기 위해 [Ecube Labs](./ecubelabs/README.md) 와 [UNIST](./unist/README.md) 링크를 꼭! 클릭해주세요.
 
 ### [**Ecube Labs**](./ecubelabs/README.md)
 
@@ -86,11 +86,3 @@
 ### [윤재진](https://github.com)
 
 > 제 평가 좀 적어주세요 ㅎㅎ -->
-
-<!-- ## 사진
-
-![army](./img/army.jpeg)
-
-![mountain](./img/mountain.jpeg)
-
-![sky](./img/sky.jpeg) -->
