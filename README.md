@@ -51,7 +51,7 @@
 - [**YouTube**](https://youtu.be/RMkTWNjY1Vc)
 - [상세정보](./unist/classmate.md)
 
-![classmate_1](./img/unist/classmate_1.png)
+![classmate_1](./unist/img/classmate_1.png)
 
 <!-- ## 지인 평가
 
