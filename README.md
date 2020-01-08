@@ -11,19 +11,49 @@
 ## 이력
 
 활동한 내용을 정리하다가, 양이 많아져서 3개의 링크로 분리했습니다.<br>
-UNIST, Ecube Labs, Community 전부 다 꼭! 클릭해주세요.
+제가 진행한 프로젝트들의 상세 정보를 보고 싶다면 Community, Ecube Labs, UNIST 링크를 꼭! 클릭해주세요.
+
+### [**Community**](./community/README.md)
 
 ### [**Ecube Labs**](./ecubelabs/README.md)
 
 - 기간: 2018.10 - 재직중
 
+#### Haulla Back Office 개발
+
+- 기간: 2019.07 -
+- 제품 소개 페이지: https://www.haulla.com/
+
+![haulla](./ecubelabs/img/haulla.png)
+
+#### CCNx 유지보수
+
+- 기간: 2019.06
+
+![ccnx](./ecubelabs/img/ccnx.png)
+
+#### CleanCityNetworks (CCN) 유지보수
+
+- 기간: 2019.05
+
+![ccn](./ecubelabs/img/ccn.png)
+
+#### CleanScaleNetworks (CSN) 개발
+
+- 기간: 2018.10 - 2019.04
+
+![csn](./ecubelabs/img/csn.png)
+
 ### [**UNIST**](./unist/README.md)
 
-- 기간: 2017.03 - 2018.09
+#### ClassMate
 
-### [**Community**](./community/README.md)
+- [**YouTube**](https://youtu.be/RMkTWNjY1Vc)
+- [상세정보](./unist/classmate.md)
 
-## 지인 평가
+![classmate_1](./img/unist/classmate_1.png)
+
+<!-- ## 지인 평가
 
 ### [이정배](https://github.com)
 
@@ -51,7 +81,7 @@ UNIST, Ecube Labs, Community 전부 다 꼭! 클릭해주세요.
 
 ### [윤재진](https://github.com)
 
-> 제 평가 좀 적어주세요 ㅎㅎ
+> 제 평가 좀 적어주세요 ㅎㅎ -->
 
 <!-- ## 사진
 

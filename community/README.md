@@ -4,8 +4,6 @@
 
 ![java_cafe](./img/java_cafe.jpeg)
 
-![rock_climing](./img/rock_climing.jpeg)
-
 ## 현재 회원으로 활동중인 커뮤니티
 
 - [자바 카페](http://tech.javacafe.io/about/)
