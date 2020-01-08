@@ -45,10 +45,9 @@
 
 ### [**UNIST**](./unist/README.md)
 
-#### ClassMate 설계 및 개발 (팀 프로젝트)
+#### [ClassMate](./unist/classmate.md) 설계 및 개발 (팀 프로젝트)
 
 - [**YouTube**](https://youtu.be/RMkTWNjY1Vc)
-- [Detail](./unist/classmate.md)
 - 사용기술: WebRTC, DASH
 - 설명: 스마트폰 카메라 및 스크린을 방송하는 앱
 

@@ -15,11 +15,9 @@
   - Pronunciation App (STT와 TSS 를 활용한 발음 교정 앱)
   - Gho Map (구글 지도를 활용한 앱)
 
-## ClassMate
+## [ClassMate](./classmate.md)
 
 [**YouTube**](https://youtu.be/RMkTWNjY1Vc)
-
-[Detail](./classmate.md)
 
 [Source Code](https://github.com/JVHE/ClassMate)
 

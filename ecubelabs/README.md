@@ -4,81 +4,10 @@
 
 - 기간: 2018.10 - 재직중
 
-<!-- ## 회사 기술 스텍, 도구
-
-아래와 같은 환경에서 업무를 진행했다는 것이지, 제가 이 모든 기술에 통달한 것은 아닙니다.<br>
-가령 간단히 Dockerize를 할줄 알고 Jenkinsfile 도 수정할 줄 알지만, 인프라를 자세히 알지는 못합니다.<br>
-실제 개발한 프로젝트들을 참고해서 제 능력을 짐작해주세요.<br>
-
-- 협업툴
-  - Slack (소통)
-  - Jira (이슈 관리)
-  - Confluence (문서 관리)
-  - Google Drive (문서 및 기타 자료 관리)
-  - Visual Studio Code (IDE)
-  - Prettier (Code Formatter)
-  - ESLint
-- 형상 관리
-  - GitHub
-  - Sourcetree
-  - Husky (Git Hook)
-- 언어 (Javascript)
-  - ES6 (with npm)
-  - TypeScript
-- 라이브러리
-  - redux
-  - rxjs
-  - lodash
-  - axios
-- TDD
-  - Jest
-  - Enzyme
-  - react-test-renderer
-- 백엔드 모니터링
-  - ELK
-    - Elasticsearch, Logstash, Kibana
-  - Slack Bot with Web Hook
-- 웹 프론트
-  - AngularJS
-  - Angular 7
-  - React
-  - SCSS
-- 백엔드 API
-  - Node.js
-  - Express.js
-  - Hapi.js
-  - Koa.js
-  - Postman
-- API 문서화
-  - apiDoc
-  - Swagger
-- CI/CD 인프라
-  - Docker
-  - Jenkins
-  - k8s
-  - terraform
-- DB
-  - MySQL
-  - AWS Aurora
-  - Redis
-- AWS
-  - EC2
-  - ALB
-    - RDS (MySQL 5.7 / Aurora)
-  - Aurora Auto Scaling
-  - Route 53
-  - IAM
-  - S3
-  - SQS
-  - SNS
-  - SES
-  - Lambda
-  - CloudFront -->
-
 ## Haulla Back Office 웹 프론트 개발
 
 - 기간: 2019.07 -
-- 제품 소개 페이지: https://www.haulla.com/
+- 제품소개: https://www.haulla.com/
 - 설명
   - 쓰레기 수거자(Hauler)와 생산자(Generator)를 연결해주는 매칭 플랫폼입니다.
   - 일반 사용자(Hauler와 Generator)는 모바일 앱을 통해 매칭 서비스를 이용합니다.
@@ -102,7 +31,9 @@
 ## CCNx 유지보수
 
 - 기간: 2019.06
-- 설명: https://www.ecubelabs.com/fleet-management-platform/
+- 제품소개: https://www.ecubelabs.com/fleet-management-platform/
+- 설명
+  - 앱으로 등록된 쓰레기 수거차량들을 관리하고, 최적화된 경로를 안내하는 웹 서비스입니다.
 - 사용기술
   - Angular 7
   - Koa
@@ -113,7 +44,9 @@
 ## CleanCityNetworks (CCN) 유지보수
 
 - 기간: 2019.05
-- 설명:https://www.ecubelabs.com/waste-analytics-platform/
+- 제품 소개:https://www.ecubelabs.com/waste-analytics-platform/
+- 설명
+  - 스마트 쓰레기통으로 수집한 데이터를 시각화한 웹 서비스입니다.
 - 사용기술
   - Angular JS
 
@@ -124,7 +57,7 @@
 - 기간: 2018.10 - 2019.04
 - 설명
   - 쓰레기 매립지에서 무게를 측정하는 계근 작업을 자동화, 온라인화 했습니다.
-  - CSN 개발 이전에는, 오프라인으로 모아진 계근 데이터가 담긴 USB를 몇개월마다 정부 시청에 물리적으로 전달해야하는 번거로움이 있었습니다.
+  - CSN 개발 이전에는, 오프라인으로 수집한 계근 데이터가 담긴 USB를 몇개월마다 정부 시청에 물리적으로 전달해야하는 번거로움이 있었습니다.
   - Partner Scale API 를 통해 하드웨어로 측정된 계근 데이터를 등록, 수정, 삭제합니다.
   - 대시 보드를 통해 API 사용량을 확인하고, 외부 업체에게 요금을 청구합니다.
   - 회사 서버의 계근 데이터를 시각화하여, CCN 의 추가 기능으로 제공합니다.
