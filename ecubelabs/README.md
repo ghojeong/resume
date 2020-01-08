@@ -144,7 +144,7 @@
 - 기억에 남는 점
   - 토큰을 통한 로그인과 인증 과정의 설계가, 예상 이상으로 재미있었습니다.
 
-<img src="./img/login_1.jpeg" width="40%" float="left" />
+<img src="./img/login_1.jpeg" width="40%" />
 <img src="./img/login_2.png" width="40%" float="right" />
 
 ### Partner Scale API 개발
