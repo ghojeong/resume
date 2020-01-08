@@ -6,7 +6,13 @@
 
 ### <회사에서 티나게 딴짓하기>
 
-![best_book_2019](./img/best_book_2019.jpeg)
+<p align="center"><img src="./img/best_book_2019.jpeg" width="90%" /></p>
+
+## 2019년 베스트 만화책
+
+### <약속의 네버랜드>
+
+<p align="center"><img src="./img/best_comic_2019.jpeg" width="60%" /></p>
 
 <!--
 ### 개발책
