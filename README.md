@@ -11,15 +11,20 @@
 
 ## 이력
 
-제가 진행한, 보다 많은 프로젝트들의 상세 정보를 보고 싶다면 Ecube Labs 와 UNIST 링크를 꼭! 클릭해주세요.
+- [**Ecube Labs**](./ecubelabs/README.md)
+
+  - 기간: 2018.10 - 재직중
+
+- [**UNIST**](./unist/README.md)
+  - 기간: 2013.03 - 2018.09
+
+## 프로젝트
+
+보다 많은 프로젝트들의 상세 정보를 보고 싶다면 [Ecube Labs](./ecubelabs/README.md) 와 [UNIST](./unist/README.md) 링크를 꼭! 클릭해주세요.
 
 ### [**Ecube Labs**](./ecubelabs/README.md)
 
-- 기간: 2018.10 - 재직중
-
 #### Haulla Back Office 개발
-
-<img src="./ecubelabs/img/haulla.png" width="50%" />
 
 - 기간: 2019.07 -
 - 제품 소개 페이지: https://www.haulla.com/
@@ -29,12 +34,14 @@
   - 일반 사용자(Hauler와 Generator)는 모바일 앱을 통해 매칭 서비스를 이용
   - 관리자(쓰레기 수거 회사들)는 Back Office 웹을 통해 쓰레기 수거 서비스를 모니터링 및 관리를 함
 
-#### CleanScaleNetworks (CSN) 개발
+<center><img src="./ecubelabs/img/haulla.png" width="50%" /></center>
 
-<img src="./ecubelabs/img/csn.png" width="50%" />
+#### CleanScaleNetworks (CSN) 개발
 
 - 기간: 2018.10 - 2019.04
 - 설명: 쓰레기 매립지에서 무게를 측정하는 계근 작업을 자동화, 온라인화
+
+<center><img src="./ecubelabs/img/csn.png" width="50%" /></center>
 
 ### [**UNIST**](./unist/README.md)
 
@@ -44,13 +51,13 @@
 - [Detail](./unist/classmate.md)
 - 설명: 스마트폰 카메라 및 스크린을 방송하는 앱
 
-<img src="./img/classmate.png" width="50%" />
+<center><img src="./img/classmate.png" width="25%" /></center>
 
 #### 발음 교정 앱 (개인 프로젝트)
 
 - 설명: TTS 와 STT 를 통해, 자신의 발음과 말 빠르기가 얼마나 적절한지 텍스트로 확인할 수 있는 앱
 
-<img src="./img/pronunciation.png" width="50%" />
+<center><img src="./img/pronunciation.png" width="25%" /></center>
 
 <!-- ## 지인 평가
 
