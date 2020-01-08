@@ -44,6 +44,7 @@
   - React
   - SCSS
 - 백엔드 API
+  - Node.js
   - Express.js
   - Hapi.js
   - Koa.js
