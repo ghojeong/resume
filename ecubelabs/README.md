@@ -3,6 +3,7 @@
 [Ecube Labs](https://www.ecubelabs.com)를 다니며 진행했던 프로젝트들의 상세 설명입니다.
 
 - 기간: 2018.10 - 재직중
+- [회사 기술 스텍](./tech.md)
 
 ## Haulla Back Office 웹 프론트 개발
 
