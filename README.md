@@ -13,30 +13,50 @@
 활동한 내용을 정리하다가, 양이 많아져서 3개의 링크로 분리했습니다.<br>
 UNIST, Ecube Labs, Community 전부 다 꼭! 클릭해주세요.
 
+### [**Ecube Labs**](./ecubelabs/README.md)
+
+- 기간: 2018.10 - 재직중
+
 ### [**UNIST**](./unist/README.md)
 
 - 기간: 2017.03 - 2018.09
 
-### [**Ecube Labs**](./ecubelabs/README.md)
-
-- 기간: 2018.10 -
-
 ### [**Community**](./community/README.md)
-
-### 육군 훈련소
-
-- 기간: 2019.12
 
 ## 지인 평가
 
-### [정규현](https://github.com/JungKyuHyun)
+### [이정배](https://github.com)
 
 > 제 평가 좀 적어주세요 ㅎㅎ
 
-## 사진
+### [전태준](https://github.com)
+
+> 제 평가 좀 적어주세요 ㅎㅎ
+
+### [이지은](https://github.com)
+
+> 제 평가 좀 적어주세요 ㅎㅎ
+
+### [유현석](https://github.com)
+
+> 제 평가 좀 적어주세요 ㅎㅎ
+
+### [장훈](https://github.com)
+
+> 제 평가 좀 적어주세요 ㅎㅎ
+
+### [김인수](https://github.com)
+
+> 제 평가 좀 적어주세요 ㅎㅎ
+
+### [윤재진](https://github.com)
+
+> 제 평가 좀 적어주세요 ㅎㅎ
+
+<!-- ## 사진
 
 ![army](./img/army.jpeg)
 
 ![mountain](./img/mountain.jpeg)
 
-![sky](./img/sky.jpeg)
+![sky](./img/sky.jpeg) -->

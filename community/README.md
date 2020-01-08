@@ -13,6 +13,31 @@
 
 ![softwarecampus](./img/softwarecampus.png)
 
+## 알고리즘 스터디
+
+- 기간: 2019.09 - 2019.11
+- 링크: https://github.com/study-records/coding-interview-study
+- 설명
+  - 혼자서는 어려웠던 알고리즘 공부에 도전하고 싶어서 열은 스터디입니다.
+- 기억에 남는 점
+  - 연말에 육군 훈련소에 가게 되어 스터디가 일시중지되었는데, 훈련소를 수료하자 마자 스터디가 언제 다시 열리냐는 연락들을 받아서 감동했습니다.
+  - 스터디원들을 위해 더 열심히 공부해야겠다는 새해 다짐을 했습니다.
+
+![algorithm](./img/algorithm.jpeg)
+
+## <모던 자바스크립트 입문> 책 스터디
+
+- 기간: 2019.07 - 2019.09
+- 링크: https://github.com/study-records/modern-javascript-study/tree/master/Modern_Javascript_Primer
+- 설명
+  - 자바스크립트에 대한 이해도를 높이고 싶어서 시작한 스터디입니다.
+  - 공부했던 내용을 문서로 정리해서 gitHub 에 올렸습니다.
+- 기억에 남는 점
+  - 자바를 본업으로 삼고 계시는 경력직 개발자 분들도, 언제나 새로운 학습에 목말라 있다는 열정이 참 대단하다고 느꼈습니다.
+  - 스스로가 본받고 싶은 분들을 많이 만나 행복했습니다.
+
+![javascript_study](./img/javascript_study.jpeg)
+
 ## 공감 세미나 주니어
 
 - 기간: 2019.03 - 2019.06
@@ -31,28 +56,3 @@
   - 이때부터 커뮤니티 활동이라는 스릴에 중독이 된 것 같습니다.
 
 ![gonggam](./img/gonggam.jpeg)
-
-## <모던 자바스크립트 입문> 책 스터디
-
-- 기간: 2019.07 - 2019.09
-- 링크: https://github.com/study-records/modern-javascript-study/tree/master/Modern_Javascript_Primer
-- 설명
-  - 자바스크립트에 대한 이해도를 높이고 싶어서 시작한 스터디입니다.
-  - 공부했던 내용을 문서로 정리해서 gitHub 에 올렸습니다.
-- 기억에 남는 점
-  - 자바를 본업으로 삼고 계시는 경력직 개발자 분들도, 언제나 새로운 학습에 목말라 있다는 열정이 참 대단하다고 느꼈습니다.
-  - 스스로가 본받고 싶은 분들을 많이 만나 행복했습니다.
-
-![javascript_study](./img/javascript_study.jpeg)
-
-## 알고리즘 스터디
-
-- 기간: 2019.09 - 2019.10
-- 링크: https://github.com/study-records/coding-interview-study
-- 설명
-  - 혼자서는 어려웠던 알고리즘 공부에 도전하고 싶어서 열은 스터디입니다.
-- 기억에 남는 점
-  - 훈련소에 가야하는 11월이 다가오자, 심각한 무기력증에 빠져서 스터디를 계속 진행하지 못해 흐지부지 되었습니다.
-  - 스터디 주최자로서, 스터디에 모여주신 분들에게 더 좋은 경험을 제공하지 못한 미안함이 지금도 남아있습니다.
-
-![algorithm](./img/algorithm.jpeg)
