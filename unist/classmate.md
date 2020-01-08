@@ -4,23 +4,23 @@
 
 [Source Code](https://github.com/JVHE/ClassMate)
 
-![classmate_1](./projects/classmate_1.png)
+![classmate_1](./img/classmate_1.png)
 
-![classmate_2](./projects/classmate_2.png)
+![classmate_2](./img/classmate_2.png)
 
-![classmate_3](./projects/classmate_3.png)
+![classmate_3](./img/classmate_3.png)
 
-![classmate_4](./projects/classmate_4.png)
+![classmate_4](./img/classmate_4.png)
 
-![classmate_5](./projects/classmate_5.png)
+![classmate_5](./img/classmate_5.png)
 
-![classmate_6](./projects/classmate_6.png)
+![classmate_6](./img/classmate_6.png)
 
-![classmate_7](./projects/classmate_7.png)
+![classmate_7](./img/classmate_7.png)
 
-![classmate_8](./projects/classmate_8.png)
+![classmate_8](./img/classmate_8.png)
 
-![classmate_9](./projects/classmate_9.png)
+![classmate_9](./img/classmate_9.png)
 
 교수님께서 애플 펜슬로 빔 프로젝터에 연결된 아이 패드를 칠판 대신 사용하며 수업하는 것을 보고, 안드로이드에서도 같은 방식으로 과외방송을 할 수 있도록 하고 싶은 마음에 시작한 팀 프로젝트입니다. 스마트 폰의 카메라 혹은 스크린을 실시간으로 방송하고, 방송되고 있는 화면 위에 방송자가 펜으로 수업을 할 수 있는 안드로이드 앱입니다. 우분투 서버에서 Java, php, JavaScript, Perl을 통해 개발했으며 HTTP, WebRTC, Mpeg-DASH 프로토콜을 사용했습니다. 주요 기능으로 Adaptive Streaming을 실현해, 네트워크 환경에 따라 동영상의 bitrate가 변할 수 있도록 했습니다.
 

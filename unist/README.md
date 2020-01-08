@@ -1,6 +1,6 @@
 # UNIST Projects Description
 
-[UNIST](<[./classmate.md](https://www.unist.ac.kr)>)를 다니며 진행했던 프로젝트들의 상세 설명입니다.
+[UNIST](https://www.unist.ac.kr)를 다니며 진행했던 프로젝트들의 상세 설명입니다.
 기간: 2017.03 - 2018.09
 
 ## Team Project
@@ -13,7 +13,7 @@
 
 [Source Code](https://github.com/JVHE/ClassMate)
 
-![classmate_1](./projects/classmate_1.png)
+![classmate_1](./img/classmate_1.png)
 
 교수님께서 애플 펜슬로 빔 프로젝터에 연결된 아이 패드를 칠판 대신 사용하며 수업하는 것을 보고, 안드로이드에서도 같은 방식으로 과외방송을 할 수 있도록 하고 싶은 마음에 시작한 팀 프로젝트입니다. 스마트 폰의 카메라 혹은 스크린을 실시간으로 방송하고, 방송되고 있는 화면 위에 방송자가 펜으로 수업을 할 수 있는 안드로이드 앱입니다. 우분투 서버에서 Java, php, JavaScript, Perl을 통해 개발했으며 HTTP, WebRTC, Mpeg-DASH 프로토콜을 사용했습니다. 주요 기능으로 Adaptive Streaming을 실현해, 네트워크 환경에 따라 동영상의 bitrate가 변할 수 있도록 했습니다.
 
@@ -27,38 +27,38 @@
 
 교수님의 의뢰로 만든 개인 프로젝트입니다. GPS의 기능 없이 실내에서 자신이 어디에 위치하고 있는지 알려주는 안드로이드 앱입니다. Wi-Fi 신호의 Finger Printing 기법을 이용했으며, Finger Printing 된 노드들을 Sparse Matrix 자료구조 형태로 연결했습니다. Finger Printing을 하기 위해서 각 노드에서 수집된 Wi-Fi 신호들을 로컬 데이터베이스에 SQLite를 통하여 저장했습니다. 각 노드의 Finger Printing 값과 현재 측정된 Wi-Fi 신호 값을 상대적으로 비교하여, 자신의 현재 위치를 실시간으로 알아냅니다. 현재 위치에서 이동할 경우, 변경된 위치와 이동 경로를 새롭게 표시해줍니다. 이동 경로가 벽을 통과하거나, 존재하지 않는 길을 지나가지 않도록 예외처리를 하였습니다.
 
-![indoor_tracker_1](./projects/indoor_tracker_1.png)
+![indoor_tracker_1](./img/indoor_tracker_1.png)
 
-![indoor_tracker_2](./projects/indoor_tracker_2.png)
+![indoor_tracker_2](./img/indoor_tracker_2.png)
 
 ### 2. 웹서버 (프로젝트명: Web Server)
 
 HTTP Request와 Response를 공부하기 위해 만든 개인 프로젝트입니다. C언어로 소켓 프로그래밍을 하여 직접 만든 간단한 웹서버입니다. 브라우저가 요청한 HTTP Request에 맞추어 적절한 형식으로 HTML, CSS, JavaScript, 이미지 파일에 대한 데이터를 다시 브라우저에게 Response 해줍니다. 다수의 클라이언트 요청을 PThread를 사용한 멀티 스레드로 처리했습니다. 개발은 우분투 서버의 터미널에서 vim, gcc, gdb를 이용해 코딩했습니다.
 
-![web_server](./projects/web_server.png)
+![web_server](./img/web_server.png)
 
 ### 3. 쇼핑몰 (프로젝트명: 고-SHOP)
 
 웹 개발을 익히기 위해 만든 개인 프로젝트입니다. 서버에 centOS, Apache, MariaDB, php를 직접 소스 설치한 후, HTML, php, JavaScript, CSS 파일을 만들었습니다. 로그인, 회원가입, 회원정보 수정, 장바구니 기능이 있으며 관리자 모드와 유저 모드가 있습니다. 관리자 아이디로 로그인할 경우 관리자 모드가 되며, 상품과 유저를 관리할 수 있는 기능이 추가됩니다. 상품 목록은 페이징 처리가 되어있으며, 상품을 검색, 분류, 정렬하더라도 페이징 처리가 유지되도록 했습니다.
 
-![shop](./projects/shop.png)
+![shop](./img/shop.png)
 
 ### 4. 테트리스 (프로젝트명: Tetris)
 
 테트리스 게임이 재밌어서 만든 개인 프로젝트입니다. 다른 플레이어와 멀티 플레이와 기록 경쟁이 가능한 안드로이드 게임 앱입니다. 로그인, 회원가입, 회원정보 수정이 가능하며, 로그인 정보는 SharedPreference로 저장되고, 게임의 기록은 로컬 데이터베이스에 SQLite를 통해 저장됩니다. 회원 정보와 게임 기록은 서버에 HTTP Request로 전송되어 저장됩니다. 백엔드 서버는 centOS, Apache, MySQL, php로 구축했습니다. 멀티 플레이시에는 자신의 게임 상태가 다른 플레이어에게 Java의 TCP 소켓 통신으로 서버를 경유해 실시간으로 전송됩니다. 매초마다 실시간으로 전송되는 데이터는 JSON 형식으로 보냈습니다.
 
-![tetris_1](./projects/tetris_1.png)
+![tetris_1](./img/tetris_1.png)
 
-![tetris_2](./projects/tetris_2.png)
+![tetris_2](./img/tetris_2.png)
 
 ### 5. 발음 교정 앱 (프로젝트명: 말 빠르기, 발음 연습)
 
 스스로 발음과 말 빠르기를 교정하기 위해 만든 개인 프로젝트입니다. 안드로이드 앱이며, 자신이 연습하고 싶은 텍스트를 로컬 데이터베이스에 SQLite를 통해 저장할 수 있습니다. TTS(Text To Speech) 기술로 등록된 텍스트를 음성으로 변환하여, 사용자는 자신이 목표로 해야 할 적절한 발음과 말 빠르기를 들을 수 있습니다. 또한 STT(Speech To Text) 기술로 녹음된 음성을 텍스트로 변환하여, 사용자의 발성이 실제로는 어떻게 들렸는지 텍스트로 직접 보여줍니다.
 
-![pronunciation_app](./projects/pronunciation_app.png)
+![pronunciation_app](./img/pronunciation_app.png)
 
 ### 6. 지도 앱 (프로젝트명: Gho Map)
 
 다른 안드로이드 지도 앱에서 한가지 검색 결과만이 뜨는 것이 아쉬워 만든 개인 프로젝트입니다. 자신이 좋아하는 장소와, 싫어하는 장소 두 가지를 동시에 검색하여 결과를 보여주는 안드로이드 앱입니다. 구글 MAPS API를 사용했으며, JSON과 HTTP를 통해 검색을 요청하고 검색 결과를 받았습니다. Marker와 Info Window를 직접 커스텀하여 자신이 좋아하는 장소는 하트로, 싫어하는 장소는 Heat Map으로 나타나게 했습니다. 한 곳에 집중된 Marker에 대해 마커 클러스터링 처리를 하였습니다.
 
-![map_app](./projects/map_app.png)
+![map_app](./img/map_app.png)
