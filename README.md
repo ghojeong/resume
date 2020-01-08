@@ -1,5 +1,7 @@
 # 고정완 / JeongWan Gho
 
+<a href="./profile.md"><img src="./img/sky.jpeg" width="25%" /></a>
+
 ## 가치관
 
 - 최고의 복지란 최고의 동료입니다.
