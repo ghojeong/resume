@@ -30,6 +30,8 @@
 
 > 제 평가 좀 적어주세요 ㅎㅎ
 
+## 갤러리
+
 ![army](./img/army.jpeg)
 
 ![mountain](./img/mountain.jpeg)
