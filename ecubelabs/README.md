@@ -64,7 +64,7 @@
 
 ## Haulla Back Office 웹 프론트 개발
 
-<img src="./img/haulla.png" width="50%" />
+<p align="center"><img src="./img/haulla.png" width="50%" /></p>
 
 - 기간: 2019.07 -
 - 제품 소개 페이지: https://www.haulla.com/
