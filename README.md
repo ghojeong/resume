@@ -8,11 +8,7 @@
 - 기술적으로 소외받는 사람 혹은 분야에서, 새로운 기술 서비스 시장을 찾아낼 수 있다고 믿습니다.
 - [책을 좋아합니다.](./book)
 
-![mountain](./img/mountain.jpeg)
-
-![sky](./img/sky.jpeg)
-
-## 활동
+## 이력
 
 ### [UNIST](./unist)
 
@@ -28,4 +24,14 @@
 
 - 기간: 2019.12
 
-![sky](./img/army.jpeg)
+## 지인 평가
+
+### [정규현](https://github.com/JungKyuHyun)
+
+> 제 평가 좀 적어주세요 ㅎㅎ
+
+![army](./img/army.jpeg)
+
+![mountain](./img/mountain.jpeg)
+
+![sky](./img/sky.jpeg)
