@@ -13,8 +13,8 @@
 
 ## 이력
 
-- [**Ecube Labs**](./ecubelabs/README.md): 2018.10 - 재직중
-- [**UNIST**](./unist/README.md): 2013.03 - 2018.09
+- [Ecube Labs](./ecubelabs/README.md): 2018.10 - 재직중
+- [UNIST](./unist/README.md): 2013.03 - 2018.09
 
 ## 프로젝트
 
