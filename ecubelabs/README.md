@@ -60,7 +60,20 @@
 - DB
   - MySQL
   - AWS Aurora
-  - Redis -->
+  - Redis
+- AWS
+  - EC2
+  - ALB
+    - RDS (MySQL 5.7 / Aurora)
+  - Aurora Auto Scaling
+  - Route 53
+  - IAM
+  - S3
+  - SQS
+  - SNS
+  - SES
+  - Lambda
+  - CloudFront -->
 
 ## Haulla Back Office 웹 프론트 개발
 
