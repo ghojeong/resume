@@ -1,8 +1,8 @@
+<a href="./profile.md"><img src="./img/mountain.jpeg" width="25%" align="right"/></a>
+
 # 고정완 / JeongWan Gho
 
 ## 가치관
-
-<a href="./profile.md"><img src="./img/mountain.jpeg" width="25%" align="right"/></a>
 
 - 최고의 복지란 최고의 동료입니다.
 - 정숙하고 깨끗한 사무실에서 혼자 집중하는 독서실 분위기를 싫어합니다.
