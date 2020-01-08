@@ -10,15 +10,18 @@
 
 ## 이력
 
-### [UNIST](./unist)
+활동한 내용을 정리하다가, 양이 많아져서 3개의 링크로 분리했습니다.<br>
+UNIST, Ecube Labs, Community 전부 다 꼭! 클릭해주세요.
+
+### [**UNIST**](./unist)
 
 - 기간: 2017.03 - 2018.09
 
-### [Ecube Labs](./ecubelabs)
+### [**Ecube Labs**](./ecubelabs)
 
 - 기간: 2018.10 -
 
-### [Community](./community)
+### [**Community**](./community)
 
 ### 육군 훈련소
 
