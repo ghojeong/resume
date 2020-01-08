@@ -121,21 +121,21 @@
 
 ## CleanCityNetworks 유지보수
 
-![ccn](./img/ccn.png)
-
 - 기간: 2019.05
 - 사용기술
   - Angular JS
 
-## CCNx 유지보수
+![ccn](./img/ccn.png)
 
-![ccnx](./img/ccnx.png)
+## CCNx 유지보수
 
 - 기간: 2019.06
 - 사용기술
   - Angular 7
   - Koa
   - Swagger
+
+![ccnx](./img/ccnx.png)
 
 ## Haulla Back Office 웹 프론트 개발
 
@@ -158,3 +158,5 @@
   - 기획이 바뀌는가 하면, 사용할 프레임워크와 라이브러리 또한 자주 바뀌었습니다.
   - 가령 시작할 때는 Next.js 를 이용해 만들었는데, 이후 설계가 바뀌어서 바벨과 웹펙만을 이용한 리액트 프로젝트로 다시 만들어야 했습니다.
   - 신중하고 단단한 설계가 얼마나 중요한지 몸소 느꼈습니다.
+
+![haulla](./img/haulla.png)
