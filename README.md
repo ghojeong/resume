@@ -2,9 +2,9 @@
 
 ## 소개
 
-![sky](./img/sky.jpeg)
-
 ![mountain](./img/mountain.jpeg)
+
+![sky](./img/sky.jpeg)
 
 - 최고의 복지란 최고의 동료입니다.
 - 정숙하고 깨끗한 사무실에서 혼자 집중하는 것은 싫어합니다.
