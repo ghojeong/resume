@@ -24,6 +24,8 @@
 
 ### [Community](./community)
 
-### 훈련소
+### 육군 훈련소
 
 - 기간: 2019.12
+
+![sky](./img/army.jpeg)
