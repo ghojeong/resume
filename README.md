@@ -27,7 +27,7 @@
 
 - 기간: 2019.07 - 진행 중
 - 사용기술: React, Typescript
-- 제품 소개 페이지: https://www.haulla.com/
+- 제품소개: https://www.haulla.com/
 - 설명
   - Haulla: 쓰레기 수거자(Hauler)와 생산자(Generator)를 연결해주는 매칭 플랫폼
   - 일반 사용자(Hauler와 Generator)는 모바일 앱을 통해 매칭 서비스를 이용
