@@ -53,9 +53,9 @@
 ## 백엔드 API
 
 - Node.js
-- Express.js
-- Hapi.js
-- Koa.js
+- Express
+- Hapi
+- Koa
 - Postman
 
 ## API 문서화
