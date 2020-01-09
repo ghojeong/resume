@@ -7,25 +7,25 @@
 - 최고의 복지란 최고의 동료입니다.
 - 정숙하고 깨끗한 사무실에서 혼자 집중하는 독서실 분위기를 싫어합니다.
 - 시끄럽고 난잡하게 의견을 나누고, 그 결과가 깨끗한 코드 혹은 문서로 나타날 때 희열을 느낍니다.
-- 기술적으로 소외받는 사람 혹은 분야에서, 새로운 기술 서비스 시장을 찾아낼 수 있다고 믿습니다.
+- 기술적으로 소외당하는 사람 혹은 분야에서, 새로운 기술 서비스 시장을 찾아낼 수 있다고 믿습니다.
 - [책을 좋아합니다.](./book/README.md)
   <!-- - [사람과 어울리는 것을 좋아합니다.](./recommend.md) -->
 - [**커뮤니티 활동을 좋아합니다.**](./community/README.md)
 
 ## 이력
 
-- [Ecube Labs](./ecubelabs/README.md): 2018.10 - 재직중
+- [Ecube Labs](./ecubelabs/README.md): 2018.10 - 재직 중
 - [UNIST](./unist/README.md): 2013.03 - 2018.09
 
 ## 프로젝트
 
-보다 많은 프로젝트들의 상세 정보를 보기 위해 [Ecube Labs](./ecubelabs/README.md) 와 [UNIST](./unist/README.md) 링크를 꼭! 클릭해주세요.
+보다 많은 프로젝트의 상세 정보를 보기 위해 [Ecube Labs](./ecubelabs/README.md) 와 [UNIST](./unist/README.md) 링크를 꼭! 클릭해주세요.
 
 ### [**Ecube Labs**](./ecubelabs/README.md)
 
 #### Haulla Back Office 개발
 
-- 기간: 2019.07 - 진행중
+- 기간: 2019.07 - 진행 중
 - 사용기술: React, Typescript
 - 제품 소개 페이지: https://www.haulla.com/
 - 설명
