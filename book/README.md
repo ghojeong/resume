@@ -12,7 +12,7 @@
 
 ### <약속의 네버랜드>
 
-<p align="center"><img src="./img/best_comic_2019.jpeg" width="60%" /></p>
+<p align="center"><img src="./img/best_comic_2019.jpeg" /></p>
 
 <!--
 ### 개발책
