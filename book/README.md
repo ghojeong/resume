@@ -4,7 +4,7 @@
 
 ## 2019년 베스트 책
 
-### <회사에서 티나게 딴짓하기>
+### <회사에서 티 나게 딴짓하기>
 
 <p align="center"><img src="./img/best_book_2019.jpeg" width="90%" /></p>
 
