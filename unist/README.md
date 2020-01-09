@@ -5,9 +5,9 @@
 
 ## 요약
 
-- Team Project
+- 팀 프로젝트
   - Class Mate (영상 스트리밍 앱)
-- Personal Project
+- 개인 프로젝트
   - Indoor Tracker (실내 위치 추적 앱)
   - Web Server (C로 바닥부터 구현한 웹서버)
   - 고-Shop (쇼핑몰)
