@@ -45,7 +45,7 @@
 
 ## 웹 프론트
 
-- Angular.js
+- Angular JS
 - Angular 7
 - React
 - SCSS

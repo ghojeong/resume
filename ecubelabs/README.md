@@ -49,7 +49,7 @@
 - 설명
   - 스마트 쓰레기통으로 수집한 데이터를 시각화해서 보여주는 웹 서비스입니다.
 - 사용기술
-  - Angular.js
+  - Angular JS
 
 <p align="center"><img src="./img/ccn.png" width="60%" /></p>
 
@@ -85,7 +85,7 @@
 - 설명
   - 회사 서버의 계근 데이터를 정부 공무원들이 GUI 를 통해 조회할 수 있게끔, 데이터를 시각화 한 프로젝트입니다.
 - 사용기술
-  - Angular.js
+  - Angular JS
   - axios
   - Nginx
 - 기억에 남는 점

@@ -38,7 +38,7 @@
 #### CleanScaleNetworks (CSN) 개발
 
 - 기간: 2018.10 - 2019.04
-- 사용기술: Express, Angular.js
+- 사용기술: Express, Angular JS
 - 설명: 쓰레기 매립지에서 무게를 측정하는 계근 작업을 자동화, 온라인화
 
 <p align="center"><img src="./ecubelabs/img/csn.png" width="60%" /></p>
