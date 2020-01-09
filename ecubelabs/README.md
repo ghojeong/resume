@@ -47,9 +47,9 @@
 - 기간: 2019.05
 - 제품 소개:https://www.ecubelabs.com/waste-analytics-platform/
 - 설명
-  - 스마트 쓰레기통으로 수집한 데이터를 시각화한 웹 서비스입니다.
+  - 스마트 쓰레기통으로 수집한 데이터를 시각화해서 보여주는 웹 서비스입니다.
 - 사용기술
-  - Angular JS
+  - Angular.js
 
 <p align="center"><img src="./img/ccn.png" width="60%" /></p>
 
