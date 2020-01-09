@@ -26,8 +26,8 @@
 #### Haulla Back Office 개발
 
 - 기간: 2019.07 - 진행 중
-- 사용기술: React, Typescript
-- 제품소개: https://www.haulla.com/
+- 사용 기술: React, Typescript
+- 제품 소개: https://www.haulla.com/
 - 설명
   - Haulla: 쓰레기 수거자(Hauler)와 생산자(Generator)를 연결해주는 매칭 플랫폼
   - 일반 사용자(Hauler와 Generator)는 모바일 앱을 통해 매칭 서비스를 이용
@@ -38,7 +38,7 @@
 #### CleanScaleNetworks (CSN) 개발
 
 - 기간: 2018.10 - 2019.04
-- 사용기술: Express, Angular JS
+- 사용 기술: Express, Angular JS
 - 설명: 쓰레기 매립지에서 무게를 측정하는 계근 작업을 자동화, 온라인화
 
 <p align="center"><img src="./ecubelabs/img/csn.png" width="60%" /></p>
@@ -47,7 +47,7 @@
 
 #### [ClassMate](./unist/classmate.md) 설계 및 개발 (팀 프로젝트)
 
-- 사용기술: WebRTC, DASH
+- 사용 기술: WebRTC, DASH
 - [**YouTube**](https://youtu.be/RMkTWNjY1Vc)
 - 설명: 스마트폰 카메라 및 스크린을 방송하는 앱
 
@@ -55,7 +55,7 @@
 
 #### 발음 교정 앱 (개인 프로젝트)
 
-- 사용기술: STT, TTS
+- 사용 기술: STT, TTS
 - 설명: 자신의 발음과 말 빠르기가 얼마나 적절한지 텍스트로 확인할 수 있는 앱
 
 <p align="center"><img src="./img/pronunciation.png" width="25%" /></p>

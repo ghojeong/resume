@@ -8,12 +8,12 @@
 ## Haulla Back Office 웹 프론트 개발
 
 - 기간: 2019.07 -
-- 제품소개: https://www.haulla.com/
+- 제품 소개: https://www.haulla.com/
 - 설명
   - Haulla 는 쓰레기 수거자(Hauler)와 생산자(Generator)를 연결해주는 매칭 플랫폼입니다.
   - 일반 사용자(Hauler와 Generator)는 모바일 앱을 통해 매칭 서비스를 이용합니다.
   - 관리자(쓰레기 수거 회사들)는 Back Office 웹을 통해 쓰레기 수거 서비스의 모니터링 및 관리를 할 수 있습니다.
-- 사용기술
+- 사용 기술
   - React, Next.js
   - Typescript
   - redux, redux-observable
@@ -32,10 +32,10 @@
 ## CCNx 유지보수
 
 - 기간: 2019.06
-- 제품소개: https://www.ecubelabs.com/fleet-management-platform/
+- 제품 소개: https://www.ecubelabs.com/fleet-management-platform/
 - 설명
   - 앱으로 등록된 쓰레기 수거 차량을 관리하고, 최적화된 경로 안내를 하는 웹 서비스입니다.
-- 사용기술
+- 사용 기술
   - Angular 7
   - Koa
   - Swagger
@@ -45,10 +45,10 @@
 ## CleanCityNetworks (CCN) 유지보수
 
 - 기간: 2019.05
-- 제품소개:https://www.ecubelabs.com/waste-analytics-platform/
+- 제품 소개:https://www.ecubelabs.com/waste-analytics-platform/
 - 설명
   - 스마트 쓰레기통으로 수집한 데이터를 시각화해서 보여주는 웹 서비스입니다.
-- 사용기술
+- 사용 기술
   - Angular JS
 
 <p align="center"><img src="./img/ccn.png" width="60%" /></p>
@@ -72,7 +72,7 @@
   - Scale API 의 사용량을 시각화한 대시보드 입니다.
   - API 사용량에 따라, 외부 업체에게 금액을 청구하기 위해 쓰였습니다.
   - 기존에 개발된 API 대시보드에, Scale API 사용량이 표시될 수 있도록 기능을 추가했습니다.
-- 사용기술
+- 사용 기술
   - Pug 를 통한 SSR
 - 기억에 남는 점
   - 웹 프론트에서는 기술이 정말 순식간에 생겼다가, 인기가 식는다는 점을 느꼈습니다.
@@ -84,7 +84,7 @@
 - 기간: 2019.01 - 2019.02
 - 설명
   - 회사 서버의 계근 데이터를 정부 공무원들이 GUI 를 통해 조회할 수 있게끔, 데이터를 시각화 한 프로젝트입니다.
-- 사용기술
+- 사용 기술
   - Angular JS
   - axios
   - Nginx
@@ -100,7 +100,7 @@
 - 링크: https://doc.cleancitynetworks.com/partner-scale-api-doc/
 - 설명
   - 계근 하드웨어에서 측정된 데이터를 회사 서버에 등록, 수정, 삭제 할 수 있는 API 입니다.
-- 사용기술
+- 사용 기술
   - Express
   - apiDoc
   - MySQL
