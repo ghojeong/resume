@@ -1,6 +1,6 @@
 # UNIST Projects Description
 
-[UNIST](https://www.unist.ac.kr)를 다니며 진행했던 프로젝트들의 상세 설명입니다.
+[UNIST](https://www.unist.ac.kr)를 재학하며 진행했던 프로젝트들의 상세 설명입니다.
 
 - 프로젝트 진행 기간: 2017.03 - 2018.09
 
