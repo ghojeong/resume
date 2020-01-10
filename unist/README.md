@@ -12,7 +12,7 @@
   - Indoor Tracker (실내 위치 추적 앱)
   - Web Server (바닥부터 C 언어로 구현한 웹서버)
   - 고-Shop (쇼핑몰)
-  - Tetris (멀티 플레이 대전이 가능한 게임 앱)
+  - Tetris (멀티 플레이가 가능한 게임 앱)
   - Pronunciation App (STT와 TSS 를 활용한 발음 교정 앱)
   - Gho Map (구글 지도를 활용한 앱)
 
