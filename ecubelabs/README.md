@@ -5,9 +5,25 @@
 - 기간: 2018.10 - 재직 중
 - [회사 기술 스텍](./tech.md)
 
+## 요약
+
+- [Haulla Back Office](https://github.com/ghojeong/resume/blob/master/ecubelabs/README.md#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C) (React 웹)
+  - 기간: 2019.07 - 진행 중
+- [CCNx](https://github.com/ghojeong/resume/blob/master/ecubelabs/README.md#ccnx-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) (Angular 7)
+  - 기간: 2019.06
+- [CleanCityNetworks](https://github.com/ghojeong/resume/blob/master/ecubelabs/README.md#cleancitynetworks-ccn-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) (Angular JS)
+  - 기간: 2019.05
+- [CleanScaleNetworks](https://github.com/ghojeong/resume/blob/master/ecubelabs/README.md#cleanscalenetworks-csn-%EA%B0%9C%EB%B0%9C)
+  - 대시보드 (Pug)
+    - 기간: 2019.03 - 2019.04
+  - 데이터 시각화 (Angular JS)
+    - 기간: 2019.01 - 2019.02
+  - Partner Scale API (Express)
+    - 기간: 2018.10 - 2018.12
+
 ## Haulla Back Office 웹 프론트 개발
 
-- 기간: 2019.07 -
+- 기간: 2019.07 - 진행 중
 - 제품 소개: https://www.haulla.com/
 - 설명
   - Haulla 는 쓰레기 수거자(Hauler)와 배출자(Generator)를 연결해주는 매칭 플랫폼입니다.
