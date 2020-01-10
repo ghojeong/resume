@@ -14,11 +14,11 @@
 - [CleanCityNetworks](https://github.com/ghojeong/resume/blob/master/ecubelabs/README.md#cleancitynetworks-ccn-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) (Angular JS)
   - 기간: 2019.05
 - [CleanScaleNetworks](https://github.com/ghojeong/resume/blob/master/ecubelabs/README.md#cleanscalenetworks-csn-%EA%B0%9C%EB%B0%9C)
-  - 대시보드 (Pug)
+  - [대시보드](https://github.com/ghojeong/resume/blob/master/ecubelabs/README.md#partner-scale-api-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-%EA%B0%9C%EB%B0%9C) (Pug)
     - 기간: 2019.03 - 2019.04
-  - 데이터 시각화 (Angular JS)
+  - [데이터 시각화](https://github.com/ghojeong/resume/blob/master/ecubelabs/README.md#%EA%B3%84%EA%B7%BC-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EC%95%B5%EA%B7%A4%EB%9F%AC%EB%A1%9C-%EC%8B%9C%EA%B0%81%ED%99%94) (Angular JS)
     - 기간: 2019.01 - 2019.02
-  - Partner Scale API (Express)
+  - [Partner Scale API](https://github.com/ghojeong/resume/blob/master/ecubelabs/README.md#partner-scale-api-%EA%B0%9C%EB%B0%9C) (Express)
     - 기간: 2018.10 - 2018.12
 
 ## Haulla Back Office 웹 프론트 개발
