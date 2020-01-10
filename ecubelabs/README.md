@@ -10,7 +10,7 @@
 - 기간: 2019.07 -
 - 제품 소개: https://www.haulla.com/
 - 설명
-  - Haulla 는 쓰레기 수거자(Hauler)와 생산자(Generator)를 연결해주는 매칭 플랫폼입니다.
+  - Haulla 는 쓰레기 수거자(Hauler)와 배출자(Generator)를 연결해주는 매칭 플랫폼입니다.
   - 일반 사용자(Hauler와 Generator)는 모바일 앱을 통해 매칭 서비스를 이용합니다.
   - 관리자(쓰레기 수거 회사)는 Back Office 웹을 통해 쓰레기 수거 서비스의 모니터링 및 관리를 할 수 있습니다.
 - 사용 기술
