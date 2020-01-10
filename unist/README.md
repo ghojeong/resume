@@ -13,7 +13,7 @@
   - [Web Server](https://github.com/ghojeong/resume/blob/master/unist/README.md#web-server) (바닥부터 C 언어로 구현한 웹서버)
   - [고-Shop](https://github.com/ghojeong/resume/blob/master/unist/README.md#%EA%B3%A0-shop) (쇼핑몰)
   - [Tetris](https://github.com/ghojeong/resume/blob/master/unist/README.md#tetris) (멀티 플레이가 가능한 게임 앱)
-  - [Pronunciation App](https://github.com/ghojeong/resume/blob/master/unist/README.md#pronunciation-app) (STT와 TSS 를 활용한 발음 교정 앱)
+  - [Pronunciation App](https://github.com/ghojeong/resume/blob/master/unist/README.md#pronunciation-app) (TSS와 STT를 활용한 발음 교정 앱)
   - [Gho Map](https://github.com/ghojeong/resume/blob/master/unist/README.md#gho-map) (구글 지도를 활용한 앱)
 
 ## [ClassMate](./classmate.md)
