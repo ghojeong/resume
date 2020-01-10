@@ -30,7 +30,7 @@
 - 설명
   - Haulla: 쓰레기 수거자(Hauler)와 배출자(Generator)를 연결해주는 매칭 플랫폼
   - 일반 사용자(Hauler와 Generator)는 모바일 앱을 통해 매칭 서비스를 이용
-  - 관리자(쓰레기 수거 회사)는 Back Office 웹을 통해 쓰레기 수거 서비스를 모니터링 및 관리를 함
+  - 관리자(쓰레기 수거 회사)는 Back Office 웹을 통해 쓰레기 수거 서비스를 모니터링 및 관리함
 
 <p align="center"><img src="./ecubelabs/img/haulla.png" width="60%" /></p>
 
