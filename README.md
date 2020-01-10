@@ -47,6 +47,7 @@
 
 #### [ClassMate](./unist/classmate.md) 설계 및 개발 (팀 프로젝트)
 
+- 기간: 2018.03 - 2018.07
 - 사용 기술: WebRTC, DASH
 - [**YouTube**](https://youtu.be/RMkTWNjY1Vc)
 - 설명

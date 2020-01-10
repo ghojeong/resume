@@ -1,5 +1,7 @@
 # ClassMate
 
+기간: 2018.03 - 2018.07
+
 [**YouTube**](https://youtu.be/RMkTWNjY1Vc)
 
 [Source Code](https://github.com/JVHE/ClassMate)
