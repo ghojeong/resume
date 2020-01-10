@@ -10,7 +10,7 @@
   - Class Mate (영상 스트리밍 앱)
 - 개인 프로젝트
   - Indoor Tracker (실내 위치 추적 앱)
-  - Web Server (바닥부터 C로 구현한 웹서버)
+  - Web Server (바닥부터 C 언어로 구현한 웹서버)
   - 고-Shop (쇼핑몰)
   - Tetris (멀티 플레이 대전이 가능한 게임 앱)
   - Pronunciation App (STT와 TSS 를 활용한 발음 교정 앱)
