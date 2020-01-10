@@ -7,7 +7,7 @@
 
 ## 요약
 
-- [Haulla Back Office](https://github.com/ghojeong/resume/blob/master/ecubelabs/README.md#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C) (React 웹)
+- [Haulla Back Office](https://github.com/ghojeong/resume/blob/master/ecubelabs/README.md#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C) (React, Typescript)
   - 기간: 2019.07 - 진행 중
 - [CCNx](https://github.com/ghojeong/resume/blob/master/ecubelabs/README.md#ccnx-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) (Angular 7)
   - 기간: 2019.06
