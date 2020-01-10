@@ -38,7 +38,8 @@
 
 - 기간: 2018.10 - 2019.04
 - 사용 기술: Express, Angular JS
-- 설명: 쓰레기 매립지에서 무게를 측정하는 계근 작업을 자동화, 온라인화
+- 설명
+  - 쓰레기 매립지에서 무게를 측정하는 계근 작업을 자동화, 온라인화
 
 <p align="center"><img src="./ecubelabs/img/csn.png" width="60%" /></p>
 
@@ -48,13 +49,15 @@
 
 - 사용 기술: WebRTC, DASH
 - [**YouTube**](https://youtu.be/RMkTWNjY1Vc)
-- 설명: 스마트폰 카메라 및 스크린을 방송하는 앱
+- 설명
+  - 스마트폰 카메라 및 스크린을 방송하는 앱
 
 <p align="center"><img src="./img/classmate.png" width="25%" /></p>
 
 #### 발음 교정 앱 (개인 프로젝트)
 
 - 사용 기술: STT, TTS
-- 설명: 자신의 발음과 말 빠르기가 얼마나 적절한지 텍스트로 확인할 수 있는 앱
+- 설명
+  - 자신의 발음과 말 빠르기가 얼마나 적절한지 텍스트로 확인할 수 있는 앱
 
 <p align="center"><img src="./img/pronunciation.png" width="25%" /></p>
