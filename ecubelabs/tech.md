@@ -63,7 +63,7 @@
   - Elasticsearch, Logstash, Kibana
 - Slack Bot with Web Hook
 
-## CI/CD 인프라
+## CI/CD
 
 - Docker
 - Jenkins
