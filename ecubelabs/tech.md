@@ -37,12 +37,6 @@
 - Enzyme
 - react-test-renderer
 
-## 백엔드 모니터링
-
-- ELK
-  - Elasticsearch, Logstash, Kibana
-- Slack Bot with Web Hook
-
 ## 웹 프론트
 
 - Angular JS
@@ -62,6 +56,12 @@
 
 - apiDoc
 - Swagger
+
+## 백엔드 모니터링
+
+- ELK
+  - Elasticsearch, Logstash, Kibana
+- Slack Bot with Web Hook
 
 ## CI/CD 인프라
 
