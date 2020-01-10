@@ -31,13 +31,13 @@
     - [Pronunciation App](#pronunciation-app) (TSS와 STT를 활용한 발음 교정 앱)
     - [Gho Map](#gho-map) (구글 지도를 활용한 앱)
   - 팀 프로젝트
-    - [Class Mate](./classmate.md) (영상 스트리밍 앱)
-- 커뮤니티
-  - 알고리즘 스터디
+    - [Class Mate](#classmate) (영상 스트리밍 앱)
+- [커뮤니티](#%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0)
+  - [알고리즘 스터디](#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%8A%A4%ED%84%B0%EB%94%94)
     - 기간: 2019.09 - 2019.11
-  - <모던 자바스크립트 입문> 책 스터디
+  - [<모던 자바스크립트 입문> 책 스터디](#%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%9E%85%EB%AC%B8-%EC%B1%85-%EC%8A%A4%ED%84%B0%EB%94%94)
     - 기간: 2019.07 - 2019.09
-  - 공감 세미나 주니어
+  - [공감 세미나 주니어](#%EA%B3%B5%EA%B0%90-%EC%84%B8%EB%AF%B8%EB%82%98-%EC%A3%BC%EB%8B%88%EC%96%B4)
     - 기간: 2019.03 - 2019.06
 
 ## Haulla Back Office 웹 프론트 개발
@@ -193,11 +193,9 @@ HTTP Request와 Response를 공부하기 위해 만든 개인 프로젝트입니
 
 ## ClassMate
 
-기간: 2018.03 - 2018.07
-
-[**YouTube**](https://youtu.be/RMkTWNjY1Vc)
-
-[Source Code](https://github.com/JVHE/ClassMate)
+- 기간: 2018.03 - 2018.07
+- [**YouTube**](https://youtu.be/RMkTWNjY1Vc)
+- [Source Code](https://github.com/JVHE/ClassMate)
 
 교수님께서 애플 펜슬로 빔프로젝터에 연결된 아이패드를 칠판 대신 사용하며 수업하는 것을 보고, 안드로이드에서도 같은 방식으로 과외방송을 할 수 있도록 하고 싶은 마음에 시작한 팀 프로젝트입니다. 스마트 폰의 카메라 혹은 스크린을 실시간으로 방송하고, 방송되고 있는 화면 위에 방송자가 펜으로 수업을 할 수 있는 안드로이드 앱입니다. 우분투 서버에서 Java, php, JavaScript, Perl을 통해 개발했으며 HTTP, WebRTC, Mpeg-DASH 프로토콜을 사용했습니다. 주요 기능으로 Adaptive Streaming을 실현해, 네트워크 환경에 따라 동영상의 bitrate가 변할 수 있도록 했습니다.
 
