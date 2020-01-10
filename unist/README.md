@@ -7,14 +7,14 @@
 ## 요약
 
 - 팀 프로젝트
-  - Class Mate (영상 스트리밍 앱)
+  - [Class Mate](./classmate.md) (영상 스트리밍 앱)
 - 개인 프로젝트
-  - Indoor Tracker (실내 위치 추적 앱)
-  - Web Server (바닥부터 C 언어로 구현한 웹서버)
-  - 고-Shop (쇼핑몰)
-  - Tetris (멀티 플레이가 가능한 게임 앱)
-  - Pronunciation App (STT와 TSS 를 활용한 발음 교정 앱)
-  - Gho Map (구글 지도를 활용한 앱)
+  - [Indoor Tracker](https://github.com/ghojeong/resume/blob/master/unist/README.md#indoor-tracker) (실내 위치 추적 앱)
+  - [Web Server](https://github.com/ghojeong/resume/blob/master/unist/README.md#web-server) (바닥부터 C 언어로 구현한 웹서버)
+  - [고-Shop](https://github.com/ghojeong/resume/blob/master/unist/README.md#%EA%B3%A0-shop) (쇼핑몰)
+  - [Tetris](https://github.com/ghojeong/resume/blob/master/unist/README.md#tetris) (멀티 플레이가 가능한 게임 앱)
+  - [Pronunciation App](https://github.com/ghojeong/resume/blob/master/unist/README.md#pronunciation-app) (STT와 TSS 를 활용한 발음 교정 앱)
+  - [Gho Map](https://github.com/ghojeong/resume/blob/master/unist/README.md#gho-map) (구글 지도를 활용한 앱)
 
 ## [ClassMate](./classmate.md)
 
