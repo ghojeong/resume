@@ -2,7 +2,23 @@
 
 최근에 작성한 것 중, 자랑하고 싶은 코드를 정리한 문서입니다.
 
+## 요약
+
+- 타입스크립트 리액트 컴포넌트
+  - ListFilter.tsx
+- Global State 설계
+  - model.ts
+  - actions.ts
+  - services.ts
+  - epic.ts
+  - reducer.ts
+  - selector.ts
+  - App.tsx
+  - UserInfoLabel.tsx
+
 ## 타입스크립트 리액트 컴포넌트
+
+### ListFilter.tsx
 
 ```ListFilter.tsx
 import React, { ChangeEvent, FormEvent, useState } from 'react';
@@ -96,6 +112,8 @@ export const ListFilter = <T extends FilterMapType>({
 
 ## Global State 설계
 
+### model.ts
+
 ```model.ts
 export class UserModel {
   userId!: number;
@@ -105,6 +123,8 @@ export class UserModel {
   phoneNumber!: string;
 }
 ```
+
+### actions.ts
 
 ```actions.ts
 import { createAction, createAsyncAction, ActionType } from 'typesafe-actions';
@@ -134,6 +154,8 @@ export type Actions =
   | ActionType<typeof fetchUserDetailAsync>;
 ```
 
+### services.ts
+
 ```services.ts
 import { httpClient, mapApiResponse, ApiResponse } from 'app/libs/http-client';
 import { UserModel } from '@models';
@@ -144,6 +166,8 @@ export const userService = {
   },
 };
 ```
+
+### epic.ts
 
 ```epic.ts
 import { of, empty } from 'rxjs';
@@ -174,6 +198,8 @@ export const fetchUserDetailsEpic: Epic = (action$: ActionsObservable<Actions>, 
 
 export const rootEpic = combineEpics(fetchUserDetailsEpic);
 ```
+
+### reducer.ts
 
 ```reducer.ts
 import { combineReducers } from 'redux';
@@ -236,6 +262,8 @@ export const createRootReducer = () =>
   });
 ```
 
+### selector.ts
+
 ```selector.ts
 import mapValues from 'lodash/mapValues';
 import { plainToClass } from 'class-transformer';
@@ -253,6 +281,8 @@ export const userDetailsSelectorByIdFactory = (userId: UserModel['userId']) => (
   return userDetails[userId] || null;
 };
 ```
+
+### App.tsx
 
 ```App.tsx
 import React from 'react';
@@ -281,6 +311,8 @@ const App = () => (
 
 export default hot(module)(App);
 ```
+
+### UserInfoLabel.tsx
 
 ```UserInfoLabel.tsx
 import React, { FC, useMemo, useEffect, useState, MouseEvent } from 'react';
