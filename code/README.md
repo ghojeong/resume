@@ -162,10 +162,10 @@ export type Actions =
 ### services.ts
 
 ```services.ts
-import { map } from 'rxjs/operators';
-import Axios from 'axios-observable';
-import { AxiosResponse } from 'axios';
 import { OperatorFunction } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { AxiosResponse } from 'axios';
+import Axios from 'axios-observable';
 import { UserModel } from 'app/models';
 import { API_ENDPOINT } from 'app/configs';
 
@@ -208,9 +208,9 @@ export const userService = {
 
 ```epic.ts
 import { of, empty } from 'rxjs';
-import { isActionOf } from 'typesafe-actions';
-import { ActionsObservable, combineEpics, Epic } from 'redux-observable';
 import { map, filter, catchError, mergeMap, finalize } from 'rxjs/operators';
+import { ActionsObservable, combineEpics, Epic } from 'redux-observable';
+import { isActionOf } from 'typesafe-actions';
 import { Actions, fetchUserDetailAsync } from 'app/actions';
 
 export const fetchUserDetailsEpic: Epic = (action$: ActionsObservable<Actions>, _, { userService }) => {
@@ -240,13 +240,13 @@ export const rootEpic = combineEpics(fetchUserDetailsEpic);
 ### epic.spec.ts
 
 ```epic.spec.ts
-import { Action } from 'redux';
 import { Subject, of, throwError } from 'rxjs';
+import { Action } from 'redux';
 import { ActionsObservable, StateObservable } from 'redux-observable';
 import { mocked } from 'ts-jest/utils';
+import { fetchUserDetailAsync } from 'app/actions';
 import * as services from 'app/services';
 import { fetchUserDetailsEpic } from 'app/epic';
-import { fetchUserDetailAsync } from 'app/actions';
 
 jest.mock('@services');
 
@@ -375,8 +375,8 @@ export const createRootReducer = () =>
 ### reducer.spec.ts
 
 ```reducer.spec.ts
-import { UserDetailsState, userDetailsReducer, userDetailsInitialState } from 'app/reducer';
 import { authLogout, fetchUserDetailAsync } from 'app/actions';
+import { UserDetailsState, userDetailsReducer, userDetailsInitialState } from 'app/reducer';
 
 describe('userDetailsReducer 테스트', () => {
   test('authLogout 액션이 발행되면 state 가 초기값으로 세팅 되어야 한다.', () => {
@@ -477,10 +477,10 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { createEpicMiddleware } from 'redux-observable';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { rootEpic } from 'app/epic';
-import { AppRouter } from 'app/routes';
 import { userService } from 'app/services';
+import { rootEpic } from 'app/epic';
 import { createRootReducer } from 'app/reducers';
+import { AppRouter } from 'app/routes';
 import { CombineProvider } from 'app/components';
 
 const services = { userService };
