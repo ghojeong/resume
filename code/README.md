@@ -240,7 +240,7 @@ import { fetchUserDetailAsync } from 'app/actions';
 import * as services from 'app/services';
 import { fetchUserDetailEpic } from 'app/epic';
 
-jest.mock('@services');
+jest.mock('app/services');
 
 describe('epic 테스트', () => {
   describe('fetchUserDetailEpic 테스트', () => {
