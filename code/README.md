@@ -17,7 +17,7 @@
   - [reducer.spec.ts](#reducerspects)
   - [selector.ts](#selectorts)
   - [App.tsx](#apptsx)
-  - [UserInfoLabel.tsx](#userinfolabeltsx)
+  - [UserPopover.tsx](#userpopovertsx)
 
 <!-- ## 타입스크립트 리액트 컴포넌트
 
@@ -498,9 +498,9 @@ const App = () => (
 export default hot(module)(App);
 ```
 
-### UserInfoLabel.tsx
+### UserPopover.tsx
 
-```UserInfoLabel.tsx
+```UserPopover.tsx
 import React, { FC, useMemo, useEffect, useState, MouseEvent } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Button from '@material-ui/core/Button';
@@ -517,7 +517,7 @@ interface PropTypes {
   userId: UserModel['userId'];
 }
 
-export const UserInfoLabel: FC<PropTypes> = ({ userId }) => {
+export const UserPopover: FC<PropTypes> = ({ userId }) => {
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = useState<HTMLSpanElement | null>(null);
   // NOTE: userId가 바뀌지 않으면 셀렉터를 다시 만들지 않는다.
