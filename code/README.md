@@ -8,7 +8,7 @@
   - [ListFilter.tsx](#listfiltertsx) -->
 
 - redux-observable 을 통한 비동기 처리
-  - [model.ts](#modelts)
+  - [models.ts](#modelsts)
   - [actions.ts](#actionsts)
   - [services.ts](#servicests)
   - [epic.ts](#epicts)
@@ -117,9 +117,9 @@ export const ListFilter = <T extends FilterMapType>({
 
 유저 상세 정보 (UserDetail) API 를 호출하고, 받아온 정보를 스토어에서 관리하는 비동기 작업을 redux-observable을 통해 수행하는 코드입니다.
 
-### model.ts
+### models.ts
 
-```model.ts
+```models.ts
 export class UserModel {
   userId!: number;
   firstName!: string | null;
