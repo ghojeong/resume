@@ -135,8 +135,6 @@ export class UserModel {
 import { createAction, createAsyncAction, ActionType } from 'typesafe-actions';
 import { UserModel } from 'app/models';
 
-export const checkAuthentication = createAction('CHECK_AUTHENTICATION')();
-export const authLogin = createAction('AUTH_LOGIN')();
 export const authLogout = createAction('AUTH_LOGOUT')();
 
 export const fetchUserDetailAsync = createAsyncAction(
@@ -152,11 +150,7 @@ export const fetchUserDetailAsync = createAsyncAction(
   }
 >();
 
-export type Actions =
-  | ActionType<typeof checkAuthentication>
-  | ActionType<typeof authLogin>
-  | ActionType<typeof authLogout>
-  | ActionType<typeof fetchUserDetailAsync>;
+export type Actions = ActionType<typeof authLogout> | ActionType<typeof fetchUserDetailAsync>;
 ```
 
 ### services.ts
