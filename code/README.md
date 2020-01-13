@@ -486,7 +486,10 @@ type CombineContextInput = {
   context: CombineContext<ReactNode>;
   props?: any;
 };
-type PropTypes = { contexts: CombineContextInput[] };
+
+interface PropTypes {
+  contexts: CombineContextInput[];
+}
 export const CombineProvider: FC<PropTypes> = ({ contexts, children }) => (
   <>
     {contexts
@@ -524,7 +527,6 @@ import { userDetailSelectorByIdFactory } from 'app/selectors';
 interface PropTypes {
   userId: UserModel['userId'];
 }
-
 export const UserLabel: FC<PropTypes> = ({ userId }) => {
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = useState<HTMLSpanElement | null>(null);
