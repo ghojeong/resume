@@ -477,7 +477,12 @@ import { RootState, UserDetailState } from 'app/reducers';
 
 const userDetailSelector = (state: RootState): UserDetailState => ({
   ...state.userDetail,
-  ...{ userDetails: mapValues(state.userDetails, (item) => plainToClass(UserModel, item)) },
+  ...{
+    userDetails: mapValues(
+      state.userDetails,
+      (item) => plainToClass(UserModel, item),
+    ),
+  },
 });
 export const userDetailSelectorByIdFactory = (userId: UserModel['userId']) => (state: RootState) => {
   const userDetail = userDetailSelector(state);
