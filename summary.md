@@ -2,7 +2,7 @@
 
 # 고정완 / JeongWan Gho
 
-[자신있는 코드](./code/README.md)
+[자신 있는 코드](./code/README.md)
 
 ## 가치관
 
