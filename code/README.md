@@ -501,7 +501,10 @@ const services = { userService };
 const epicMiddleware = createEpicMiddleware({
   dependencies: services,
 });
-const store = createStore(createRootReducer(), composeWithDevTools(applyMiddleware(epicMiddleware)));
+const store = createStore(
+  createRootReducer(),
+  composeWithDevTools(applyMiddleware(epicMiddleware)),
+);
 epicMiddleware.run(rootEpic);
 
 const App = () => (
