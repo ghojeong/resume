@@ -114,7 +114,7 @@ export const ListFilter = <T extends FilterMapType>({
 
 ## redux-observable 을 통한 비동기 처리
 
-redux-observable을 통해 유저 상세 정보 (UserDetail)를 API 를 통해 호출하고, 스토어에서 관리하는 비동기 작업을 수행하는 코드입니다.
+유저 상세 정보 (UserDetail) API 를 호출하고, 받아온 정보를 스토어에서 관리하는 비동기 작업을 redux-observable을 통해 수행하는 코드입니다.
 
 ### model.ts
 
