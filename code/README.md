@@ -184,7 +184,10 @@ httpClient.interceptors.request.use((config) => {
 
 type ApiResponse<T> = { data: T };
 type ProxyAxiosResponse<T> = T extends AxiosResponse<{ data: infer D }> ? D : never;
-const mapApiResponse: <T extends AxiosResponse<ApiResponse<R>>, R = ProxyAxiosResponse<T>>() => OperatorFunction<
+const mapApiResponse: <
+  T extends AxiosResponse<ApiResponse<R>>,
+  R = ProxyAxiosResponse<T>
+>() => OperatorFunction<
   T,
   R
 > = () => map(({ data: { data } }) => data);
@@ -205,7 +208,11 @@ import { ActionsObservable, combineEpics, Epic } from 'redux-observable';
 import { isActionOf } from 'typesafe-actions';
 import { Actions, fetchUserDetailAsync } from 'app/actions';
 
-export const fetchUserDetailEpic: Epic = (action$: ActionsObservable<Actions>, _, { userService }) => {
+export const fetchUserDetailEpic: Epic = (
+  action$: ActionsObservable<Actions>,
+  _,
+  { userService },
+) => {
   // NOTE: API 요청 중인 userId를 inProgress에 임시 저장하여, 같은 유저의 정보를 동시에 요청하는 일이 없도록 한다.
   const inProgress: Record<number, boolean> = {};
   return action$.pipe(
@@ -217,7 +224,14 @@ export const fetchUserDetailEpic: Epic = (action$: ActionsObservable<Actions>, _
       inProgress[userId] = true;
       return userService.getUser(userId).pipe(
         map((data) => fetchUserDetailAsync.success(data)),
-        catchError((err) => of(fetchUserDetailAsync.failure({ userId, errMsg: err.message }))),
+        catchError((err) =>
+          of(
+            fetchUserDetailAsync.failure({
+              userId,
+              errMsg: err.message,
+            }),
+          ),
+        ),
         finalize(() => {
           inProgress[userId] = false;
         }),
