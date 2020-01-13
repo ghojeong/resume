@@ -12,7 +12,7 @@
   - [actions.ts](#actionsts)
   - [services.ts](#servicests)
   - [epic.ts](#epicts)
-  - [epic.spec.ts](#epic.spec.ts)
+  - [epic.spec.ts](#epicspects)
   - [reducer.ts](#reducerts)
   - [reducer.spec.ts](#reducerspects)
   - [selector.ts](#selectorts)
