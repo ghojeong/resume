@@ -4,19 +4,21 @@
 
 ## 요약
 
-- [타입스크립트 리액트 컴포넌트](#%ed%83%80%ec%9e%85%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8-%eb%a6%ac%ec%95%a1%ed%8a%b8-%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8)
-  - [ListFilter.tsx](#listfiltertsx)
+<!-- - [타입스크립트 리액트 컴포넌트](#%ed%83%80%ec%9e%85%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8-%eb%a6%ac%ec%95%a1%ed%8a%b8-%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8)
+  - [ListFilter.tsx](#listfiltertsx) -->
+
 - [Global State 설계](#global-state-%ec%84%a4%ea%b3%84)
   - [model.ts](#modelts)
   - [actions.ts](#actionsts)
   - [services.ts](#servicests)
   - [epic.ts](#epicts)
   - [reducer.ts](#reducerts)
+  - [reducer.spec.ts](#reducerspects)
   - [selector.ts](#selectorts)
   - [App.tsx](#apptsx)
   - [UserInfoLabel.tsx](#userinfolabeltsx)
 
-## 타입스크립트 리액트 컴포넌트
+<!-- ## 타입스크립트 리액트 컴포넌트
 
 ### ListFilter.tsx
 
@@ -108,7 +110,7 @@ export const ListFilter = <T extends FilterMapType>({
     </Box>
   );
 };
-```
+``` -->
 
 ## Global State 설계
 
@@ -215,8 +217,8 @@ export type UserDetailsState = Record<
     item?: UserModel; // NOTE: 데이터를 한번도 받아오지 않았다면 비어있을수 있다.
   }
 >;
-const userDetailsInitialState: UserDetailsState = {};
-const userDetailsReducer = (state = userDetailsInitialState, action: Actions): UserDetailsState => {
+export const userDetailsInitialState: UserDetailsState = {};
+export const userDetailsReducer = (state = userDetailsInitialState, action: Actions): UserDetailsState => {
   switch (action.type) {
     case getType(authLogout):
       return userDetailsInitialState;
@@ -260,6 +262,82 @@ export const createRootReducer = () =>
   combineReducers<RootState>({
     userDetails: userDetailsReducer,
   });
+```
+
+### reducer.spec.ts
+
+```reducer.spec.ts
+import { UserDetailsState, userDetailsReducer, userDetailsInitialState } from 'app/reducer';
+import { authLogout, fetchUserDetailAsync } from 'app/actions';
+
+describe('userDetailsReducer 테스트', () => {
+  test('authLogout 액션이 발행되면 state 가 초기값으로 세팅 되어야 한다.', () => {
+    const userDetailsState: UserDetailsState = {
+      105: {
+        isLoading: false,
+        errMsg: null,
+        item: {
+          userId: 105,
+          firstName: 'name',
+          lastName: null,
+          email: 'name@email.com',
+          phoneNumber: '+821012345678',
+        },
+      },
+    };
+    const action = authLogout();
+    expect(userDetailsReducer(userDetailsState, action)).toEqual(userDetailsInitialState);
+  });
+
+  test('fetchUserDetailsAsync 를 request 하면 isLoading 이 true가 되어야 한다.', () => {
+    const userDetailsState: UserDetailsState = userDetailsInitialState;
+    const action = fetchUserDetailAsync.request(105);
+    expect(userDetailsReducer(userDetailsState, action)).toEqual({
+      105: {
+        isLoading: true,
+        errMsg: null,
+      },
+    });
+  });
+
+  test('fetchUserDetailsAsync가 성공하면 state에 받아온 userDetail이 추가되어야 한다.', () => {
+    const userDetailsState: UserDetailsState = userDetailsInitialState;
+    const action = fetchUserDetailAsync.success({
+      userId: 105,
+      firstName: 'name',
+      lastName: null,
+      email: 'name@email.com',
+      phoneNumber: '+821012345678',
+    });
+    expect(userDetailsReducer(userDetailsState, action)).toEqual({
+      105: {
+        isLoading: false,
+        errMsg: null,
+        item: {
+          userId: 105,
+          firstName: 'name',
+          lastName: null,
+          email: 'name@email.com',
+          phoneNumber: '+821012345678',
+        },
+      },
+    });
+  });
+
+  test('fetchUserDetailsAsync 가 실패하면 errMsg 가 세팅 되어야 한다.', () => {
+    const userDetailsState: UserDetailsState = userDetailsInitialState;
+    const action = fetchUserDetailAsync.failure({
+      userId: 105,
+      errMsg: 'fetchUserDetailsAsync Failed',
+    });
+    expect(userDetailsReducer(userDetailsState, action)).toEqual({
+      105: {
+        isLoading: false,
+        errMsg: 'fetchUserDetailsAsync Failed',
+      },
+    });
+  });
+});
 ```
 
 ### selector.ts
