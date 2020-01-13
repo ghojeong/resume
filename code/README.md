@@ -463,17 +463,16 @@ export const userDetailSelectorByIdFactory = (userId: UserModel['userId']) => (s
 ### App.tsx
 
 ```App.tsx
-import React from 'react';
+import React, { FC, ReactNode } from 'react';
 import { hot } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { createEpicMiddleware } from 'redux-observable';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { userService } from 'app/services';
 import { rootEpic } from 'app/epic';
-import { createRootReducer } from 'app/reducers';
 import { AppRouter } from 'app/routes';
-import { CombineProvider } from 'app/components';
+import { userService } from 'app/services';
+import { createRootReducer } from 'app/reducers';
 
 const services = { userService };
 const epicMiddleware = createEpicMiddleware({
@@ -481,12 +480,29 @@ const epicMiddleware = createEpicMiddleware({
 });
 const store = createStore(createRootReducer(), composeWithDevTools(applyMiddleware(epicMiddleware)));
 epicMiddleware.run(rootEpic);
+
+type CombineContext<T = any> = T;
+type CombineContextInput = {
+  context: CombineContext<ReactNode>;
+  props?: any;
+};
+type PropTypes = { contexts: CombineContextInput[] };
+export const CombineProvider: FC<PropTypes> = ({ contexts, children }) => (
+  <>
+    {contexts
+      .reverse()
+      .reduce(
+        (prev, { context, props = {} }) => React.createElement(context as any, { children: prev, ...props }),
+        children,
+      )}
+  </>
+);
+
 const App = () => (
   <CombineProvider contexts={[{ context: Provider, props: { store } }]}>
     <AppRouter />
   </CombineProvider>
 );
-
 export default hot(module)(App);
 ```
 
