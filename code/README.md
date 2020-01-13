@@ -259,16 +259,10 @@ describe('epic 테스트', () => {
       mockedUserService.getUser.mockReturnValueOnce(
         of({
           userId: 105,
-          serviceAccountId: 'c0aa8b35-4030-44ed-910e-e3a57ebdaf2d',
-          firstName: 'admin',
+          firstName: 'name',
           lastName: null,
-          email: 'admin@ecubelabs.com',
-          phoneNumber: '+821030074421',
-          countryCode: 'us',
-          timezone: 'America/Los_Angeles',
-          language: 'en',
-          unitVolume: 'L',
-          registeredAt: '2019-08-30T06:40:44.000Z',
+          email: 'name@email.com',
+          phoneNumber: '+821012345678',
         }),
       );
       // -->
