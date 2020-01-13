@@ -213,7 +213,7 @@ import { ActionsObservable, combineEpics, Epic } from 'redux-observable';
 import { isActionOf } from 'typesafe-actions';
 import { Actions, fetchUserDetailAsync } from 'app/actions';
 
-export const fetchUserDetailsEpic: Epic = (action$: ActionsObservable<Actions>, _, { userService }) => {
+export const fetchUserDetailEpic: Epic = (action$: ActionsObservable<Actions>, _, { userService }) => {
   // NOTE: API 요청 중인 userId를 inProgress에 임시 저장하여, 같은 유저의 정보를 동시에 요청하는 일이 없도록 한다.
   const inProgress: Record<number, boolean> = {};
   return action$.pipe(
@@ -234,7 +234,7 @@ export const fetchUserDetailsEpic: Epic = (action$: ActionsObservable<Actions>, 
   );
 };
 
-export const rootEpic = combineEpics(fetchUserDetailsEpic);
+export const rootEpic = combineEpics(fetchUserDetailEpic);
 ```
 
 ### epic.spec.ts
@@ -246,12 +246,12 @@ import { ActionsObservable, StateObservable } from 'redux-observable';
 import { mocked } from 'ts-jest/utils';
 import { fetchUserDetailAsync } from 'app/actions';
 import * as services from 'app/services';
-import { fetchUserDetailsEpic } from 'app/epic';
+import { fetchUserDetailEpic } from 'app/epic';
 
 jest.mock('@services');
 
 describe('epic 테스트', () => {
-  describe('fetchUserDetailsEpic 테스트', () => {
+  describe('fetchUserDetailEpic 테스트', () => {
     const mockedUserService = mocked(services.userService, true);
 
     test('유저 상세 데이터 조회 성공', (done) => {
@@ -271,7 +271,7 @@ describe('epic 테스트', () => {
       const dependencies = { userService: mockedUserService };
       const actualActions: Action[] = [];
 
-      fetchUserDetailsEpic(action$, state$, dependencies).subscribe({
+      fetchUserDetailEpic(action$, state$, dependencies).subscribe({
         next: (action: Action) => actualActions.push(action),
         complete: () => {
           expect(actualActions).toEqual([
@@ -297,7 +297,7 @@ describe('epic 테스트', () => {
       const dependencies = { userService: mockedUserService };
       const actualActions: Action[] = [];
 
-      fetchUserDetailsEpic(action$, state$, dependencies).subscribe({
+      fetchUserDetailEpic(action$, state$, dependencies).subscribe({
         next: (action) => actualActions.push(action),
         complete: () => {
           expect(actualActions).toEqual([fetchUserDetailAsync.failure({ userId: 105, errMsg: 'getUser Error' })]);
@@ -317,7 +317,7 @@ import { getType } from 'typesafe-actions';
 import { UserModel } from 'app/models';
 import { Actions, authLogout, fetchUserDetailAsync } from 'app/actions';
 
-export type UserDetailsState = Record<
+export type UserDetailState = Record<
   UserModel['userId'],
   {
     isLoading: boolean;
@@ -325,11 +325,11 @@ export type UserDetailsState = Record<
     item?: UserModel; // NOTE: 데이터를 한번도 받아오지 않았다면 비어있을수 있다.
   }
 >;
-export const userDetailsInitialState: UserDetailsState = {};
-export const userDetailsReducer = (state = userDetailsInitialState, action: Actions): UserDetailsState => {
+export const userDetailInitialState: UserDetailState = {};
+export const userDetailReducer = (state = userDetailInitialState, action: Actions): UserDetailState => {
   switch (action.type) {
     case getType(authLogout):
-      return userDetailsInitialState;
+      return userDetailInitialState;
     case getType(fetchUserDetailAsync.request):
       return {
         ...state,
@@ -364,11 +364,11 @@ export const userDetailsReducer = (state = userDetailsInitialState, action: Acti
 };
 
 export interface RootState {
-  userDetails: UserDetailsState;
+  userDetail: UserDetailState;
 }
 export const createRootReducer = () =>
   combineReducers<RootState>({
-    userDetails: userDetailsReducer,
+    userDetail: userDetailReducer,
   });
 ```
 
@@ -376,11 +376,11 @@ export const createRootReducer = () =>
 
 ```reducer.spec.ts
 import { authLogout, fetchUserDetailAsync } from 'app/actions';
-import { UserDetailsState, userDetailsReducer, userDetailsInitialState } from 'app/reducer';
+import { UserDetailState, userDetailReducer, userDetailInitialState } from 'app/reducer';
 
-describe('userDetailsReducer 테스트', () => {
+describe('userDetailReducer 테스트', () => {
   test('authLogout 액션이 발행되면 state 가 초기값으로 세팅 되어야 한다.', () => {
-    const userDetailsState: UserDetailsState = {
+    const userDetailState: UserDetailState = {
       105: {
         isLoading: false,
         errMsg: null,
@@ -394,13 +394,13 @@ describe('userDetailsReducer 테스트', () => {
       },
     };
     const action = authLogout();
-    expect(userDetailsReducer(userDetailsState, action)).toEqual(userDetailsInitialState);
+    expect(userDetailReducer(userDetailState, action)).toEqual(userDetailInitialState);
   });
 
-  test('fetchUserDetailsAsync 를 request 하면 isLoading 이 true가 되어야 한다.', () => {
-    const userDetailsState: UserDetailsState = userDetailsInitialState;
+  test('fetchUserDetailAsync 를 request 하면 isLoading 이 true가 되어야 한다.', () => {
+    const userDetailState: UserDetailState = userDetailInitialState;
     const action = fetchUserDetailAsync.request(105);
-    expect(userDetailsReducer(userDetailsState, action)).toEqual({
+    expect(userDetailReducer(userDetailState, action)).toEqual({
       105: {
         isLoading: true,
         errMsg: null,
@@ -408,8 +408,8 @@ describe('userDetailsReducer 테스트', () => {
     });
   });
 
-  test('fetchUserDetailsAsync가 성공하면 state에 받아온 userDetail이 추가되어야 한다.', () => {
-    const userDetailsState: UserDetailsState = userDetailsInitialState;
+  test('fetchUserDetailAsync가 성공하면 state에 받아온 userDetail이 추가되어야 한다.', () => {
+    const userDetailState: UserDetailState = userDetailInitialState;
     const action = fetchUserDetailAsync.success({
       userId: 105,
       firstName: 'name',
@@ -417,7 +417,7 @@ describe('userDetailsReducer 테스트', () => {
       email: 'name@email.com',
       phoneNumber: '+821012345678',
     });
-    expect(userDetailsReducer(userDetailsState, action)).toEqual({
+    expect(userDetailReducer(userDetailState, action)).toEqual({
       105: {
         isLoading: false,
         errMsg: null,
@@ -432,16 +432,16 @@ describe('userDetailsReducer 테스트', () => {
     });
   });
 
-  test('fetchUserDetailsAsync 가 실패하면 errMsg 가 세팅 되어야 한다.', () => {
-    const userDetailsState: UserDetailsState = userDetailsInitialState;
+  test('fetchUserDetailAsync 가 실패하면 errMsg 가 세팅 되어야 한다.', () => {
+    const userDetailState: UserDetailState = userDetailInitialState;
     const action = fetchUserDetailAsync.failure({
       userId: 105,
-      errMsg: 'fetchUserDetailsAsync Failed',
+      errMsg: 'fetchUserDetailAsync Failed',
     });
-    expect(userDetailsReducer(userDetailsState, action)).toEqual({
+    expect(userDetailReducer(userDetailState, action)).toEqual({
       105: {
         isLoading: false,
-        errMsg: 'fetchUserDetailsAsync Failed',
+        errMsg: 'fetchUserDetailAsync Failed',
       },
     });
   });
@@ -454,17 +454,17 @@ describe('userDetailsReducer 테스트', () => {
 import mapValues from 'lodash/mapValues';
 import { plainToClass } from 'class-transformer';
 import { UserModel } from 'app/models';
-import { RootState, UserDetailsState } from 'app/reducers';
+import { RootState, UserDetailState } from 'app/reducers';
 
-const userDetailsSelector = (state: RootState): UserDetailsState => ({
-  ...state.userDetails,
+const userDetailSelector = (state: RootState): UserDetailState => ({
+  ...state.userDetail,
   ...{
-    userDetails: mapValues(state.userDetails, (item) => plainToClass(UserModel, item)),
+    userDetail: mapValues(state.userDetail, (item) => plainToClass(UserModel, item)),
   },
 });
-export const userDetailsSelectorByIdFactory = (userId: UserModel['userId']) => (state: RootState) => {
-  const userDetails = userDetailsSelector(state);
-  return userDetails[userId] || null;
+export const userDetailSelectorByIdFactory = (userId: UserModel['userId']) => (state: RootState) => {
+  const userDetail = userDetailSelector(state);
+  return userDetail[userId] || null;
 };
 ```
 
@@ -511,7 +511,7 @@ import RefreshIcon from '@material-ui/icons/Refresh';
 import Typography from '@material-ui/core/Typography';
 import { UserModel } from 'app/models';
 import { fetchUserDetailAsync } from 'app/actions';
-import { userDetailsSelectorByIdFactory } from 'app/selector';
+import { userDetailSelectorByIdFactory } from 'app/selector';
 
 interface PropTypes {
   userId: UserModel['userId'];
@@ -521,20 +521,20 @@ export const UserInfoLabel: FC<PropTypes> = ({ userId }) => {
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = useState<HTMLSpanElement | null>(null);
   // NOTE: userId가 바뀌지 않으면 셀렉터를 다시 만들지 않는다.
-  const userSelector = useMemo(() => userDetailsSelectorByIdFactory(userId), [userId]);
-  const userDetails = useSelector(userSelector);
+  const userSelector = useMemo(() => userDetailSelectorByIdFactory(userId), [userId]);
+  const userDetail = useSelector(userSelector);
   const displayedUsername = useMemo(() => {
-    if (userDetails?.item) {
-      if (userDetails.item.firstName && userDetails.item.lastName) {
-        return `${userDetails.item.firstName} ${userDetails.item.lastName}`;
+    if (userDetail?.item) {
+      if (userDetail.item.firstName && userDetail.item.lastName) {
+        return `${userDetail.item.firstName} ${userDetail.item.lastName}`;
       }
-      if (userDetails.item.firstName) {
-        return userDetails.item.firstName;
+      if (userDetail.item.firstName) {
+        return userDetail.item.firstName;
       }
       return <div>No User</div>;
     }
     return null;
-  }, [userDetails]);
+  }, [userDetail]);
 
   const handlePopoverOpen = (event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -547,14 +547,14 @@ export const UserInfoLabel: FC<PropTypes> = ({ userId }) => {
     dispatch(fetchUserDetailAsync.request(userId));
   }, [dispatch, userId]);
 
-  const hasErrMsg = userDetails && !userDetails.isLoading && userDetails.errMsg;
-  const hasDisplayedUsername = userDetails && !userDetails.isLoading && displayedUsername;
+  const hasErrMsg = userDetail && !userDetail.isLoading && userDetail.errMsg;
+  const hasDisplayedUsername = userDetail && !userDetail.isLoading && displayedUsername;
 
   if (hasErrMsg) {
     return (
       <Typography noWrap component="div" variant="body2" color="error">
         <ErrorIcon />
-        <span>{userDetails.errMsg}</span>
+        <span>{userDetail.errMsg}</span>
         <Button
           variant="contained"
           onClick={() => {
@@ -567,7 +567,7 @@ export const UserInfoLabel: FC<PropTypes> = ({ userId }) => {
       </Typography>
     );
   }
-  if (hasDisplayedUsername && userDetails.item) {
+  if (hasDisplayedUsername && userDetail.item) {
     return (
       <>
         <span onMouseEnter={handlePopoverOpen} onMouseLeave={handlePopoverClose}>
@@ -588,8 +588,8 @@ export const UserInfoLabel: FC<PropTypes> = ({ userId }) => {
           disableRestoreFocus
         >
           <div>
-            <div>Email: {userDetails.item.email}</div>
-            <div>Phone Number: {userDetails.item.phoneNumber}</div>
+            <div>Email: {userDetail.item.email}</div>
+            <div>Phone Number: {userDetail.item.phoneNumber}</div>
           </div>
         </Popover>
       </>
