@@ -12,6 +12,7 @@
   - [actions.ts](#actionsts)
   - [services.ts](#servicests)
   - [epic.ts](#epicts)
+  - [epic.spec.ts](#epic.spec.ts)
   - [reducer.ts](#reducerts)
   - [reducer.spec.ts](#reducerspects)
   - [selector.ts](#selectorts)
@@ -202,6 +203,84 @@ export const fetchUserDetailsEpic: Epic = (action$: ActionsObservable<Actions>, 
 };
 
 export const rootEpic = combineEpics(fetchUserDetailsEpic);
+```
+
+### epic.spec.ts
+
+```epic.spec.ts
+import { Action } from 'redux';
+import { Subject, of, throwError } from 'rxjs';
+import { ActionsObservable, StateObservable } from 'redux-observable';
+import { mocked } from 'ts-jest/utils';
+import * as services from 'app/services';
+import { fetchUserDetailsEpic } from 'app/epic';
+import { fetchUserDetailAsync } from 'app/actions';
+
+jest.mock('@services');
+
+describe('epic 테스트', () => {
+  describe('fetchUserDetailsEpic 테스트', () => {
+    const mockedUserService = mocked(services.userService, true);
+
+    test('유저 상세 데이터 조회 성공', (done) => {
+      // <!-- mock
+      mockedUserService.getUser.mockReturnValueOnce(
+        of({
+          userId: 105,
+          serviceAccountId: 'c0aa8b35-4030-44ed-910e-e3a57ebdaf2d',
+          firstName: 'admin',
+          lastName: null,
+          email: 'admin@ecubelabs.com',
+          phoneNumber: '+821030074421',
+          countryCode: 'us',
+          timezone: 'America/Los_Angeles',
+          language: 'en',
+          unitVolume: 'L',
+          registeredAt: '2019-08-30T06:40:44.000Z',
+        }),
+      );
+      // -->
+      const action$ = ActionsObservable.of(fetchUserDetailAsync.request(105));
+      const state$ = new StateObservable(new Subject(), {});
+      const dependencies = { userService: mockedUserService };
+      const actualActions: Action[] = [];
+
+      fetchUserDetailsEpic(action$, state$, dependencies).subscribe({
+        next: (action: Action) => actualActions.push(action),
+        complete: () => {
+          expect(actualActions).toEqual([
+            fetchUserDetailAsync.success({
+              userId: 105,
+              firstName: 'name',
+              lastName: null,
+              email: 'name@email.com',
+              phoneNumber: '+821012345678',
+            }),
+          ]);
+          done();
+        },
+      });
+    });
+
+    test('유저 상세 데이터 조회 실패', (done) => {
+      // <!-- mock
+      mockedUserService.getUser = jest.fn().mockImplementation(() => throwError(new Error('getUser Error')));
+      // -->
+      const action$ = ActionsObservable.of(fetchUserDetailAsync.request(105));
+      const state$ = new StateObservable(new Subject(), {});
+      const dependencies = { userService: mockedUserService };
+      const actualActions: Action[] = [];
+
+      fetchUserDetailsEpic(action$, state$, dependencies).subscribe({
+        next: (action) => actualActions.push(action),
+        complete: () => {
+          expect(actualActions).toEqual([fetchUserDetailAsync.failure({ userId: 105, errMsg: 'getUser Error' })]);
+          done();
+        },
+      });
+    });
+  });
+});
 ```
 
 ### reducer.ts
