@@ -179,7 +179,10 @@ import { map, filter, catchError, mergeMap, finalize } from 'rxjs/operators';
 import { Actions, fetchUserDetailAsync } from 'app/actions';
 
 export const fetchUserDetailsEpic: Epic = (action$: ActionsObservable<Actions>, _, { userService }) => {
+
+  // 현재 API 요청중인 userId를 임시 저장하여, 같은 유저의 정보를 동시에 요청하는 일이 없도록 한다.
   const inProgress: Record<number, boolean> = {};
+
   return action$.pipe(
     filter(isActionOf(fetchUserDetailAsync.request)),
     mergeMap(({ payload: userId }) => {
