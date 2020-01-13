@@ -148,7 +148,9 @@ export const fetchUserDetailAsync = createAsyncAction(
     errMsg: string;
   }
 >();
-export type Actions = ActionType<typeof authLogout> | ActionType<typeof fetchUserDetailAsync>;
+export type Actions =
+  | ActionType<typeof authLogout>
+  | ActionType<typeof fetchUserDetailAsync>;
 ```
 
 ### services.ts
