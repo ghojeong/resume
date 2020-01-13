@@ -15,7 +15,7 @@
   - [epic.spec.ts](#epicspects)
   - [reducer.ts](#reducerts)
   - [reducer.spec.ts](#reducerspects)
-  - [selector.ts](#selectorts)
+  - [selectors.ts](#selectorsts)
   - [App.tsx](#apptsx)
   - [UserPopover.tsx](#userpopovertsx)
 
@@ -448,9 +448,9 @@ describe('userDetailReducer 테스트', () => {
 });
 ```
 
-### selector.ts
+### selectors.ts
 
-```selector.ts
+```selectors.ts
 import mapValues from 'lodash/mapValues';
 import { plainToClass } from 'class-transformer';
 import { UserModel } from 'app/models';
@@ -511,7 +511,7 @@ import RefreshIcon from '@material-ui/icons/Refresh';
 import Typography from '@material-ui/core/Typography';
 import { UserModel } from 'app/models';
 import { fetchUserDetailAsync } from 'app/actions';
-import { userDetailSelectorByIdFactory } from 'app/selector';
+import { userDetailSelectorByIdFactory } from 'app/selectors';
 
 interface PropTypes {
   userId: UserModel['userId'];
