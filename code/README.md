@@ -4,19 +4,17 @@
 
 ## 요약
 
-- [자신있는 코드](#%ec%9e%90%ec%8b%a0%ec%9e%88%eb%8a%94-%ec%bd%94%eb%93%9c)
-  - [요약](#%ec%9a%94%ec%95%bd)
-  - [타입스크립트 리액트 컴포넌트](#%ed%83%80%ec%9e%85%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8-%eb%a6%ac%ec%95%a1%ed%8a%b8-%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8)
-    - [ListFilter.tsx](#listfiltertsx)
-  - [Global State 설계](#global-state-%ec%84%a4%ea%b3%84)
-    - [model.ts](#modelts)
-    - [actions.ts](#actionsts)
-    - [services.ts](#servicests)
-    - [epic.ts](#epicts)
-    - [reducer.ts](#reducerts)
-    - [selector.ts](#selectorts)
-    - [App.tsx](#apptsx)
-    - [UserInfoLabel.tsx](#userinfolabeltsx)
+- [타입스크립트 리액트 컴포넌트](#%ed%83%80%ec%9e%85%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8-%eb%a6%ac%ec%95%a1%ed%8a%b8-%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8)
+  - [ListFilter.tsx](#listfiltertsx)
+- [Global State 설계](#global-state-%ec%84%a4%ea%b3%84)
+  - [model.ts](#modelts)
+  - [actions.ts](#actionsts)
+  - [services.ts](#servicests)
+  - [epic.ts](#epicts)
+  - [reducer.ts](#reducerts)
+  - [selector.ts](#selectorts)
+  - [App.tsx](#apptsx)
+  - [UserInfoLabel.tsx](#userinfolabeltsx)
 
 ## 타입스크립트 리액트 컴포넌트
 
