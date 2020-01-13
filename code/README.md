@@ -196,7 +196,9 @@ const mapApiResponse: <
 
 export const userService = {
   getUser(userId: UserModel['userId']) {
-    return httpClient.get<ApiResponse<UserModel>>(`/users/${userId}`).pipe(mapApiResponse());
+    return httpClient
+      .get<ApiResponse<UserModel>>(`/users/${userId}`)
+      .pipe(mapApiResponse());
   },
 };
 ```
