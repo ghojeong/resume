@@ -162,8 +162,40 @@ export type Actions =
 ### services.ts
 
 ```services.ts
-import { httpClient, mapApiResponse, ApiResponse } from 'app/libs/http-client';
-import { UserModel } from '@models';
+import { map } from 'rxjs/operators';
+import Axios from 'axios-observable';
+import { AxiosResponse } from 'axios';
+import { OperatorFunction } from 'rxjs';
+import { UserModel } from 'app/models';
+import { API_ENDPOINT } from 'app/configs';
+
+export const storageService = {
+  getItem(key: string) {
+    return localStorage.getItem(key);
+  },
+  setItem(key: string, value: string) {
+    return localStorage.setItem(key, value);
+  },
+  clear() {
+    return localStorage.clear();
+  },
+};
+
+const httpClient = Axios.create({
+  baseURL: API_ENDPOINT,
+});
+httpClient.interceptors.request.use((config) => {
+  const token = storageService.getItem('token');
+  config.headers.Authorization = token ? `Bearer ${token}` : '';
+  return config;
+});
+
+type ApiResponse<T> = { data: T };
+type ProxyAxiosResponse<T> = T extends AxiosResponse<{ data: infer D }> ? D : never;
+const mapApiResponse: <T extends AxiosResponse<ApiResponse<R>>, R = ProxyAxiosResponse<T>>() => OperatorFunction<
+  T,
+  R
+> = () => map(({ data: { data } }) => data);
 
 export const userService = {
   getUser(userId: UserModel['userId']) {
