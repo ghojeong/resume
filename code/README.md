@@ -292,7 +292,12 @@ describe('epic 테스트', () => {
       fetchUserDetailEpic(action$, state$, dependencies).subscribe({
         next: (action) => actualActions.push(action),
         complete: () => {
-          expect(actualActions).toEqual([fetchUserDetailAsync.failure({ userId: 105, errMsg: 'getUser Error' })]);
+          expect(actualActions).toEqual([
+            fetchUserDetailAsync.failure({
+              userId: 105,
+              errMsg: 'getUser Error',
+            }),
+          ]);
           done();
         },
       });
@@ -492,12 +497,14 @@ interface PropTypes {
 }
 export const CombineProvider: FC<PropTypes> = ({ contexts, children }) => (
   <>
-    {contexts
-      .reverse()
-      .reduce(
-        (prev, { context, props = {} }) => React.createElement(context as any, { children: prev, ...props }),
-        children,
-      )}
+    {contexts.reverse().reduce(
+      (prev, { context, props = {} }) =>
+        React.createElement(context as any, {
+          children: prev,
+          ...props,
+        }),
+      children,
+    )}
   </>
 );
 
