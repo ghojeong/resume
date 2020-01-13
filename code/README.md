@@ -207,11 +207,14 @@ import { map, filter, catchError, mergeMap, finalize } from 'rxjs/operators';
 import { ActionsObservable, combineEpics, Epic } from 'redux-observable';
 import { isActionOf } from 'typesafe-actions';
 import { Actions, fetchUserDetailAsync } from 'app/actions';
+import * as services from 'app/services';
+
+type RootDependency = typeof services;
 
 export const fetchUserDetailEpic: Epic = (
   action$: ActionsObservable<Actions>,
   _,
-  { userService },
+  { userService }: RootDependency,
 ) => {
   // NOTE: API 요청 중인 userId를 inProgress에 임시 저장하여, 같은 유저의 정보를 동시에 요청하는 일이 없도록 한다.
   const inProgress: Record<number, boolean> = {};
