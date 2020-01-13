@@ -136,7 +136,6 @@ import { createAction, createAsyncAction, ActionType } from 'typesafe-actions';
 import { UserModel } from 'app/models';
 
 export const authLogout = createAction('AUTH_LOGOUT')();
-
 export const fetchUserDetailAsync = createAsyncAction(
   'FETCH_USER_DETAIL_REQUEST',
   'FETCH_USER_DETAIL_FULFILLED',
@@ -149,7 +148,6 @@ export const fetchUserDetailAsync = createAsyncAction(
     errMsg: string;
   }
 >();
-
 export type Actions = ActionType<typeof authLogout> | ActionType<typeof fetchUserDetailAsync>;
 ```
 
