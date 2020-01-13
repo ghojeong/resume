@@ -7,7 +7,7 @@
 <!-- - [타입스크립트 리액트 컴포넌트](#%ed%83%80%ec%9e%85%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8-%eb%a6%ac%ec%95%a1%ed%8a%b8-%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8)
   - [ListFilter.tsx](#listfiltertsx) -->
 
-- [Global State 설계](#global-state-%ec%84%a4%ea%b3%84)
+- redux-observable 을 통한 비동기 처리
   - [model.ts](#modelts)
   - [actions.ts](#actionsts)
   - [services.ts](#servicests)
@@ -112,7 +112,9 @@ export const ListFilter = <T extends FilterMapType>({
 };
 ``` -->
 
-## Global State 설계
+## redux-observable 을 통한 비동기 처리
+
+redux-observable을 통해 유저 상세 정보 (UserDetail)를 API 를 통해 호출하고, 스토어에서 관리하는 비동기 작업을 수행하는 코드입니다.
 
 ### model.ts
 
@@ -179,10 +181,8 @@ import { map, filter, catchError, mergeMap, finalize } from 'rxjs/operators';
 import { Actions, fetchUserDetailAsync } from 'app/actions';
 
 export const fetchUserDetailsEpic: Epic = (action$: ActionsObservable<Actions>, _, { userService }) => {
-
-  // 현재 API 요청중인 userId를 임시 저장하여, 같은 유저의 정보를 동시에 요청하는 일이 없도록 한다.
+  // NOTE: API 요청 중인 userId를 임시 저장하여, 같은 유저의 정보를 동시에 요청하는 일이 없도록 한다.
   const inProgress: Record<number, boolean> = {};
-
   return action$.pipe(
     filter(isActionOf(fetchUserDetailAsync.request)),
     mergeMap(({ payload: userId }) => {
