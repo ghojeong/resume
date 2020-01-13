@@ -296,7 +296,9 @@ describe('epic 테스트', () => {
 
     test('유저 상세 정보 조회 실패', (done) => {
       // <!-- mock
-      mockedUserService.getUser = jest.fn().mockImplementation(() => throwError(new Error('getUser Error')));
+      mockedUserService.getUser = jest.fn().mockImplementation(
+        () => throwError(new Error('getUser Error'))
+      );
       // -->
       const action$ = ActionsObservable.of(fetchUserDetailAsync.request(105));
       const state$ = new StateObservable(new Subject(), {});
@@ -337,7 +339,10 @@ export type UserDetailState = Record<
   }
 >;
 export const userDetailInitialState: UserDetailState = {};
-export const userDetailReducer = (state = userDetailInitialState, action: Actions): UserDetailState => {
+export const userDetailReducer = (
+  state = userDetailInitialState,
+  action: Actions,
+): UserDetailState => {
   switch (action.type) {
     case getType(authLogout):
       return userDetailInitialState;
