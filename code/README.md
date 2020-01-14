@@ -126,8 +126,8 @@ UserLabel 스마트 컴포넌트를 만들었습니다.
 ```models.ts
 export class UserModel {
   userIdx!: number;
-  firstName!: string | null;
-  lastName!: string | null;
+  firstName!: string;
+  lastName!: string;
   email!: string;
   phoneNumber!: string;
 }
@@ -274,8 +274,8 @@ describe('epic 테스트', () => {
       mockedUserService.getUser.mockReturnValueOnce(
         of({
           userIdx: 105,
-          firstName: 'name',
-          lastName: null,
+          firstName: 'first-name',
+          lastName: 'last-name',
           email: 'name@email.com',
           phoneNumber: '+821012345678',
         }),
@@ -292,8 +292,8 @@ describe('epic 테스트', () => {
           expect(actualActions).toEqual([
             fetchUserDetailAsync.success({
               userIdx: 105,
-              firstName: 'name',
-              lastName: null,
+              firstName: 'first-name',
+              lastName: 'last-name',
               email: 'name@email.com',
               phoneNumber: '+821012345678',
             }),
@@ -408,8 +408,8 @@ describe('userDetailReducer 테스트', () => {
         errMsg: null,
         item: {
           userIdx: 105,
-          firstName: 'name',
-          lastName: null,
+          firstName: 'first-name',
+          lastName: 'last-name',
           email: 'name@email.com',
           phoneNumber: '+821012345678',
         },
@@ -434,8 +434,8 @@ describe('userDetailReducer 테스트', () => {
     const userDetailState: UserDetailState = userDetailInitialState;
     const action = fetchUserDetailAsync.success({
       userIdx: 105,
-      firstName: 'name',
-      lastName: null,
+      firstName: 'first-name',
+      lastName: 'last-name',
       email: 'name@email.com',
       phoneNumber: '+821012345678',
     });
@@ -445,8 +445,8 @@ describe('userDetailReducer 테스트', () => {
         errMsg: null,
         item: {
           userIdx: 105,
-          firstName: 'name',
-          lastName: null,
+          firstName: 'first-name',
+          lastName: 'last-name',
           email: 'name@email.com',
           phoneNumber: '+821012345678',
         },
@@ -542,13 +542,7 @@ export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
   const userDetail = useSelector(userSelector);
   const displayedUsername = useMemo(() => {
     if (userDetail?.item) {
-      if (userDetail.item.firstName && userDetail.item.lastName) {
-        return `${userDetail.item.firstName} ${userDetail.item.lastName}`;
-      }
-      if (userDetail.item.firstName) {
-        return userDetail.item.firstName;
-      }
-      return <div>No User</div>;
+      return `${userDetail.item.firstName} ${userDetail.item.lastName}`;
     }
     return null;
   }, [userDetail]);
