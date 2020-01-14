@@ -346,7 +346,7 @@ export type UserDetailState = Record<
 >;
 export const userDetailInitialState: UserDetailState = {};
 export const userDetailReducer = (
-  state = userDetailInitialState,
+  userDetailState = userDetailInitialState,
   action: Actions,
 ): UserDetailState => {
   switch (action.type) {
@@ -354,18 +354,18 @@ export const userDetailReducer = (
       return userDetailInitialState;
     case getType(fetchUserDetailAsync.request):
       return {
-        ...state,
+        ...userDetailState,
         [action.payload]: {
-          ...(state[action.payload] || {}),
+          ...(userDetailState[action.payload] || {}),
           isLoading: true,
           errMsg: null,
         },
       };
     case getType(fetchUserDetailAsync.success):
       return {
-        ...state,
+        ...userDetailState,
         [action.payload.userIdx]: {
-          ...(state[action.payload.userIdx] || {}),
+          ...(userDetailState[action.payload.userIdx] || {}),
           isLoading: false,
           errMsg: null,
           item: action.payload,
@@ -373,15 +373,15 @@ export const userDetailReducer = (
       };
     case getType(fetchUserDetailAsync.failure):
       return {
-        ...state,
+        ...userDetailState,
         [action.payload.userIdx]: {
-          ...(state[action.payload.userIdx] || {}),
+          ...(userDetailState[action.payload.userIdx] || {}),
           isLoading: false,
           errMsg: action.payload.errMsg,
         },
       };
     default:
-      return state;
+      return userDetailState;
   }
 };
 
