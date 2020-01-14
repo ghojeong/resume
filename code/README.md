@@ -469,7 +469,6 @@ describe('userDetailReducer 테스트', () => {
 ### selectors.ts
 
 ```selectors.ts
-import mapValues from 'lodash/mapValues';
 import { UserModel } from 'app/models';
 import { RootState } from 'app/reducers';
 
