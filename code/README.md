@@ -387,8 +387,8 @@ export const userDetailReducer = (
 export interface RootState {
   userDetail: UserDetailState;
 }
-export const createRootReducer = () =>
-  combineReducers<RootState>({
+export const createRootReducer =
+  () => combineReducers<RootState>({
     userDetail: userDetailReducer,
   });
 ```
@@ -487,10 +487,10 @@ const userDetailSelector = (state: RootState): UserDetailState => ({
   },
 });
 export const userDetailSelectorByIdxFactory =
-(userIdx: UserModel['userIdx']) => (state: RootState) => {
-  const userDetail = userDetailSelector(state);
-  return userDetail[userIdx] || null;
-};
+  (userIdx: UserModel['userIdx']) => (state: RootState) => {
+    const userDetail = userDetailSelector(state);
+    return userDetail[userIdx] || null;
+  };
 ```
 
 ### App.tsx
