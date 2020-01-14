@@ -575,7 +575,7 @@ export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
           onMouseLeave={handlePopoverClose}
         >
           {name}
-        </spanonMouseEnter={handlePopoverOpen}>
+        </span>
         <Popover
           open={Boolean(anchorEl)}
           anchorEl={anchorEl}
