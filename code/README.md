@@ -281,7 +281,7 @@ describe('epic 테스트', () => {
         }),
       );
       // -->
-      const action$ = ActionsObservable.of(fetchUserDetailAsync.request(105));
+      const action$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
       const state$ = new StateObservable(new Subject(), {});
       const dependencies = { userService: mockedUserService };
       const actualActions: Action[] = [];
@@ -308,7 +308,7 @@ describe('epic 테스트', () => {
         () => throwError(new Error('getUser Error'))
       );
       // -->
-      const action$ = ActionsObservable.of(fetchUserDetailAsync.request(105));
+      const action$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
       const state$ = new StateObservable(new Subject(), {});
       const dependencies = { userService: mockedUserService };
       const actualActions: Action[] = [];
@@ -419,7 +419,7 @@ describe('userDetailReducer 테스트', () => {
 
   test('fetchUserDetailAsync 를 request 하면 isLoading 이 true가 되어야 한다.', () => {
     const userDetailState: UserDetailState = userDetailInitialState;
-    const action = fetchUserDetailAsync.request(105);
+    const action = fetchUserDetailAsync.request({ userIdx: 105 });
     expect(userDetailReducer(userDetailState, action)).toEqual({
       105: {
         isLoading: true,
