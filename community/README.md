@@ -9,14 +9,13 @@
 - [공감 세미나 주니어](#%EA%B3%B5%EA%B0%90-%EC%84%B8%EB%AF%B8%EB%82%98-%EC%A3%BC%EB%8B%88%EC%96%B4)
   - 기간: 2019.03 - 2019.06
 
-<p align="center"><img src="./img/java_cafe.jpeg" width="60%" /></p>
-
 ## 현재 회원으로 활동 중인 커뮤니티
 
 - [자바 카페](http://tech.javacafe.io/about/)
 - [소프트웨어 캠퍼스](https://www.facebook.com/softwarecamp/)
 
 <p align="center"><img src="./img/softwarecampus.png" width="60%" /></p>
+<p align="center"><img src="./img/java_cafe.jpeg" width="60%" /></p>
 
 ## 알고리즘 스터디
 
