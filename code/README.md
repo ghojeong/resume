@@ -115,7 +115,7 @@ export const ListFilter = <T extends FilterMapType>({
 
 ## redux-observable 을 통한 비동기 처리
 
-유저 상세 정보 (UserDetail) 를 API를 통해 받아온 후 스토어에서 관리하는<br>
+유저 상세 정보(UserDetail)를 API로 호출하여 받아온 후 스토어에서 관리하는<br>
 비동기 작업을 redux-observable을 통해 수행하는 코드입니다.
 
 이를 이용해 마우스를 호버하면 유저 상세 정보의 Popover를 보여주는<br>
