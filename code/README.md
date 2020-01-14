@@ -545,7 +545,7 @@ export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
   };
 
   useEffect(() => {
-    dispatch(fetchUserDetailAsync.request(userIdx));
+    dispatch(fetchUserDetailAsync.request({ userIdx }));
   }, [dispatch, userIdx]);
 
   const hasErrMsg = userDetail && !userDetail.isLoading && userDetail.errMsg;
@@ -558,7 +558,7 @@ export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
         <Button
           variant="contained"
           onClick={() => {
-            dispatch(fetchUserDetailAsync.request(userIdx));
+            dispatch(fetchUserDetailAsync.request({ userIdx }));
           }}
         >
           Refresh
