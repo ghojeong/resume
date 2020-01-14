@@ -8,14 +8,14 @@
   - [ListFilter.tsx](#listfiltertsx) -->
 
 - redux-observable 을 통한 비동기 처리
-  - [models.ts](#modelsts)
-  - [actions.ts](#actionsts)
-  - [services.ts](#servicests)
+  - [model.ts](#modelts)
+  - [action.ts](#actionts)
+  - [service.ts](#servicets)
   - [epic.ts](#epicts)
   - [epic.spec.ts](#epicspects)
   - [reducer.ts](#reducerts)
   - [reducer.spec.ts](#reducerspects)
-  - [selectors.ts](#selectorsts)
+  - [selector.ts](#selectorts)
   - [App.tsx](#apptsx)
   - [UserLabel.tsx](#userlabeltsx)
 
@@ -121,9 +121,9 @@ export const ListFilter = <T extends FilterMapType>({
 이를 이용해 마우스 호버 시 유저 상세 정보의 Popover를 띄워주는<br>
 UserLabel 스마트 컴포넌트를 만들었습니다.
 
-### models.ts
+### model.ts
 
-```models.ts
+```model.ts
 export class UserModel {
   userIdx!: number;
   name!: string;
@@ -132,11 +132,11 @@ export class UserModel {
 }
 ```
 
-### actions.ts
+### action.ts
 
-```actions.ts
-import { createAction, createAsyncAction, ActionType } from 'typesafe-actions';
-import { UserModel } from 'app/models';
+```action.ts
+import { createAction, createAsyncAction, ActionType } from 'typesafe-action';
+import { UserModel } from 'app/model';
 
 export const authLogout = createAction('AUTH_LOGOUT')();
 export const fetchUserDetailAsync = createAsyncAction(
@@ -158,14 +158,14 @@ export type Actions =
   | ActionType<typeof fetchUserDetailAsync>;
 ```
 
-### services.ts
+### service.ts
 
-```services.ts
+```service.ts
 import { OperatorFunction } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AxiosResponse } from 'axios';
 import Axios from 'axios-observable';
-import { UserModel } from 'app/models';
+import { UserModel } from 'app/model';
 import { API_ENDPOINT } from 'app/configs';
 
 export const storageService = {
@@ -214,14 +214,14 @@ export const userService = {
 import { of, empty } from 'rxjs';
 import { map, filter, catchError, mergeMap, finalize } from 'rxjs/operators';
 import { ActionsObservable, combineEpics, Epic } from 'redux-observable';
-import { isActionOf } from 'typesafe-actions';
-import { Actions, fetchUserDetailAsync } from 'app/actions';
-import * as services from 'app/services';
+import { isActionOf } from 'typesafe-action';
+import { Actions, fetchUserDetailAsync } from 'app/action';
+import * as service from 'app/service';
 
 export const fetchUserDetailEpic: Epic = (
   action$: ActionsObservable<Actions>,
   _,
-  { userService }: typeof services,
+  { userService }: typeof service,
 ) => {
   // NOTE: API 요청 중인 userIdx를 inProgress에 임시 저장하여, 같은 유저의 정보를 동시에 요청하는 일이 없도록 한다.
   const inProgress: Record<number, boolean> = {};
@@ -260,15 +260,15 @@ import { Subject, of, throwError } from 'rxjs';
 import { Action } from 'redux';
 import { ActionsObservable, StateObservable } from 'redux-observable';
 import { mocked } from 'ts-jest/utils';
-import { fetchUserDetailAsync } from 'app/actions';
-import * as services from 'app/services';
+import { fetchUserDetailAsync } from 'app/action';
+import * as service from 'app/service';
 import { fetchUserDetailEpic } from 'app/epic';
 
-jest.mock('app/services');
+jest.mock('app/service');
 
 describe('epic 테스트', () => {
   describe('fetchUserDetailEpic 테스트', () => {
-    const mockedUserService = mocked(services.userService, true);
+    const mockedUserService = mocked(service.userService, true);
 
     test('유저 상세 정보 조회 성공', (done) => {
       // <!-- mock
@@ -334,9 +334,9 @@ describe('epic 테스트', () => {
 
 ```reducer.ts
 import { combineReducers } from 'redux';
-import { getType } from 'typesafe-actions';
-import { UserModel } from 'app/models';
-import { Actions, authLogout, fetchUserDetailAsync } from 'app/actions';
+import { getType } from 'typesafe-action';
+import { UserModel } from 'app/model';
+import { Actions, authLogout, fetchUserDetailAsync } from 'app/action';
 
 export type UserDetailState = Record<
   UserModel['userIdx'],
@@ -396,7 +396,7 @@ export const rootReducer = combineReducers<RootState>({ userDetail: userDetailRe
 ### reducer.spec.ts
 
 ```reducer.spec.ts
-import { authLogout, fetchUserDetailAsync } from 'app/actions';
+import { authLogout, fetchUserDetailAsync } from 'app/action';
 import { UserDetailState, userDetailReducer, userDetailInitialState } from 'app/reducer';
 
 describe('userDetailReducer 테스트', () => {
@@ -466,10 +466,10 @@ describe('userDetailReducer 테스트', () => {
 });
 ```
 
-### selectors.ts
+### selector.ts
 
-```selectors.ts
-import { UserModel } from 'app/models';
+```selector.ts
+import { UserModel } from 'app/model';
 import { RootState } from 'app/reducers';
 
 export const userDetailSelectorByIdxFactory =
@@ -488,14 +488,14 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { createEpicMiddleware } from 'redux-observable';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { userService } from 'app/services';
+import { userService } from 'app/service';
 import { rootEpic } from 'app/epic';
 import { rootReducer } from 'app/reducers';
 import { AppRouter } from 'app/routes';
 
-const services = { userService };
+const service = { userService };
 const epicMiddleware = createEpicMiddleware({
-  dependencies: services,
+  dependencies: service,
 });
 const store = createStore(
   rootReducer,
@@ -522,9 +522,9 @@ import Typography from '@material-ui/core/Typography';
 import Skeleton from '@material-ui/lab/Skeleton';
 import ErrorIcon from '@material-ui/icons/Error';
 import RefreshIcon from '@material-ui/icons/Refresh';
-import { UserModel } from 'app/models';
-import { fetchUserDetailAsync } from 'app/actions';
-import { userDetailSelectorByIdxFactory } from 'app/selectors';
+import { UserModel } from 'app/model';
+import { fetchUserDetailAsync } from 'app/action';
+import { userDetailSelectorByIdxFactory } from 'app/selector';
 
 interface PropTypes {
   userIdx: UserModel['userIdx'];
