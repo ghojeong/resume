@@ -531,7 +531,7 @@ interface PropTypes {
 }
 export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
   const dispatch = useDispatch();
-  const [anchorEl, setAnchorEl] = useState<HTMLSpanElement | null>(null);
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   // NOTE: userIdx가 바뀌지 않으면 셀렉터를 다시 만들지 않는다.
   const userSelector = useMemo(() => userDetailSelectorByIdxFactory(userIdx), [userIdx]);
   const userDetail = useSelector(userSelector);
