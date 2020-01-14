@@ -276,7 +276,7 @@ describe('epic 테스트', () => {
         of({
           userIdx: 105,
           name: 'ghojeong',
-          email: 'name@email.com',
+          email: 'gho@email.com',
           phoneNumber: '+821012345678',
         }),
       );
@@ -293,7 +293,7 @@ describe('epic 테스트', () => {
             fetchUserDetailAsync.success({
               userIdx: 105,
               name: 'ghojeong',
-              email: 'name@email.com',
+              email: 'gho@email.com',
               phoneNumber: '+821012345678',
             }),
           ]);
@@ -408,7 +408,7 @@ describe('userDetailReducer 테스트', () => {
         item: {
           userIdx: 105,
           name: 'ghojeong',
-          email: 'name@email.com',
+          email: 'gho@email.com',
           phoneNumber: '+821012345678',
         },
       },
@@ -433,7 +433,7 @@ describe('userDetailReducer 테스트', () => {
     const action = fetchUserDetailAsync.success({
       userIdx: 105,
       name: 'ghojeong',
-      email: 'name@email.com',
+      email: 'gho@email.com',
       phoneNumber: '+821012345678',
     });
     expect(userDetailReducer(userDetailState, action)).toEqual({
@@ -443,7 +443,7 @@ describe('userDetailReducer 테스트', () => {
         item: {
           userIdx: 105,
           name: 'ghojeong',
-          email: 'name@email.com',
+          email: 'gho@email.com',
           phoneNumber: '+821012345678',
         },
       },
