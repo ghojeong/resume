@@ -219,13 +219,13 @@ import { Action, fetchUserDetailAsync } from 'app/action';
 import * as service from 'app/service';
 
 export const fetchUserDetailEpic: Epic = (
-  action$: ActionsObservable<Action>,
+  actions$: ActionsObservable<Action>,
   _,
   { userService }: typeof service,
 ) => {
   // NOTE: API 요청 중인 userIdx를 inProgress에 임시 저장하여, 같은 유저의 정보를 동시에 요청하는 일이 없도록 한다.
   const inProgress: Record<number, boolean> = {};
-  return action$.pipe(
+  return actions$.pipe(
     filter(isActionOf(fetchUserDetailAsync.request)),
     mergeMap(({ payload: { userIdx } }) => {
       if (inProgress[userIdx]) {
@@ -281,15 +281,15 @@ describe('epic 테스트', () => {
         }),
       );
       // -->
-      const action$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
+      const actions$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
       const state$ = new StateObservable(new Subject(), {});
       const dependencies = { userService: mockedUserService };
-      const actualAction: Action[] = [];
+      const actualActions: Action[] = [];
 
-      fetchUserDetailEpic(action$, state$, dependencies).subscribe({
-        next: (action: Action) => actualAction.push(action),
+      fetchUserDetailEpic(actions$, state$, dependencies).subscribe({
+        next: (action: Action) => actualActions.push(action),
         complete: () => {
-          expect(actualAction).toEqual([
+          expect(actualActions).toEqual([
             fetchUserDetailAsync.success({
               userIdx: 105,
               name: 'ghojeong',
@@ -308,15 +308,15 @@ describe('epic 테스트', () => {
         () => throwError(new Error('getUser Error'))
       );
       // -->
-      const action$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
+      const actions$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
       const state$ = new StateObservable(new Subject(), {});
       const dependencies = { userService: mockedUserService };
-      const actualAction: Action[] = [];
+      const actualActions: Action[] = [];
 
-      fetchUserDetailEpic(action$, state$, dependencies).subscribe({
-        next: (action) => actualAction.push(action),
+      fetchUserDetailEpic(actions$, state$, dependencies).subscribe({
+        next: (action) => actualActions.push(action),
         complete: () => {
-          expect(actualAction).toEqual([
+          expect(actualActions).toEqual([
             fetchUserDetailAsync.failure({
               userIdx: 105,
               errMsg: 'getUser Error',
