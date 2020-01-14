@@ -144,7 +144,9 @@ export const fetchUserDetailAsync = createAsyncAction(
   'FETCH_USER_DETAIL_FULFILLED',
   'FETCH_USER_DETAIL_REJECTED',
 )<
-  UserModel['userIdx'],
+  {
+    userIdx: UserModel['userIdx'];
+  },
   UserModel,
   {
     userIdx: UserModel['userIdx'];
@@ -355,8 +357,8 @@ export const userDetailReducer = (
     case getType(fetchUserDetailAsync.request):
       return {
         ...userDetailState,
-        [action.payload]: {
-          ...(userDetailState[action.payload] || {}),
+        [action.payload.userIdx]: {
+          ...(userDetailState[action.payload.userIdx] || {}),
           isLoading: true,
           errMsg: null,
         },
