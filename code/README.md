@@ -166,7 +166,7 @@ import { map } from 'rxjs/operators';
 import { AxiosResponse } from 'axios';
 import AxiosObservable from 'axios-observable';
 import { UserModel } from 'app/model';
-import { API_ENDPOINT } from 'app/configs';
+import { API_ENDPOINT } from 'app/config';
 
 export const storageService = {
   getItem(key: string) {
