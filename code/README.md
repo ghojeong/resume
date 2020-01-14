@@ -213,13 +213,13 @@ export const userService = {
 ```epic.ts
 import { of, empty } from 'rxjs';
 import { map, filter, catchError, mergeMap, finalize } from 'rxjs/operators';
-import { ActionObservable, combineEpics, Epic } from 'redux-observable';
+import { ActionsObservable, combineEpics, Epic } from 'redux-observable';
 import { isActionOf } from 'typesafe-actions';
 import { Action, fetchUserDetailAsync } from 'app/action';
 import * as service from 'app/service';
 
 export const fetchUserDetailEpic: Epic = (
-  action$: ActionObservable<Action>,
+  action$: ActionsObservable<Action>,
   _,
   { userService }: typeof service,
 ) => {
@@ -258,7 +258,7 @@ export const rootEpic = combineEpics(fetchUserDetailEpic);
 ```epic.spec.ts
 import { Subject, of, throwError } from 'rxjs';
 import { Action } from 'redux';
-import { ActionObservable, StateObservable } from 'redux-observable';
+import { ActionsObservable, StateObservable } from 'redux-observable';
 import { mocked } from 'ts-jest/utils';
 import { fetchUserDetailAsync } from 'app/action';
 import * as service from 'app/service';
@@ -281,7 +281,7 @@ describe('epic 테스트', () => {
         }),
       );
       // -->
-      const action$ = ActionObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
+      const action$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
       const state$ = new StateObservable(new Subject(), {});
       const dependencies = { userService: mockedUserService };
       const actualAction: Action[] = [];
@@ -308,7 +308,7 @@ describe('epic 테스트', () => {
         () => throwError(new Error('getUser Error'))
       );
       // -->
-      const action$ = ActionObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
+      const action$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
       const state$ = new StateObservable(new Subject(), {});
       const dependencies = { userService: mockedUserService };
       const actualAction: Action[] = [];
