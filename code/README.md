@@ -141,8 +141,8 @@ import { UserModel } from 'app/model';
 export const authLogout = createAction('AUTH_LOGOUT')();
 export const fetchUserDetailAsync = createAsyncAction(
   'FETCH_USER_DETAIL_REQUEST',
-  'FETCH_USER_DETAIL_FULFILLED',
-  'FETCH_USER_DETAIL_REJECTED',
+  'FETCH_USER_DETAIL_SUCCESS',
+  'FETCH_USER_DETAIL_FAILURE',
 )<
   {
     userIdx: UserModel['userIdx'];
