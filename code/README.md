@@ -343,7 +343,7 @@ export type UserDetailState = Record<
   {
     isLoading: boolean;
     errMsg: string | null;
-    item?: UserModel; // NOTE: 데이터를 한번도 받아오지 않았다면 비어있을수 있다.
+    item?: UserModel; // NOTE: 데이터를 한 번도 받아오지 않았다면 비어있을 수 있다.
   }
 >;
 export const userDetailInitialState: UserDetailState = {};
@@ -428,7 +428,7 @@ describe('userDetailReducer 테스트', () => {
     });
   });
 
-  test('fetchUserDetailAsync가 성공하면 state에 받아온 userDetail이 추가되어야 한다.', () => {
+  test('fetchUserDetailAsync가 성공하면 state에 받아온 userDetail이 추가 되어야 한다.', () => {
     const userDetailState: UserDetailState = userDetailInitialState;
     const action = fetchUserDetailAsync.success({
       userIdx: 105,
