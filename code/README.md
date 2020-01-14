@@ -218,7 +218,7 @@ export const fetchUserDetailsEpic: Epic = (
   _,
   { userService }: typeof services,
 ) => {
-  // NOTE: API 요청 중인 userId를 inProgress에 임시 저장하여, 같은 유저의 정보를 동시에 요청하는 일이 없도록 한다.
+  // NOTE: API 요청 중인 userIdx를 inProgress에 임시 저장하여, 같은 유저의 정보를 동시에 요청하는 일이 없도록 한다.
   const inProgress: Record<number, boolean> = {};
   return action$.pipe(
     filter(isActionOf(fetchUserDetailAsync.request)),
@@ -545,7 +545,7 @@ interface PropTypes {
 export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = useState<HTMLSpanElement | null>(null);
-  // NOTE: userId가 바뀌지 않으면 셀렉터를 다시 만들지 않는다.
+  // NOTE: userIdx가 바뀌지 않으면 셀렉터를 다시 만들지 않는다.
   const userSelector = useMemo(() => userDetailSelectorByIdFactory(userIdx), [userIdx]);
   const userDetail = useSelector(userSelector);
   const displayedUsername = useMemo(() => {
