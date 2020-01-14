@@ -135,7 +135,7 @@ export class UserModel {
 ### action.ts
 
 ```action.ts
-import { createAction, createAsyncAction, ActionType } from 'typesafe-action';
+import { createAction, createAsyncAction, ActionType } from 'typesafe-actions';
 import { UserModel } from 'app/model';
 
 export const authLogout = createAction('AUTH_LOGOUT')();
@@ -214,7 +214,7 @@ export const userService = {
 import { of, empty } from 'rxjs';
 import { map, filter, catchError, mergeMap, finalize } from 'rxjs/operators';
 import { ActionObservable, combineEpics, Epic } from 'redux-observable';
-import { isActionOf } from 'typesafe-action';
+import { isActionOf } from 'typesafe-actions';
 import { Action, fetchUserDetailAsync } from 'app/action';
 import * as service from 'app/service';
 
@@ -334,7 +334,7 @@ describe('epic 테스트', () => {
 
 ```reducer.ts
 import { combineReducers } from 'redux';
-import { getType } from 'typesafe-action';
+import { getType } from 'typesafe-actions';
 import { UserModel } from 'app/model';
 import { Action, authLogout, fetchUserDetailAsync } from 'app/action';
 
