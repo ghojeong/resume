@@ -486,7 +486,7 @@ const userDetailSelector = (state: RootState): UserDetailState => ({
     ),
   },
 });
-export const userDetailSelectorByIdFactory =
+export const userDetailSelectorByIdxFactory =
 (userIdx: UserModel['userIdx']) => (state: RootState) => {
   const userDetail = userDetailSelector(state);
   return userDetail[userIdx] || null;
@@ -538,7 +538,7 @@ import RefreshIcon from '@material-ui/icons/Refresh';
 import Typography from '@material-ui/core/Typography';
 import { UserModel } from 'app/models';
 import { fetchUserDetailAsync } from 'app/actions';
-import { userDetailSelectorByIdFactory } from 'app/selectors';
+import { userDetailSelectorByIdxFactory } from 'app/selectors';
 
 interface PropTypes {
   userIdx: UserModel['userIdx'];
@@ -547,7 +547,7 @@ export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = useState<HTMLSpanElement | null>(null);
   // NOTE: userIdx가 바뀌지 않으면 셀렉터를 다시 만들지 않는다.
-  const userSelector = useMemo(() => userDetailSelectorByIdFactory(userIdx), [userIdx]);
+  const userSelector = useMemo(() => userDetailSelectorByIdxFactory(userIdx), [userIdx]);
   const userDetail = useSelector(userSelector);
   const displayedUsername = useMemo(() => {
     if (userDetail?.item) {
