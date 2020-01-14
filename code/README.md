@@ -270,7 +270,7 @@ describe('epic 테스트', () => {
   describe('fetchUserDetailEpic 테스트', () => {
     const mockedUserService = mocked(service.userService, true);
 
-    test('유저 상세 정보 조회 성공', (done) => {
+    test('유저 상세 정보 조회 성공하면 success 액션이 발생해야 한다.', (done) => {
       // <!-- mock
       mockedUserService.getUser.mockReturnValueOnce(
         of({
@@ -302,7 +302,7 @@ describe('epic 테스트', () => {
       });
     });
 
-    test('유저 상세 정보 조회 실패', (done) => {
+    test('유저 상세 정보 조회 실패하면 failure 액션이 발생해야 한다.', (done) => {
       // <!-- mock
       mockedUserService.getUser = jest.fn().mockImplementation(
         () => throwError(new Error('getUser Error'))
