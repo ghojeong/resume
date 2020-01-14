@@ -7,7 +7,7 @@
 <!-- - [타입스크립트 리액트 컴포넌트](#%ed%83%80%ec%9e%85%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8-%eb%a6%ac%ec%95%a1%ed%8a%b8-%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8)
   - [ListFilter.tsx](#listfiltertsx) -->
 
-- redux-observable 을 통한 비동기 처리
+- redux-observable을 통한 비동기 처리
   - [model.ts](#modelts)
   - [action.ts](#actionts)
   - [service.ts](#servicets)
@@ -113,7 +113,7 @@ export const ListFilter = <T extends FilterMapType>({
 };
 ``` -->
 
-## redux-observable 을 통한 비동기 처리
+## redux-observable을 통한 비동기 처리
 
 유저 상세 정보(UserDetail)를 API로 호출하여 받아온 후 스토어에서 관리하는<br>
 비동기 작업을 redux-observable을 통해 수행하는 코드입니다.
@@ -400,7 +400,7 @@ import { authLogout, fetchUserDetailAsync } from 'app/action';
 import { UserDetailState, userDetailReducer, userDetailInitialState } from 'app/reducer';
 
 describe('userDetailReducer 테스트', () => {
-  test('authLogout 액션이 발행되면 state 가 초기값으로 세팅 되어야 한다.', () => {
+  test('authLogout 액션이 발행되면 state가 초기값으로 세팅 되어야 한다.', () => {
     const userDetailState: UserDetailState = {
       105: {
         isLoading: false,
@@ -417,7 +417,7 @@ describe('userDetailReducer 테스트', () => {
     expect(userDetailReducer(userDetailState, action)).toEqual(userDetailInitialState);
   });
 
-  test('fetchUserDetailAsync 를 request 하면 isLoading 이 true가 되어야 한다.', () => {
+  test('fetchUserDetailAsync를 request 하면 isLoading 이 true가 되어야 한다.', () => {
     const userDetailState: UserDetailState = userDetailInitialState;
     const action = fetchUserDetailAsync.request({ userIdx: 105 });
     expect(userDetailReducer(userDetailState, action)).toEqual({
@@ -450,7 +450,7 @@ describe('userDetailReducer 테스트', () => {
     });
   });
 
-  test('fetchUserDetailAsync 가 실패하면 errMsg 가 세팅 되어야 한다.', () => {
+  test('fetchUserDetailAsync가 실패하면 errMsg가 세팅 되어야 한다.', () => {
     const userDetailState: UserDetailState = userDetailInitialState;
     const action = fetchUserDetailAsync.failure({
       userIdx: 105,
