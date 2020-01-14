@@ -227,7 +227,7 @@ export const fetchUserDetailEpic: Epic = (
   const inProgress: Record<number, boolean> = {};
   return action$.pipe(
     filter(isActionOf(fetchUserDetailAsync.request)),
-    mergeMap(({ payload: userIdx }) => {
+    mergeMap(({ payload: { userIdx } }) => {
       if (inProgress[userIdx]) {
         return empty();
       }
