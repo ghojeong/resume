@@ -540,12 +540,6 @@ export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
   // NOTE: userIdx가 바뀌지 않으면 셀렉터를 다시 만들지 않는다.
   const userSelector = useMemo(() => userDetailSelectorByIdxFactory(userIdx), [userIdx]);
   const userDetail = useSelector(userSelector);
-  const displayedUsername = useMemo(() => {
-    if (userDetail?.item) {
-      return `${userDetail.item.firstName} ${userDetail.item.lastName}`;
-    }
-    return null;
-  }, [userDetail]);
 
   const handlePopoverOpen = (event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -559,7 +553,6 @@ export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
   }, [dispatch, userIdx]);
 
   const hasErrMsg = userDetail && !userDetail.isLoading && userDetail.errMsg;
-  const hasDisplayedUsername = userDetail && !userDetail.isLoading && displayedUsername;
 
   if (hasErrMsg) {
     return (
@@ -578,11 +571,11 @@ export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
       </Typography>
     );
   }
-  if (hasDisplayedUsername && userDetail.item) {
+  if (userDetail.item) {
     return (
       <>
         <span onMouseEnter={handlePopoverOpen} onMouseLeave={handlePopoverClose}>
-          {displayedUsername}
+          {`${userDetail.item.firstName} ${userDetail.item.lastName}`}
         </span>
         <Popover
           open={Boolean(anchorEl)}
