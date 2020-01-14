@@ -491,7 +491,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { userService } from 'app/service';
 import { rootEpic } from 'app/epic';
 import { rootReducer } from 'app/reducer';
-import { AppRouter } from 'app/routes';
+import { AppRouter } from 'app/route';
 
 const service = { userService };
 const epicMiddleware = createEpicMiddleware({
