@@ -121,7 +121,7 @@ export const ListFilter = <T extends FilterMapType>({
 
 ```models.ts
 export class UserModel {
-  userId!: number;
+  userIdx!: number;
   firstName!: string | null;
   lastName!: string | null;
   email!: string;
@@ -141,10 +141,10 @@ export const fetchUserDetailAsync = createAsyncAction(
   'FETCH_USER_DETAIL_FULFILLED',
   'FETCH_USER_DETAIL_REJECTED',
 )<
-  UserModel['userId'],
+  UserModel['userIdx'],
   UserModel,
   {
-    userId: UserModel['userId'];
+    userIdx: UserModel['userIdx'];
     errMsg: string;
   }
 >();
@@ -195,9 +195,9 @@ const mapApiResponse: <
 > = () => map(({ data: { data } }) => data);
 
 export const userService = {
-  getUser(userId: UserModel['userId']) {
+  getUser(userIdx: UserModel['userIdx']) {
     return httpClient
-      .get<ApiResponse<UserModel>>(`/users/${userId}`)
+      .get<ApiResponse<UserModel>>(`/users/${userIdx}`)
       .pipe(mapApiResponse());
   },
 };
@@ -222,23 +222,23 @@ export const fetchUserDetailsEpic: Epic = (
   const inProgress: Record<number, boolean> = {};
   return action$.pipe(
     filter(isActionOf(fetchUserDetailAsync.request)),
-    mergeMap(({ payload: userId }) => {
-      if (inProgress[userId]) {
+    mergeMap(({ payload: userIdx }) => {
+      if (inProgress[userIdx]) {
         return empty();
       }
-      inProgress[userId] = true;
-      return userService.getUser(userId).pipe(
+      inProgress[userIdx] = true;
+      return userService.getUser(userIdx).pipe(
         map((data) => fetchUserDetailAsync.success(data)),
         catchError((err) =>
           of(
             fetchUserDetailAsync.failure({
-              userId,
+              userIdx,
               errMsg: err.message,
             }),
           ),
         ),
         finalize(() => {
-          inProgress[userId] = false;
+          inProgress[userIdx] = false;
         }),
       );
     }),
@@ -269,7 +269,7 @@ describe('epic 테스트', () => {
       // <!-- mock
       mockedUserService.getUser.mockReturnValueOnce(
         of({
-          userId: 105,
+          userIdx: 105,
           firstName: 'name',
           lastName: null,
           email: 'name@email.com',
@@ -287,7 +287,7 @@ describe('epic 테스트', () => {
         complete: () => {
           expect(actualActions).toEqual([
             fetchUserDetailAsync.success({
-              userId: 105,
+              userIdx: 105,
               firstName: 'name',
               lastName: null,
               email: 'name@email.com',
@@ -315,7 +315,7 @@ describe('epic 테스트', () => {
         complete: () => {
           expect(actualActions).toEqual([
             fetchUserDetailAsync.failure({
-              userId: 105,
+              userIdx: 105,
               errMsg: 'getUser Error',
             }),
           ]);
@@ -336,7 +336,7 @@ import { UserModel } from 'app/models';
 import { Actions, authLogout, fetchUserDetailAsync } from 'app/actions';
 
 export type UserDetailState = Record<
-  UserModel['userId'],
+  UserModel['userIdx'],
   {
     isLoading: boolean;
     errMsg: string | null;
@@ -363,8 +363,8 @@ export const userDetailReducer = (
     case getType(fetchUserDetailAsync.success):
       return {
         ...state,
-        [action.payload.userId]: {
-          ...(state[action.payload.userId] || {}),
+        [action.payload.userIdx]: {
+          ...(state[action.payload.userIdx] || {}),
           isLoading: false,
           errMsg: null,
           item: action.payload,
@@ -373,8 +373,8 @@ export const userDetailReducer = (
     case getType(fetchUserDetailAsync.failure):
       return {
         ...state,
-        [action.payload.userId]: {
-          ...(state[action.payload.userId] || {}),
+        [action.payload.userIdx]: {
+          ...(state[action.payload.userIdx] || {}),
           isLoading: false,
           errMsg: action.payload.errMsg,
         },
@@ -406,7 +406,7 @@ describe('userDetailReducer 테스트', () => {
         isLoading: false,
         errMsg: null,
         item: {
-          userId: 105,
+          userIdx: 105,
           firstName: 'name',
           lastName: null,
           email: 'name@email.com',
@@ -432,7 +432,7 @@ describe('userDetailReducer 테스트', () => {
   test('fetchUserDetailAsync가 성공하면 state에 받아온 userDetail이 추가되어야 한다.', () => {
     const userDetailState: UserDetailState = userDetailInitialState;
     const action = fetchUserDetailAsync.success({
-      userId: 105,
+      userIdx: 105,
       firstName: 'name',
       lastName: null,
       email: 'name@email.com',
@@ -443,7 +443,7 @@ describe('userDetailReducer 테스트', () => {
         isLoading: false,
         errMsg: null,
         item: {
-          userId: 105,
+          userIdx: 105,
           firstName: 'name',
           lastName: null,
           email: 'name@email.com',
@@ -456,7 +456,7 @@ describe('userDetailReducer 테스트', () => {
   test('fetchUserDetailAsync 가 실패하면 errMsg 가 세팅 되어야 한다.', () => {
     const userDetailState: UserDetailState = userDetailInitialState;
     const action = fetchUserDetailAsync.failure({
-      userId: 105,
+      userIdx: 105,
       errMsg: 'fetchUserDetailAsync Failed',
     });
     expect(userDetailReducer(userDetailState, action)).toEqual({
@@ -486,9 +486,9 @@ const userDetailSelector = (state: RootState): UserDetailState => ({
     ),
   },
 });
-export const userDetailSelectorByIdFactory = (userId: UserModel['userId']) => (state: RootState) => {
+export const userDetailSelectorByIdFactory = (userIdx: UserModel['userIdx']) => (state: RootState) => {
   const userDetail = userDetailSelector(state);
-  return userDetail[userId] || null;
+  return userDetail[userIdx] || null;
 };
 ```
 
@@ -540,13 +540,13 @@ import { fetchUserDetailAsync } from 'app/actions';
 import { userDetailSelectorByIdFactory } from 'app/selectors';
 
 interface PropTypes {
-  userId: UserModel['userId'];
+  userIdx: UserModel['userIdx'];
 }
-export const UserLabel: FC<PropTypes> = ({ userId }) => {
+export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = useState<HTMLSpanElement | null>(null);
   // NOTE: userId가 바뀌지 않으면 셀렉터를 다시 만들지 않는다.
-  const userSelector = useMemo(() => userDetailSelectorByIdFactory(userId), [userId]);
+  const userSelector = useMemo(() => userDetailSelectorByIdFactory(userIdx), [userIdx]);
   const userDetail = useSelector(userSelector);
   const displayedUsername = useMemo(() => {
     if (userDetail?.item) {
@@ -569,8 +569,8 @@ export const UserLabel: FC<PropTypes> = ({ userId }) => {
   };
 
   useEffect(() => {
-    dispatch(fetchUserDetailAsync.request(userId));
-  }, [dispatch, userId]);
+    dispatch(fetchUserDetailAsync.request(userIdx));
+  }, [dispatch, userIdx]);
 
   const hasErrMsg = userDetail && !userDetail.isLoading && userDetail.errMsg;
   const hasDisplayedUsername = userDetail && !userDetail.isLoading && displayedUsername;
@@ -583,7 +583,7 @@ export const UserLabel: FC<PropTypes> = ({ userId }) => {
         <Button
           variant="contained"
           onClick={() => {
-            dispatch(fetchUserDetailAsync.request(userId));
+            dispatch(fetchUserDetailAsync.request(userIdx));
           }}
         >
           Refresh
