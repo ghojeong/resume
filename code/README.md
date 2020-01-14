@@ -115,8 +115,11 @@ export const ListFilter = <T extends FilterMapType>({
 
 ## redux-observable 을 통한 비동기 처리
 
-유저 상세 정보 (UserDetail) API 를 호출하고, 받아온 정보를 스토어에서 관리하는 비동기 작업을 redux-observable을 통해 수행하는 코드입니다.<br>
-이를 이용해 마우스를 호버하면 유저 상세 정보의 Popover를 보여주는 재사용 가능한 UserLabel 스마트 컴포넌트를 만들어보았습니다.
+유저 상세 정보 (UserDetail) API 를 호출해서 받아온 정보를,<br>
+스토어에서 관리하는 비동기 작업을 redux-observable을 통해 수행하는 코드입니다.
+
+이를 이용해 마우스를 호버하면 유저 상세 정보의 Popover를 보여주는<br>
+재사용 가능한 UserLabel 스마트 컴포넌트를 만들어보았습니다.
 
 ### models.ts
 
