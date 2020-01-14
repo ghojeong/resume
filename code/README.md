@@ -486,7 +486,8 @@ const userDetailSelector = (state: RootState): UserDetailState => ({
     ),
   },
 });
-export const userDetailSelectorByIdFactory = (userIdx: UserModel['userIdx']) => (state: RootState) => {
+export const userDetailSelectorByIdFactory =
+(userIdx: UserModel['userIdx']) => (state: RootState) => {
   const userDetail = userDetailSelector(state);
   return userDetail[userIdx] || null;
 };
