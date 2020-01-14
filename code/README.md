@@ -153,7 +153,7 @@ export const fetchUserDetailAsync = createAsyncAction(
     errMsg: string;
   }
 >();
-export type Actions =
+export type Action =
   | ActionType<typeof authLogout>
   | ActionType<typeof fetchUserDetailAsync>;
 ```
@@ -213,13 +213,13 @@ export const userService = {
 ```epic.ts
 import { of, empty } from 'rxjs';
 import { map, filter, catchError, mergeMap, finalize } from 'rxjs/operators';
-import { ActionsObservable, combineEpics, Epic } from 'redux-observable';
+import { ActionObservable, combineEpics, Epic } from 'redux-observable';
 import { isActionOf } from 'typesafe-action';
-import { Actions, fetchUserDetailAsync } from 'app/action';
+import { Action, fetchUserDetailAsync } from 'app/action';
 import * as service from 'app/service';
 
 export const fetchUserDetailEpic: Epic = (
-  action$: ActionsObservable<Actions>,
+  action$: ActionObservable<Action>,
   _,
   { userService }: typeof service,
 ) => {
@@ -258,7 +258,7 @@ export const rootEpic = combineEpics(fetchUserDetailEpic);
 ```epic.spec.ts
 import { Subject, of, throwError } from 'rxjs';
 import { Action } from 'redux';
-import { ActionsObservable, StateObservable } from 'redux-observable';
+import { ActionObservable, StateObservable } from 'redux-observable';
 import { mocked } from 'ts-jest/utils';
 import { fetchUserDetailAsync } from 'app/action';
 import * as service from 'app/service';
@@ -281,15 +281,15 @@ describe('epic 테스트', () => {
         }),
       );
       // -->
-      const action$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
+      const action$ = ActionObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
       const state$ = new StateObservable(new Subject(), {});
       const dependencies = { userService: mockedUserService };
-      const actualActions: Action[] = [];
+      const actualAction: Action[] = [];
 
       fetchUserDetailEpic(action$, state$, dependencies).subscribe({
-        next: (action: Action) => actualActions.push(action),
+        next: (action: Action) => actualAction.push(action),
         complete: () => {
-          expect(actualActions).toEqual([
+          expect(actualAction).toEqual([
             fetchUserDetailAsync.success({
               userIdx: 105,
               name: 'ghojeong',
@@ -308,15 +308,15 @@ describe('epic 테스트', () => {
         () => throwError(new Error('getUser Error'))
       );
       // -->
-      const action$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
+      const action$ = ActionObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
       const state$ = new StateObservable(new Subject(), {});
       const dependencies = { userService: mockedUserService };
-      const actualActions: Action[] = [];
+      const actualAction: Action[] = [];
 
       fetchUserDetailEpic(action$, state$, dependencies).subscribe({
-        next: (action) => actualActions.push(action),
+        next: (action) => actualAction.push(action),
         complete: () => {
-          expect(actualActions).toEqual([
+          expect(actualAction).toEqual([
             fetchUserDetailAsync.failure({
               userIdx: 105,
               errMsg: 'getUser Error',
@@ -336,7 +336,7 @@ describe('epic 테스트', () => {
 import { combineReducers } from 'redux';
 import { getType } from 'typesafe-action';
 import { UserModel } from 'app/model';
-import { Actions, authLogout, fetchUserDetailAsync } from 'app/action';
+import { Action, authLogout, fetchUserDetailAsync } from 'app/action';
 
 export type UserDetailState = Record<
   UserModel['userIdx'],
@@ -349,7 +349,7 @@ export type UserDetailState = Record<
 export const userDetailInitialState: UserDetailState = {};
 export const userDetailReducer = (
   userDetailState = userDetailInitialState,
-  action: Actions,
+  action: Action,
 ): UserDetailState => {
   switch (action.type) {
     case getType(authLogout):
