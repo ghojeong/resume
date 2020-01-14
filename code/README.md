@@ -164,7 +164,7 @@ export type Action =
 import { OperatorFunction } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AxiosResponse } from 'axios';
-import Axios from 'axios-observable';
+import AxiosObservable from 'axios-observable';
 import { UserModel } from 'app/model';
 import { API_ENDPOINT } from 'app/configs';
 
@@ -180,7 +180,7 @@ export const storageService = {
   },
 };
 
-const httpClient = Axios.create({
+const httpClient = AxiosObservable.create({
   baseURL: API_ENDPOINT,
 });
 httpClient.interceptors.request.use((config) => {
