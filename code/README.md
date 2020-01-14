@@ -387,10 +387,7 @@ export const userDetailReducer = (
 export interface RootState {
   userDetail: UserDetailState;
 }
-export const createRootReducer =
-  () => combineReducers<RootState>({
-    userDetail: userDetailReducer,
-  });
+export const rootReducer = combineReducers<RootState>({ userDetail: userDetailReducer });
 ```
 
 ### reducer.spec.ts
@@ -504,7 +501,7 @@ import { createEpicMiddleware } from 'redux-observable';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { userService } from 'app/services';
 import { rootEpic } from 'app/epic';
-import { createRootReducer } from 'app/reducers';
+import { rootReducer } from 'app/reducers';
 import { AppRouter } from 'app/routes';
 
 const services = { userService };
@@ -512,7 +509,7 @@ const epicMiddleware = createEpicMiddleware({
   dependencies: services,
 });
 const store = createStore(
-  createRootReducer(),
+  rootReducer,
   composeWithDevTools(applyMiddleware(epicMiddleware)),
 );
 epicMiddleware.run(rootEpic);
