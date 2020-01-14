@@ -213,7 +213,7 @@ import { isActionOf } from 'typesafe-actions';
 import { Actions, fetchUserDetailAsync } from 'app/actions';
 import * as services from 'app/services';
 
-export const fetchUserDetailsEpic: Epic = (
+export const fetchUserDetailEpic: Epic = (
   action$: ActionsObservable<Actions>,
   _,
   { userService }: typeof services,
@@ -477,8 +477,8 @@ import { RootState, UserDetailState } from 'app/reducers';
 const userDetailSelector = (state: RootState): UserDetailState => ({
   ...state.userDetail,
   ...{
-    userDetails: mapValues(
-      state.userDetails,
+    userDetail: mapValues(
+      state.userDetail,
       (item) => plainToClass(UserModel, item),
     ),
   },
