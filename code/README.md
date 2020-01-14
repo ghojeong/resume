@@ -126,8 +126,7 @@ UserLabel 스마트 컴포넌트를 만들었습니다.
 ```models.ts
 export class UserModel {
   userIdx!: number;
-  firstName!: string;
-  lastName!: string;
+  name!: string;
   email!: string;
   phoneNumber!: string;
 }
@@ -274,8 +273,7 @@ describe('epic 테스트', () => {
       mockedUserService.getUser.mockReturnValueOnce(
         of({
           userIdx: 105,
-          firstName: 'first-name',
-          lastName: 'last-name',
+          name: 'ghojeong',
           email: 'name@email.com',
           phoneNumber: '+821012345678',
         }),
@@ -292,8 +290,7 @@ describe('epic 테스트', () => {
           expect(actualActions).toEqual([
             fetchUserDetailAsync.success({
               userIdx: 105,
-              firstName: 'first-name',
-              lastName: 'last-name',
+              name: 'ghojeong',
               email: 'name@email.com',
               phoneNumber: '+821012345678',
             }),
@@ -408,8 +405,7 @@ describe('userDetailReducer 테스트', () => {
         errMsg: null,
         item: {
           userIdx: 105,
-          firstName: 'first-name',
-          lastName: 'last-name',
+          name: 'ghojeong',
           email: 'name@email.com',
           phoneNumber: '+821012345678',
         },
@@ -434,8 +430,7 @@ describe('userDetailReducer 테스트', () => {
     const userDetailState: UserDetailState = userDetailInitialState;
     const action = fetchUserDetailAsync.success({
       userIdx: 105,
-      firstName: 'first-name',
-      lastName: 'last-name',
+      name: 'ghojeong',
       email: 'name@email.com',
       phoneNumber: '+821012345678',
     });
@@ -445,8 +440,7 @@ describe('userDetailReducer 테스트', () => {
         errMsg: null,
         item: {
           userIdx: 105,
-          firstName: 'first-name',
-          lastName: 'last-name',
+          name: 'ghojeong',
           email: 'name@email.com',
           phoneNumber: '+821012345678',
         },
@@ -572,10 +566,11 @@ export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
     );
   }
   if (userDetail.item) {
+    const { name, email, phoneNumber } = userDetail.item;
     return (
       <>
         <span onMouseEnter={handlePopoverOpen} onMouseLeave={handlePopoverClose}>
-          {`${userDetail.item.firstName} ${userDetail.item.lastName}`}
+          {name}
         </span>
         <Popover
           open={Boolean(anchorEl)}
@@ -592,8 +587,8 @@ export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
           disableRestoreFocus
         >
           <div>
-            <div>Email: {userDetail.item.email}</div>
-            <div>Phone Number: {userDetail.item.phoneNumber}</div>
+            <div>Email: {email}</div>
+            <div>Phone Number: {phoneNumber}</div>
           </div>
         </Popover>
       </>
