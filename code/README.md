@@ -480,7 +480,7 @@ import { RootState } from 'app/reducers';
 export const userDetailSelectorByIdxFactory =
   (userIdx: UserModel['userIdx']) => (state: RootState) => {
     const { userDetail } = state;
-    return userDetail[userIdx] || null;
+    return userDetail[userIdx];
   };
 ```
 
