@@ -14,7 +14,7 @@
   - [epic.ts](#epicts)
   - [epic.spec.ts](#epicspects)
   - [reducer.ts](#reducerts)
-  - [reducer.spec.ts](#reducerspects)
+  - [reducer.spec.ts](#reducerpects)
   - [selector.ts](#selectorts)
   - [App.tsx](#apptsx)
   - [UserLabel.tsx](#userlabeltsx)
@@ -470,7 +470,7 @@ describe('userDetailReducer 테스트', () => {
 
 ```selector.ts
 import { UserModel } from 'app/model';
-import { RootState } from 'app/reducers';
+import { RootState } from 'app/reducer';
 
 export const userDetailSelectorByIdxFactory =
   (userIdx: UserModel['userIdx']) => (state: RootState) => {
@@ -490,7 +490,7 @@ import { createEpicMiddleware } from 'redux-observable';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { userService } from 'app/service';
 import { rootEpic } from 'app/epic';
-import { rootReducer } from 'app/reducers';
+import { rootReducer } from 'app/reducer';
 import { AppRouter } from 'app/routes';
 
 const service = { userService };
