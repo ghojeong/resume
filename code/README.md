@@ -474,22 +474,12 @@ describe('userDetailReducer 테스트', () => {
 
 ```selectors.ts
 import mapValues from 'lodash/mapValues';
-import { plainToClass } from 'class-transformer';
 import { UserModel } from 'app/models';
-import { RootState, UserDetailState } from 'app/reducers';
+import { RootState } from 'app/reducers';
 
-const userDetailSelector = (state: RootState): UserDetailState => ({
-  ...state.userDetail,
-  ...{
-    userDetail: mapValues(
-      state.userDetail,
-      (item) => plainToClass(UserModel, item),
-    ),
-  },
-});
 export const userDetailSelectorByIdxFactory =
   (userIdx: UserModel['userIdx']) => (state: RootState) => {
-    const userDetail = userDetailSelector(state);
+    const { userDetail } = state;
     return userDetail[userIdx] || null;
   };
 ```
