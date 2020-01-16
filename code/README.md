@@ -221,13 +221,13 @@ import * as service from 'app/service';
 type Service = typeof service;
 
 export const fetchUserDetailEpic: Epic = (
-  actions$: ActionsObservable<Action>,
+  action$: ActionsObservable<Action>,
   _,
   { userService }: Service,
 ) => {
   // NOTE: API 요청 중인 userIdx를 inProgress에 임시 저장하여, 같은 유저의 정보를 동시에 요청하는 일이 없도록 한다.
   const inProgress: Record<number, boolean> = {};
-  return actions$.pipe(
+  return action$.pipe(
     filter(isActionOf(fetchUserDetailAsync.request)),
     mergeMap(({ payload: { userIdx } }) => {
       if (inProgress[userIdx]) {
@@ -283,12 +283,12 @@ describe('epic 테스트', () => {
         }),
       );
       // -->
-      const actions$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
+      const action$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
       const state$ = new StateObservable(new Subject(), {});
       const dependencies = { userService: mockedUserService };
       const actualActions: Action[] = [];
 
-      fetchUserDetailEpic(actions$, state$, dependencies).subscribe({
+      fetchUserDetailEpic(action$, state$, dependencies).subscribe({
         next: (action: Action) => actualActions.push(action),
         complete: () => {
           expect(actualActions).toEqual([
@@ -310,12 +310,12 @@ describe('epic 테스트', () => {
         () => throwError(new Error('getUser Error'))
       );
       // -->
-      const actions$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
+      const action$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
       const state$ = new StateObservable(new Subject(), {});
       const dependencies = { userService: mockedUserService };
       const actualActions: Action[] = [];
 
-      fetchUserDetailEpic(actions$, state$, dependencies).subscribe({
+      fetchUserDetailEpic(action$, state$, dependencies).subscribe({
         next: (action) => actualActions.push(action),
         complete: () => {
           expect(actualActions).toEqual([
