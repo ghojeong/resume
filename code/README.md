@@ -115,10 +115,10 @@ export const ListFilter = <T extends FilterMapType>({
 
 ## redux-observable을 통한 비동기 처리
 
-유저 상세 정보(UserDetail)를 API로 호출하여 받아온 후 스토어에서 관리하는<br>
+유저 정보를 API로 호출하여 받아온 후 스토어에서 관리하는<br>
 비동기 작업을 redux-observable을 통해 수행하는 코드입니다.
 
-이를 이용해 마우스 호버 시 유저 상세 정보의 Popover를 띄워주는<br>
+이를 이용해 마우스 호버 시 유저 정보의 Popover를 띄워주는<br>
 UserLabel 스마트 컴포넌트를 만들었습니다.
 
 ### model.ts
@@ -139,10 +139,10 @@ import { createAction, createAsyncAction, ActionType } from 'typesafe-actions';
 import { UserModel } from 'app/model';
 
 export const authLogout = createAction('AUTH_LOGOUT')();
-export const fetchUserDetailAsync = createAsyncAction(
-  'FETCH_USER_DETAIL_REQUEST',
-  'FETCH_USER_DETAIL_SUCCESS',
-  'FETCH_USER_DETAIL_FAILURE',
+export const fetchUserAsync = createAsyncAction(
+  'FETCH_USER_REQUEST',
+  'FETCH_USER_SUCCESS',
+  'FETCH_USER_FAILURE',
 )<
   {
     userIdx: UserModel['userIdx'];
@@ -155,7 +155,7 @@ export const fetchUserDetailAsync = createAsyncAction(
 >();
 export type Action =
   | ActionType<typeof authLogout>
-  | ActionType<typeof fetchUserDetailAsync>;
+  | ActionType<typeof fetchUserAsync>;
 ```
 
 ### service.ts
@@ -215,12 +215,12 @@ import { of, empty } from 'rxjs';
 import { map, filter, catchError, mergeMap, finalize } from 'rxjs/operators';
 import { ActionsObservable, combineEpics, Epic } from 'redux-observable';
 import { isActionOf } from 'typesafe-actions';
-import { Action, fetchUserDetailAsync } from 'app/action';
+import { Action, fetchUserAsync } from 'app/action';
 import * as service from 'app/service';
 
 type Service = typeof service;
 
-export const fetchUserDetailEpic: Epic = (
+export const fetchUserEpic: Epic = (
   action$: ActionsObservable<Action>,
   _,
   { userService }: Service,
@@ -228,17 +228,17 @@ export const fetchUserDetailEpic: Epic = (
   // NOTE: API 요청 중인 userIdx를 inProgress에 임시 저장하여, 같은 유저의 정보를 동시에 요청하는 일이 없도록 한다.
   const inProgress: Record<number, boolean> = {};
   return action$.pipe(
-    filter(isActionOf(fetchUserDetailAsync.request)),
+    filter(isActionOf(fetchUserAsync.request)),
     mergeMap(({ payload: { userIdx } }) => {
       if (inProgress[userIdx]) {
         return empty();
       }
       inProgress[userIdx] = true;
       return userService.getUser(userIdx).pipe(
-        map((data) => fetchUserDetailAsync.success(data)),
+        map((data) => fetchUserAsync.success(data)),
         catchError((err) =>
           of(
-            fetchUserDetailAsync.failure({
+            fetchUserAsync.failure({
               userIdx,
               errMsg: err.message,
             }),
@@ -252,7 +252,7 @@ export const fetchUserDetailEpic: Epic = (
   );
 };
 
-export const rootEpic = combineEpics(fetchUserDetailEpic);
+export const rootEpic = combineEpics(fetchUserEpic);
 ```
 
 ### epic.spec.ts
@@ -262,17 +262,17 @@ import { Subject, of, throwError } from 'rxjs';
 import { Action } from 'redux';
 import { ActionsObservable, StateObservable } from 'redux-observable';
 import { mocked } from 'ts-jest/utils';
-import { fetchUserDetailAsync } from 'app/action';
+import { fetchUserAsync } from 'app/action';
 import * as service from 'app/service';
-import { fetchUserDetailEpic } from 'app/epic';
+import { fetchUserEpic } from 'app/epic';
 
 jest.mock('app/service');
 
 describe('epic 테스트', () => {
-  describe('fetchUserDetailEpic 테스트', () => {
+  describe('fetchUserEpic 테스트', () => {
     const mockedUserService = mocked(service.userService, true);
 
-    test('유저 상세 정보 조회가 성공하면 success 액션이 발생해야 한다.', (done) => {
+    test('유저 정보 조회가 성공하면 success 액션이 발생해야 한다.', (done) => {
       // <!-- mock
       mockedUserService.getUser.mockReturnValueOnce(
         of({
@@ -283,16 +283,16 @@ describe('epic 테스트', () => {
         }),
       );
       // -->
-      const action$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
+      const action$ = ActionsObservable.of(fetchUserAsync.request({ userIdx: 105 }));
       const state$ = new StateObservable(new Subject(), {});
       const dependencies = { userService: mockedUserService };
       const actualActions: Action[] = [];
 
-      fetchUserDetailEpic(action$, state$, dependencies).subscribe({
+      fetchUserEpic(action$, state$, dependencies).subscribe({
         next: (action: Action) => actualActions.push(action),
         complete: () => {
           expect(actualActions).toEqual([
-            fetchUserDetailAsync.success({
+            fetchUserAsync.success({
               userIdx: 105,
               name: 'ghojeong',
               email: 'gho@email.com',
@@ -304,22 +304,22 @@ describe('epic 테스트', () => {
       });
     });
 
-    test('유저 상세 정보 조회가 실패하면 failure 액션이 발생해야 한다.', (done) => {
+    test('유저 정보 조회가 실패하면 failure 액션이 발생해야 한다.', (done) => {
       // <!-- mock
       mockedUserService.getUser = jest.fn().mockImplementation(
         () => throwError(new Error('getUser Error'))
       );
       // -->
-      const action$ = ActionsObservable.of(fetchUserDetailAsync.request({ userIdx: 105 }));
+      const action$ = ActionsObservable.of(fetchUserAsync.request({ userIdx: 105 }));
       const state$ = new StateObservable(new Subject(), {});
       const dependencies = { userService: mockedUserService };
       const actualActions: Action[] = [];
 
-      fetchUserDetailEpic(action$, state$, dependencies).subscribe({
+      fetchUserEpic(action$, state$, dependencies).subscribe({
         next: (action) => actualActions.push(action),
         complete: () => {
           expect(actualActions).toEqual([
-            fetchUserDetailAsync.failure({
+            fetchUserAsync.failure({
               userIdx: 105,
               errMsg: 'getUser Error',
             }),
@@ -338,9 +338,9 @@ describe('epic 테스트', () => {
 import { combineReducers } from 'redux';
 import { getType } from 'typesafe-actions';
 import { UserModel } from 'app/model';
-import { Action, authLogout, fetchUserDetailAsync } from 'app/action';
+import { Action, authLogout, fetchUserAsync } from 'app/action';
 
-export type UserDetailState = Record<
+export type UserState = Record<
   UserModel['userIdx'],
   {
     isLoading: boolean;
@@ -348,62 +348,62 @@ export type UserDetailState = Record<
     item?: UserModel; // NOTE: 데이터를 한 번도 받아오지 않았다면 비어있을 수 있다.
   }
 >;
-export const userDetailInitialState: UserDetailState = {};
-export const userDetailReducer = (
-  userDetailState = userDetailInitialState,
+export const userInitialState: UserState = {};
+export const userReducer = (
+  userState = userInitialState,
   action: Action,
-): UserDetailState => {
+): UserState => {
   switch (action.type) {
     case getType(authLogout):
-      return userDetailInitialState;
-    case getType(fetchUserDetailAsync.request):
+      return userInitialState;
+    case getType(fetchUserAsync.request):
       return {
-        ...userDetailState,
+        ...userState,
         [action.payload.userIdx]: {
-          ...(userDetailState[action.payload.userIdx] || {}),
+          ...(userState[action.payload.userIdx] || {}),
           isLoading: true,
           errMsg: null,
         },
       };
-    case getType(fetchUserDetailAsync.success):
+    case getType(fetchUserAsync.success):
       return {
-        ...userDetailState,
+        ...userState,
         [action.payload.userIdx]: {
-          ...(userDetailState[action.payload.userIdx] || {}),
+          ...(userState[action.payload.userIdx] || {}),
           isLoading: false,
           errMsg: null,
           item: action.payload,
         },
       };
-    case getType(fetchUserDetailAsync.failure):
+    case getType(fetchUserAsync.failure):
       return {
-        ...userDetailState,
+        ...userState,
         [action.payload.userIdx]: {
-          ...(userDetailState[action.payload.userIdx] || {}),
+          ...(userState[action.payload.userIdx] || {}),
           isLoading: false,
           errMsg: action.payload.errMsg,
         },
       };
     default:
-      return userDetailState;
+      return userState;
   }
 };
 
 export interface RootState {
-  userDetail: UserDetailState;
+  user: UserState;
 }
-export const rootReducer = combineReducers<RootState>({ userDetail: userDetailReducer });
+export const rootReducer = combineReducers<RootState>({ user: userReducer });
 ```
 
 ### reducer.spec.ts
 
 ```reducer.spec.ts
-import { authLogout, fetchUserDetailAsync } from 'app/action';
-import { UserDetailState, userDetailReducer, userDetailInitialState } from 'app/reducer';
+import { authLogout, fetchUserAsync } from 'app/action';
+import { UserState, userReducer, userInitialState } from 'app/reducer';
 
-describe('userDetailReducer 테스트', () => {
-  test('authLogout 액션이 발행되면 userDetailState가 초기값으로 세팅 되어야 한다.', () => {
-    const userDetailState: UserDetailState = {
+describe('userReducer 테스트', () => {
+  test('authLogout 액션이 발행되면 userState가 초기값으로 세팅 되어야 한다.', () => {
+    const userState: UserState = {
       105: {
         isLoading: false,
         errMsg: null,
@@ -416,13 +416,13 @@ describe('userDetailReducer 테스트', () => {
       },
     };
     const action = authLogout();
-    expect(userDetailReducer(userDetailState, action)).toEqual(userDetailInitialState);
+    expect(userReducer(userState, action)).toEqual(userInitialState);
   });
 
-  test('fetchUserDetailAsync를 request 하면 isLoading 이 true가 되어야 한다.', () => {
-    const userDetailState: UserDetailState = userDetailInitialState;
-    const action = fetchUserDetailAsync.request({ userIdx: 105 });
-    expect(userDetailReducer(userDetailState, action)).toEqual({
+  test('fetchUserAsync를 request 하면 isLoading 이 true가 되어야 한다.', () => {
+    const userState: UserState = userInitialState;
+    const action = fetchUserAsync.request({ userIdx: 105 });
+    expect(userReducer(userState, action)).toEqual({
       105: {
         isLoading: true,
         errMsg: null,
@@ -430,15 +430,15 @@ describe('userDetailReducer 테스트', () => {
     });
   });
 
-  test('fetchUserDetailAsync가 성공하면 userDetailState에, 받아온 userDetail이 추가 되어야 한다.', () => {
-    const userDetailState: UserDetailState = userDetailInitialState;
-    const action = fetchUserDetailAsync.success({
+  test('fetchUserAsync가 성공하면 userState에, 받아온 user이 추가 되어야 한다.', () => {
+    const userState: UserState = userInitialState;
+    const action = fetchUserAsync.success({
       userIdx: 105,
       name: 'ghojeong',
       email: 'gho@email.com',
       phoneNumber: '+821012345678',
     });
-    expect(userDetailReducer(userDetailState, action)).toEqual({
+    expect(userReducer(userState, action)).toEqual({
       105: {
         isLoading: false,
         errMsg: null,
@@ -452,16 +452,16 @@ describe('userDetailReducer 테스트', () => {
     });
   });
 
-  test('fetchUserDetailAsync가 실패하면 errMsg가 세팅 되어야 한다.', () => {
-    const userDetailState: UserDetailState = userDetailInitialState;
-    const action = fetchUserDetailAsync.failure({
+  test('fetchUserAsync가 실패하면 errMsg가 세팅 되어야 한다.', () => {
+    const userState: UserState = userInitialState;
+    const action = fetchUserAsync.failure({
       userIdx: 105,
-      errMsg: 'fetchUserDetailAsync Failed',
+      errMsg: 'fetchUserAsync Failed',
     });
-    expect(userDetailReducer(userDetailState, action)).toEqual({
+    expect(userReducer(userState, action)).toEqual({
       105: {
         isLoading: false,
-        errMsg: 'fetchUserDetailAsync Failed',
+        errMsg: 'fetchUserAsync Failed',
       },
     });
   });
@@ -474,10 +474,10 @@ describe('userDetailReducer 테스트', () => {
 import { UserModel } from 'app/model';
 import { RootState } from 'app/reducer';
 
-export const userDetailSelectorByIdxFactory =
+export const userSelectorByIdxFactory =
   (userIdx: UserModel['userIdx']) => (rootState: RootState) => {
-    const { userDetail } = rootState;
-    return userDetail[userIdx];
+    const { user } = rootState;
+    return user[userIdx];
   };
 ```
 
@@ -525,8 +525,8 @@ import Skeleton from '@material-ui/lab/Skeleton';
 import ErrorIcon from '@material-ui/icons/Error';
 import RefreshIcon from '@material-ui/icons/Refresh';
 import { UserModel } from 'app/model';
-import { fetchUserDetailAsync } from 'app/action';
-import { userDetailSelectorByIdxFactory } from 'app/selector';
+import { fetchUserAsync } from 'app/action';
+import { userSelectorByIdxFactory } from 'app/selector';
 
 interface PropTypes {
   userIdx: UserModel['userIdx'];
@@ -535,8 +535,8 @@ export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   // NOTE: userIdx가 바뀌지 않으면 셀렉터를 다시 만들지 않는다.
-  const userSelector = useMemo(() => userDetailSelectorByIdxFactory(userIdx), [userIdx]);
-  const userDetail = useSelector(userSelector);
+  const userSelector = useMemo(() => userSelectorByIdxFactory(userIdx), [userIdx]);
+  const user = useSelector(userSelector);
 
   const handlePopoverOpen = (event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -546,20 +546,20 @@ export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
   };
 
   useEffect(() => {
-    dispatch(fetchUserDetailAsync.request({ userIdx }));
+    dispatch(fetchUserAsync.request({ userIdx }));
   }, [dispatch, userIdx]);
 
-  const hasErrMsg = userDetail && !userDetail.isLoading && userDetail.errMsg;
+  const hasErrMsg = user && !user.isLoading && user.errMsg;
 
   if (hasErrMsg) {
     return (
       <Typography noWrap component="div" variant="body2" color="error">
         <ErrorIcon />
-        <span>{userDetail.errMsg}</span>
+        <span>{user.errMsg}</span>
         <Button
           variant="contained"
           onClick={() => {
-            dispatch(fetchUserDetailAsync.request({ userIdx }));
+            dispatch(fetchUserAsync.request({ userIdx }));
           }}
         >
           Refresh
@@ -568,8 +568,8 @@ export const UserLabel: FC<PropTypes> = ({ userIdx }) => {
       </Typography>
     );
   }
-  if (userDetail.item) {
-    const { name, email, phoneNumber } = userDetail.item;
+  if (user.item) {
+    const { name, email, phoneNumber } = user.item;
     return (
       <>
         <span
