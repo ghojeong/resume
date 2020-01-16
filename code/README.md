@@ -218,10 +218,12 @@ import { isActionOf } from 'typesafe-actions';
 import { Action, fetchUserDetailAsync } from 'app/action';
 import * as service from 'app/service';
 
+type Service = typeof service;
+
 export const fetchUserDetailEpic: Epic = (
   actions$: ActionsObservable<Action>,
   _,
-  { userService }: typeof service,
+  { userService }: Service,
 ) => {
   // NOTE: API 요청 중인 userIdx를 inProgress에 임시 저장하여, 같은 유저의 정보를 동시에 요청하는 일이 없도록 한다.
   const inProgress: Record<number, boolean> = {};
