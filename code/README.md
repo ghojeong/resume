@@ -474,7 +474,8 @@ describe('userReducer 테스트', () => {
 import { UserModel } from 'app/model';
 import { RootState } from 'app/reducer';
 
-export const userSelectorByIdxFactory = (userIdx: UserModel['userIdx']) =>
+export const userSelectorByIdxFactory =
+  (userIdx: UserModel['userIdx']) =>
   ({ user }: RootState) =>
   user[userIdx];
 ```
