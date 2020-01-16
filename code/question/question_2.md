@@ -1,6 +1,6 @@
 # 상태 관리
 
-아래 이야기 주제에 흥미롭다면, 같이 이야기했으면 좋겠습니다.
+아래 이야기 주제가 흥미롭다면, 같이 이야기했으면 좋겠습니다.
 
 https://github.com/deminoth/redux/blob/8408d9e92889ac07e5fd14f937e56cb189010cf9/docs/faq/OrganizingState.md#do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate
 
