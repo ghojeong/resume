@@ -400,7 +400,7 @@ import { authLogout, fetchUserDetailAsync } from 'app/action';
 import { UserDetailState, userDetailReducer, userDetailInitialState } from 'app/reducer';
 
 describe('userDetailReducer 테스트', () => {
-  test('authLogout 액션이 발행되면 state가 초기값으로 세팅 되어야 한다.', () => {
+  test('authLogout 액션이 발행되면 userDetailState가 초기값으로 세팅 되어야 한다.', () => {
     const userDetailState: UserDetailState = {
       105: {
         isLoading: false,
@@ -428,7 +428,7 @@ describe('userDetailReducer 테스트', () => {
     });
   });
 
-  test('fetchUserDetailAsync가 성공하면 state에 받아온 userDetail이 추가 되어야 한다.', () => {
+  test('fetchUserDetailAsync가 성공하면 userDetailState에, 받아온 userDetail이 추가 되어야 한다.', () => {
     const userDetailState: UserDetailState = userDetailInitialState;
     const action = fetchUserDetailAsync.success({
       userIdx: 105,
@@ -473,8 +473,8 @@ import { UserModel } from 'app/model';
 import { RootState } from 'app/reducer';
 
 export const userDetailSelectorByIdxFactory =
-  (userIdx: UserModel['userIdx']) => (state: RootState) => {
-    const { userDetail } = state;
+  (userIdx: UserModel['userIdx']) => (rootState: RootState) => {
+    const { userDetail } = rootState;
     return userDetail[userIdx];
   };
 ```
