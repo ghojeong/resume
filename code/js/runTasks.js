@@ -3,7 +3,7 @@
  * 자바스크립트에서 비동기를 처리하는 다양한 테크닉을 느껴볼 수 있다.
  */
 
-// 콜백을 사용해서 구현
+// 콜백으로 구현
 function runTasks1(seed, tasks, callback) {
   tasks.reduce(
     (accCallback, currentTask) => acc => currentTask(acc, accCallback),
@@ -11,7 +11,7 @@ function runTasks1(seed, tasks, callback) {
   )(seed);
 }
 
-// Promise를 사용해서 구현
+// Promise로 구현
 function runTasks2(seed, tasks) {
   return tasks.reduce(
     (accPromise, currentTask) => accPromise.then(acc => currentTask(acc)),
@@ -19,7 +19,7 @@ function runTasks2(seed, tasks) {
   );
 }
 
-// async/await를 써서 구현
+// async/await으로 구현
 async function runTasks3(seed, tasks) {
   let acc = seed;
   for (const currentTask of tasks) {
