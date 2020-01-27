@@ -3,7 +3,7 @@
  * 자바스크립트에서 비동기를 처리하는 다양한 테크닉을 느껴볼 수 있다.
  */
 
-// Promise와 async/await를 쓰지 않고 구현
+// 콜백을 사용해서 구현
 function runTasks1(seed, tasks, callback) {
   tasks.reduce(
     (accCallback, currentTask) => acc => currentTask(acc, accCallback),
