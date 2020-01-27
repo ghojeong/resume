@@ -21,7 +21,6 @@ function runTasks2(seed, tasks) {
 
 // async/await를 써서 구현
 async function runTasks3(seed, tasks) {
-  // throw new Error("not implemented");
   let acc = seed;
   for (const currentTask of tasks) {
     acc = await currentTask(acc);
