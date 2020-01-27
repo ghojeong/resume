@@ -5,7 +5,7 @@
 
 // Promise와 async/await를 쓰지 않고 구현
 function runTasks1(seed, tasks, callback) {
-  return tasks.reduce(
+  tasks.reduce(
     (accCallback, currentTask) => acc => currentTask(acc, accCallback),
     callback
   )(seed);
