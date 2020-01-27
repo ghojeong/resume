@@ -7,18 +7,25 @@
 <!-- - [타입스크립트 리액트 컴포넌트](#%ed%83%80%ec%9e%85%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8-%eb%a6%ac%ec%95%a1%ed%8a%b8-%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8)
   - [ListFilter.tsx](#listfiltertsx) -->
 
-- [아래 설계에 따라 만든 장바구니 소스 코드](https://github.com/ghojeong/shopping-cart)
-- redux-observable을 통한 비동기 처리
-  - [model.ts](#modelts)
-  - [action.ts](#actionts)
-  - [service.ts](#servicets)
-  - [epic.ts](#epicts)
-  - [epic.spec.ts](#epicspects)
-  - [reducer.ts](#reducerts)
-  - [reducer.spec.ts](#reducerpects)
-  - [selector.ts](#selectorts)
-  - [App.tsx](#apptsx)
-  - [UserLabel.tsx](#userlabeltsx)
+### 비동기 처리
+
+#### 콜백, Promise, async/await을 통한 비동기 처리
+
+- [runTasks.js](./js/runTasks.js)
+
+#### redux-observable을 통한 비동기 처리
+
+- [model.ts](#modelts)
+- [action.ts](#actionts)
+- [service.ts](#servicets)
+- [epic.ts](#epicts)
+- [epic.spec.ts](#epicspects)
+- [reducer.ts](#reducerts)
+- [reducer.spec.ts](#reducerpects)
+- [selector.ts](#selectorts)
+- [App.tsx](#apptsx)
+- [UserLabel.tsx](#userlabeltsx)
+- [위 설계에 따라 만든 장바구니 소스 코드](https://github.com/ghojeong/shopping-cart)
 
 <!-- ## 타입스크립트 리액트 컴포넌트
 
