@@ -124,7 +124,9 @@ export const ListFilter = <T extends FilterMapType>({
 ## redux-observable을 통한 비동기 처리
 
 유저 정보를 API로 호출하여 받아온 후 스토어에서 관리하는<br>
-비동기 작업을 redux-observable을 통해 수행하는 코드입니다.
+비동기 작업을 [redux-observable](https://redux-observable.js.org/)을 통해 수행하는 코드입니다.
+
+[넷플릭스](https://youtu.be/AslncyG8whg)의 설계를 참고했습니다.
 
 이를 이용해 마우스 호버 시 유저 정보의 Popover를 띄워주는<br>
 UserLabel 스마트 컴포넌트를 만들었습니다.
