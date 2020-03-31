@@ -7,8 +7,10 @@
 
 ## 요약
 
+- [i-Box](#i-Box)
+  - 기간: 2020.01 - 2020.04
 - [Haulla Back Office](#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C) (React, Typescript)
-  - 기간: 2019.07 - 진행 중
+  - 기간: 2019.07 - 2019.11
 - [CCNx](#ccnx-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) (Angular 7)
   - 기간: 2019.06
 - [CleanCityNetworks](#cleancitynetworks-ccn-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) (Angular JS)
@@ -21,10 +23,35 @@
   - [Partner Scale API](#partner-scale-api-%EA%B0%9C%EB%B0%9C) (Express)
     - 기간: 2018.10 - 2018.12
 
+## i-Box
+
+- 기간: 2020.01 - 2020.04
+- 제품 소개: <https://www.haulla.com/>
+- 설명
+  - 이치카와시에 설치된 스마트 공공 쓰레기통입니다.
+  - 쓰레기를 누가, 언제, 어디서, 얼마나 버렸는지 추적해서 버린 사람에게 비용을 청구합니다.
+  - 웹 혹은 앱을 통해 받은 QR 이미지로, 사용자 인증을 합니다.
+  - 이치카와시의 공무원은 i-Box의 기록을 관리자로 모니터링할 수 있습니다.
+- 사용 기술
+  - typescript
+  - redux-observable: React, redux, rxjs
+  - graphql, apollo: apollo-boost, apollo-react-hooks
+  - reactotron
+  - intl, react-intl
+- 기억에 남는 점
+
+  - 비동기를 커스텀 훅을 사용해 처리해서, 리액트 훅에 대한 이해도가 많이 올라갔습니다.
+    - GraphQL API 호출을 모두 커스텀 훅으로 비동기 처리했습니다.
+  - 자바스크립트로 바이너리 스트림을 다루는 경험을 해볼 수 있었습니다.
+
+    - QR 이미지를 생성 후 압축해서 업로드하거나 다운받는 작업을 할때, 일반 JSON 텍스트와 달리 소켓에 설정해주어야 할게 있어서, 원인 파악을 못해 고생을 했습니다.
+
+<p align="center">|<img src="./img/i-Box.png" width="50%" />|<img src="./img/i-Box.gif" width="40%" />|</p>
+
 ## Haulla Back Office 웹 프론트 개발
 
-- 기간: 2019.07 - 진행 중
-- 제품 소개: https://www.haulla.com/
+- 기간: 2019.07 - 2019.11
+- 제품 소개: <https://www.haulla.com/>
 - 설명
   - Haulla 는 쓰레기 수거자(Hauler)와 배출자(Generator)를 연결해주는 매칭 플랫폼입니다.
   - 일반 사용자(Hauler와 Generator)는 모바일 앱을 통해 매칭 서비스를 이용합니다.
@@ -48,7 +75,7 @@
 ## CCNx 유지보수
 
 - 기간: 2019.06
-- 제품 소개: https://www.ecubelabs.com/fleet-management-platform/
+- 제품 소개: <https://www.ecubelabs.com/fleet-management-platform/>
 - 설명
   - 앱으로 등록된 쓰레기 수거 차량을 관리하고, 최적화된 경로 안내를 하는 웹 서비스입니다.
 - 사용 기술
@@ -61,7 +88,7 @@
 ## CleanCityNetworks (CCN) 유지보수
 
 - 기간: 2019.05
-- 제품 소개: https://www.ecubelabs.com/waste-analytics-platform/
+- 제품 소개: <https://www.ecubelabs.com/waste-analytics-platform/>
 - 설명
   - 스마트 쓰레기통으로 수집한 데이터를 시각화해서 보여주는 웹 서비스입니다.
 - 사용 기술
@@ -115,7 +142,7 @@
 ### Partner Scale API 개발
 
 - 기간: 2018.10 - 2018.12
-- 링크: https://doc.cleancitynetworks.com/partner-scale-api-doc/
+- 링크: <https://doc.cleancitynetworks.com/partner-scale-api-doc/>
 - 설명
   - 계근 하드웨어에서 측정된 데이터를 회사 서버에 등록, 수정, 삭제 할 수 있는 API 입니다.
 - 사용 기술
