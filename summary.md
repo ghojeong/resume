@@ -10,7 +10,6 @@
 - 폭풍 같은 브레인스토밍이 깨끗한 코드 혹은 문서로 완성될 때 희열을 느낍니다.
 - 기술적으로 소외당하는 사람 혹은 분야에서, 새로운 기술 서비스 시장을 찾아낼 수 있다고 믿습니다.
 - [책을 좋아합니다.](./book/README.md)
-  <!-- - [사람과 어울리는 것을 좋아합니다.](./recommend.md) -->
 - [**커뮤니티 활동을 좋아합니다.**](./community/README.md)
 
 ## 이력
@@ -24,15 +23,26 @@
 
 ### [**Ecube Labs**](./ecubelabs/README.md)
 
+#### i-Box
+
+- 기간: 2020.01 - 2020.04
+- 사용 기술: Graphql, Apollo, react-intl
+- 설명
+  - 이치카와시에 설치된 스마트 공공 쓰레기통
+  - 누가, 언제, 어디서, 얼마나 버렸는지 기록 후 배출자에게 비용 청구
+  - 관리자 웹페이지로 모니터링 가능
+
+<p align="center">|<img src="./ecubelabs/img/i-Box.png" width="50%" />|<img src="./ecubelabs/img/i-Box.gif" width="40%" />|</p>
+
 #### Haulla Back Office 개발
 
-- 기간: 2019.07 - 진행 중
-- 사용 기술: React, Typescript
-- 제품 소개: https://www.haulla.com/
+- 기간: 2019.07 - 2019.11
+- 사용 기술: React, Typescript, redux-observable
+- 제품 소개: <https://www.haulla.com/>
 - 설명
   - Haulla: 쓰레기 수거자(Hauler)와 배출자(Generator)를 연결해주는 매칭 플랫폼
   - 일반 사용자(Hauler와 Generator)는 모바일 앱을 통해 매칭 서비스를 이용
-  - 관리자(쓰레기 수거 회사)는 Back Office 웹을 통해 쓰레기 수거 서비스를 모니터링 및 관리함
+  - 관리자(쓰레기 수거 회사)는 Back Office 웹을 통해 쓰레기 수거 서비스를 모니터링 및 관리
 
 <p align="center"><img src="./ecubelabs/img/haulla.png" width="60%" /></p>
 
