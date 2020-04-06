@@ -10,7 +10,7 @@
 ## 목차
 
 - Ecube Labs (회사)
-  - [i-Box](#i-Box)
+  - [i-Box](#i-Box) (React, Apollo GraphQL)
     - 기간: 2020.01 - 2020.04
   - [Haulla Back Office](#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C) (React, Typescript)
     - 기간: 2019.07 - 2019.11
