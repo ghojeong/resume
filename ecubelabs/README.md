@@ -32,7 +32,7 @@
   - 웹 혹은 앱을 통해 받은 QR 이미지로, 사용자 인증을 합니다.
   - 이치카와시의 공무원은 i-Box의 기록을 관리자로 모니터링할 수 있습니다.
 - 사용 기술
-  - typescript
+  - Typescript
   - redux-observable: React, redux, rxjs
   - graphql, apollo: apollo-boost, apollo-react-hooks
   - reactotron
