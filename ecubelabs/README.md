@@ -23,7 +23,7 @@
   - [Partner Scale API](#partner-scale-api-%EA%B0%9C%EB%B0%9C) (Express)
     - 기간: 2018.10 - 2018.12
 
-## i-Box
+## i-Box 웹 프론트 개발
 
 - 기간: 2020.01 - 2020.04
 - 설명
