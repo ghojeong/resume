@@ -2,7 +2,8 @@
 
 # 고정완 / JeongWan Gho
 
-[자신 있는 코드](./code/README.md)
+- 나이: 1994년생, 26살
+- [자신 있는 코드](./code/README.md)
 
 ## 가치관
 
