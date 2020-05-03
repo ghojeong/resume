@@ -19,13 +19,13 @@
 
 ## 알고리즘 스터디
 
-- 기간: 2019.09 - 2019.11
-- 링크: https://github.com/study-records/coding-interview-study
+- 기간: 2019.09 -
+- 링크: <https://github.com/study-records/coding-interview-study>
 - 설명
   - 혼자서는 어려웠던 알고리즘 공부에 도전하고 싶어서 열은 스터디입니다.
 - 기억에 남는 점
 
-  - 연말에 육군 훈련소에 가게 되어 스터디가 일시중지 되었는데, 훈련소를 수료하자마자 스터디가 언제 다시 열리냐는 연락을 받아서 감동했습니다.
+  - 2019년 12월에 육군 훈련소에 가게 되어 스터디가 일시중지 되었는데, 훈련소를 수료하자마자 스터디가 언제 다시 열리냐는 연락을 받아서 감동했습니다.
   - 스터디원 분들을 위해 더 열심히 공부해야겠다는 새해 다짐을 했습니다.
 
     <p align="center"><img src="./img/algorithm.jpeg" width="60%" /></p>
@@ -33,7 +33,7 @@
 ## <모던 자바스크립트 입문> 책 스터디
 
 - 기간: 2019.07 - 2019.09
-- 링크: https://github.com/study-records/modern-javascript-study/tree/master/Modern_Javascript_Primer
+- 링크: <https://github.com/study-records/modern-javascript-study/tree/master/Modern_Javascript_Primer>
 - 설명
   - 자바스크립트에 대한 이해도를 높이고 싶어서 시작한 스터디입니다.
   - 공부했던 내용을 문서로 정리해서 gitHub 에 올렸습니다.
@@ -47,7 +47,7 @@
 ## 공감 세미나 주니어
 
 - 기간: 2019.03 - 2019.06
-- 링크: http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334
+- 링크: <http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334>
 - 설명
   - 한빛미디어 후원으로 열었던 유료 세미나입니다.
   - 본인이 직접 기획하고, 준비하고, 발표자로 참가했습니다.
