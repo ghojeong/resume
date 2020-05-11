@@ -17,10 +17,20 @@
 <p align="center"><img src="./img/softwarecampus.png" width="60%" /></p>
 <p align="center"><img src="./img/java_cafe.jpeg" width="60%" /></p>
 
+## 디자인 패턴 스터디
+
+- 기간: 2019.04 -
+- 링크: <https://github.com/ghojeong/GoF>
+- 설명
+  - GoF의 디자인 패턴을 공부하고자 열은 스터디입니다.
+- 기억에 남는 점
+
+    <p align="center"><img src="./img/gof.png" width="60%" /></p>
+
 ## 알고리즘 스터디
 
 - 기간: 2019.09 -
-- 링크: <https://github.com/study-records/coding-interview-study>
+- 링크: <https://github.com/ghojeong/CtCI>
 - 설명
   - 혼자서는 어려웠던 알고리즘 공부에 도전하고 싶어서 열은 스터디입니다.
 - 기억에 남는 점
