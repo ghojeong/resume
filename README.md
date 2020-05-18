@@ -265,7 +265,7 @@ HTTP Request와 Response를 공부하기 위해 만든 개인 프로젝트입니
   - GoF의 디자인 패턴을 공부하고자 열은 스터디입니다.
 - 기억에 남는 점
 
-    <p align="center"><img src="./img/gof.png" width="60%" /></p>
+    <p align="center"><img src="./community/img/gof.png" width="60%" /></p>
 
 ## 알고리즘 스터디
 
