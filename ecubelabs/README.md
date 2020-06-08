@@ -8,7 +8,7 @@
 ## 요약
 
 - [i-Box](#i-Box) (React, Apollo GraphQL)
-  - 기간: 2020.01 - 2020.04
+  - 기간: 2020.01 - 2020.06
 - [Haulla Back Office](#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C) (React, Typescript)
   - 기간: 2019.07 - 2019.11
 - [CCNx](#ccnx-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) (Angular 7)
@@ -25,7 +25,7 @@
 
 ## i-Box 웹 프론트 개발
 
-- 기간: 2020.01 - 2020.04
+- 기간: 2020.01 - 2020.06
 - 설명
   - 이치카와시에 설치된 스마트 공공 쓰레기통입니다.
   - 쓰레기를 누가, 언제, 어디서, 얼마나 버렸는지 추적해서 버린 사람에게 비용을 청구합니다.
