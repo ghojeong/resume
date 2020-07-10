@@ -18,13 +18,10 @@
 
 ## [ClassMate](./classmate.md)
 
-기간: 2018.03 - 2018.07
-
-[**YouTube**](https://youtu.be/RMkTWNjY1Vc)
-
-[Source Code](https://github.com/JVHE/ClassMate)
-
-스마트폰 카메라 및 스크린을 방송하는 앱입니다. 자세한 내용은 [링크](./classmate.md)를 확인해주세요.
+- 기간: 2018.03 - 2018.07
+- [**YouTube**](https://youtu.be/RMkTWNjY1Vc)
+- [Source Code](https://github.com/JVHE/ClassMate)
+- 스마트폰 카메라 및 스크린을 방송하는 앱입니다. 자세한 내용은 [링크](./classmate.md)를 확인해주세요.
 
 <p align="center"><img src="./img/classmate_2.png" width="90%" /></p>
 
