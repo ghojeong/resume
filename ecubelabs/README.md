@@ -7,6 +7,8 @@
 
 ## 요약
 
+- [e2e test](#e2e-test) (Selenium, Appium)
+  - 기간: 2020.01 - 2020.06
 - [i-Box](#i-Box) (React, Apollo GraphQL)
   - 기간: 2020.01 - 2020.06
 - [Haulla Back Office](#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C) (React, Typescript)
@@ -22,6 +24,21 @@
     - 기간: 2019.01 - 2019.02
   - [Partner Scale API](#partner-scale-api-%EA%B0%9C%EB%B0%9C) (Express)
     - 기간: 2018.10 - 2018.12
+
+## e2e test
+
+- 기간: 2020.07 -
+- 설명
+  - e2e 테스트를 위한 환경구축 및 테스트 코드 작성했습니다.
+- 사용 기술
+  - Selenium
+  - Appium
+  - wd(Web Driver)
+  - Jest
+
+<p align="center"><img src="./img/appium-login.gif" width="60%" /></p>
+
+<p align="center"><img src="./img/selenium-login.gif" width="60%" /></p>
 
 ## i-Box 웹 프론트 개발
 
