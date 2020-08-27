@@ -62,9 +62,9 @@
   - wd(Web Driver)
   - Jest
 
-<p align="center"><img src="./img/appium-login.gif" width="80%" /></p>
+<p align="center"><img src="./ecubelabs/img/appium-login.gif" width="80%" /></p>
 
-<p align="center"><img src="./img/selenium-login.gif" width="80%" /></p>
+<p align="center"><img src="./ecubelabs/img/selenium-login.gif" width="80%" /></p>
 
 ## i-Box 웹 프론트 개발
 
