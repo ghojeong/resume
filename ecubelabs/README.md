@@ -8,7 +8,7 @@
 ## 요약
 
 - [e2e test](#e2e-test) (Selenium, Appium)
-  - 기간: 2020.01 - 2020.06
+  - 기간: 2020.07 - 2020.08
 - [i-Box](#i-Box) (React, Apollo GraphQL)
   - 기간: 2020.01 - 2020.06
 - [Haulla Back Office](#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C) (React, Typescript)
@@ -27,7 +27,7 @@
 
 ## e2e test
 
-- 기간: 2020.07 -
+- 기간: 2020.07 - 2020.08
 - 설명
   - e2e 테스트를 위한 환경구축 및 테스트 코드 작성했습니다.
 - 사용 기술
