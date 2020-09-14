@@ -2,7 +2,8 @@
 
 제가 참여한 커뮤니티 활동에 대한 상세 설명입니다.
 
-- [오픈소스 컨트리뷰톤]()
+- [오픈소스 컨트리뷰톤](#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%86%A4)
+  - 기간: 2020.08 - 2020.09
 - [디자인 패턴 스터디](#%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-%EC%8A%A4%ED%84%B0%EB%94%94)
   - 기간: 2020.04 -
 - [알고리즘 스터디](#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%8A%A4%ED%84%B0%EB%94%94)
@@ -31,7 +32,7 @@
 
     <p align="center"><img src="./img/oss_cloud-barista_1.png" width="60%" /></p>
 
-    <p align="center"><img src="./img/oss_cloud-barista_2.png" width="60%" /></p>
+    <p align="center"><img src="./img/oss_cloud-barista_2.jpg" width="60%" /></p>
 
 ## 디자인 패턴 스터디
 
