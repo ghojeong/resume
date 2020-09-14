@@ -7,6 +7,8 @@
 
 ## 요약
 
+- [ceed/core]() (Storybook)
+  - 기간: 2020.09 -
 - [e2e test](#e2e-test) (Selenium, Appium)
   - 기간: 2020.07 - 2020.08
 - [i-Box](#i-Box) (React, Apollo GraphQL)
@@ -24,6 +26,20 @@
     - 기간: 2019.01 - 2019.02
   - [Partner Scale API](#partner-scale-api-%EA%B0%9C%EB%B0%9C) (Express)
     - 기간: 2018.10 - 2018.12
+
+## ceed/core
+
+- 기간: 2020.09 -
+- 링크: <https://github.com/Ecube-Labs/ceed-core>
+- 설명
+  - 회사에서 공통적으로 쓰이는 스타일드 컴포넌트를 모듈화 해서, npm에 배포했습니다.
+- 사용 기술
+  - Storybook
+  - React
+  - Jest
+  - Typescript
+
+<p align="center"><img src="./img/storybook.png" width="80%" /></p>
 
 ## e2e test
 
