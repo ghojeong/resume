@@ -7,8 +7,8 @@
 
 ## 요약
 
-- [ceed/core]() (Storybook)
-  - 기간: 2020.09 -
+- [ceed/core](#ceedcore) (Storybook)
+  - 기간: 2020.09
 - [e2e test](#e2e-test) (Selenium, Appium)
   - 기간: 2020.07 - 2020.08
 - [i-Box](#i-Box) (React, Apollo GraphQL)
@@ -29,7 +29,7 @@
 
 ## ceed/core
 
-- 기간: 2020.09 -
+- 기간: 2020.09
 - 링크: <https://github.com/Ecube-Labs/ceed-core>
 - 설명
   - 회사에서 공통적으로 쓰이는 스타일드 컴포넌트를 모듈화 해서, npm에 배포했습니다.

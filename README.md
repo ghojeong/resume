@@ -14,6 +14,8 @@
 ## 목차
 
 - Ecube Labs (회사)
+  - [ceed/core](#ceedcore) (Storybook)
+    - 기간: 2020.09
   - [e2e test](#e2e-test) (Selenium, Appium)
     - 기간: 2020.07 - 2020.08
   - [i-Box](#i-Box) (React, Apollo GraphQL)
@@ -52,6 +54,20 @@
     - 기간: 2019.07 - 2019.09
   - [공감 세미나 주니어](#%EA%B3%B5%EA%B0%90-%EC%84%B8%EB%AF%B8%EB%82%98-%EC%A3%BC%EB%8B%88%EC%96%B4)
     - 기간: 2019.03 - 2019.06
+
+## ceed/core
+
+- 기간: 2020.09
+- 링크: <https://github.com/Ecube-Labs/ceed-core>
+- 설명
+  - 회사에서 공통적으로 쓰이는 스타일드 컴포넌트를 모듈화 해서, npm에 배포했습니다.
+- 사용 기술
+  - Storybook
+  - React
+  - Jest
+  - Typescript
+
+<p align="center"><img src="./ecubelabs/img/storybook.png" width="80%" /></p>
 
 ## e2e test
 
