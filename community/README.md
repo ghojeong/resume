@@ -2,6 +2,7 @@
 
 제가 참여한 커뮤니티 활동에 대한 상세 설명입니다.
 
+- [오픈소스 컨트리뷰톤]()
 - [디자인 패턴 스터디](#%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-%EC%8A%A4%ED%84%B0%EB%94%94)
   - 기간: 2020.04 -
 - [알고리즘 스터디](#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%8A%A4%ED%84%B0%EB%94%94)
@@ -13,11 +14,24 @@
 
 ## 현재 회원으로 활동 중인 커뮤니티
 
-- [자바 카페](http://tech.javacafe.io/about/)
-- [소프트웨어 캠퍼스](https://www.facebook.com/softwarecamp/)
+- [Cloud-Barista](https://cloud-barista.github.io/)
+- [Java Cafe](http://tech.javacafe.io/about/)
+- [Software Campus](https://www.facebook.com/softwarecamp/)
 
 <p align="center"><img src="./img/softwarecampus.png" width="60%" /></p>
 <p align="center"><img src="./img/java_cafe.jpeg" width="60%" /></p>
+
+## 오픈소스 컨트리뷰톤
+
+- 기간: 2020.08 - 2020.09
+- 링크: <https://www.oss.kr/contributhon_project/show/e06eb6b5-25d9-4be4-92ea-c24ceda137b0>
+- 설명
+  - 정보통신산업진흥원에서 주최하는 오픈소스 컨트리뷰톤 행사에 참가했습니다.
+  - 행사 활동을 통해 멘토 단이 소속되어 있는 Cloud-Barista 오픈 소스 커뮤니티에 가입하게 되었습니다.
+
+    <p align="center"><img src="./img/oss_cloud-barista_1.png" width="60%" /></p>
+
+    <p align="center"><img src="./img/oss_cloud-barista_2.png" width="60%" /></p>
 
 ## 디자인 패턴 스터디
 
@@ -25,7 +39,6 @@
 - 링크: <https://github.com/ghojeong/GoF>
 - 설명
   - GoF의 디자인 패턴을 공부하고자 열은 스터디입니다.
-- 기억에 남는 점
 
     <p align="center"><img src="./img/gof.png" width="60%" /></p>
 
