@@ -221,7 +221,7 @@
 
 <p align="center"><img src="./community/img/softwarecampus.png" width="60%" /></p>
 
-## 오픈소스 컨트리뷰톤
+### 오픈소스 컨트리뷰톤
 
 - 기간: 2020.08 - 2020.09
 - 링크: <https://www.oss.kr/contributhon_project/show/e06eb6b5-25d9-4be4-92ea-c24ceda137b0>
@@ -233,7 +233,7 @@
 
     <p align="center"><img src="./community/img/oss_cloud-barista_2.jpg" width="60%" /></p>
 
-## 디자인 패턴 스터디
+### 디자인 패턴 스터디
 
 - 기간: 2020.04 -
 - 링크: <https://github.com/ghojeong/GoF>
@@ -242,7 +242,7 @@
 
     <p align="center"><img src="./community/img/gof.png" width="60%" /></p>
 
-## 알고리즘 스터디
+### 알고리즘 스터디
 
 - 기간: 2019.09 -
 - 링크: <https://github.com/ghojeong/CtCI>
@@ -254,7 +254,7 @@
 
     <p align="center"><img src="./community/img/algorithm.jpeg" width="60%" /></p>
 
-## <모던 자바스크립트 입문> 책 스터디
+### <모던 자바스크립트 입문> 책 스터디
 
 - 기간: 2019.07 - 2019.09
 - 링크: <https://github.com/study-records/modern-javascript-study/tree/master/Modern_Javascript_Primer>
@@ -267,7 +267,7 @@
 
     <p align="center"><img src="./community/img/javascript_study.jpeg" width="60%" /></p>
 
-## 공감 세미나 주니어
+### 공감 세미나 주니어
 
 - 기간: 2019.03 - 2019.06
 - 링크: <http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334>
