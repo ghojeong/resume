@@ -33,16 +33,6 @@
       - 기간: 2019.01 - 2019.02
     - [Partner Scale API](#partner-scale-api-%EA%B0%9C%EB%B0%9C) (Express)
       - 기간: 2018.10 - 2018.12
-- UNIST (대학교)
-  - 개인 프로젝트
-    - [Indoor Tracker](#indoor-tracker) (실내 위치 추적 앱)
-    - [Web Server](#web-server) (바닥부터 C 언어로 구현한 웹서버)
-    - [고-Shop](#%EA%B3%A0-shop) (쇼핑몰)
-    - [Tetris](#tetris) (멀티 플레이가 가능한 게임 앱)
-    - [Pronunciation App](#pronunciation-app) (TSS와 STT를 활용한 발음 교정 앱)
-    - [Gho Map](#gho-map) (구글 지도를 활용한 앱)
-  - 팀 프로젝트
-    - [Class Mate](#classmate) (영상 스트리밍 앱)
 - [커뮤니티](#%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0)
   - [오픈소스 컨트리뷰톤](#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%86%A4)
     - 기간: 2020.08 - 2020.09
@@ -54,6 +44,16 @@
     - 기간: 2019.07 - 2019.09
   - [공감 세미나 주니어](#%EA%B3%B5%EA%B0%90-%EC%84%B8%EB%AF%B8%EB%82%98-%EC%A3%BC%EB%8B%88%EC%96%B4)
     - 기간: 2019.03 - 2019.06
+- UNIST (대학교)
+  - 개인 프로젝트
+    - [Indoor Tracker](#indoor-tracker) (실내 위치 추적 앱)
+    - [Web Server](#web-server) (바닥부터 C 언어로 구현한 웹서버)
+    - [고-Shop](#%EA%B3%A0-shop) (쇼핑몰)
+    - [Tetris](#tetris) (멀티 플레이가 가능한 게임 앱)
+    - [Pronunciation App](#pronunciation-app) (TSS와 STT를 활용한 발음 교정 앱)
+    - [Gho Map](#gho-map) (구글 지도를 활용한 앱)
+  - 팀 프로젝트
+    - [Class Mate](#classmate) (영상 스트리밍 앱)
 
 ## ceed/core
 
@@ -213,6 +213,79 @@
   - 하드웨어를 제조하는 파트너사가 퍼센트 인코딩을 지원해 달라고 요청했습니다.
     - 결국 해당 파트너사를 위해 퍼센트 인코딩을 지원하는 미들웨어를 따로 개발해야 했습니다.
 
+## 커뮤니티
+
+- [Cloud-Barista](https://cloud-barista.github.io/)
+- [Java Cafe](http://tech.javacafe.io/about/)
+- [Software Campus](https://www.facebook.com/softwarecamp/)
+
+<p align="center"><img src="./community/img/softwarecampus.png" width="60%" /></p>
+
+## 오픈소스 컨트리뷰톤
+
+- 기간: 2020.08 - 2020.09
+- 링크: <https://www.oss.kr/contributhon_project/show/e06eb6b5-25d9-4be4-92ea-c24ceda137b0>
+- 설명
+  - 정보통신산업진흥원에서 주최하는 오픈소스 컨트리뷰톤 행사에 참가했습니다.
+  - 행사 활동을 통해 멘토 단이 소속되어 있는 Cloud-Barista 오픈 소스 커뮤니티에 가입하게 되었습니다.
+
+    <p align="center"><img src="./community/img/oss_cloud-barista_1.png" width="60%" /></p>
+
+    <p align="center"><img src="./community/img/oss_cloud-barista_2.jpg" width="60%" /></p>
+
+## 디자인 패턴 스터디
+
+- 기간: 2020.04 -
+- 링크: <https://github.com/ghojeong/GoF>
+- 설명
+  - GoF의 디자인 패턴을 공부하고자 열은 스터디입니다.
+
+    <p align="center"><img src="./community/img/gof.png" width="60%" /></p>
+
+## 알고리즘 스터디
+
+- 기간: 2019.09 -
+- 링크: <https://github.com/ghojeong/CtCI>
+- 설명
+  - 혼자서는 어려웠던 알고리즘 공부에 도전하고 싶어서 열은 스터디입니다.
+- 기억에 남는 점
+  - 2019년 12월에 육군 훈련소에 가게 되어 스터디가 일시중지 되었는데, 훈련소를 수료하자마자 스터디가 언제 다시 열리냐는 연락을 받아서 감동했습니다.
+  - 스터디원 분들을 위해 더 열심히 공부해야겠다는 새해 다짐을 했습니다.
+
+    <p align="center"><img src="./community/img/algorithm.jpeg" width="60%" /></p>
+
+## <모던 자바스크립트 입문> 책 스터디
+
+- 기간: 2019.07 - 2019.09
+- 링크: <https://github.com/study-records/modern-javascript-study/tree/master/Modern_Javascript_Primer>
+- 설명
+  - 자바스크립트에 대한 이해도를 높이고 싶어서 시작한 스터디입니다.
+  - 공부했던 내용을 문서로 정리해서 gitHub 에 올렸습니다.
+- 기억에 남는 점
+  - 자바를 본업으로 삼고 계시는 경력직 개발자분들도, 언제나 새로운 학습에 목말라 있다는 열정이 참 대단하다고 느꼈습니다.
+  - 본받고 싶은 분들을 많이 만나 행복했습니다.
+
+    <p align="center"><img src="./community/img/javascript_study.jpeg" width="60%" /></p>
+
+## 공감 세미나 주니어
+
+- 기간: 2019.03 - 2019.06
+- 링크: <http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334>
+- 설명
+  - 한빛미디어 후원으로 열었던 유료 세미나입니다.
+  - 본인이 직접 기획하고, 준비하고, 발표자로 참가했습니다.
+  - 본인이 2개의 세션을 발표했습니다.
+    - 첫번째 세션: 개발자가 되고 싶은 대학생 및 성인을 대상으로, 주니어로서 겪었던 어려움을 이야기했습니다.
+    - 두번째 세션: 개발자로 취업을 희망하는 친구들과 2개월 간 만든 미니 프로젝트를 발표했습니다.
+- 기억에 남는 점
+  - 1만 1천원을 지불한 사람들이 80명 넘게 강의장을 꽉 채웠습니다.
+  - 준비를 할 때도 긴장했지만, 발표를 할 때는 더욱 긴장해서 다리에 힘이 들어가지 않아 중간중간 의자에 앉아야 했습니다.
+  - 발표가 끝나고 나서, 제가 기대했던 것 이상의 박수 소리에 기뻐서 몸을 떨었던게 기억납니다.
+  - 행사가 끝나고 긴장이 풀리자, 화장실로 가서 헛구역질 했던게 기억납니다.
+  - 이때부터 커뮤니티 활동이라는 스릴에 중독이 된 것 같습니다.
+
+    <p align="center"><img src="./community/img/gonggam.jpeg" width="60%" /></p>
+
 ## Indoor Tracker
 
 교수님의 의뢰로 만든 개인 프로젝트입니다. GPS의 기능 없이 실내에서 자신이 어디에 있는지 알려주는 안드로이드 앱입니다. Wi-Fi 신호의 Finger Printing 기법을 이용했으며, Finger Printing 된 노드들을 Sparse Matrix 자료구조 형태로 연결했습니다. Finger Printing을 하기 위해서 각 노드에서 수집된 Wi-Fi 신호들을 로컬 데이터베이스에 SQLite를 통하여 저장했습니다. 각 노드의 Finger Printing 값과 현재 측정된 Wi-Fi 신호 값을 상대적으로 비교하여, 자신의 현재 위치를 실시간으로 알아냅니다. 현재 위치에서 이동할 경우, 변경된 위치와 이동 경로를 새롭게 표시해줍니다. 이동 경로가 벽을 통과하거나, 존재하지 않는 길을 지나가지 않도록 예외처리를 하였습니다.
@@ -286,76 +359,3 @@ HTTP Request와 Response를 공부하기 위해 만든 개인 프로젝트입니
 ![classmate_9](./unist/img/classmate_9.png)
 
 ![classmate_10](./unist/img/classmate_10.png)
-
-## 커뮤니티
-
-- [Cloud-Barista](https://cloud-barista.github.io/)
-- [Java Cafe](http://tech.javacafe.io/about/)
-- [Software Campus](https://www.facebook.com/softwarecamp/)
-
-<p align="center"><img src="./community/img/softwarecampus.png" width="60%" /></p>
-
-## 오픈소스 컨트리뷰톤
-
-- 기간: 2020.08 - 2020.09
-- 링크: <https://www.oss.kr/contributhon_project/show/e06eb6b5-25d9-4be4-92ea-c24ceda137b0>
-- 설명
-  - 정보통신산업진흥원에서 주최하는 오픈소스 컨트리뷰톤 행사에 참가했습니다.
-  - 행사 활동을 통해 멘토 단이 소속되어 있는 Cloud-Barista 오픈 소스 커뮤니티에 가입하게 되었습니다.
-
-    <p align="center"><img src="./community/img/oss_cloud-barista_1.png" width="60%" /></p>
-
-    <p align="center"><img src="./community/img/oss_cloud-barista_2.jpg" width="60%" /></p>
-
-## 디자인 패턴 스터디
-
-- 기간: 2020.04 -
-- 링크: <https://github.com/ghojeong/GoF>
-- 설명
-  - GoF의 디자인 패턴을 공부하고자 열은 스터디입니다.
-
-    <p align="center"><img src="./community/img/gof.png" width="60%" /></p>
-
-## 알고리즘 스터디
-
-- 기간: 2019.09 -
-- 링크: <https://github.com/ghojeong/CtCI>
-- 설명
-  - 혼자서는 어려웠던 알고리즘 공부에 도전하고 싶어서 열은 스터디입니다.
-- 기억에 남는 점
-  - 2019년 12월에 육군 훈련소에 가게 되어 스터디가 일시중지 되었는데, 훈련소를 수료하자마자 스터디가 언제 다시 열리냐는 연락을 받아서 감동했습니다.
-  - 스터디원 분들을 위해 더 열심히 공부해야겠다는 새해 다짐을 했습니다.
-
-    <p align="center"><img src="./community/img/algorithm.jpeg" width="60%" /></p>
-
-## <모던 자바스크립트 입문> 책 스터디
-
-- 기간: 2019.07 - 2019.09
-- 링크: <https://github.com/study-records/modern-javascript-study/tree/master/Modern_Javascript_Primer>
-- 설명
-  - 자바스크립트에 대한 이해도를 높이고 싶어서 시작한 스터디입니다.
-  - 공부했던 내용을 문서로 정리해서 gitHub 에 올렸습니다.
-- 기억에 남는 점
-  - 자바를 본업으로 삼고 계시는 경력직 개발자분들도, 언제나 새로운 학습에 목말라 있다는 열정이 참 대단하다고 느꼈습니다.
-  - 본받고 싶은 분들을 많이 만나 행복했습니다.
-
-   <p align="center"><img src="./community/img/javascript_study.jpeg" width="60%" /></p>
-
-## 공감 세미나 주니어
-
-- 기간: 2019.03 - 2019.06
-- 링크: <http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334>
-- 설명
-  - 한빛미디어 후원으로 열었던 유료 세미나입니다.
-  - 본인이 직접 기획하고, 준비하고, 발표자로 참가했습니다.
-  - 본인이 2개의 세션을 발표했습니다.
-    - 첫번째 세션: 개발자가 되고 싶은 대학생 및 성인을 대상으로, 주니어로서 겪었던 어려움을 이야기했습니다.
-    - 두번째 세션: 개발자로 취업을 희망하는 친구들과 2개월 간 만든 미니 프로젝트를 발표했습니다.
-- 기억에 남는 점
-  - 1만 1천원을 지불한 사람들이 80명 넘게 강의장을 꽉 채웠습니다.
-  - 준비를 할 때도 긴장했지만, 발표를 할 때는 더욱 긴장해서 다리에 힘이 들어가지 않아 중간중간 의자에 앉아야 했습니다.
-  - 발표가 끝나고 나서, 제가 기대했던 것 이상의 박수 소리에 기뻐서 몸을 떨었던게 기억납니다.
-  - 행사가 끝나고 긴장이 풀리자, 화장실로 가서 헛구역질 했던게 기억납니다.
-  - 이때부터 커뮤니티 활동이라는 스릴에 중독이 된 것 같습니다.
-
-<p align="center"><img src="./community/img/gonggam.jpeg" width="60%" /></p>
