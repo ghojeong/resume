@@ -27,7 +27,7 @@
 ### ceed/core 컴포넌트 라이브러리 모듈화
 
 - 기간: 2020.09
-- 사용 기술: React, Typescript, Storybook, Jest
+- 사용 기술: React, Typescript, Jest, Storybook
 - 설명
   - 회사에서 공통적으로 쓰이는 스타일드 컴포넌트를 모듈화 해서, npm에 배포
 
