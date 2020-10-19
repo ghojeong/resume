@@ -20,7 +20,7 @@
 - [UNIST](./unist/README.md): 2013.03 - 2018.09
   - [성적표](./unist/grade.pdf)
 
-## 경험 프로젝트
+## 개발 경험
 
 ![grass](./img/grass.png)
 
