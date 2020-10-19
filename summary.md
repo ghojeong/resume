@@ -5,6 +5,13 @@
 - 나이: 1994년생, 27살
 - 거주지: 코엑스 근처
 
+## 이력
+
+- [Ecube Labs](./ecubelabs/README.md): 2018.10 - 재직 중
+  - 기술 스택: React, Typescript
+- [UNIST](./unist/README.md): 2013.03 - 2018.09
+  - [성적표](./unist/grade.pdf)
+
 ## 가치관
 
 - 정숙하고 외로운 독서실보다는, 활기찬 파티룸을 좋아합니다.
@@ -12,13 +19,6 @@
 - 기술적으로 소외당하는 분야에서, 새로운 기술 서비스 시장을 찾아낼 수 있다고 믿습니다.
 - [책을 좋아합니다.](./book/README.md)
 - [**커뮤니티 활동을 좋아합니다.**](./community/README.md)
-
-## 이력
-
-- [Ecube Labs](./ecubelabs/README.md): 2018.10 - 재직 중
-  - 기술 스택: React, Typescript
-- [UNIST](./unist/README.md): 2013.03 - 2018.09
-  - [성적표](./unist/grade.pdf)
 
 ## 개발 경험
 
