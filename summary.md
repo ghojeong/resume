@@ -22,7 +22,7 @@
 
 ## 경험 프로젝트
 
-<p align="center"><img src="./img/grass.png" width="90%" /></p>
+![grass](./img/grass.png)
 
 ### ceed/core 컴포넌트 라이브러리 모듈화
 
