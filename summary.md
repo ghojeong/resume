@@ -58,7 +58,7 @@
 ### Haulla 웹 프론트 개발
 
 - 기간: 2019.07 - 2019.11
-- 사용 기술: React, Typescript, redux-observable
+- 사용 기술: React, Typescript, rxjs, redux-observable
 - 제품 소개: <https://www.haulla.com/>
 - 설명
   - Haulla: 쓰레기 수거자(Hauler)와 배출자(Generator)를 연결해주는 매칭 플랫폼
