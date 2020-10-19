@@ -20,9 +20,9 @@
 - [UNIST](./unist/README.md): 2013.03 - 2018.09
   - [성적표](./unist/grade.pdf)
 
-<p align="center"><img src="./img/grass.png" width="90%" /></p>
+## 경험 프로젝트
 
-## 프로젝트
+<p align="center"><img src="./img/grass.png" width="90%" /></p>
 
 ### ceed/core 컴포넌트 라이브러리 모듈화
 
