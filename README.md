@@ -233,7 +233,7 @@
 - 링크: <https://www.oss.kr/contributhon_project/show/e06eb6b5-25d9-4be4-92ea-c24ceda137b0>
 - 설명
   - 정보통신산업진흥원에서 주최하는 오픈소스 컨트리뷰톤 행사에 참가했습니다.
-  - 행사 활동을 통해 멘토 단이 소속되어 있는 Cloud-Barista 오픈 소스 커뮤니티에 가입하게 되었습니다.
+  - 행사 활동을 통해 멘토단이 소속되어 있는 Cloud-Barista 오픈 소스 커뮤니티에 가입하게 되었습니다.
 
     <p align="center"><img src="./community/img/oss_cloud-barista_1.png" width="60%" /></p>
 
