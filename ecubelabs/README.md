@@ -33,10 +33,10 @@
 - 설명
   - 회사에서 공통적으로 쓰이는 스타일드 컴포넌트를 모듈화 해서, npm에 배포했습니다.
 - 사용 기술
-  - Storybook
   - React
-  - Jest
   - Typescript
+  - Jest
+  - Storybook
 
 <p align="center"><img src="./img/storybook.png" width="80%" /></p>
 
@@ -46,10 +46,16 @@
 - 설명
   - e2e 테스트를 위한 환경을 구축하고 테스트 코드를 작성했습니다.
 - 사용 기술
+  - React, React Native
+  - Typescript
+  - Jest
   - Selenium
   - Appium
   - wd(Web Driver)
-  - Jest
+- 기억에 남는 점
+  - Animated.View 로 컴포넌트가 감싸져 있을 경우, 컴포넌트에 이벤트를 전달할 때 XPath를 사용해야만 합니다.
+  - accessibilityId 로 컴포넌트에 접근하거나, 이벤트를 전달할 경우 IOS 환경에서 의도치 않은 현상이 발생하거나, 반응하지 않는 경우가 많았습니다.
+  - 테스트 환경을 구축하더라도, 팀원 모두가 e2e-test 에 관심을 보여주지 않는다면 테스트 자동화가 문화로 정착하기 어렵다는 점을 알게 되었습니다.
 
 <p align="center"><img src="./img/appium-login.gif" width="80%" /></p>
 
@@ -64,10 +70,12 @@
   - 웹 혹은 앱을 통해 받은 QR 이미지로, 사용자 인증을 합니다.
   - 이치카와시의 공무원은 i-Box의 기록을 관리자로 모니터링할 수 있습니다.
 - 사용 기술
+  - React
   - Typescript
-  - redux-observable: React, redux, rxjs
-  - graphql, apollo: apollo-boost, apollo-react-hooks
-  - reactotron
+  - Redux, redux-observable
+  - RxJS, lodash
+  - graphql, apollo, apollo-boost, apollo-react-hooks
+  - Reactotron
   - intl, react-intl
 - 기억에 남는 점
   - 비동기를 커스텀 훅을 사용해 처리해서, 리액트 훅에 대한 이해도가 많이 올라갔습니다.
@@ -88,9 +96,8 @@
 - 사용 기술
   - React, Next.js
   - Typescript
-  - redux, redux-observable
-  - rxjs
-  - lodash
+  - Redux, redux-observable
+  - Rxjs, lodash
   - axios, axios-observable
   - Material-UI
 - 기억에 남는 점
