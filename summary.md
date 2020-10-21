@@ -24,7 +24,7 @@
 
 ![grass](./img/grass.png)
 
-### ceed/core 컴포넌트 라이브러리 모듈화
+### ceed/core 컴포넌트 모듈화
 
 - 기간: 2020.09
 - 사용 기술: React, Typescript, Storybook
