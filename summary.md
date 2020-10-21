@@ -29,7 +29,7 @@
 - 기간: 2020.09
 - 사용 기술: React, Typescript, Storybook
 - 설명
-  - 회사에서 공통적으로 쓰이는 스타일드 컴포넌트를 모듈화 해서, npm에 배포
+  - 회사에서 공통적으로 쓰이는 컴포넌트를 모듈화 해서, npm에 배포
 
 <p align="center"><img src="./ecubelabs/img/storybook.png" width="80%" /></p>
 
