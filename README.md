@@ -7,15 +7,15 @@
 
 ## 이력
 
-- Ecube Labs (회사): 2018.10 - 재직 중
+- Ecube Labs (회사): 2018 - 2020
   - [회사 기술 스택](./ecubelabs/tech.md)
-- UNIST (대학교): 2013.03 - 2018.09
+- UNIST (대학교): 2013 - 2018
 
 ## 목차
 
 - Ecube Labs (회사)
   - [ceed/core](#ceedcore) (Storybook)
-    - 기간: 2020.09
+    - 기간: 2020.09 - 2020.10
   - [e2e test](#e2e-test) (Selenium, Appium)
     - 기간: 2020.07 - 2020.08
   - [i-Box](#i-Box) (React, Apollo GraphQL)
@@ -57,7 +57,7 @@
 
 ## ceed/core
 
-- 기간: 2020.09
+- 기간: 2020.09 - 2020.10
 - 설명
   - 회사에서 공통적으로 쓰이는 컴포넌트를 모듈화 해서, npm에 배포했습니다.
 - 사용 기술

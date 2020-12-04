@@ -7,9 +7,9 @@
 
 ## 이력
 
-- [Ecube Labs](./ecubelabs/README.md): 2018.10 - 재직 중
+- [Ecube Labs](./ecubelabs/README.md): 2018 - 2020
   - 기술 스택: React, Typescript
-- [UNIST](./unist/README.md): 2013.03 - 2018.09
+- [UNIST](./unist/README.md): 2013 - 2018
   - [성적표](./unist/grade.pdf)
 
 ## 가치관
@@ -26,7 +26,7 @@
 
 ### ceed/core 컴포넌트 모듈화
 
-- 기간: 2020.09
+- 기간: 2020.09 - 2020.10
 - 사용 기술: React, Typescript, Storybook
 - 설명
   - 회사에서 공통적으로 쓰이는 컴포넌트를 모듈화 해서, npm에 배포
