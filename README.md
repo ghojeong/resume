@@ -34,7 +34,7 @@
     - [Partner Scale API](#partner-scale-api-%EA%B0%9C%EB%B0%9C) (Express)
       - 기간: 2018.10 - 2018.12
 - [커뮤니티](#%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0)
-  - [오픈소스 컨트리뷰톤](#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%86%A4)
+  - [오픈소스 컨트리뷰톤 수상](#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%86%A4)
     - 기간: 2020.08 - 2020.09
   - [디자인 패턴 스터디](#%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-%EC%8A%A4%ED%84%B0%EB%94%94)
     - 기간: 2020.04 - 2020.10
@@ -227,13 +227,13 @@
 
 <p align="center"><img src="./community/img/softwarecampus.png" width="60%" /></p>
 
-### 오픈소스 컨트리뷰톤
+### 오픈소스 컨트리뷰톤 수상
 
 - 기간: 2020.08 - 2020.09
 - 링크: <https://www.oss.kr/contributhon_project/show/e06eb6b5-25d9-4be4-92ea-c24ceda137b0>
 - 설명
 
-  - 정보통신산업진흥원에서 주최하는 오픈소스 컨트리뷰톤 행사에 참가했습니다.
+  - 정보통신산업진흥원에서 주최하는 오픈소스 컨트리뷰톤 행사에 참가하여 특별상을 수상했습니다.
   - 행사 활동을 통해 멘토단이 소속되어 있는 Cloud-Barista 오픈 소스 커뮤니티에 가입하게 되었습니다.
 
     <p align="center"><img src="./community/img/oss_cloud-barista_1.png" width="60%" /></p>
