@@ -34,7 +34,7 @@
     - [Partner Scale API](#partner-scale-api-%EA%B0%9C%EB%B0%9C) (Express)
       - 기간: 2018.10 - 2018.12
 - [커뮤니티](#%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0)
-  - [오픈소스 컨트리뷰톤 수상](#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%86%A4)
+  - [오픈소스 컨트리뷰톤 수상](#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%86%A4-%EC%88%98%EC%83%81)
     - 기간: 2020.08 - 2020.09
   - [디자인 패턴 스터디](#%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-%EC%8A%A4%ED%84%B0%EB%94%94)
     - 기간: 2020.04 - 2020.10
