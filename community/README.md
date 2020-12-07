@@ -33,9 +33,9 @@
 <table>
 <tr>
 <td rowspan="2"><img src="./img/oss.png" /></td>
-<td><img src="./img/oss_cloud-barista_1.png" width="60%" /></td>
+<td style="width:56%;"><img src="./img/oss_cloud-barista_1.png" /></td>
 </tr>
-<tr><td><img src="./img/oss_cloud-barista_2.jpg" width="60%" /></td></tr>
+<tr><td><img src="./img/oss_cloud-barista_2.jpg" /></td></tr>
 </table>
 </div>
 
