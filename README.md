@@ -111,7 +111,7 @@
   - 자바스크립트로 바이너리 스트림을 다루는 경험을 해볼 수 있었습니다.
     - QR 이미지를 생성 후 압축해서 업로드하거나 다운받는 작업을 할때, 일반 JSON 텍스트와 달리 바이너리 데이터에 맞게 소켓통신을 해야했습니다.
 
-<p align="center">|<img src="./ecubelabs/img/i-Box.png" width="50%" />|<img src="./ecubelabs/img/i-Box.gif" width="40%" />|</p>
+<p align="center"><img src="./ecubelabs/img/i-Box.png" width="50%" /><img src="./ecubelabs/img/i-Box.gif" width="40%" /></p>
 
 ## Haulla Back Office 웹 프론트 개발
 
@@ -236,9 +236,7 @@
   - 정보통신산업진흥원에서 주최하는 오픈소스 컨트리뷰톤 행사에 참가하여 특별상을 수상했습니다.
   - 행사 활동을 통해 멘토단이 소속되어 있는 Cloud-Barista 오픈 소스 커뮤니티에 가입하게 되었습니다.
 
-    <p align="center"><img src="./community/img/oss_cloud-barista_1.png" width="60%" /></p>
-
-    <p align="center"><img src="./community/img/oss_cloud-barista_2.jpg" width="60%" /></p>
+  <div style="display:flex;"><img src="./community/img/oss.png" width="40%" /><div style="width:60%; padding-left: 8px;"><img src="./community/img/oss_cloud-barista_1.png" /><img src="./community/img/oss_cloud-barista_2.jpg" /></div></div>
 
 ### 디자인 패턴 스터디
 

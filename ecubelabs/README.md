@@ -83,7 +83,7 @@
   - 자바스크립트로 바이너리 스트림을 다루는 경험을 해볼 수 있었습니다.
     - QR 이미지를 생성 후 압축해서 업로드하거나 다운받는 작업을 할때, 일반 JSON 텍스트와 달리 바이너리 데이터에 맞게 소켓통신을 해야했습니다.
 
-<p align="center">|<img src="./img/i-Box.png" width="50%" />|<img src="./img/i-Box.gif" width="40%" />|</p>
+<p align="center"><img src="./img/i-Box.png" width="50%" /><img src="./img/i-Box.gif" width="40%" /></p>
 
 ## Haulla Back Office 웹 프론트 개발
 

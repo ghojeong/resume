@@ -53,7 +53,7 @@
   - 누가, 언제, 어디서, 얼마나 버렸는지 기록 후 배출자에게 비용 청구
   - 관리자 웹페이지로 모니터링 가능
 
-<p align="center">|<img src="./ecubelabs/img/i-Box.png" width="50%" />|<img src="./ecubelabs/img/i-Box.gif" width="40%" />|</p>
+<p align="center"><img src="./ecubelabs/img/i-Box.png" width="50%" /><img src="./ecubelabs/img/i-Box.gif" width="40%" /></p>
 
 ### Haulla 웹 프론트 개발
 
