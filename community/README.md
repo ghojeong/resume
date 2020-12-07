@@ -30,13 +30,13 @@
   - 정보통신산업진흥원에서 주최하는 오픈소스 컨트리뷰톤 행사에 참가하여 특별상을 수상했습니다.
   - 행사 활동을 통해 멘토단이 소속되어 있는 Cloud-Barista 오픈 소스 커뮤니티에 가입하게 되었습니다.
 
-
-<div style="display:flex !important;">
-  <img src="./img/oss.png" width="40%" />
-  <div style="width:60% !important; padding-left: 8px;">
-    <img src="./img/oss_cloud-barista_1.png" />
-    <img src="./img/oss_cloud-barista_2.jpg" />
-  </div>
+<table>
+<tr>
+<td style="width:44%" rowspan="2"><img src="./img/oss.png" /></td>
+<td><img src="./img/oss_cloud-barista_1.png" /></td>
+</tr>
+<tr><td><img src="./img/oss_cloud-barista_2.jpg" /></td></tr>
+</table>
 </div>
 
 ## 디자인 패턴 스터디
