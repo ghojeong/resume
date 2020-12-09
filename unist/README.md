@@ -14,7 +14,6 @@
   - [고-Shop](#%EA%B3%A0-shop) (쇼핑몰)
   - [Tetris](#tetris) (멀티 플레이가 가능한 게임 앱)
   - [Pronunciation App](#pronunciation-app) (TSS와 STT를 활용한 발음 교정 앱)
-  - [Gho Map](#gho-map) (구글 지도를 활용한 앱)
 
 ## [ClassMate](./classmate.md)
 
@@ -62,9 +61,3 @@ HTTP Request와 Response를 공부하기 위해 만든 개인 프로젝트입니
 스스로 발음과 말 빠르기를 교정하기 위해 만든 개인 프로젝트입니다. 안드로이드 앱이며, 자신이 연습하고 싶은 텍스트를 로컬 데이터베이스에 SQLite를 통해 저장할 수 있습니다. TTS(Text To Speech) 기술로 등록된 텍스트를 음성으로 변환하여, 사용자는 자신이 목표로 해야 할 적절한 발음과 말 빠르기를 들을 수 있습니다. 또한 STT(Speech To Text) 기술로 녹음된 음성을 텍스트로 변환하여, 사용자의 발성이 실제로는 어떻게 들렸는지 텍스트로 직접 보여줍니다.
 
 <p align="center"><img src="./img/pronunciation_app.png" width="90%" /></p>
-
-## Gho Map
-
-다른 안드로이드 지도 앱에서 한가지 검색 결과만이 뜨는 것이 아쉬워 만든 개인 프로젝트입니다. 자신이 좋아하는 장소와, 싫어하는 장소 두 가지를 동시에 검색하여 결과를 보여주는 안드로이드 앱입니다. 구글 MAPS API를 사용했으며, JSON과 HTTP를 통해 검색을 요청하고 검색 결과를 받았습니다. Marker와 Info Window를 직접 커스텀하여 자신이 좋아하는 장소는 하트로, 싫어하는 장소는 Heat Map으로 나타나게 했습니다. 한 곳에 집중된 Marker에 대해 마커 클러스터링 처리를 하였습니다.
-
-<p align="center"><img src="./img/map_app.png" width="90%" /></p>
