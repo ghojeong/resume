@@ -48,7 +48,6 @@
   - 개인 프로젝트
     - [Indoor Tracker](#indoor-tracker) (실내 위치 추적 앱)
     - [Web Server](#web-server) (바닥부터 C 언어로 구현한 웹서버)
-    - [고-Shop](#%EA%B3%A0-shop) (쇼핑몰)
     - [Tetris](#tetris) (멀티 플레이가 가능한 게임 앱)
     - [Pronunciation App](#pronunciation-app) (TSS와 STT를 활용한 발음 교정 앱)
   - 팀 프로젝트
@@ -309,12 +308,6 @@
 HTTP Request와 Response를 공부하기 위해 만든 개인 프로젝트입니다. C언어로 소켓 프로그래밍을 하여 밑바닥부터 만든 간단한 웹서버입니다. 브라우저의 HTTP Request에 맞추어 적절한 형식으로 HTML, CSS, JavaScript, 이미지 파일에 대한 데이터를 다시 브라우저에게 Response 해줍니다. 다수의 클라이언트 요청을 PThread를 사용한 멀티 스레드로 처리했습니다. 개발은 우분투 서버의 터미널에서 vim, gcc, gdb를 이용해 코딩했습니다.
 
 <p align="center"><img src="./unist/img/web_server.png" width="90%" /></p>
-
-## 고-Shop
-
-웹 개발을 익히기 위해 만든 개인 프로젝트입니다. 서버에 centOS, Apache, MariaDB, php를 직접 소스 설치한 후, HTML, php, JavaScript, CSS 파일을 만들었습니다. 로그인, 회원가입, 회원정보 수정, 장바구니 기능이 있으며 관리자 모드와 유저 모드가 있습니다. 관리자 아이디로 로그인할 경우 관리자 모드가 되며, 상품과 유저를 관리할 수 있는 기능이 추가됩니다. 상품 목록은 페이징 처리가 되어있으며, 상품을 검색, 분류, 정렬하더라도 페이징 처리가 유지되도록 했습니다.
-
-<p align="center"><img src="./unist/img/shop.png" width="90%" /></p>
 
 ## Tetris
 
