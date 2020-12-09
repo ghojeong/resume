@@ -11,7 +11,6 @@
 - 개인 프로젝트
   - [Indoor Tracker](#indoor-tracker) (실내 위치 추적 앱)
   - [Web Server](#web-server) (바닥부터 C 언어로 구현한 웹서버)
-  - [Tetris](#tetris) (멀티 플레이가 가능한 게임 앱)
   - [Pronunciation App](#pronunciation-app) (TSS와 STT를 활용한 발음 교정 앱)
 
 ## [ClassMate](./classmate.md)
@@ -38,16 +37,6 @@
 HTTP Request와 Response를 공부하기 위해 만든 개인 프로젝트입니다. C언어로 소켓 프로그래밍을 하여 밑바닥부터 만든 간단한 웹서버입니다. 브라우저의 HTTP Request에 맞추어 적절한 형식으로 HTML, CSS, JavaScript, 이미지 파일에 대한 데이터를 다시 브라우저에게 Response 해줍니다. 다수의 클라이언트 요청을 PThread를 사용한 멀티 스레드로 처리했습니다. 개발은 우분투 서버의 터미널에서 vim, gcc, gdb를 이용해 코딩했습니다.
 
 <p align="center"><img src="./img/web_server.png" width="90%" /></p>
-
-## Tetris
-
-테트리스 게임이 재밌어서 만든 개인 프로젝트입니다. 다른 플레이어와 멀티 플레이와 기록 경쟁이 가능한 안드로이드 게임 앱입니다. 로그인, 회원가입, 회원정보 수정이 가능하며, 로그인 정보는 SharedPreference로 저장되고, 게임의 기록은 로컬 데이터베이스에 SQLite를 통해 저장됩니다. 회원 정보와 게임 기록은 서버에 HTTP Request로 전송되어 저장됩니다. 백엔드 서버는 centOS, Apache, MySQL, php로 구축했습니다. 멀티 플레이시에는 자신의 게임 상태가 다른 플레이어에게 Java의 TCP 소켓 통신으로 서버를 경유해 실시간으로 전송됩니다. 매초마다 실시간으로 전송되는 데이터는 JSON 형식으로 보냈습니다.
-
-<p align="center"><img src="./img/tetris_1.png" width="90%" /></p>
-
-<p align="center"><img src="./img/tetris_2.png" width="90%" /></p>
-
-<br>
 
 ## Pronunciation App
 
