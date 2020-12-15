@@ -7,9 +7,9 @@
 
 ## 이력
 
-- [Ecube Labs](./ecubelabs/README.md): 2018 - 2020
+- [Ecube Labs](./ecubelabs/README.md): 2018.10 - 2020.12
   - 기술 스택: React, Typescript
-- [UNIST](./unist/README.md): 2013 - 2018
+- [UNIST](./unist/README.md): 2013.03 - 2018.08
   - [성적표](./unist/grade.pdf)
 
 ## 가치관
