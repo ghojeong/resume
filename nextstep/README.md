@@ -25,25 +25,20 @@
 
 ## 4. 경력 사항 (경력 기술서, 프로젝트 등 작성)
 
-### React 컴포넌트 모듈화
-
-- 기간: 2020.09 - 2020.10
-- 사용 기술: React, Typescript, Storybook
-- 설명: 회사에서 공통적으로 쓰이는 컴포넌트를 모듈화 해서, npm에 배포
-
-<p align="center"><img src="./ecubelabs/img/storybook.png" width="80%" /></p>
-
-### Appium 으로 e2e test 환경 구축
+### 4-1. Appium 으로 e2e test 환경 구축
 
 - 기간: 2020.07 - 2020.08
 - 사용 기술: React, Typescript, Jest, Selenium, Appium, wd(Web Driver)
 - 설명: e2e 테스트를 위한 환경을 구축하고 테스트 코드를 작성
+- 느낀점
+  - Animated.View 로 컴포넌트가 감싸져 있을 경우, 컴포넌트에 이벤트를 전달되지 않는 경우가 있어서, 결국 XPath를 사용하게 됨
+  - 혼자서 테스트 환경을 구축하더라도, 팀이 e2e-test 에 지속적인 관심을 보여주지 않으면 테스트 문화가 정착되지 않음을 깨달음
 
-<p align="center"><img src="./ecubelabs/img/appium-login.gif" width="80%" /></p>
+<p align="center"><img src="../ecubelabs/img/appium-login.gif" width="80%" /></p>
 
-<p align="center"><img src="./ecubelabs/img/selenium-login.gif" width="80%" /></p>
+<p align="center"><img src="../ecubelabs/img/selenium-login.gif" width="80%" /></p>
 
-### 스마트 쓰레기통 관리자 웹페이지 개발
+### 4-2. 스마트 쓰레기통 관리자 웹페이지 개발
 
 - 기간: 2020.01 - 2020.06
 - 사용 기술: React, Typescript, react-intl
@@ -51,10 +46,13 @@
   - 이치카와시에 설치된 스마트 공공 쓰레기통
   - 누가, 언제, 어디서, 얼마나 버렸는지 기록 후 배출자에게 비용 청구
   - 관리자 웹페이지로 모니터링 가능
+- 느낀점
+  - 비동기를 커스텀 훅을 사용해 처리해서, 리액트 훅에 대한 이해도가 많이 올라감
+  - QR 이미지를 업로드하거나 다운받기 위해, 바이너리 소켓통신에 대한 경험을 하게 됨
 
-<p align="center"><img src="./ecubelabs/img/i-Box.png" width="50%" /><img src="./ecubelabs/img/i-Box.gif" width="40%" /></p>
+<p align="center"><img src="../ecubelabs/img/i-Box.png" width="50%" /><img src="../ecubelabs/img/i-Box.gif" width="40%" /></p>
 
-### 쓰레기 수거자와 배출자를 연결하는 매칭 플랫폼 개발
+### 4-3. 쓰레기 수거자와 배출자를 연결하는 매칭 플랫폼 개발
 
 - 기간: 2019.07 - 2019.11
 - 사용 기술: React, Typescript, Rxjs, redux-observable
@@ -63,20 +61,27 @@
   - 쓰레기 수거자(Hauler)와 배출자(Generator)를 연결해주는 매칭 플랫폼
   - 일반 사용자(Hauler와 Generator)는 모바일 앱을 통해 매칭 서비스를 이용
   - 관리자(쓰레기 수거 회사)는 Back Office 웹을 통해 쓰레기 수거 서비스를 모니터링 및 관리
+- 느낀점
+  - 충분한 협의와 설계 없이 프로젝트가 진행되어 나중에 전부 갈아엎는 경험을 함
+  - 시작할 때는 Next.js로 만들다가, 나중에 바벨과 웹펙 만을 이용한 리액트 프로젝트로 다시 만들게 됨
+  - 신중하고 단단한 협의와 설계가 얼마나 중요한지 몸소 느낌
 
-<p align="center"><img src="./ecubelabs/img/haulla.png" width="90%" /></p>
+<p align="center"><img src="../ecubelabs/img/haulla.png" width="90%" /></p>
 
-### 쓰레기 매립지에서 무게를 측정하는 작업을 자동화, 온라인화
+### 4-4. 쓰레기 매립지에서 무게를 측정하는 작업을 자동화, 온라인화
 
 - 기간: 2018.10 - 2019.04
 - 사용 기술: Express, Angular JS
 - 설명: Rest API 와 데이터 시각화 양쪽을 구현
+- 느낀점
+  - JWT를 이용한 외부 인증 방식을 제공했는데, 토큰의 권한을 파싱할때 비트 단위 연산이 사용되어 적응하기 위해 어려움을 겪음
+  - 하드웨어를 제조하는 파트너사가 퍼센트 인코딩을 지원해 달라고 요청해서, 해당 미들웨어를 추가로 개발하기 위해 야근을 해야했음
 
-<p align="center"><img src="./ecubelabs/img/csn.png" width="90%" /></p>
+<p align="center"><img src="../ecubelabs/img/csn.png" width="90%" /></p>
 
 ## 5. 개인 프로젝트
 
-### 실내 위치 추적 안드로이드 앱
+### 5-1. 실내 위치 추적 안드로이드 앱
 
 - 기간: 2018.05 - 2018.06
 - 사용 기술: Android, RSS Finger Printing
@@ -86,11 +91,11 @@
   - 이동 경로가 벽을 통과하지 않도록 예외처리 함
   - Finger Printing 한 노드를 Sparse Matrix 자료 구조로 연결
 
-<p align="center"><img src="./unist/img/indoor_tracker_1.png" width="90%" /></p>
+<p align="center"><img src="../unist/img/indoor_tracker_1.png" width="90%" /></p>
 
-<p align="center"><img src="./unist/img/indoor_tracker_2.png" width="90%" /></p>
+<p align="center"><img src="../unist/img/indoor_tracker_2.png" width="90%" /></p>
 
-### 발음 교정 안드로이드 앱
+### 5-1. 발음 교정 안드로이드 앱
 
 - 기간: 2017.10 - 2017.11
 - 사용 기술: Android, TTS, STT, SQLite를
@@ -98,13 +103,13 @@
   - 발음과 말 빠르기를 교정하기 위한 앱
   - 자신이 연습하고 싶은 텍스트를 SQLite를 통해 추가, 수정, 삭제 가능
   - TTS 라이브러리로 등록된 텍스트를 음성으로 변환하여, 사용자는 자신이 목표로 해야 할 적절한 발음과 말 빠르기를 들을 수 있음
-  - STT로 녹음된 음성을 텍스트로 변환하여, 사용자의 발성이 실제로는 어떻게 들렸는지 확인 가능
+  - STT 라이브러리로 녹음된 음성을 텍스트로 변환하여, 사용자의 발성이 실제로는 어떻게 들렸는지 확인 가능
 
-<p align="center"><img src="./unist/img/pronunciation_app.png" width="90%" /></p>
+<p align="center"><img src="../unist/img/pronunciation_app.png" width="90%" /></p>
 
 ## 6. 기타 활동 (교육, 세미나, 스터디, 출판, 오픈소스...)
 
-<p align="center"><img src="./community/img/softwarecampus.png" width="60%" /></p>
+<p align="center"><img src="../community/img/softwarecampus.png" width="60%" /></p>
 
 ### 공감 세미나 주니어
 
@@ -118,6 +123,6 @@
 
 ## 7. 학력&자격증
 
-- [2020 오픈소스 컨트리뷰톤](https://github.com/ghojeong/competition/blob/master/oss/README.md)에서 특별상 수상
-- [구글 Hash Code 2020](https://github.com/ghojeong/competition/blob/master/hashcodejudge/README.md) 에서 3232 / 10724 월드 랭킹 획득
+- [2020 오픈소스 컨트리뷰톤](https://github.com/ghojeong/competition/blob/master/oss/README.md) 특별상 수상
+- [구글 Hash Code 2020](https://github.com/ghojeong/competition/blob/master/hashcodejudge/README.md) 3232/10724 월드 랭킹
 - UNIST: 2013.03 - 2018.08
