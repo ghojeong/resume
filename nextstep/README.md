@@ -36,7 +36,7 @@
 - 회사(EcubeLabs), 인원(1명)
 - 기간: 2020.07 - 2020.08
 - 개발 환경: React, Typescript, Jest, Selenium, Appium, wd(Web Driver)
-- 담당업무: 웹, 안드로이드, iOS 크로스 플랫폼 e2e 환경을 selenium 으로 통합하려고 시도
+- 담당업무: 크로스 플랫폼(웹, 안드로이드, iOS) e2e 환경을 selenium 으로 통합하려고 시도
 - 배운 점
   - Animated.View 로 컴포넌트가 감싸져 있을 경우, 컴포넌트에 이벤트가 전달되지 않는 경우가 있어서, 결국 XPath를 사용하게 됨
   - 혼자서 테스트 환경을 구축하더라도, 팀이 e2e-test 에 지속적인 관심을 보여주지 않으면 테스트 문화가 정착되지 않음을 깨달음
