@@ -107,6 +107,7 @@
 <p align="center"><img src="../unist/img/pronunciation_app.png" width="90%" /></p>
 
 <br>
+<br>
 
 ## 6. 기타 활동 (교육, 세미나, 스터디, 출판, 오픈소스...)
 
@@ -120,6 +121,8 @@
 
 - [리얼리눅스](https://reallinux.co.kr/) 리눅스 SW 기본기 수료, 기간(2020.9.7 - 2020.11.30)
 - [NextStep](https://edu.nextstep.camp/) TDD, Clean Code with Java 10기 수료, 기간(2020.10.26 - 2020.12.23)
+
+<br>
 
 ### 6-2. 한빛미디어 후원의 유료 세미나에서 발표
 
