@@ -31,6 +31,8 @@
 
 ## 4. 경력 사항 (경력 기술서, 프로젝트 등 작성)
 
+<br>
+
 ### 4-1. Appium 으로 e2e test 환경 구축
 
 - 회사(EcubeLabs), 인원(1명), 기간(2020.07 - 2020.08)
@@ -75,7 +77,7 @@
   - 시작할 때는 Next.js로 만들다가, 나중에 바벨과 웹펙 만을 이용한 리액트 프로젝트로 다시 만들게 됨
   - 신중하고 단단한 협의와 설계가 얼마나 중요한지 몸소 느낌
 
-<p align="center"><img src="../ecubelabs/img/haulla.png" width="90%" /></p>
+<p align="center"><img src="../ecubelabs/img/haulla.png" width="80%" /></p>
 
 <br>
 
