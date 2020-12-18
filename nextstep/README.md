@@ -33,8 +33,7 @@
 
 ### 4-1. Appium 으로 e2e test 환경 구축
 
-- 회사(EcubeLabs), 인원(1명)
-- 기간: 2020.07 - 2020.08
+- 회사(EcubeLabs), 인원(1명), 기간(2020.07 - 2020.08)
 - 개발 환경: React, Typescript, Jest, Selenium, Appium, wd(Web Driver)
 - 담당업무: 크로스 플랫폼(웹, 안드로이드, iOS) e2e 환경을 selenium 으로 통합하려고 시도
 - 배운 점
@@ -47,8 +46,7 @@
 
 ### 4-2. 스마트 쓰레기통 관리자 대시보드 개발
 
-- 회사(EcubeLabs), 인원(2명)
-- 기간: 2020.01 - 2020.06
+- 회사(EcubeLabs), 인원(2명), 기간(2020.01 - 2020.06)
 - 개발 환경: React, Typescript, react-intl
 - 담당업무: React 로 모니터링용 관리자 대시보드 개발
 - 설명
@@ -64,8 +62,7 @@
 
 ### 4-3. 쓰레기 수거자와 배출자를 연결하는 매칭 플랫폼 개발
 
-- 회사(EcubeLabs), 인원(7명)
-- 기간: 2019.07 - 2019.11
+- 회사(EcubeLabs), 인원(7명), 기간(2019.07 - 2019.11)
 - 개발 환경: React, Typescript, Rxjs, redux-observable
 - 담당업무: React 로 관리자 대시보드 개발
 - 제품 소개: <https://www.haulla.com/>
@@ -84,8 +81,7 @@
 
 ### 4-4. 쓰레기 매립지에서 무게를 측정하는 작업을 자동화, 온라인화
 
-- 회사(EcubeLabs), 인원(2명)
-- 기간: 2018.10 - 2019.04
+- 회사(EcubeLabs), 인원(2명), 기간(2018.10 - 2019.04)
 - 개발 환경: Express, Angular JS
 - 담당업무
   - 파트너 사에게 제공할 REST API 개발 및 교육
@@ -120,8 +116,8 @@
 
 ### 6-1. 교육
 
-- [리얼리눅스](https://reallinux.co.kr/) 리눅스 SW 기본기 수료 ​- 2019.9.7 ~ 2019.11.30
-- [NextStep](https://edu.nextstep.camp/) TDD, Clean Code with Java 10기 수료​ ​- 2019.8.1 ~ 2019.9.30
+- [리얼리눅스](https://reallinux.co.kr/) 리눅스 SW 기본기 수료, 기간(2020.9.7 - 2020.11.30)
+- [NextStep](https://edu.nextstep.camp/) TDD, Clean Code with Java 10기 수료, 기간(2020.10.26 - 2020.12.23)
 
 ### 6-2. 한빛미디어 후원의 유료 세미나에서 발표
 
