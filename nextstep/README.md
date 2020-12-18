@@ -111,7 +111,7 @@
 
 <br>
 
-### 공감 세미나 주니어
+### 6-1. 공감 세미나 주니어
 
 - 기간: 2019.03 - 2019.06
 - 링크: <http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334>
