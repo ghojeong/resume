@@ -14,7 +14,7 @@
 
 2년 동안 React, Typescript 를 이용하여 관리자 대시보드의 웹 프론트 개발을 했습니다.<br>
 코드 리뷰와 Jira/Confluence 를 통한 이슈관리와 문서관리에 익숙합니다.<br>
-최근에는 리눅스의 동작 원리 자체에 관심이 생겨서, 운영체제를 다시 공부하고 있습니다.
+최근에는 리눅스의 동작 원리에 관심이 생겨서, 운영체제를 다시 공부하고 있습니다.
 
 <br>
 
@@ -37,7 +37,7 @@
 - 사용 기술: React, Typescript, Jest, Selenium, Appium, wd(Web Driver)
 - 설명: e2e 테스트를 위한 환경을 구축하고 테스트 코드를 작성
 - 느낀점
-  - Animated.View 로 컴포넌트가 감싸져 있을 경우, 컴포넌트에 이벤트를 전달되지 않는 경우가 있어서, 결국 XPath를 사용하게 됨
+  - Animated.View 로 컴포넌트가 감싸져 있을 경우, 컴포넌트에 이벤트가 전달되지 않는 경우가 있어서, 결국 XPath를 사용하게 됨
   - 혼자서 테스트 환경을 구축하더라도, 팀이 e2e-test 에 지속적인 관심을 보여주지 않으면 테스트 문화가 정착되지 않음을 깨달음
 
 <p align="center"><img src="../ecubelabs/img/appium-login.gif" width="80%" /></p>
