@@ -5,7 +5,7 @@
 1. 이름: 고정완
 2. 메일 주소: rhwjddhks@gmail.com
 3. 전화번호: 010 - 3878- 1459
-4. Github 주소: https://github.com/ghojeong
+4. Github 주소: https://github.com/ghojeong/resume/blob/master/README.md
 <!-- 5. 블로그 주소: (TODO:) -->
 
 <br>
@@ -92,7 +92,9 @@
   - JWT를 이용한 외부 인증 방식을 제공했는데, 토큰의 권한을 파싱할 때 비트 단위 연산이 사용되어 적응하는데 어려움을 겪음
   - 하드웨어를 제조하는 파트너사가 퍼센트 인코딩을 지원해 달라고 요청해서, 해당 미들웨어를 추가로 개발하기 위해 야근을 해야했음
 
-<p align="center"><img src="../ecubelabs/img/csn.png" width="90%" /></p>
+<p align="center"><img src="../ecubelabs/img/csn.png" width="80%" /></p>
+
+<br>
 
 ## 5. 개인 프로젝트
 
@@ -106,7 +108,6 @@
 
 <p align="center"><img src="../unist/img/pronunciation_app.png" width="90%" /></p>
 
-<br>
 <br>
 
 ## 6. 기타 활동 (교육, 세미나, 스터디, 출판, 오픈소스...)
@@ -135,7 +136,6 @@
 
 <p align="center"><img src="../community/img/gonggam.jpeg" width="60%" /></p>
 
-<br>
 <br>
 
 ## 7. 학력&자격증
