@@ -5,7 +5,7 @@
 1. 이름: 고정완
 2. 메일 주소: rhwjddhks@gmail.com
 3. 전화번호: 010 - 3878- 1459
-4. Github 주소: https://github.com/ghojeong/resume/blob/master/README.md
+4. GitHub 주소: https://github.com/ghojeong/resume/blob/master/README.md
 <!-- 5. 블로그 주소: (TODO:) -->
 
 <br>

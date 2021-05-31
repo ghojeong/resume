@@ -273,7 +273,7 @@
 - 링크: <https://github.com/study-records/modern-javascript-study/tree/master/Modern_Javascript_Primer>
 - 설명
   - 자바스크립트에 대한 이해도를 높이고 싶어서 시작한 스터디입니다.
-  - 공부했던 내용을 문서로 정리해서 gitHub 에 올렸습니다.
+  - 공부했던 내용을 문서로 정리해서 GitHub 에 올렸습니다.
 - 기억에 남는 점
 
   - 자바를 본업으로 삼고 계시는 경력직 개발자분들도, 언제나 새로운 학습에 목말라 있다는 열정이 참 대단하다고 느꼈습니다.
