@@ -96,3 +96,5 @@
   - 이때부터 커뮤니티 활동이라는 스릴에 중독이 된 것 같습니다.
 
 <p align="center"><img src="./img/gonggam.jpeg" width="60%" /></p>
+
+![hanbit](./img/hanbit.jpeg)
