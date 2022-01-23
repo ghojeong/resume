@@ -3,7 +3,13 @@
 개발과 관련된 회사, 대학교, 커뮤니티 이력을 정리한 문서입니다.
 
 - 나이: 1994년생
-- [자신 있는 코드](./code/README.md)
+- 자신있는 코드
+  - Java
+    - [Typesafe Heterogeneous Container](https://github.com/ghojeong/Effective-Java-Study/blob/main/pyro/item33.md)
+    - [DI 프레임워크 바닐라 Java 로 구현](https://github.com/ghojeong/playground/tree/main/dependency/src/main/java/ioc)
+  - Javascript
+    - [비동기](https://github.com/ghojeong/resume/blob/master/code/js/runTasks.js)
+    - [redux-observable](https://github.com/ghojeong/resume/blob/master/code/README.md)
 
 ## 이력
 

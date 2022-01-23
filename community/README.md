@@ -1,6 +1,7 @@
 # Community Activities Description
 
 제가 참여한 커뮤니티 활동에 대한 상세 설명입니다.
+
 - [<파이썬 알고리즘 인터뷰> 책 스터디](#%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%9D%B8%ED%84%B0%EB%B7%B0) (2021.04 - 2021.06)
 - [<이펙티브 자바> 책 스터디](#%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C-%EC%9E%90%EB%B0%94-%EC%8A%A4%ED%84%B0%EB%94%94) (2020.04 - 2020.06)
 - [오픈소스 컨트리뷰톤](#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%86%A4-%EC%88%98%EC%83%81) (2021.08 - 2021.09)

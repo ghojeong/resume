@@ -1,6 +1,6 @@
 # 2021 년의 활동 기록 정리
 
-[resume 웹  사이트](https://resume.pyro-squad.com/)
+[resume 웹 사이트](https://resume.pyro-squad.com/)
 
 ## 시간대별 정리
 
