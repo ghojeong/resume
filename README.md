@@ -1,77 +1,46 @@
 # 고정완의 이력서
 
-개발과 관련된 회사, 대학교, 커뮤니티 이력을 정리한 문서입니다.
+## 자신있는 코드
 
-- 나이: 1994년생
-- 자신있는 코드
-  - Java
-    - [Typesafe Heterogeneous Container](https://github.com/ghojeong/Effective-Java-Study/blob/main/pyro/item33.md)
-    - [DI 프레임워크 바닐라 Java 로 구현](https://github.com/ghojeong/playground/tree/main/dependency/src/main/java/ioc)
-  - Javascript
-    - [비동기](https://github.com/ghojeong/resume/blob/master/code/js/runTasks.js)
-    - [redux-observable](https://github.com/ghojeong/resume/blob/master/code/README.md)
+- Java
+  - [IoC 컨테이너를 바닐라 Java 로 구현](https://github.com/ghojeong/playground/tree/main/dependency/src/main/java/ioc)
+  - [Typesafe Heterogeneous Container](https://github.com/ghojeong/Effective-Java-Study/blob/main/pyro/item33.md)
+- Javascript
+  - [비동기](https://github.com/ghojeong/resume/blob/master/code/js/runTasks.js)
+  - [redux-observable](https://github.com/ghojeong/resume/blob/master/code/README.md)
 
 # 이력
 
-- [Dreamfora (회사)](https://dreamfora.com): 2021.08 -
-- [코드스쿼드 (부트캠프)](https://codesquad.kr/page/masters/be.html): 2021.01 - 2021.06
-- [NEXTSTEP (리뷰어로 근무)](https://edu.nextstep.camp/s/ApJ4Ca71): 2021.03 - 2021.05
-- [Ecube Labs (회사)](https://www.ecubelabs.com/): 2018.10 - 2020.12
-- UNIST (대학교): 2013.03 - 2018.08
+- Dreamfora (회사): 2021.08 -
+  - Kotlin + Android
+- 코드스쿼드 (부트캠프): 2021.01 - 2021.06
+  - Java + Spring
+- NEXTSTEP (리뷰어로 근무): 2021.03 - 2021.05
+  - Java
+- Ecube Labs (회사): 2018.10 - 2020.12
+  - Typescript + React
 
-# 목차
+# Dreamfora
 
-- [커뮤니티](#%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0)
-  - [코드스쿼드 Java 웹백엔드 마스터즈 코스](https://github.com/ghojeong/resume/tree/master/2021/codesquad)
-    - 기간: 2021.01 - 2021.06
-  - [NEXTSTEP 에서 리뷰어로 근무](#nextstep-리뷰어-활동)
-    - 기간: 2021.03 - 2021.05
-  - [오픈소스 컨트리뷰톤 수상](#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%86%A4-%EC%88%98%EC%83%81)
-    - 기간: 2020.08 - 2020.09
-  - [디자인 패턴 스터디](#%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-%EC%8A%A4%ED%84%B0%EB%94%94)
-    - 기간: 2020.04 - 2020.10
-  - [알고리즘 스터디](#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%8A%A4%ED%84%B0%EB%94%94)
-    - 기간: 2019.09 - 2019.11
-  - [<모던 자바스크립트 입문> 책 스터디](#%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%9E%85%EB%AC%B8-%EC%B1%85-%EC%8A%A4%ED%84%B0%EB%94%94)
-    - 기간: 2019.07 - 2019.09
-  - [공감 세미나 주니어](#%EA%B3%B5%EA%B0%90-%EC%84%B8%EB%AF%B8%EB%82%98-%EC%A3%BC%EB%8B%88%EC%96%B4)
-    - 기간: 2019.03 - 2019.06
-- Ecube Labs (회사)
-  - [ceed/core](#ceedcore) (Storybook)
-    - 기간: 2020.09 - 2020.10
-  - [e2e test](#e2e-test) (Selenium, Appium)
-    - 기간: 2020.07 - 2020.08
-  - [i-Box](#i-Box) (React, Apollo GraphQL)
-    - 기간: 2020.01 - 2020.06
-  - [Haulla Back Office](#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C) (React, Typescript)
-    - 기간: 2019.07 - 2019.11
-  - [CCNx](#ccnx-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) (Angular 7)
-    - 기간: 2019.06
-  - [CleanCityNetworks](#cleancitynetworks-ccn-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) (Angular JS)
-    - 기간: 2019.05
-  - [CleanScaleNetworks](#cleanscalenetworks-csn-%EA%B0%9C%EB%B0%9C)
-    - [대시보드](#partner-scale-api-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-%EA%B0%9C%EB%B0%9C) (Pug, jQuery)
-      - 기간: 2019.03 - 2019.04
-    - [데이터 시각화](#%EA%B3%84%EA%B7%BC-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EC%95%B5%EA%B7%A4%EB%9F%AC%EB%A1%9C-%EC%8B%9C%EA%B0%81%ED%99%94) (Angular JS)
-      - 기간: 2019.01 - 2019.02
-    - [Partner Scale API](#partner-scale-api-%EA%B0%9C%EB%B0%9C) (Express)
-      - 기간: 2018.10 - 2018.12
-- UNIST (대학교)
-  - 개인 프로젝트
-    - [Indoor Tracker](#indoor-tracker) (실내 위치 추적 앱)
-    - [Web Server](#web-server) (바닥부터 C 언어로 구현한 웹서버)
-    - [Pronunciation App](#pronunciation-app) (TSS와 STT를 활용한 발음 교정 앱)
-  - 팀 프로젝트
-    - [Class Mate](#classmate) (영상 스트리밍 앱)
+## 안드로이드 네이티브 전환
+
+- 기간: 2022.01 -
+- 링크: <https://velog.io/@pyro/android-module2>
+- 설명
+  - 자마린으로 된 애플리케이션을 안드로이드 네이티브로 갈아엎고 있습니다.
+  - 어떻게 애플리케이션을 구현할지, 아키텍처를 제시하고 팀원들과 합의점을 만들어냈습니다.
+  - [Repository 패턴](https://github.com/java-squid/2022-jubilant/pull/18#issuecomment-1067434341)을 도입했고, 이와 관련된 사내 교육 세션을 진행했습니다.
+
+## git 도입
+
+- 기간: 2021.08 - 2021.12
+- 설명
+  - 회사에 git 을 통한 형상관리와, 코드리뷰 문화를 처음 도입했습니다.
+  - git 에 대한 지식을 가진 팀원이 없으셔서, 교육을 진행했습니다.
+  - 관리자 웹페이지 유지보수를 하며 git 활용예시를 먼저 만들고, 매주 하루 이상 교육 세션을 가졌습니다.
+  - 2021.12 부터는 코드 리뷰 문화까지 도입을 성공해냈습니다.
 
 # 커뮤니티
-
-- [코드스쿼드](https://codesquad.kr/page/masters/be.html)
-- [NEXTSTEP 리뷰어](https://edu.nextstep.camp/)
-- [Java Cafe](http://tech.javacafe.io/about/)
-- [Software Campus](https://www.facebook.com/softwarecamp/)
-
-<p align="center"><img src="./community/img/softwarecampus.png" width="60%" /></p>
 
 ## NEXTSTEP 리뷰어 활동
 
@@ -86,51 +55,10 @@
 
 - 기간: 2020.08 - 2020.09
 - 링크: <https://www.oss.kr/contributhon_project/show/e06eb6b5-25d9-4be4-92ea-c24ceda137b0>
-- 설명
+- 설명: 정보통신산업진흥원에서 주최하는 오픈소스 컨트리뷰톤 행사에 참가하여 특별상을 수상했습니다.
 
-  - 정보통신산업진흥원에서 주최하는 오픈소스 컨트리뷰톤 행사에 참가하여 특별상을 수상했습니다.
-  - 행사 활동을 통해 멘토단이 소속되어 있는 Cloud-Barista 오픈 소스 커뮤니티에 가입하게 되었습니다.
-
-    <p align="center"><img src="./community/img/oss_cloud-barista_1.png" width="60%" /></p>
-
-    <p align="center"><img src="./community/img/oss_cloud-barista_2.jpg" width="60%" /></p>
-
-## 디자인 패턴 스터디
-
-- 기간: 2020.04 - 2020.10
-- 링크: <https://github.com/ghojeong/GoF>
-- 설명
-
-  - GoF의 디자인 패턴을 공부하고자 열은 스터디입니다.
-
-    <p align="center"><img src="./community/img/gof.png" width="60%" /></p>
-
-## 알고리즘 스터디
-
-- 기간: 2019.09 - 2019.10
-- 링크: <https://github.com/ghojeong/CtCI>
-- 설명
-  - 혼자서는 어려웠던 알고리즘 공부에 도전하고 싶어서 열은 스터디입니다.
-- 기억에 남는 점
-
-  - 2019년 12월에 육군 훈련소에 가게 되어 스터디가 중지 되었는데, 훈련소를 수료하자마자 스터디가 언제 다시 열리냐는 연락을 받아서 감동했습니다.
-  - 스터디원 분들을 위해 더 열심히 공부해야겠다는 새해 다짐을 했습니다.
-
-    <p align="center"><img src="./community/img/algorithm.jpeg" width="60%" /></p>
-
-## <모던 자바스크립트 입문> 책 스터디
-
-- 기간: 2019.07 - 2019.09
-- 링크: <https://github.com/study-records/modern-javascript-study/tree/master/Modern_Javascript_Primer>
-- 설명
-  - 자바스크립트에 대한 이해도를 높이고 싶어서 시작한 스터디입니다.
-  - 공부했던 내용을 문서로 정리해서 GitHub 에 올렸습니다.
-- 기억에 남는 점
-
-  - 자바를 본업으로 삼고 계시는 경력직 개발자분들도, 언제나 새로운 학습에 목말라 있다는 열정이 참 대단하다고 느꼈습니다.
-  - 본받고 싶은 분들을 많이 만나 행복했습니다.
-
-    <p align="center"><img src="./community/img/javascript_study.jpeg" width="60%" /></p>
+<p align="center"><img src="./community/img/oss_cloud-barista_1.png" width="60%" /></p>
+<p align="center"><img src="./community/img/oss_cloud-barista_2.jpg" width="60%" /></p>
 
 ## 공감 세미나 주니어
 
@@ -143,14 +71,45 @@
     - 첫번째 세션: 개발자가 되고 싶은 대학생 및 성인을 대상으로, 주니어로서 겪었던 어려움을 이야기했습니다.
     - 두번째 세션: 개발자로 취업을 희망하는 친구들과 2개월 간 만든 미니 프로젝트를 발표했습니다.
 - 기억에 남는 점
-
   - 1만 1천원을 지불한 사람들이 80명 넘게 강의장을 꽉 채웠습니다.
   - 준비를 할 때도 긴장했지만, 발표를 할 때는 더욱 긴장해서 다리에 힘이 들어가지 않아 중간중간 의자에 앉아야 했습니다.
   - 발표가 끝나고 나서, 제가 기대했던 것 이상의 박수 소리에 기뻐서 몸을 떨었던게 기억납니다.
   - 행사가 끝나고 긴장이 풀리자, 화장실로 가서 헛구역질 했던게 기억납니다.
   - 이때부터 커뮤니티 활동이라는 스릴에 중독이 된 것 같습니다.
 
-    <p align="center"><img src="./community/img/gonggam.jpeg" width="60%" /></p>
+<p align="center"><img src="./community/img/gonggam.jpeg" width="60%" /></p>
+
+# 스터디
+
+## 이펙티브 자바 2차 스터디
+
+- 기간: 2021.07 - 2021.10
+- 링크: <https://github.com/ghojeong/Effective-Java-Study>
+- 설명: 이펙티브 자바를 스터디를 통해 2회 완독 했습니다.
+
+## 이펙티브 자바 1차 스터디
+
+- 기간: 2021.01 - 2021.04
+- 링크: <https://github.com/java-squid/effective-java>
+- 설명: 이펙티브 자바를 스터디를 통해 1회 완독 했습니다.
+
+## 디자인 패턴 스터디
+
+- 기간: 2020.04 - 2020.10
+- 링크: <https://github.com/ghojeong/GoF>
+- 설명: GoF의 디자인 패턴을 반년동안 꾸준히 공부했습니다..
+
+<p align="center"><img src="./community/img/gof.png" width="60%" /></p>
+
+## <모던 자바스크립트 입문> 책 스터디
+
+- 기간: 2019.07 - 2019.09
+- 링크: <https://github.com/study-records/modern-javascript-study/tree/master/Modern_Javascript_Primer>
+- 설명
+  - 자바스크립트에 대한 이해도를 높이고 싶어서 시작한 스터디입니다.
+  - 공부했던 내용을 문서로 정리해서 GitHub 에 올렸습니다.
+- 기억에 남는 점
+  - 자바를 본업으로 삼고 계시는 경력직 개발자분들도, 언제나 새로운 학습에 목말라 있다는 열정이 참 대단하다고 느꼈습니다.
 
 # Ecube Labs
 
@@ -185,7 +144,6 @@
   - 테스트 환경을 구축하더라도, 팀이 e2e-test 에 지속적인 관심을 보여주지 않는다면 테스트 자동화가 문화로 정착하기 어렵다는 점을 알게 되었습니다.
 
 <p align="center"><img src="./ecubelabs/img/appium-login.gif" width="80%" /></p>
-
 <p align="center"><img src="./ecubelabs/img/selenium-login.gif" width="80%" /></p>
 
 ## i-Box 웹 프론트 개발
@@ -317,57 +275,3 @@
   - JWT를 이용한 외부 인증 방식을 제공했는데, 토큰의 권한을 파싱할때 비트 단위 연산이 사용되어 어려움을 겪었습니다.
   - 하드웨어를 제조하는 파트너사가 퍼센트 인코딩을 지원해 달라고 요청했습니다.
     - 결국 해당 파트너사를 위해 퍼센트 인코딩을 지원하는 미들웨어를 따로 개발해야 했습니다.
-
-# UNIST
-
-## Indoor Tracker
-
-교수님의 의뢰로 만든 개인 프로젝트입니다. GPS의 기능 없이 실내에서 자신이 어디에 있는지 알려주는 안드로이드 앱입니다. Wi-Fi 신호의 Finger Printing 기법을 이용했으며, Finger Printing 된 노드들을 Sparse Matrix 자료구조 형태로 연결했습니다. Finger Printing을 하기 위해서 각 노드에서 수집된 Wi-Fi 신호들을 로컬 데이터베이스에 SQLite를 통하여 저장했습니다. 각 노드의 Finger Printing 값과 현재 측정된 Wi-Fi 신호 값을 상대적으로 비교하여, 자신의 현재 위치를 실시간으로 알아냅니다. 현재 위치에서 이동할 경우, 변경된 위치와 이동 경로를 새롭게 표시해줍니다. 이동 경로가 벽을 통과하거나, 존재하지 않는 길을 지나가지 않도록 예외처리를 하였습니다.
-
-<p align="center"><img src="./unist/img/indoor_tracker_1.png" width="90%" /></p>
-
-<p align="center"><img src="./unist/img/indoor_tracker_2.png" width="90%" /></p>
-
-## Web Server
-
-HTTP Request와 Response를 공부하기 위해 만든 개인 프로젝트입니다. C언어로 소켓 프로그래밍을 하여 밑바닥부터 만든 간단한 웹서버입니다. 브라우저의 HTTP Request에 맞추어 적절한 형식으로 HTML, CSS, JavaScript, 이미지 파일에 대한 데이터를 다시 브라우저에게 Response 해줍니다. 다수의 클라이언트 요청을 PThread를 사용한 멀티 스레드로 처리했습니다. 개발은 우분투 서버의 터미널에서 vim, gcc, gdb를 이용해 코딩했습니다.
-
-<p align="center"><img src="./unist/img/web_server.png" width="90%" /></p>
-
-## Pronunciation App
-
-스스로 발음과 말 빠르기를 교정하기 위해 만든 개인 프로젝트입니다. 안드로이드 앱이며, 자신이 연습하고 싶은 텍스트를 로컬 데이터베이스에 SQLite를 통해 저장할 수 있습니다. TTS(Text To Speech) 기술로 등록된 텍스트를 음성으로 변환하여, 사용자는 자신이 목표로 해야 할 적절한 발음과 말 빠르기를 들을 수 있습니다. 또한 STT(Speech To Text) 기술로 녹음된 음성을 텍스트로 변환하여, 사용자의 발성이 실제로는 어떻게 들렸는지 텍스트로 직접 보여줍니다.
-
-<p align="center"><img src="./unist/img/pronunciation_app.png" width="90%" /></p>
-
-## ClassMate
-
-- 기간: 2018.03 - 2018.07
-- [**YouTube**](https://youtu.be/RMkTWNjY1Vc)
-- [Source Code](https://github.com/JVHE/ClassMate)
-
-교수님께서 애플 펜슬로 빔프로젝터에 연결된 아이패드를 칠판 대신 사용하며 수업하는 것을 보고, 안드로이드에서도 같은 방식으로 과외방송을 할 수 있도록 하고 싶은 마음에 시작한 팀 프로젝트입니다. 스마트 폰의 카메라 혹은 스크린을 실시간으로 방송하고, 방송되고 있는 화면 위에 방송자가 펜으로 수업을 할 수 있는 안드로이드 앱입니다. 우분투 서버에서 Java, php, JavaScript, Perl을 통해 개발했으며 HTTP, WebRTC, Mpeg-DASH 프로토콜을 사용했습니다. 주요 기능으로 Adaptive Streaming을 실현해, 네트워크 환경에 따라 동영상의 bitrate가 변할 수 있도록 했습니다.
-
-저는 이 프로젝트에서 설계와 개발, 그리고 역할 분배를 해주는 역할을 맡았습니다. 저는 프로젝트를 진행하며 팀원들이 자유롭게 의견을 교류할 수 있도록 노력했습니다. 매주 두 번씩 정기적으로 회의를 할 때마다 사회자와 서기를 자처하여 회의한 내용을 기록했으며, 팀원들이 방향을 잃을 때마다 진행 상황을 정리하고 요약해 다음 단계로 나아갈 수 있도록 발판을 마련했습니다. WebRTC와 DASH 프로토콜을 팀원들이 구현할 수 있도록 관련 논문들과 기술문서들을 읽고 정리해, 팀원들에게 제공했습니다. 또한, 팀원들이 개발하는 도중 문제가 생기면 그에 대한 해결책을 제시해 진행이 늦춰지는 상황을 막았습니다.
-
-제가 팀 프로젝트를 하며 겪은 가장 큰 어려움은, 팀원들의 사기와 단결력을 유지하는 일이었습니다. 팀원들과 같이 시도한 공부량과 작업량은 결코 적은 양이 아니었습니다. 팀원들이 계속 시간을 성실하게 쓰도록 하기 위해서는, 팀원들에게 자신이 하는 일의 가치를 스스로 대단하게 느끼게끔 해야 했습니다. 저는 팀원들이 큰 꿈을 갖고 행동할 수 있도록, 여러 IT 기업의 성장과 성공 사례를 매주 있는 회의 시간에 들려주었습니다. 하나의 꿈과 목표라는 열정을 갖고, 그 불길이 꺼지지 않도록 계속 관리하는 일은 무척 힘들었지만, 저에게 잊을 수 없는 기억을 많이 남겼습니다.
-
-![classmate_1](./unist/img/classmate_1.png)
-
-![classmate_2](./unist/img/classmate_2.png)
-
-![classmate_3](./unist/img/classmate_3.png)
-
-![classmate_4](./unist/img/classmate_4.png)
-
-![classmate_5](./unist/img/classmate_5.png)
-
-![classmate_6](./unist/img/classmate_6.png)
-
-![classmate_7](./unist/img/classmate_7.png)
-
-![classmate_8](./unist/img/classmate_8.png)
-
-![classmate_9](./unist/img/classmate_9.png)
-
-![classmate_10](./unist/img/classmate_10.png)
