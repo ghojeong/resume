@@ -5,6 +5,7 @@
 - Java
   - [IoC 컨테이너를 바닐라 Java 로 구현](https://github.com/ghojeong/playground/tree/main/dependency/src/main/java/ioc)
   - [Typesafe Heterogeneous Container](https://github.com/ghojeong/Effective-Java-Study/blob/main/pyro/item33.md)
+  - [WAS 를 TDD로 구현](https://github.com/ghojeong/jwp-was)
 - Javascript
   - [비동기](https://github.com/ghojeong/resume/blob/master/code/js/runTasks.js)
   - [redux-observable](https://github.com/ghojeong/resume/blob/master/code/README.md)
