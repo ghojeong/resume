@@ -4,6 +4,8 @@
 
 - 기간: 2021.08 -
 
+![dreamfora.jpeg](./img/app.jpeg)
+
 ## 회사 기여도
 
 ### git 과 GitHub 도입
