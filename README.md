@@ -1,5 +1,16 @@
 # 고정완의 이력서
 
+## 보유 기술
+
+||||
+|--|--|--|
+|언어|`Java` `Kotlin` <br> `Typescript`|**리플렉션**을 통해 커스텀 어노테이션을 만든 경험과, <br> **코루틴**을 활용한 병렬 상태관리 경험이 있습니다.|
+|프레임워크|`Spring Boot` `JPA` <br> `Android` `React`|JPA 를 사용한 경험을 바탕으로, <br> 안드로이드에서 **Repository 패턴**을 직접 구현했습니다.|
+|DB|`MySQL` `SQLite`|InnoDB 와 다른 **스토리지 엔진**의 락이 어떻게 다르게 걸리는지 이해하고 있습니다. <br> 테이블 단위로 락이 걸리는 SQLite 의 트랜잭션에 반응하기 위해, **리액티브 프로그래밍**을 도입하여, 렌더링 최적화를 해낸 경험이 있습니다.|
+|IDE|`Vim` `VSCode` <br> `IntelliJ` |TUI 환경에서도 편안히 코딩이 가능하며, 커밋과 푸시 전에 자동으로 lint 와 test 코드를 돌리는 **git hooks** 설정을 할 수 있습니다.|
+|협업|`Slack` `git flow` <br> `Jira/Confluence`|개발팀에게 **git flow** 를 교육하고 도입을 설득한 경험이 있습니다. <br> 경영진에게 GitHub Project 기반의 개발보고를 하여 개발 성과를 인정받은 경험이 있습니다.|
+|인프라|`Docker` `EC2` <br> `S3` `IAM` `RDS` <br> `CloutFront` <br> `Route53`|Docker 가 어떻게 독립된 **cgroup** 과 **namespace** 를 가지는지 프로세스 생성 과정을 추적한 경험이 있습니다. <br> DB 를 private network 에 분리해야하는 필요성을 인지하고 있으며, **Bastion Host** 에 대해 알고 있습니다. IAM 에서 **Role** 을 통해 필요한 권한을 부여하는 법에 대해 알고 있습니다.|
+
 ## 자신있는 코드
 
 - Java
@@ -23,14 +34,22 @@
 
 # Dreamfora
 
+<p align="center"><img src="./img/dreamfora_app.jpeg" width="80%" /></p>
+
 ## 안드로이드 네이티브 전환
 
 - 기간: 2022.01 - 2022.06
 - 링크: <https://velog.io/@pyro/android-module2>
 - 설명
-  - 자마린으로 된 애플리케이션을 안드로이드 네이티브로 갈아엎고 있습니다.
+  - 자마린으로 된 애플리케이션을 안드로이드 네이티브로 갈아엎었습니다.
   - 어떻게 애플리케이션을 구현할지, 아키텍처를 제시하고 팀원들과 합의점을 만들어냈습니다.
   - [Repository 패턴](https://github.com/java-squid/2022-jubilant/pull/18#issuecomment-1067434341)을 도입했고, 이와 관련된 사내 교육 세션을 진행했습니다.
+  - 단위 테스트와 Lint 겁사를 자동화 하는 개발환경을 도입했습니다.
+  - app, data, domain 을 별개의 모듈로 의존성 분리를 해냈습니다.
+  - 백그라운드 서비스를 최소화하여, 크래시율을 99% 낮추었습니다.
+  - 이미지의 Lazy Loading 을 도입하여, 렌더링 딜레이를 0.8초에서 0.2초로 낮추었습니다.
+
+<p align="center"><img src="./img/dreamfora_crash1.png" width="80%" /></p>
 
 ## git 도입
 
@@ -285,4 +304,3 @@
   - 공부했던 내용을 문서로 정리해서 GitHub 에 올렸습니다.
 - 기억에 남는 점
   - 자바를 본업으로 삼고 계시는 경력직 개발자분들도, 언제나 새로운 학습에 목말라 있다는 열정이 참 대단하다고 느꼈습니다.
-
