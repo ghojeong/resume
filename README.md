@@ -33,15 +33,33 @@
 
 # Dreamfora
 
-<p align="center"><img src="./img/dreamfora_app.jpeg" width="80%" /></p>
+<p align="center"><img src="./dreamfora/img/dreamfora_app.jpeg" width="80%" /></p>
 
-## 세션 기반 인증을 JWT 기반 인증으로 Spring 서버를 리팩토링
+## 쿼리 튜닝, 객체 및 DB 모델 리팩토링, 인프라 재구축
+
+- 기간: 2023.04 - 2023.08
+- 설명
+  - N + 1 쿼리가 발생하는 JPA 레포지토리를 전부 찾아내서 리팩토링했습니다.
+  - JOIN 하는 테이블 갯수가 4개 이하가 되도록 DB 스키마를 전부 새롭게 모델링했습니다.
+  - 새롭게 모델링한 스키마에 오래된 스키마의 데이터를 마이그레이션했습니다.
+  - 최적화한 DB 와 WAS 에 필요한 성능에 맞추어 인프라를 재구축 했습니다.
+  - 실서비스에 영향이 가지 않도록 dev, stage, production 의 인프라를 나누어야 한다고 경영진을 설득해냈습니다.
+  - production 인프라는 DB 의 망분리를 진행하여, public IP 가 할당되지 않도록 했습니다.
+  - 슬로우 쿼리를 모니터링할 수 있는 인프라를 구축했습니다.
+  - API request, response, duration 을 기록하는 로깅 시스템을 구축했습니다.
+  - 로깅 시스템으로 인해 스토리지가 꽉 차면 로그를 지우는 배치서버를 구현했습니다.
+  - 리팩토링과 최적화 덕분에 인프라 비용이 하루 **51달러에서 8달러** 이하로 줄었습니다.
+  - 전부 혼자했습니다.
+
+<p align="center"><img src="./dreamfora/img/dreamfora_infra_old.png" width="50%" /><img src="./dreamfora/img/dreamfora_infra_new.png" width="48%" /></p>
+
+## ATDD 도입, 세션 기반 인증을 JWT 기반 인증으로 리팩토링
 
 - 기간: 2023.01 - 2023.05
 - 링크: <https://github.com/ghojeong/SpringBoilerPlate>
 - 설명
   - 모바일 서비스임에도, Session ID 와 세션 기반의 인증 구조를 사용하고 있었습니다.
-  - JWT Bearer Token 을 통한 인증을 하도록 기존의 Spring 서버를 리팩토링했습니다.
+  - JWT Bearer Token 을 통한 인증을 하도록 Spring 서버와 안드로이드를 리팩토링했습니다.
   - Spring Security 와 JPA Auditing 을 이용해 데이터의 creator 와 updater 에 관한 로그를 남겼습니다.
   - Rest Docs 와 인수 테스트를 활용한 문서화를 도입했습니다.
 
@@ -58,7 +76,7 @@
   - 백그라운드 서비스를 최소화하여, 크래시율을 99% 낮추었습니다.
   - 이미지의 Lazy Loading 을 도입하여, 렌더링 딜레이를 0.8초에서 0.2초로 낮추었습니다.
 
-<p align="center"><img src="./img/dreamfora_crash1.png" width="80%" /></p>
+<p align="center"><img src="./dreamfora/img/dreamfora_crash1.png" width="80%" /></p>
 
 ## git 도입
 
