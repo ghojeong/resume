@@ -48,7 +48,7 @@
   - 슬로우 쿼리를 모니터링할 수 있는 인프라를 구축했습니다.
   - API request, response, duration 을 기록하는 로깅 시스템을 구축했습니다.
   - 로깅 시스템으로 인해 스토리지가 꽉 차면 로그를 지우는 배치서버를 구현했습니다.
-  - 리팩토링과 최적화 덕분에 인프라 비용이 하루 **51달러에서 8달러** 이하로 줄었습니다.
+  - 리팩토링과 최적화 덕분에 인프라 비용이 월 **216만원에서 73만원** 으로 줄었습니다.
   - 전부 혼자했습니다.
 
 <p align="center"><img src="./dreamfora/img/dreamfora_infra_old.png" width="50%" /><img src="./dreamfora/img/dreamfora_infra_new.png" width="48%" /></p>
