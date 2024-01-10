@@ -21,12 +21,14 @@
 
 # 이력
 
-- Dreamfora (회사): 2021.08 - 
+- 위스덤마인드 (데이터모델링 이론 스터디): 2023.12 - 2024.01
+- NEXTSTEP (JPA 리뷰어로 활동): 2021.03 - 2021.05
+- Dreamfora (회사): 2023.10 - 2023.11 
   - Java11 + Spring Boot2 + JPA + MariaDB
   - Kotlin + Android
 - 코드스쿼드 (부트캠프): 2021.01 - 2021.06
   - Java11 + Spring Boot2
-- NEXTSTEP (리뷰어로 근무): 2021.03 - 2021.05
+- NEXTSTEP (Java TDD 리뷰어로 활동): 2021.03 - 2021.05
   - Java
 - Ecube Labs (회사): 2018.10 - 2020.12
   - Typescript + React
@@ -34,6 +36,23 @@
 # Dreamfora
 
 <p align="center"><img src="./dreamfora/img/dreamfora_app.jpeg" width="80%" /></p>
+
+## 이미지 중개 서버 구현
+
+- 기간: 2024.01 - 2024.02
+- 설명
+  - CloudFlare 뿐만 아니라 다른 이미지 서버 솔루션을 염두해두고 중개하는
+  - 이미지 중개 서버 구현
+  - 기존의 이미지 업로드 인터페이스 규약을 지킴
+
+## 배치 서버 구현
+
+- 기간: 2023.09 - 2023.12
+- 설명
+  - 테스트 주도로 개발 가능한 배치 서버 구현
+  - chatGPT 를 활용한 인공지능 플래너 구현
+  - 배치로 정기적으로 Dream 복사 숫자 집계 기능 구현
+  - 배치로 정기적인 api_log 백업 기능 구현
 
 ## 쿼리 튜닝, 객체 및 DB 모델 리팩토링, 인프라 재구축
 
