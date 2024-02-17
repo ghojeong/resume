@@ -37,6 +37,8 @@
 
 <p align="center"><img src="./dreamfora/img/dreamfora_app.jpeg" width="80%" /></p>
 
+<p align="center"><img src="./dreamfora/img/dreamfora_dau.png" width="80%" /></p>
+
 ## 이미지 중개 서버 구현
 
 - 기간: 2024.01 - 2024.02
