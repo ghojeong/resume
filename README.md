@@ -35,6 +35,9 @@
 
 # Dreamfora
 
+- 200만 다운로드
+- [미국 앱스토어 피쳐드](https://apps.apple.com/us/story/id1681928254)
+
 <p align="center"><img src="./dreamfora/img/dreamfora_app.jpeg" width="80%" /></p>
 
 <p align="center"><img src="./dreamfora/img/dreamfora_dau.png" width="80%" /></p>
