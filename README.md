@@ -19,19 +19,26 @@
   - [비동기](https://github.com/ghojeong/resume/blob/master/code/js/runTasks.js)
   - [redux-observable](https://github.com/ghojeong/resume/blob/master/code/README.md)
 
-# 이력
+# 업무 경력
 
-- 위스덤마인드 (데이터모델링 이론 스터디): 2023.12 - 2024.01
-- NEXTSTEP (JPA 리뷰어로 활동): 2021.03 - 2021.05
-- Dreamfora (회사): 2023.10 - 2023.11 
-  - Java11 + Spring Boot2 + JPA + MariaDB
-  - Kotlin + Android
-- 코드스쿼드 (부트캠프): 2021.01 - 2021.06
-  - Java11 + Spring Boot2
-- NEXTSTEP (Java TDD 리뷰어로 활동): 2021.03 - 2021.05
-  - Java
-- Ecube Labs (회사): 2018.10 - 2020.12
-  - Typescript + React
+- Dreamfora (회사): 2021.08.25 - 
+  - Java17, Spring Boot3, JPA, MariaDB
+  - Kotlin, Android
+- Ecube Labs (회사): 2018.10.15 - 2020.12.28
+  - Typescript, React, Redux
+ 
+# 교육 이력
+
+- 우아한테크코스 리뷰어: 2024.02.13 - 2024.06.24
+- NEXTSTEP JPA 리뷰어: 2023.10.14 - 2023.11.25
+- NEXTSTEP JWP 리뷰어: 2022.07.18 - 2022.09.29
+- NEXTSTEP Java TDD 리뷰어: 2021.03 - 2021.05
+- 한빛미디어 공감주니어 강사: 2019.03 - 2019.06
+
+# 학력
+
+- 울산과학기술원 컴퓨터공학 성적우수 졸업
+- 코드스쿼드 백엔드 마스터즈 수료
 
 # Dreamfora
 
@@ -48,18 +55,16 @@
 
 - 기간: 2024.01 - 2024.02
 - 설명
-  - CloudFlare 뿐만 아니라 다른 이미지 서버 솔루션을 염두해두고 중개하는
-  - 이미지 중개 서버 구현
-  - 기존의 이미지 업로드 인터페이스 규약을 지킴
+  - CloudFlare 뿐만 아니라 S3 를 활용한 다른 이미지 서버를 염두해두고 중개하는 서버를 구현했습니다.
+  - 기존의 이미지 업로드 인터페이스 규약을 유지하여 클라이언트 수정이 없도록 하였습니다.
 
 ## 배치 서버 구현
 
 - 기간: 2023.09 - 2023.12
 - 설명
-  - 테스트 주도로 개발 가능한 배치 서버 구현
-  - chatGPT 를 활용한 인공지능 플래너 구현
-  - 배치로 정기적으로 Dream 복사 숫자 집계 기능 구현
-  - 배치로 정기적인 api_log 백업 기능 구현
+  - 테스트 주도로 개발 가능한 배치 서버 구현했습니다.
+  - 배치로 정기적으로 Dream 복사 숫자 집계 기능 구현했습니다.
+  - 배치로 정기적인 api_log 백업을 구현하여, 로그를 가격이 싼 S3 스토리지로 옮겼습니다.
 
 ## 쿼리 튜닝, 객체 및 DB 모델 리팩토링, 인프라 재구축
 
@@ -100,7 +105,6 @@
   - 단위 테스트와 Lint 겁사를 자동화 하는 개발환경을 도입했습니다.
   - app, data, domain 을 별개의 모듈로 의존성 분리를 해냈습니다.
   - 백그라운드 서비스를 최소화하여, 크래시율을 99% 낮추었습니다.
-  - 이미지의 Lazy Loading 을 도입하여, 렌더링 딜레이를 0.8초에서 0.2초로 낮추었습니다.
 
 <p align="center"><img src="./dreamfora/img/dreamfora_crash1.png" width="80%" /></p>
 
@@ -330,6 +334,11 @@
 
 # 스터디
 
+## 위스덤마인드 데이터모델링 이론 스터디
+
+- 기간: 2023.12 - 2024.01
+- 설명: "김기창의 데이터 모델링 강의" 책을 완독했습니다.
+
 ## 이펙티브 자바 2차 스터디
 
 - 기간: 2021.07 - 2021.10
@@ -346,7 +355,7 @@
 
 - 기간: 2020.04 - 2020.10
 - 링크: <https://github.com/ghojeong/GoF>
-- 설명: GoF의 디자인 패턴을 반년동안 꾸준히 공부했습니다..
+- 설명: GoF의 디자인 패턴을 반년동안 꾸준히 공부했습니다.
 
 <p align="center"><img src="./community/img/gof.png" width="60%" /></p>
 
