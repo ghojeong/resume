@@ -1,44 +1,45 @@
 # 고정완의 이력서
 
+# 업무 경력
+
+- Dreamfora (회사): 2021.08.25 - 
+  - Java, Spring, JPA, MariaDB 기반으로 영미권 사용자를 위한 목표관리 앱의 API 서버를 개발 및 유지보수 했습니다.
+- Ecube Labs (회사): 2018.10.15 - 2020.12.28
+  - TypeScript, React, Redux, Express.js 기반으로 미국에 서비스하는 스마트 시티 솔루션을 개발 및 유지보수 했습니다.
+ 
+ # 학력
+
+- 울산과학기술원 컴퓨터공학 성적우수 졸업
+  - 알고리즘 A+, 데이터구조 A, 데이터베이스 A-, 운영체제 A-, 네트워크 A-
+- 코드스쿼드 백엔드 마스터즈 수료
+
+# 교육 이력
+
+- 우아한테크코스 리뷰어: 2024.02.13 - 2024.06.24
+- [NEXTSTEP JPA](https://edu.nextstep.camp/c/UHESCzBt) 리뷰어: 2023.10.14 - 2023.11.25
+- [NEXTSTEP Spring](https://edu.nextstep.camp/c/4YUvqn9V) 리뷰어: 2022.07.18 - 2022.09.29
+- [NEXTSTEP Java TDD](https://edu.nextstep.camp/c/8fWRxNWU) 리뷰어: 2021.03 - 2021.05
+- [한빛미디어 공감주니어](http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334) 강사: 2019.03 - 2019.06
+
 ## 보유 기술
 
 ||||
 |--|--|--|
 |언어|`Java` `Kotlin` <br> `Typescript`|**리플렉션**을 통해 커스텀 어노테이션을 만든 경험과, <br> **코루틴**을 활용한 병렬 상태관리 경험이 있습니다.|
-|프레임워크|`Spring Boot` `JPA` <br> `Android` `React`|JPA 를 사용한 경험을 바탕으로, <br> 안드로이드에서 **Repository 패턴**을 직접 구현했습니다.|
+|프레임워크|`Spring Boot` `JPA` <br> `Android` `React`|JPA 를 사용한 경험을 바탕으로, <br> 안드로이드에서 **영속성 컨텍스트**를 직접 구현했습니다.|
 |DB|`MySQL` `SQLite`|InnoDB 와 다른 **스토리지 엔진**의 락이 어떻게 다르게 걸리는지 이해하고 있습니다. <br> 테이블 단위로 락이 걸리는 SQLite 의 트랜잭션에 반응하기 위해, **리액티브 프로그래밍**을 도입하여, 렌더링 최적화를 해낸 경험이 있습니다.|
 |인프라|`Docker` `EC2` <br> `S3` `IAM` `RDS` <br> `CloutFront` <br> `Route53`|Docker 가 어떻게 독립된 **cgroup** 과 **namespace** 를 가지는지 프로세스 생성 과정을 추적한 경험이 있습니다. <br> DB 를 private network 에 분리해야하는 필요성을 인지하고 있으며, **Bastion Host** 에 대해 알고 있습니다. IAM 에서 **Role** 을 통해 필요한 권한을 부여하는 법에 대해 알고 있습니다.|
 
 ## 자신있는 코드
 
 - Java
+  - [Hibernate 를 바닐라 Java 로 흉내](https://github.com/ghojeong/jpa-association)
   - [IoC 컨테이너를 바닐라 Java 로 구현](https://github.com/ghojeong/playground/tree/main/dependency/src/main/java/ioc)
   - [Typesafe Heterogeneous Container](https://github.com/ghojeong/Effective-Java-Study/blob/main/pyro/item33.md)
   - [WAS 를 TDD로 구현](https://github.com/ghojeong/jwp-was)
 - Javascript
   - [비동기](https://github.com/ghojeong/resume/blob/master/code/js/runTasks.js)
   - [redux-observable](https://github.com/ghojeong/resume/blob/master/code/README.md)
-
-# 업무 경력
-
-- Dreamfora (회사): 2021.08.25 - 
-  - Java17, Spring Boot3, JPA, MariaDB
-  - Kotlin, Android
-- Ecube Labs (회사): 2018.10.15 - 2020.12.28
-  - Typescript, React, Redux
- 
-# 교육 이력
-
-- 우아한테크코스 리뷰어: 2024.02.13 - 2024.06.24
-- NEXTSTEP JPA 리뷰어: 2023.10.14 - 2023.11.25
-- NEXTSTEP Spring 리뷰어: 2022.07.18 - 2022.09.29
-- NEXTSTEP Java TDD 리뷰어: 2021.03 - 2021.05
-- 한빛미디어 공감주니어 강사: 2019.03 - 2019.06
-
-# 학력
-
-- 울산과학기술원 컴퓨터공학 성적우수 졸업
-- 코드스쿼드 백엔드 마스터즈 수료
 
 # Dreamfora
 
