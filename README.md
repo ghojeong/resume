@@ -48,9 +48,9 @@
 
 <p align="center"><img src="./dreamfora/img/dreamfora_app.jpeg" width="80%" /></p>
 
-<p align="center"><img src="./dreamfora/img/dreamfora_dau.png" width="80%" /></p>
+<p align="center"><img src="./dreamfora/img/dreamfora_global_user.png" width="80%" /></p>
 
-<p align="center"><img src="./dreamfora/img/dreamfora_crash_free.png" width="80%" /></p>
+<p align="center"><img src="./dreamfora/img/dreamfora_dau.png" width="80%" /></p>
 
 ## 이미지 중개 서버 구현
 
