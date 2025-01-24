@@ -48,7 +48,7 @@
 
 <p align="center"><img src="./dreamfora/img/dreamfora_app.jpeg" width="80%" /></p>
 
-<p align="center"><img src="./dreamfora/img/dreamfora_global_user.png" width="80%" /></p>
+<p align="center"><img src="./dreamfora/img/dreamfora_global_yearly_user.png" width="80%" /></p>
 
 <p align="center"><img src="./dreamfora/img/dreamfora_dau.png" width="80%" /></p>
 
