@@ -1,17 +1,18 @@
-# [Ecube Labs](https://www.ecubelabs.com) 경력 기술
+# [Ecube Labs](https://www.ecubelabs.com) 경력기술
 
+- 미국 볼티모어, 일본 이치카와, 한국 고양시에 서비스하는 SaaS 솔루션을 개발하였습니다.
 - 기간: 2018.10 - 2020.12
 - [회사 기술 스택](./tech.md)
 
 ## 요약
 
-- [ceed/core](#ceedcore) npm 모듈 배포: 2020.09 - 2020.10
+- [ceed/core](#ceedcore) npm 모듈 배포: 2020.09 - 2020.12
   - Storybook, React, Typescript, Jest
 - [e2e test](#e2e-test): 2020.07 - 2020.08
   - Selenium, Appium, React Native, Typescript, Jest
 - [i-Box](#i-box-웹-프론트-개발) 웹 프론트 개발: 2020.01 - 2020.06
   - Apollo GraphQL, React, Typescript, Redux, RxJS, lodash
-- [Haulla Back Office](#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C): 2019.07 - 2019.11
+- [Haulla Back Office](#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C): 2019.07 - 2019.12
   - React, Typescript, Redux, Rxjs, lodash, axios, MaterialUI
 - [CCNx](#ccnx-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) 웹 프론트 개발: 2019.06
   - Angular7, Koa, Swagger
@@ -27,7 +28,7 @@
 
 ## ceed/core
 
-- 기간: 2020.09 - 2020.10
+- 기간: 2020.09 - 2020.12
 - 설명
   - 회사에서 공통적으로 쓰이는 컴포넌트를 모듈화 해서, npm에 배포했습니다.
 - 사용 기술
@@ -85,7 +86,7 @@
 
 ## Haulla Back Office 웹 프론트 개발
 
-- 기간: 2019.07 - 2019.11
+- 기간: 2019.07 - 2019.12
 - 제품 소개: <https://www.haulla.com/>
 - 설명
   - Haulla 는 쓰레기 수거자(Hauler)와 배출자(Generator)를 연결해주는 매칭 플랫폼입니다.
