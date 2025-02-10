@@ -1,29 +1,29 @@
-# [Ecube Labs](https://www.ecubelabs.com) Projects Description
+# [Ecube Labs](https://www.ecubelabs.com) 경력 기술
 
 - 기간: 2018.10 - 2020.12
 - [회사 기술 스택](./tech.md)
 
 ## 요약
 
-- [ceed/core](#ceedcore) (Storybook)
-  - 기간: 2020.09 - 2020.10
-- [e2e test](#e2e-test) (Selenium, Appium)
-  - 기간: 2020.07 - 2020.08
-- [i-Box](#i-Box) (React, Apollo GraphQL)
-  - 기간: 2020.01 - 2020.06
-- [Haulla Back Office](#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C) (React, Typescript)
-  - 기간: 2019.07 - 2019.11
-- [CCNx](#ccnx-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) (Angular 7)
-  - 기간: 2019.06
-- [CleanCityNetworks](#cleancitynetworks-ccn-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) (Angular JS)
-  - 기간: 2019.05
+- [ceed/core](#ceedcore) npm 모듈 배포: 2020.09 - 2020.10
+  - Storybook, React, Typescript, Jest
+- [e2e test](#e2e-test): 2020.07 - 2020.08
+  - Selenium, Appium, React Native, Typescript, Jest
+- [i-Box](#i-box-웹-프론트-개발) 웹 프론트 개발: 2020.01 - 2020.06
+  - Apollo GraphQL, React, Typescript, Redux, RxJS, lodash
+- [Haulla Back Office](#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C): 2019.07 - 2019.11
+  - React, Typescript, Redux, Rxjs, lodash, axios, MaterialUI
+- [CCNx](#ccnx-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) 웹 프론트 개발: 2019.06
+  - Angular7, Koa, Swagger
+- [CleanCityNetworks](#cleancitynetworks-ccn-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) 웹 프론트 유지보수: 2019.05
+  - AngularJS, axios, NGINX
 - [CleanScaleNetworks](#cleanscalenetworks-csn-%EA%B0%9C%EB%B0%9C)
-  - [대시보드](#partner-scale-api-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-%EA%B0%9C%EB%B0%9C) (Pug, jQuery)
-    - 기간: 2019.03 - 2019.04
-  - [데이터 시각화](#%EA%B3%84%EA%B7%BC-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EC%95%B5%EA%B7%A4%EB%9F%AC%EB%A1%9C-%EC%8B%9C%EA%B0%81%ED%99%94) (Angular JS)
-    - 기간: 2019.01 - 2019.02
-  - [Partner Scale API](#partner-scale-api-%EA%B0%9C%EB%B0%9C) (Express)
-    - 기간: 2018.10 - 2018.12
+  - [대시보드](#partner-scale-api-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-%EA%B0%9C%EB%B0%9C) 웹 프론트 개발: 2019.03 - 2019.04
+    - Pug를 통한 SSR, jQuery, SemanticUI
+  - [데이터 시각화](#%EA%B3%84%EA%B7%BC-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EC%95%B5%EA%B7%A4%EB%9F%AC%EB%A1%9C-%EC%8B%9C%EA%B0%81%ED%99%94) 웹 프론트 개발: 2019.01 - 2019.02
+    - AngularJS, axios, NGINX
+  - [Partner Scale API](#partner-scale-api-%EA%B0%9C%EB%B0%9C) 백엔드 API 개발: 2018.10 - 2018.12
+    - Express.js, apiDoc, MySQL, JWT
 
 ## ceed/core
 
@@ -113,7 +113,7 @@
 - 설명
   - 앱으로 등록된 쓰레기 수거 차량을 관리하고, 최적화된 경로 안내를 하는 웹 서비스입니다.
 - 사용 기술
-  - Angular 7
+  - Angular7
   - Koa
   - Swagger
 
@@ -126,7 +126,9 @@
 - 설명
   - 스마트 쓰레기통으로 수집한 데이터를 시각화해서 보여주는 웹 서비스입니다.
 - 사용 기술
-  - Angular JS
+  - AngularJS
+  - axios
+  - NGINX
 
 <p align="center"><img src="./img/ccn.png" width="60%" /></p>
 
@@ -152,7 +154,7 @@
 - 사용 기술
   - Pug를 통한 SSR
   - jQuery
-  - Semantic UI
+  - SemanticUI
 - 기억에 남는 점
   - 웹 프론트에서는 기술이 정말 순식간에 생겼다가, 인기가 식는다는 점을 느꼈습니다.
   - Pug의 인기가 식은 것처럼, 앵귤러와 리액트도 언젠가 그렇게 되지 않을까라는 생각이 들었습니다.
@@ -164,9 +166,9 @@
 - 설명
   - 회사 서버의 계근 데이터를 공무원들이 GUI를 통해 조회할 수 있게끔, 데이터를 시각화 한 프로젝트입니다.
 - 사용 기술
-  - Angular JS
+  - AngularJS
   - axios
-  - Nginx
+  - NGINX
 - 기억에 남는 점
   - 토큰을 통한 로그인과 인증 과정의 설계가, 예상 이상으로 재미있었습니다.
 
@@ -180,7 +182,7 @@
 - 설명
   - 계근 하드웨어에서 측정된 데이터를 회사 서버에 등록, 수정, 삭제 할 수 있는 API 입니다.
 - 사용 기술
-  - Express
+  - Express.js
   - apiDoc
   - MySQL
   - JWT
