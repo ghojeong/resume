@@ -6,24 +6,24 @@
 
 ## 요약
 
-- [ceed/core](#ceedcore) npm 모듈 배포: 2020.09 - 2020.12
+- [ceed/core](#ceedcore) npm 모듈 배포 *(2020.09 - 2020.12)*
   - Storybook, React, Typescript, Jest
-- [e2e test](#e2e-test): 2020.07 - 2020.08
+- [e2e test](#e2e-test) *(2020.07 - 2020.08)*
   - Selenium, Appium, React Native, Typescript, Jest
-- [i-Box](#i-box-웹-프론트-개발) 웹 프론트 개발: 2020.01 - 2020.06
+- [i-Box](#i-box-웹-프론트-개발) 웹 프론트 개발 *(2020.01 - 2020.06)*
   - Apollo GraphQL, React, Typescript, Redux, RxJS, lodash
-- [Haulla Back Office](#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C): 2019.07 - 2019.12
+- [Haulla Back Office](#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C) *(2019.07 - 2019.12)*
   - React, Typescript, Redux, Rxjs, lodash, axios, MaterialUI
-- [CCNx](#ccnx-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) 웹 프론트 개발: 2019.06
+- [CCNx](#ccnx-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) 웹 프론트 개발 *(2019.06)*
   - Angular7, Koa, Swagger
-- [CleanCityNetworks](#cleancitynetworks-ccn-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) 웹 프론트 유지보수: 2019.05
+- [CleanCityNetworks](#cleancitynetworks-ccn-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) 웹 프론트 유지보수 *(2019.05)*
   - AngularJS, axios, NGINX
 - [CleanScaleNetworks](#cleanscalenetworks-csn-%EA%B0%9C%EB%B0%9C)
-  - [대시보드](#partner-scale-api-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-%EA%B0%9C%EB%B0%9C) 웹 프론트 개발: 2019.03 - 2019.04
+  - [대시보드](#partner-scale-api-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-%EA%B0%9C%EB%B0%9C) 웹 프론트 개발 *(2019.03 - 2019.04)*
     - Pug를 통한 SSR, jQuery, SemanticUI
-  - [데이터 시각화](#%EA%B3%84%EA%B7%BC-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EC%95%B5%EA%B7%A4%EB%9F%AC%EB%A1%9C-%EC%8B%9C%EA%B0%81%ED%99%94) 웹 프론트 개발: 2019.01 - 2019.02
+  - [데이터 시각화](#%EA%B3%84%EA%B7%BC-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EC%95%B5%EA%B7%A4%EB%9F%AC%EB%A1%9C-%EC%8B%9C%EA%B0%81%ED%99%94) 웹 프론트 개발 *(2019.01 - 2019.02)*
     - AngularJS, axios, NGINX
-  - [Partner Scale API](#partner-scale-api-%EA%B0%9C%EB%B0%9C) 백엔드 API 개발: 2018.10 - 2018.12
+  - [Partner Scale API](#partner-scale-api-%EA%B0%9C%EB%B0%9C) 백엔드 API 개발 *(2018.10 - 2018.12)*
     - Express.js, apiDoc, MySQL, JWT
 
 ## ceed/core

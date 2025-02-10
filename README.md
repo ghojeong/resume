@@ -2,22 +2,22 @@
 
 ## 경력
 
-- [Dreamfora](https://play.google.com/store/apps/details?id=com.dreamfora.dreamfora) 백엔드 파트장: 2021.8.25 -
+- [Dreamfora](https://github.com/ghojeong/resume/blob/main/dreamfora/README.md) 백엔드 파트장 *(2021.8.25 - )*
   - Java, Spring Boot, Spring Security, JPA, MariaDB
-  - 200만 사용자를 확보한 목표관리 서비스를 개발 및 유지보수 했습니다.
-- [Ecube Labs](https://www.ecubelabs.com) 웹 개발자: 2018.10.15 - 2020.12.28
+  - 200만 유저가 사용하는 목표관리 서비스를 개발 및 운영했습니다.
+- [Ecube Labs](https://github.com/ghojeong/resume/blob/main/ecubelabs/README.md) 웹 개발자 *(2018.10.15 - 2020.12.28)*
   - TypeScript, React, Redux, Express.js
-  - 미국에 서비스하는 스마트 시티 솔루션을 개발 및 유지보수 했습니다.
-- [NECSST](https://next.cs.vt.edu) 인턴: 2018.06.04 - 2018.09.21
+  - 미국에 서비스하는 스마트 시티 솔루션을 개발 및 운영했습니다.
+- [NECSST](https://next.cs.vt.edu) 인턴 *(2018.06.04 - 2018.09.21)*
   - InfiniBand 환경에서의 RDMA 를 활용한 Aggregated Data Center 연구에 참여했습니다.
 
 ## 교육
 
-- [우아한테크코스](https://www.woowacourse.io) 리뷰어: 2024.02.13 - 2024.06.24
-- [NEXTSTEP JPA](https://edu.nextstep.camp/c/UHESCzBt) 리뷰어: 2023.10.14 - 2023.11.25
-- [NEXTSTEP Spring](https://edu.nextstep.camp/c/4YUvqn9V) 리뷰어: 2022.07.18 - 2022.09.29
-- [NEXTSTEP Java TDD](https://edu.nextstep.camp/c/8fWRxNWU) 리뷰어: 2021.03 - 2021.05
-- [한빛미디어 공감주니어](http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334) 강사: 2019.03 - 2019.06
+- [우아한테크코스](https://www.woowacourse.io) 리뷰어 *(2024.02.13 - 2024.06.24)*
+- [NEXTSTEP JPA](https://edu.nextstep.camp/c/UHESCzBt) 리뷰어 *(2023.10.14 - 2023.11.25)*
+- [NEXTSTEP Spring](https://edu.nextstep.camp/c/4YUvqn9V) 리뷰어 *(2022.07.18 - 2022.09.29)*
+- [NEXTSTEP Java TDD](https://edu.nextstep.camp/c/8fWRxNWU) 리뷰어 *(2021.03 - 2021.05)*
+- [한빛미디어 공감주니어](http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334) 강사 *(2019.03 - 2019.06)*
 
 ## 학력
 
