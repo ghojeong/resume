@@ -1,49 +1,79 @@
 # [Dreamfora](https://play.google.com/store/apps/details?id=com.dreamfora.dreamfora) 경력기술
 
-- 200만 다운로드, [미국 앱스토어 피쳐드](https://apps.apple.com/us/story/id1681928254)
+- 200만 다운로드, [미국 앱스토어 피쳐드](https://apps.apple.com/us/story/id1681928254)된 B2C 목표관리 앱
+- 근속기간: 2021.8.25 -
+- 사용기술: Java, Spring Boot, Spring Security, JPA, MariaDB
+
+## 요약
+
+- [연도별 구현기능](#연도별-구현기능)
+  - 2025년: 상점, 시즌별 아이템
+  - 2024년: 포인트, 출석 Streak, 펫, 다이어리, 검색
+  - 2023년: 결제, 광고, Feed 커뮤니티, Follower, 인기도, 알림
+  - 2022년: 데이터 자동싱크, 목표 실행계획 모델링, 목표 실행계획 공유
+  - 2021년: 목표와 실행계획을 적는 메모장
+- [운영 및 리팩토링](#운영-및-리팩토링)
+  - Batch 작업, 쿼리 튜닝, AWS 인프라 구축, 데이터 마이그레이션, ATDD
+
+<p align="center"><img src="../dreamfora/img/dreamfora_global_yearly_user.png" width="100%" /></p>
+
+<p align="center"><img src="../dreamfora/img/dreamfora_dau.png" width="100%" /></p>
 
 <p align="center"><img src="../dreamfora/img/dreamfora_app.jpeg" width="80%" /></p>
 
-<p align="center"><img src="../dreamfora/img/dreamfora_global_yearly_user.png" width="80%" /></p>
+## 연도별 구현기능
 
-<p align="center"><img src="../dreamfora/img/dreamfora_dau.png" width="80%" /></p>
+### 2025년
 
-## 기능구현
-
-### 2025
-
-- 상점 물품과 Feed 연계
+- 상점 아이템과 Feed 커뮤니티 연계
 - 상점에 시즌 개념 도입
 
-### 2024
+### 2024년
 
 - 상점 기능 구현
+- 다이어리 기능 구현
 - 쿠폰 시스템 구현
 - 포인트를 이용한 랜덤박스 기능 구현
 - 펫 키우기 기능 구현
+- 포인트 보상을 위한 출석 Streak 도입
 - 포인트 시스템 구축
+  - 미션 수행에 따라 포인트 획득
+  - 현금성 포인트와, 일반 포인트를 분리
+  - 1년이 지나면 소멸되는 기능 구현
+- Feed 검색 구현
+- 유저 찾기 구현
+- 유저 고유 아이디 도입
 
-### 2023
+### 2023년
 
 - 정기구독 결제와 AdMob 도입
+  - 계획수행 히스토리와 시각화를 고도화
 - Follower 및 인기도 시스템 구현
-- Feed 커뮤니티 구현
 - Notification 기능 구현
-- 이미지 다중 업로드
-- 게시글 기능 구현
-- 댓글과 대댓글 구현
-- 좋아요 기능 구현
+- 순위에 따른 Hot Feed 카테고리 구현
+- Feed 커뮤니티 구현
+  - 게시글 기능 구현
+  - 댓글과 대댓글 구현
+  - 좋아요 기능 구현
+  - 좋아요와 조회수에 따른 순위 구현
+  - 이미지 서버 구현
 
-### 2022
+### 2022년
 
-- 자동 싱크 기능 구현
-- Quote 기능 구현
-- 목표계획 공유 기능 구현
-  - 모범 목표 계획을 관리자가 세워서 공유
+- 데이터 자동 싱크 기능 구현
+- 동기부여되는 Quote 를 주기적으로 보여주는 기능 구현
+- 계획수행 히스토리를 수집하고, 그래프로 시각화하는 기능 구현
+- 목표 실행계획 공유 기능 구현
+  - 관리자가 모범 목표 실행계획을 세워서 공유
+  - 일반 사용자끼리도 목표 실행계획을 공유가능
+- 목표 실행계획을 구조화
+  - Dream: 목표
+  - Habit: 목표달성을 위해 주기적으로 반복해야하는 습관
+  - Task: 목표달성을 위해 해내야하는 마일스톤
 
-### 2021
+### 2021년
 
-- 목표관리를 위한 모델링 (Dream, Habit, Task 구조)
+- 목표를 세우고, 실행계획을 적는 메모장 기능 구현
 
 ## 운영 및 리팩토링
 
@@ -103,8 +133,6 @@
   - 백그라운드 서비스를 최소화하여, 크래시율을 99% 낮추었습니다.
 
 <p align="center"><img src="../dreamfora/img/dreamfora_crash1.png" width="80%" /></p>
-
-<p align="center"><img src="../dreamfora/img/dreamfora_crashlytics.png" width="80%" /></p>
 
 ### git 도입
 
