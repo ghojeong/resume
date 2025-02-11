@@ -1,6 +1,6 @@
 # [Ecube Labs](https://www.ecubelabs.com) 경력기술
 
-- 미국 볼티모어, 일본 이치카와, 한국 고양시에 서비스하는 SaaS 솔루션을 개발
+- 미국 볼티모어, 일본 이치카와, 한국 고양시에 서비스하는 B2B 스마트 시티 SaaS를 개발
 - 근속기간: 2018.10.15 - 2020.12.28
 - [회사 사용기술](./tech.md)
 
@@ -31,7 +31,7 @@
 - 기간: 2020.09 - 2020.12
 - 설명
   - 회사에서 공통적으로 쓰이는 컴포넌트를 모듈화 해서, npm에 배포했습니다.
-- 사용 기술
+- 사용기술
   - React
   - Typescript
   - Jest
@@ -44,7 +44,7 @@
 - 기간: 2020.07 - 2020.08
 - 설명
   - e2e 테스트를 위한 환경을 구축하고 테스트 코드를 작성했습니다.
-- 사용 기술
+- 사용기술
   - React, React Native
   - Typescript
   - Jest
@@ -68,7 +68,7 @@
   - 쓰레기를 누가, 언제, 어디서, 얼마나 버렸는지 추적해서 버린 사람에게 비용을 청구합니다.
   - 웹 혹은 앱을 통해 받은 QR 이미지로, 사용자 인증을 합니다.
   - 이치카와시의 공무원은 i-Box의 기록을 관리자로 모니터링할 수 있습니다.
-- 사용 기술
+- 사용기술
   - React
   - Typescript
   - Redux, redux-observable
@@ -92,7 +92,7 @@
   - Haulla 는 쓰레기 수거자(Hauler)와 배출자(Generator)를 연결해주는 매칭 플랫폼입니다.
   - 일반 사용자(Hauler와 Generator)는 모바일 앱을 통해 매칭 서비스를 이용합니다.
   - 관리자(쓰레기 수거 회사)는 Back Office 웹을 통해 쓰레기 수거 서비스의 모니터링 및 관리를 할 수 있습니다.
-- 사용 기술
+- 사용기술
   - React, Next.js
   - Typescript
   - Redux, redux-observable
@@ -113,7 +113,7 @@
 - 제품 소개: <https://www.ecubelabs.com/fleet-management-platform/>
 - 설명
   - 앱으로 등록된 쓰레기 수거 차량을 관리하고, 최적화된 경로 안내를 하는 웹 서비스입니다.
-- 사용 기술
+- 사용기술
   - Angular7
   - Koa
   - Swagger
@@ -126,7 +126,7 @@
 - 제품 소개: <https://www.ecubelabs.com/waste-analytics-platform/>
 - 설명
   - 스마트 쓰레기통으로 수집한 데이터를 시각화해서 보여주는 웹 서비스입니다.
-- 사용 기술
+- 사용기술
   - AngularJS
   - axios
   - NGINX
@@ -152,7 +152,7 @@
   - Scale API 의 사용량을 시각화한 대시보드 입니다.
   - API 사용량에 따라, 외부 업체에게 금액을 청구하기 위해 쓰였습니다.
   - 기존에 개발된 API 대시보드에, Scale API 사용량이 표시될 수 있도록 기능을 추가했습니다.
-- 사용 기술
+- 사용기술
   - Pug를 통한 SSR
   - jQuery
   - SemanticUI
@@ -166,7 +166,7 @@
 - 기간: 2019.01 - 2019.02
 - 설명
   - 회사 서버의 계근 데이터를 공무원들이 GUI를 통해 조회할 수 있게끔, 데이터를 시각화 한 프로젝트입니다.
-- 사용 기술
+- 사용기술
   - AngularJS
   - axios
   - NGINX
@@ -182,7 +182,7 @@
 - 링크: <https://doc.cleancitynetworks.com/partner-scale-api-doc/>
 - 설명
   - 계근 하드웨어에서 측정된 데이터를 회사 서버에 등록, 수정, 삭제 할 수 있는 API 입니다.
-- 사용 기술
+- 사용기술
   - Express.js
   - apiDoc
   - MySQL

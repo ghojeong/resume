@@ -4,10 +4,10 @@
 
 - [Dreamfora](https://github.com/ghojeong/resume/blob/main/dreamfora/README.md) 백엔드 파트장 *(2021.8.25 - )*
   - Java, Spring Boot, Spring Security, JPA, MariaDB
-  - 200만 유저가 사용하는 목표관리 서비스를 개발 및 운영했습니다.
+  - 200만 유저가 사용하는 B2C 목표관리 서비스를 개발 및 운영했습니다.
 - [Ecube Labs](https://github.com/ghojeong/resume/blob/main/ecubelabs/README.md) 웹 개발자 *(2018.10.15 - 2020.12.28)*
   - TypeScript, React, Redux, Express.js
-  - 미국에 서비스하는 스마트 시티 솔루션을 개발 및 운영했습니다.
+  - 미국에 서비스하는 B2B 스마트 시티 SaaS를 개발 및 운영했습니다.
 - [NECSST](https://next.cs.vt.edu) 인턴 *(2018.06.04 - 2018.09.21)*
   - InfiniBand 환경에서의 RDMA 를 활용한 Aggregated Data Center 연구에 참여했습니다.
 
@@ -21,8 +21,9 @@
 
 ## 학력
 
-- [과학기술원 컴퓨터공학](https://cse.unist.ac.kr) 성적 우수 졸업
+- [과학기술원 컴퓨터공학](https://cse.unist.ac.kr) 성적우수 졸업
   - 알고리즘 A+, 데이터구조 A, 데이터베이스 A-, 운영체제 A-, 네트워크 A-
+  - 수리과학 부전공
 - 코드스쿼드 백엔드 마스터즈 수료
 
 ## 보유기술
