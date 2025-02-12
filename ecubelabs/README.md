@@ -13,7 +13,7 @@
 - [i-Box](#i-box-웹-프론트-개발) 웹 프론트 개발 *(2020.01 - 2020.06)*
   - Apollo GraphQL, React, Typescript, Redux, RxJS, lodash
 - [Haulla Back Office](#haulla-back-office-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C) 웹 프론트 개발 *(2019.07 - 2019.12)*
-  - React, Typescript, Redux, Rxjs, lodash, axios, MaterialUI
+  - React, Typescript, Redux, RxJS, lodash, axios, MaterialUI
 - [CCNx](#ccnx-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) 웹 프론트 개발 *(2019.06)*
   - Angular7, Koa, Swagger
 - [CleanCityNetworks](#cleancitynetworks-ccn-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98) 웹 프론트 유지보수 *(2019.05)*
@@ -77,7 +77,7 @@
   - Reactotron
   - intl, react-intl
 - 기억에 남는 점
-  - 비동기를 커스텀 훅을 사용해 처리해서, 리액트 훅에 대한 이해도가 많이 올라갔습니다.
+  - 비동기를 커스텀 훅으로 처리해서, 리액트 훅에 대한 이해도가 많이 올라갔습니다.
     - GraphQL API 호출을 모두 커스텀 훅으로 비동기 처리했습니다.
   - 자바스크립트로 바이너리 스트림을 다루는 경험을 해볼 수 있었습니다.
     - QR 이미지를 생성 후 압축해서 업로드하거나 다운받는 작업을 할때, 일반 JSON 텍스트와 달리 바이너리 데이터에 맞게 소켓통신을 해야했습니다.
@@ -96,7 +96,7 @@
   - React, Next.js
   - Typescript
   - Redux, redux-observable
-  - Rxjs, lodash
+  - RxJS, lodash
   - axios, axios-observable
   - Material-UI
 - 기억에 남는 점
