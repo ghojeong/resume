@@ -7,16 +7,24 @@
   - 200만 유저가 사용하는 B2C 목표관리 서비스를 개발 및 운영했습니다.
 - [Ecube Labs](https://github.com/ghojeong/resume/blob/main/ecubelabs/README.md) 웹 개발자 *(2018.10.15 - 2020.12.28)*
   - TypeScript, React, Redux, Express.js
-  - 미국에 서비스하는 B2B 스마트 시티 SaaS를 개발 및 운영했습니다.
+  - 미국 볼티모어, 일본 이치카와, 한국 고양시와 계약한 B2B 스마트 시티 SaaS를 개발 및 운영했습니다.
 - [NECSST](https://next.cs.vt.edu) 인턴 *(2018.06.04 - 2018.09.21)*
   - InfiniBand 환경에서의 RDMA 를 활용한 Aggregated Data Center 연구에 참여했습니다.
 
 ## 교육
 
 - [우아한테크코스](https://www.woowacourse.io) 리뷰어 *(2024.02.13 - 2024.06.24)*
+  - 우아한테크코스에서 크루들을 지도하는 Kotlin 리뷰어로 일했습니다.
+  - 리뷰예시: [람다와 함수형 프로그래밍](https://github.com/woowacourse/kotlin-omok/pull/55#discussion_r1535278325), [테스트와 예외처리](https://github.com/woowacourse/kotlin-lotto/pull/93#issuecomment-1970238649)
 - [NEXTSTEP JPA](https://edu.nextstep.camp/c/UHESCzBt) 리뷰어 *(2023.10.14 - 2023.11.25)*
+  - 2기부터 현직자를 지도하며, JSR 338 문서를 기반으로 QueryBuilder, EntityManager, 1차 캐시, OneToMany 프록시를 바닥부터 구현하도록 했습니다.
+  - 리뷰예시: [멀티 쓰레드 환경에서의 영속성 컨텍스트](https://github.com/next-step/jpa-entity-manager/pull/39#discussion_r1372620312)
 - [NEXTSTEP Spring](https://edu.nextstep.camp/c/4YUvqn9V) 리뷰어 *(2022.07.18 - 2022.09.29)*
+  - 3기부터 현직자를 지도하며, 웹서버, MVC, JDBC, DI, AOP 관련 프레임워크를 바닐라 자바로 바닥부터 구현하도록 했습니다.
+  - 리뷰예시: [쿠키 구현 시 NullObjectPattern 도입](https://github.com/next-step/java-http/pull/43#discussion_r1676799820)
 - [NEXTSTEP Java TDD](https://edu.nextstep.camp/c/8fWRxNWU) 리뷰어 *(2021.03 - 2021.05)*
+  - 11기부터 현직자를 지도하며, 객체지향 생활체조 원칙과 단위테스트 작성을 습관화하게 하였습니다.
+  - 리뷰예시: [테스트와 책임분리](https://github.com/next-step/java-racingcar/pull/3214#issuecomment-1095750744)
 - [한빛미디어 공감주니어](http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334) 강사 *(2019.03 - 2019.06)*
 
 ## 학력

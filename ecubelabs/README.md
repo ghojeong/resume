@@ -1,6 +1,6 @@
 # [Ecube Labs](https://www.ecubelabs.com) 경력기술
 
-- 미국 볼티모어, 일본 이치카와, 한국 고양시에 서비스하는 B2B 스마트 시티 SaaS를 개발
+- 미국 볼티모어, 일본 이치카와, 한국 고양시와 계약한 B2B 스마트 시티 SaaS를 개발
 - 근속기간: 2018.10.15 - 2020.12.28
 - 사용기술: TypeScript, React, Redux, RxJS, Express.js
 
