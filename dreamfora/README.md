@@ -23,7 +23,7 @@
 
 <p align="center"><img src="../dreamfora/img/dreamfora_global_yearly_user.png" width="100%" /></p>
 
-<p align="center"><img src="../dreamfora/img/dreamfora_journal.png" width="100%" /></p>
+<!-- <p align="center"><img src="../dreamfora/img/dreamfora_journal.png" width="100%" /></p> -->
 
 ## 연도별 구현기능
 
