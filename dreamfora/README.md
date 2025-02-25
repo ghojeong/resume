@@ -1,6 +1,7 @@
 # [Dreamfora](https://play.google.com/store/apps/details?id=com.dreamfora.dreamfora) 경력기술
 
-- 200만 다운로드, [미국 앱스토어 피쳐드](https://apps.apple.com/us/story/id1681928254)된 B2C 목표관리 앱
+- 200만 다운로드, MAU 16만, [미국 앱스토어 피쳐드](https://apps.apple.com/us/story/id1681928254)된 B2C 목표관리 앱
+- 독일의 FAU(프리드리히 알렉산더 대학) 연구진에 의해 [Self-Improvement 우수사례로 저널 논문](https://www.jmir.org/2025/1/e65214/)이 등재
 - 근속기간: 2021.8.25 -
 - 사용기술: Java, Spring Boot, Spring Security, JPA, MariaDB
 
@@ -21,6 +22,8 @@
     - 서버 호스팅에서 AWS 클라우드로 전환 후 [장애빈도 99% 감소](#aws-클라우드로-인프라를-이전)
 
 <p align="center"><img src="../dreamfora/img/dreamfora_global_yearly_user.png" width="100%" /></p>
+
+<p align="center"><img src="../dreamfora/img/dreamfora_journal.png" width="100%" /></p>
 
 ## 연도별 구현기능
 
@@ -209,7 +212,7 @@
     - stage: 버전단위로 QA 되는 서버
     - production: 이중화와 망분리가 된 실서버
 
-<p align="center"><img src="../dreamfora/img/dreamfora_crash1.png" width="80%" /></p>
+<p align="center"><img src="../dreamfora/img/dreamfora_crash.png" width="80%" /></p>
 
 ### 안드로이드 네이티브 전환
 
