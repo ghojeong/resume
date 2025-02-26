@@ -18,11 +18,11 @@ Java, Spring, JPA 기반 6년차 개발자 고정완입니다.
     - 인증서버를 세션기반에서 토큰기반으로 변경 후 인증시간 93% 단축
 - [Ecube Labs](https://github.com/ghojeong/resume/blob/main/ecubelabs/README.md) 웹 개발자 *(2018.10.15 - 2020.12.28)*
   - 사용기술: TypeScript, React, Redux, Express.js
-  - 미국 볼티모어, 일본 이치카와, 한국 고양 시와 계약한 B2B 스마트 시티 SaaS 를 개발
+  - 미국 볼티모어, 일본 이치카와, 한국 고양시와 계약한 B2B 스마트 시티 SaaS 를 개발
   - 주요성과
-    - 미국 볼티모어 시의 폐기물 수거 업무 낙찰을 위한 경매(Bidding) 시스템을 구축
+    - 미국 볼티모어 시의 폐기물 수거 업무 낙찰을 위한 경매 시스템을 구축
     - 일본 이치카와 시의 유료 공공 쓰레기통을 위한 QR 기반 인증 및 과금 시스템을 구축
-    - 한국 고양 시와 협력 하드웨어 업체를 위해 OAuth2.0 인증 서버와 리소스 서버를 구현
+    - 한국 고양시와 협력 하드웨어 업체를 위해 OAuth2.0 인증 서버와 리소스 서버를 구현
     - E2E 테스트 환경을 구축하고 테스트 코드를 작성
 - [NECSST](https://next.cs.vt.edu) 인턴 *(2018.06.04 - 2018.09.21)*
   - InfiniBand 환경에서의 RDMA 를 활용한 Aggregated Data Center 연구에 참여
