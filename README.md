@@ -1,37 +1,55 @@
-# 고정완의 이력서
+# [고정완의 이력서](https://ghojeong.github.io/)
+
+Java, Spring, JPA 기반 6년차 개발자 고정완입니다.  
+200만 다운로드, MAU 16만, 미국 앱스토어 피처드 B2C 목표관리 서비스인  
+드림포라의 백엔드 테크리드로 일하며 Feed 커뮤니티와 검색, 현금성 포인트와 상점을 구현했습니다.  
+독일의 FAU 연구진에 의해 [Self-Improvement 우수사례로 저널 논문](https://www.jmir.org/2025/1/e65214/)이 등재되었습니다.  
+**우아한테크코스**와 넥스트스텝에서 Java, Kotlin, Spring, JPA 강사로 일하며 크루와 현직자를 교육했습니다.
 
 ## 경력
 
 - [Dreamfora](https://github.com/ghojeong/resume/blob/main/dreamfora/README.md) 백엔드 테크리드 *(2021.08.25 - )*
-  - Java, Spring Boot, Spring Security, JPA, MariaDB
-  - 200만 유저가 사용하는 B2C 목표관리 서비스를 개발 및 운영했습니다.
+  - 사용기술: Java, Spring Boot, Spring Security, JPA, MariaDB
+  - 미국, 영국, 인도, 러시아, 이집트 등 전세계 200만명이 사용하는 B2C 목표관리 서비스를 개발
+  - 주요성과
+    - IDC에서 AWS 클라우드로 인프라 전환 후 **장애빈도 99%** 감소
+    - 쿼리튜닝과 DB 파티셔닝 후 **서버비용 82%** 절약
+    - 모놀리식에서 MSA로 리팩토링 후 테스트 커버리지 86% 달성
+    - 인증서버를 세션기반에서 토큰기반으로 변경 후 인증시간 93% 단축
 - [Ecube Labs](https://github.com/ghojeong/resume/blob/main/ecubelabs/README.md) 웹 개발자 *(2018.10.15 - 2020.12.28)*
-  - TypeScript, React, Redux, Express.js
-  - 미국 볼티모어, 일본 이치카와, 한국 고양시와 계약한 B2B 스마트 시티 SaaS를 개발 및 운영했습니다.
+  - 사용기술: TypeScript, React, Redux, Express.js
+  - 미국 볼티모어, 일본 이치카와, 한국 고양 시와 계약한 B2B 스마트 시티 SaaS 를 개발
+  - 주요성과
+    - 미국 볼티모어 시의 폐기물 수거 업무 낙찰을 위한 경매(Bidding) 시스템을 구축
+    - 일본 이치카와 시의 유료 공공 쓰레기통을 위한 QR 기반 인증 및 과금 시스템을 구축
+    - 한국 고양 시와 협력 하드웨어 업체를 위해 OAuth2.0 인증 서버와 리소스 서버를 구현
+    - E2E 테스트 환경을 구축하고 테스트 코드를 작성
 - [NECSST](https://next.cs.vt.edu) 인턴 *(2018.06.04 - 2018.09.21)*
-  - InfiniBand 환경에서의 RDMA 를 활용한 Aggregated Data Center 연구에 참여했습니다.
+  - InfiniBand 환경에서의 RDMA 를 활용한 Aggregated Data Center 연구에 참여
 
 ## 교육
 
-- [우아한테크코스](https://www.woowacourse.io) 리뷰어 *(2024.02.13 - 2024.06.24)*
-  - 우아한테크코스에서 크루들을 지도하는 Kotlin 리뷰어로 일했습니다.
-  - 리뷰예시: [람다와 함수형 프로그래밍](https://github.com/woowacourse/kotlin-omok/pull/55#discussion_r1535278325), [테스트와 예외처리](https://github.com/woowacourse/kotlin-lotto/pull/93#issuecomment-1970238649)
-- [NEXTSTEP JPA](https://edu.nextstep.camp/c/UHESCzBt) 리뷰어 *(2023.10.14 - 2023.11.25)*
+- [우아한테크코스](https://www.woowacourse.io) 강사 *(2024.02.13 - 2024.06.24)*
+  - 우아한테크코스에서 크루들에게 Kotlin 을 교육하며 코드리뷰를 하였습니다.
+  - 코드리뷰 예시: [람다와 함수형 프로그래밍](https://github.com/woowacourse/kotlin-omok/pull/55#discussion_r1535278325), [테스트와 예외처리](https://github.com/woowacourse/kotlin-lotto/pull/93#issuecomment-1970238649)
+- [NEXTSTEP JPA](https://edu.nextstep.camp/c/UHESCzBt) 강사 *(2023.10.14 - 2023.11.25)*
   - 2기부터 현직자를 지도하며, JSR 338 문서를 기반으로 QueryBuilder, EntityManager, 1차 캐시, OneToMany 프록시를 바닥부터 구현하도록 했습니다.
-  - 리뷰예시: [멀티 쓰레드 환경에서의 영속성 컨텍스트](https://github.com/next-step/jpa-entity-manager/pull/39#discussion_r1372620312)
-- [NEXTSTEP Spring](https://edu.nextstep.camp/c/4YUvqn9V) 리뷰어 *(2022.07.18 - 2022.09.29)*
-  - 3기부터 현직자를 지도하며, 웹서버, MVC, JDBC, DI, AOP 관련 프레임워크를 바닐라 자바로 바닥부터 구현하도록 했습니다.
-  - 리뷰예시: [쿠키 구현 시 NullObjectPattern 도입](https://github.com/next-step/java-http/pull/43#discussion_r1676799820)
-- [NEXTSTEP Java TDD](https://edu.nextstep.camp/c/8fWRxNWU) 리뷰어 *(2021.03 - 2021.05)*
+  - 코드리뷰 예시: [멀티 쓰레드 환경에서의 영속성 컨텍스트](https://github.com/next-step/jpa-entity-manager/pull/39#discussion_r1372620312)
+- [NEXTSTEP Spring](https://edu.nextstep.camp/c/4YUvqn9V) 강사 *(2022.07.18 - 2022.09.29)*
+  - 3기부터 현직자를 지도하며, WAS, MVC, JDBC, DI, AOP 관련 프레임워크를 바닐라 자바로 바닥부터 구현하도록 했습니다.
+  - 코드리뷰 예시: [쿠키 구현 시 NullObjectPattern 도입](https://github.com/next-step/java-http/pull/43#discussion_r1676799820)
+- [NEXTSTEP Java TDD](https://edu.nextstep.camp/c/8fWRxNWU) 강사 *(2021.03 - 2021.05)*
   - 11기부터 현직자를 지도하며, 객체지향 생활체조 원칙과 단위테스트 작성을 습관화하게 하였습니다.
-  - 리뷰예시: [테스트와 책임분리](https://github.com/next-step/java-racingcar/pull/3214#issuecomment-1095750744)
-- [한빛미디어 공감주니어](http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334) 강사 *(2019.03 - 2019.06)*
+  - 코드리뷰 예시: [테스트와 책임분리](https://github.com/next-step/java-racingcar/pull/3214#issuecomment-1095750744)
+- [한빛미디어 세미나](http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334) 강사 *(2019.03 - 2019.06)*
+  - 개발 문서화를 주제로 한빛미디어의 후원을 받아 공감세미나 주니어를 개최했습니다.
+  - 사전정의서, 요구사항 명세서, ERD, 프로세스 Flow Chart 문서 작성하는 법을 강의했습니다.
 
 ## 학력
 
-- [과학기술원 컴퓨터공학](https://cse.unist.ac.kr) 성적우수 졸업
+- [과학기술원 컴퓨터공학](https://cse.unist.ac.kr) 성적우수 졸업 (수리과학 부전공)
   - 알고리즘 A+, 데이터구조 A, 데이터베이스 A-, 운영체제 A-, 네트워크 A-
-  - 수리과학 부전공
+  - 선형대수학 A, 미분방정식 A, 집합론 A, 이산수학 A, 위상수학 A, 통계학 A-
 - 코드스쿼드 백엔드 마스터즈 수료
 
 ## 보유기술
