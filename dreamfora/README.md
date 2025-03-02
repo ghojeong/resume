@@ -2,7 +2,7 @@
 
 - 200만 다운로드, MAU 16만, [미국 앱스토어 피쳐드](https://apps.apple.com/us/story/id1681928254)된 B2C 목표관리 앱
 - 독일의 FAU(프리드리히 알렉산더 대학) 연구진에 의해 [Self-Improvement 우수사례로 저널 논문](https://www.jmir.org/2025/1/e65214/)이 등재
-- 근속기간: 2021.08.25 -
+- 근속기간: 4년(2021.08.25 - )
 - 사용기술: Java, Spring Boot, Spring Security, JPA, MariaDB
 - 주요성과
   - IDC에서 AWS 클라우드로 전환 후 [**장애빈도 99% 감소**](#aws-클라우드로-인프라를-전환)
@@ -79,7 +79,7 @@
 - 사용기술: Java21, Spring Boot 3.3, Gradle 8.10
 - 성과: 서비스 장애 없는 프레임워크 업그레이드
 - 설명
-  - Java11, Spring Boot2.6, Gradle 7.1 에서 Java21, Spring Boot 3.3, Gradle 8.10 으로 버전을 올렸습니다.
+  - Java 11, Spring Boot 2.6, Gradle 7.1 에서 Java 21, Spring Boot 3.3, Gradle 8.10 으로 버전을 올렸습니다.
   - 버전 업그레이드 후 통과되지 못한 테스트가 245개 였습니다.
   - **테스트 커버리지가 86%** 였기에, 테스트를 모두 통과하도록 수정하면 실서비스 장애도 없을거라는 자신이 있었습니다.
   - 실서비스 배포 후 서비스 장애가 전혀 일어나지 않았습니다.

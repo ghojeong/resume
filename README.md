@@ -8,7 +8,7 @@ Java, Spring, JPA 기반 6년차 개발자 고정완입니다.
 
 ## 경력
 
-- [Dreamfora](https://github.com/ghojeong/resume/blob/main/dreamfora/README.md) 백엔드 테크리드 *(2021.08.25 - )*
+- [Dreamfora](https://github.com/ghojeong/resume/blob/main/dreamfora/README.md) 백엔드 테크리드 *4년(2021.08.25 - )*
   - 사용기술: Java, Spring Boot, Spring Security, JPA, MariaDB
   - 미국, 영국, 인도, 러시아, 이집트 등 전세계 200만명이 사용하는 B2C 목표관리 서비스를 개발
   - 주요성과
@@ -16,7 +16,7 @@ Java, Spring, JPA 기반 6년차 개발자 고정완입니다.
     - 쿼리튜닝과 DB 파티셔닝 후 **서버비용 82%** 절약
     - 모놀리식에서 MSA로 리팩토링 후 테스트 커버리지 86% 달성
     - 인증서버를 세션기반에서 토큰기반으로 변경 후 인증시간 93% 단축
-- [Ecube Labs](https://github.com/ghojeong/resume/blob/main/ecubelabs/README.md) 웹 개발자 *(2018.10.15 - 2020.12.28)*
+- [Ecube Labs](https://github.com/ghojeong/resume/blob/main/ecubelabs/README.md) 웹 개발자 *2년(2018.10.15 - 2020.12.28)*
   - 사용기술: TypeScript, React, Redux, Express.js
   - 미국 볼티모어, 일본 이치카와, 한국 고양시와 계약한 B2B 스마트 시티 SaaS 를 개발
   - 주요성과
