@@ -2,7 +2,7 @@
 
 - 200만 다운로드, MAU 16만, [미국 앱스토어 피쳐드](https://apps.apple.com/us/story/id1681928254)된 B2C 목표관리 앱
 - 독일의 FAU(프리드리히 알렉산더 대학) 연구진에 의해 [Self-Improvement 우수사례로 저널 논문](https://www.jmir.org/2025/1/e65214/)이 등재
-- 근속기간: 4년(2021.08.25 - )
+- 근속기간: 2021.08.25 - 2025.03.25
 - 사용기술: Java, Spring Boot, Spring Security, JPA, MariaDB
 - 주요성과
   - IDC에서 AWS 클라우드로 전환 후 [**장애빈도 99% 감소**](#aws-클라우드로-인프라를-전환)
