@@ -48,7 +48,7 @@ Java, Spring, JPA 기반 6년차 개발자 고정완입니다.
 - [NEXTSTEP Java TDD](https://edu.nextstep.camp/c/8fWRxNWU) 강사 *(2021.03 - 2021.05)*
   - 11기부터 현직자를 지도하며, 객체지향 생활체조 원칙과 단위테스트 작성을 습관화하게 하였습니다.
   - 코드리뷰 예시: [테스트와 책임분리](https://github.com/next-step/java-racingcar/pull/3214#issuecomment-1095750744)
-- [한빛미디어 세미나](http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334) 강사 *(2019.03 - 2019.06)*
+- [한빛미디어 세미나](https://www.onoffmix.com/event/183044) 강사 *(2019.03 - 2019.06)*
   - 개발 문서화를 주제로 한빛미디어의 후원을 받아 공감세미나 주니어를 개최했습니다.
   - 사전정의서, 요구사항 명세서, ERD, 프로세스 Flow Chart 문서 작성하는 법을 강의했습니다.
 
