@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostgreSQL → DynamoDB 마이그레이션 계획</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: false
+            }
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .slide {
+            width: 210mm;
+            height: 297mm;
+            padding: 40px;
+            margin: 0 auto 20px;
+            box-sizing: border-box;
+            background: white;
+            page-break-after: always;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .slide:last-child {
+            page-break-after: auto;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+        }
+        
+        h2 {
+            color: #34495e;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #2980b9;
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .purpose {
+            background-color: #d4edda;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+            margin: 20px 0;
+        }
+        
+        .feature {
+            background-color: #d1ecf1;
+            padding: 15px;
+            border-left: 4px solid #17a2b8;
+            margin: 20px 0;
+        }
+        
+        .warning {
+            background-color: #f8d7da;
+            padding: 15px;
+            border-left: 4px solid #dc3545;
+            margin: 20px 0;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        .diagram-container {
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .mermaid {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        
+        .abbreviation {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .step-number {
+            background-color: #3498db;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 15px;
+        }
+        
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        @media print {
+            body { margin: 0; }
+            .slide { margin: 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 제목 슬라이드 -->
+    <div class="slide">
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+            <h1 style="font-size: 3em; margin-bottom: 50px;">PostgreSQL → DynamoDB<br/>QnA 마이그레이션 계획</h1>
+            <div class="center" style="font-size: 1.5em; color: #666;">
+                <p>고정완</p>
+                <p style="margin-top: 50px; font-size: 1.2em;">2025.06.11</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 개요 슬라이드 -->
+    <div class="slide">
+        <h1>개요</h1>
+        
+        <div class="abbreviation">
+            <h3>축약어</h3>
+            <ul>
+                <li>psql: PostgreSQL</li>
+                <li>ddb: DynamoDB</li>
+            </ul>
+        </div>
+        
+        <h2>마이그레이션 목표</h2>
+        <ul>
+            <li>PostgreSQL의 QnA 관련 데이터를 DynamoDB로 이전</li>
+            <li>서비스 <b>무중단</b> 마이그레이션</li>
+            <li>언제든 <b>롤백</b> 가능한 마이그레이션</li>
+            <li>실서비스 <b>성능 장애</b> 없는 마이그레이션</li>
+            <li>개발자가 밤을 새우지 않는 마이그레이션</li>
+        </ul>
+    </div>
+
+    <!-- 절차 1 -->
+    <div class="slide">
+        <div class="step-header">
+            <div class="step-number">절차 1</div>
+            <h1 style="margin: 0;">양쪽 DB에 데이터 쓰기</h1>
+        </div>
+        
+        <div class="diagram-container">
+            <div class="mermaid">
+graph TB
+    Client1["Client Applications"]
+    BE1["sumone-be Server"]
+    PSQL1["PostgreSQL<br/>(Write + Read)"]
+    DDB1["DynamoDB<br/>(Write Only)"]
+    
+    Client1 --> BE1
+    BE1 --> PSQL1
+    BE1 --> DDB1
+    BE1 --> Client1
+    
+    PSQL1 -.->|"Read"| BE1
+
+    style PSQL1 fill:#e1f5fe
+    style DDB1 fill:#fff3e0
+    style BE1 fill:#f3e5f5
+    style Client1 fill:#e8f5e8
+            </div>
+        </div>
+
+        <h3>구현 내용</h3>
+        <ul>
+            <li>sumone-be 서버에서 데이터 쓰기 시 양쪽 DB에 동시 저장</li>
+            <li><b>데이터 읽기는 기존 PostgreSQL에서만 수행</b></li>
+        </ul>
+
+        <div class="purpose">
+            <h3>목적</h3>
+            <p>양쪽에 계속 데이터를 쌓아서 DynamoDB 에서 PostgreSQL 로 <b>롤백</b>이 쉽도록 하기 위해</p>
+        </div>
+    </div>
+
+    <!-- 절차 2 -->
+    <div class="slide">
+        <div class="step-header">
+            <div class="step-number">절차 2</div>
+            <h1 style="margin: 0;">AWS DMS를 통한 복제 DB 생성</h1>
+        </div>
+        
+        <div class="diagram-container">
+            <div class="mermaid">
+graph LR
+    subgraph PROD["실서비스 환경"]
+        PSQL_PROD["Production<br/>PostgreSQL"]
+        BE_PROD["sumone-be<br/>Server"]
+    end
+    
+    subgraph VPC["DynamoDB 와 같은 VPC"]
+        DMS["AWS DMS<br/>Service"]
+        PSQL_V2["V2 PostgreSQL<br/>(Migration Target)"]
+        DDB2["DynamoDB<br/>Database"]
+    end
+    
+    PSQL_PROD -->|"Homogeneous<br/>Migration"| DMS
+    DMS -->|"Data Transfer"| PSQL_V2
+    PSQL_V2 -.->|"Same VPC<br/>High Throughput"| DDB2
+
+    style PSQL_PROD fill:#e1f5fe
+    style PSQL_V2 fill:#e3f2fd
+    style DMS fill:#e8eaf6
+    style DDB2 fill:#fff3e0
+    style BE_PROD fill:#f3e5f5
+            </div>
+        </div>
+        
+        <h3>구현 내용</h3>
+        <ul>
+            <li>AWS DMS를 활용한 Homogeneous 마이그레이션</li>
+            <li>DynamoDB와 같은 VPC에 있는 RDS 머신으로 이전</li>
+            <li>마이그레이션된 RDS 머신을 <strong>V2 PSQL</strong>이라 명명</li>
+        </ul>
+
+        <div class="purpose">
+            <h3>목적</h3>
+            <ul>
+                <li><strong>목적1:</strong> 같은 VPC로 인한 네트워크 throughput 확보</li>
+                <li><strong>목적2:</strong> 실서비스 DB와 마이그레이션 DB 머신을 분리해서 실서비스 영향이 없도록 하기</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 절차 3 -->
+    <div class="slide">
+        <div class="step-header">
+            <div class="step-number">절차 3</div>
+            <h1 style="margin: 0;">EC2에서 마이그레이션 프로세스 실행</h1>
+        </div>
+        
+        <div class="diagram-container">
+            <div class="mermaid">
+graph TD
+    subgraph VPC["같은 VPC 환경"]
+        V2DB["V2 PostgreSQL<br/>Database"]
+        EC2_PROC["EC2 Migration<br/>Process"]
+        DDB_TARGET["DynamoDB<br/>Target"]
+    end
+    
+    V2DB -->|"Read Source Data"| EC2_PROC
+    EC2_PROC -->|"Put with attribute_not_exists"| DDB_TARGET
+    
+    subgraph FEATURES["Migration Features"]
+        F1["✓ Resume Capability"]
+        F2["✓ Parallel Processing<br/>(87 Mbps Target)"]
+        F3["✓ No Data Overwrite"]
+    end
+    
+    EC2_PROC -.->|"Implements"| F1
+    EC2_PROC -.->|"Utilizes"| F2
+    EC2_PROC -.->|"Ensures"| F3
+
+    style V2DB fill:#e3f2fd
+    style EC2_PROC fill:#e8f5e8
+    style DDB_TARGET fill:#fff3e0
+    style F1 fill:#f0f8ff
+    style F2 fill:#f0f8ff
+    style F3 fill:#f0f8ff
+            </div>
+        </div>
+        
+        <h3>구현내용</h3>
+        <ul>
+            <li>BatchWrite가 아닌 Put의 attribute_not_exists 옵션을 이용해, <br/>절차1에서 생성된 data가 덮어씌워지지 않도록 함</li>
+            <li>resume 기능을 만들어서 마이그레이션 프로세스 중 실패한 item에 대해서 <br/>다시 마이그레이션을 이어서 시행할 수 있도록 함</li>
+            <li>resume 기능이 있기에 마이그레이션 프로세스의 속도는 그리 중요하지 않음 (48시간 이내)</li>
+            <li>Put 성능 최적화를 위해 병렬 프로그래밍을 고려</li>
+        </ul>
+        
+        <div class="highlight">
+            목표 속도: 최소 87 Mbps (EC2 micro 의 VPC 네트워크 보장 속도)
+        </div>
+    </div>
+
+    <!-- 절차 4 -->
+    <div class="slide">
+        <div class="step-header">
+            <div class="step-number">절차 4</div>
+            <h1 style="margin: 0;">DynamoDB 읽기로 전환</h1>
+        </div>
+        
+        <div class="diagram-container">
+            <div class="mermaid">
+graph TB
+    Client4["Client Applications"]
+    BE4["sumone-be Server"]
+    PSQL4["PostgreSQL<br/>(Write Only)"]
+    DDB4["DynamoDB<br/>(Write + Read)"]
+    
+    Client4 --> BE4
+    BE4 --> DDB4
+    BE4 --> PSQL4
+    BE4 --> Client4
+    
+    DDB4 -.->|"Read"| BE4
+    
+    subgraph "롤백 전략"
+        ROLLBACK["안정성 확신까지 PostgreSQL 쓰기를 병행 <br/> <br/> 문제가 생기면 PostgreSQL을 읽도록 롤백"]
+    end
+
+    style PSQL4 fill:#e1f5fe
+    style DDB4 fill:#fff3e0
+    style BE4 fill:#f3e5f5
+    style Client4 fill:#e8f5e8
+    style ROLLBACK fill:#ffebee
+            </div>
+        </div>
+        
+        <h3>구현 내용</h3>
+        <ul>
+            <li>sumone-be 로직을 수정하여 DynamoDB에서 QnA 데이터를 Read</li>
+            <li>롤백을 위해 PostgreSQL 와 DynamoDB 양쪽에 데이터를 계속 저장</li>
+            <li>2주간 문제가 없어서 롤백이 필요없다는 판단이 들면, PostgreSQL에 데이터 저장을 중단</li>
+        </ul>
+    </div>
+
+    <!-- 절차 5 -->
+    <div class="slide">
+        <div class="step-header">
+            <div class="step-number">절차 5</div>
+            <h1 style="margin: 0;">기존 데이터 DROP</h1>
+        </div>
+        
+        <div class="diagram-container">
+            <div class="mermaid">
+graph TB
+    Client5["Client Applications"]
+    BE5["sumone-be Server"]
+    DDB5["DynamoDB<br/>(Primary DB)"]
+    
+    Client5 --> BE5
+    BE5 --> DDB5
+    BE5 --> Client5
+    
+    DDB5 -.->|"Read"| BE5
+
+    subgraph "Cleanup"
+        PSQL_OLD["Original PostgreSQL<br/>(QnA Data Deleted)"]
+        PSQL_V2_DELETED["V2 PostgreSQL<br/>(Machine Deleted)"]
+    end
+
+    style DDB5 fill:#fff3e0
+    style BE5 fill:#f3e5f5
+    style Client5 fill:#e8f5e8
+    style PSQL_OLD fill:#ffcdd2
+    style PSQL_V2_DELETED fill:#ffcdd2
+            </div>
+        </div>
+        
+        <h3>최종 작업</h3>
+        <ul>
+            <li>절차4까지 성공하면 V2 PSQL 머신과 데이터를 삭제</li>
+            <li>롤백이 필요없어지면 본래 PostgreSQL에서 QnA 데이터와 테이블들을 drop</li>
+            <li>DynamoDB 단일 데이터베이스로 QnA 서비스 운영하도록 마이그레이션 완료</li>
+        </ul>
+    </div>
+
+    <!-- 핵심 고려사항 -->
+    <div class="slide">
+        <h1>핵심 고려사항</h1>
+        
+        <div class="grid">
+            <div>
+                <h2 style="color: #28a745;">고려한 점</h2>
+                <ul>
+                    <li>마이그레이션 중 서비스가 무중단이어야 한다</li>
+                    <li>실서비스 성능장애가 없어야 한다</li>
+                    <li>문제가 생기면 언제든 롤백 가능해야한다</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h2 style="color: #dc3545;">고려안한 점</h2>
+                <ul>
+                    <li>마이그레이션 비용 싸게하기</li>
+                    <li>마이그레이션 후 비용 최적화</li>
+                </ul>
+                
+                <h2 style="color: #2980b9;">필요한 자원 및 권한</h2>
+                <ul>
+                    <li><b>AWS DMS</b></li>
+                    <li>DynamoDB와 같은 VPC에 있는 <b>EC2 인스턴스</b>와, 접속할 bastion 서버</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

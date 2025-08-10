@@ -8,7 +8,14 @@ Java, Spring, JPA 기반 6년차 개발자 고정완입니다.
 
 ## 경력
 
-- [Dreamfora](https://github.com/ghojeong/resume/blob/main/dreamfora/README.md) 백엔드 테크리드 *2021.08.25 - 2025.03.25*
+- [SumOne](https://www.monymony.co/) 백엔드 개발자 *(2025.05.12 - 2025.08.14)*
+  - 사용기술: TypeScript, NestJS, GraphQL, PostgreSQL, DynamoDB
+  - DAU 120만명 커플 다이어리 서비스의 구독 결제와 DB의 Hash Sharding을 담당
+  - 주요성과
+    - 핵심 서비스의 PostgreSQL 에서 DynamoDB 로의 무중단 점진적 마이그레이션을 책임지고 성공함
+    - 변경된 Storage Engine 의 동작원리에 맞추어 키와 스키마 재설계
+    - 평생이용권을 월간/연간 구독으로 변경하는 백엔드 구현에 참여
+- [Dreamfora](https://github.com/ghojeong/resume/blob/main/dreamfora/README.md) 백엔드 테크리드 *(2021.08.25 - 2025.03.25)*
   - 사용기술: Java, Spring Boot, Spring Security, JPA, MariaDB
   - 미국, 영국, 인도, 러시아, 이집트 등 전세계 200만명이 사용하는 B2C 목표관리 서비스를 개발
   - 주요성과
@@ -16,7 +23,7 @@ Java, Spring, JPA 기반 6년차 개발자 고정완입니다.
     - 쿼리튜닝과 DB 파티셔닝 후 **서버비용 82%** 절약
     - 모놀리식에서 MSA로 리팩토링 후 테스트 커버리지 86% 달성
     - 인증서버를 세션기반에서 토큰기반으로 변경 후 인증시간 93% 단축
-- [Ecube Labs](https://github.com/ghojeong/resume/blob/main/ecubelabs/README.md) 웹 개발자 *2018.10.15 - 2020.12.28*
+- [Ecube Labs](https://github.com/ghojeong/resume/blob/main/ecubelabs/README.md) 웹 개발자 *(2018.10.15 - 2020.12.28)*
   - 사용기술: TypeScript, React, Redux, Express.js
   - 미국 볼티모어, 일본 이치카와, 한국 고양시와 계약한 B2B 스마트 시티 SaaS 를 개발
   - 주요성과
@@ -25,7 +32,7 @@ Java, Spring, JPA 기반 6년차 개발자 고정완입니다.
     - 한국 고양시와 협력 하드웨어 업체를 위해 OAuth2.0 인증 서버와 리소스 서버를 구현
     - E2E 테스트 환경을 구축하고 테스트 코드를 작성
 - [NECSST](https://next.cs.vt.edu) 인턴 *(2018.06.04 - 2018.09.21)*
-  - InfiniBand 환경에서의 RDMA 를 활용한 Aggregated Data Center 연구에 참여
+  - InfiniBand 환경에서 RDMA 기반 Aggregated Data Center 연구에 참여
 
 ## 교육
 
