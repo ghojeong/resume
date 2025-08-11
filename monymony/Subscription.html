@@ -1,0 +1,757 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Store Server Notification</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(84, 72, 49, 0.08); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="24584624-3f8c-8059-9f50-db125d3f907f" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📃</span></div><h1 class="page-title">Store Server Notification</h1><p class="page-description"></p></header><div class="page-body"><p id="24584624-3f8c-80aa-a7ff-c883f0fd5e0f" class="">이 문서는 Apple App Store와 Google Play Store의 서버 측 알림(Server-to-Server Notifications)을 수신하고 처리하는 서버리스 애플리케이션에 대한 기술 문서입니다.</p><h2 id="24584624-3f8c-80a8-a2fb-fb3efd9c3898" class="">개요</h2><p id="24584624-3f8c-8091-9d65-d20e45c0e0a1" class="">이 시스템은 두 개의 주요 컴포넌트로 구성됩니다.</p><ol type="1" id="24584624-3f8c-80ad-9750-ddd837818867" class="numbered-list" start="1"><li><strong>Notification Receiver</strong>: AWS Lambda와 API Gateway를 사용하여 Apple App Store 및 Google Play Store로부터 인앱 결제(IAP) 관련 이벤트 알림을 수신합니다. 수신된 알림은 검증 과정을 거친 후 Amazon SQS로 전송되어 추가 처리를 위한 큐에 저장됩니다.</li></ol><ol type="1" id="24584624-3f8c-8046-9bfe-c38f07d0b4a7" class="numbered-list" start="2"><li><strong>Notification Consumer</strong>: SQS 메시지를 배치 단위로 수신하여 처리하는 핸들러입니다. 각 스토어 및 알림 유형에 맞는 비즈니스 로직을 수행하고, 결과를 데이터베이스에 저장합니다.</li></ol><h2 id="24584624-3f8c-8073-aad4-ca7ee862e788" class="">처리 흐름도</h2><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="24584624-3f8c-803e-b259-d6619127b66c" class="code code-wrap"><code class="language-Mermaid" style="white-space:pre-wrap;word-break:break-all">graph TD
+    A1[Apple Store] --&gt;|Server-to-Server Notification| GW[API Gateway]
+    A2[Google Play Store] --&gt;|Real-time Developer Notifications| GW
+
+    GW --&gt; R[Receiver Lambda]
+    R --&gt; V{알림 검증}
+    V --&gt;|검증 성공| SQS[SQS FIFO Queue]
+    V --&gt;|검증 실패| Skip1[처리 중단]
+
+    SQS --&gt;|Batch Messages| C[Consumer Lambda]
+    C --&gt; D[메시지 디코딩 및 파싱]
+    D --&gt; E{Provider Check}
+    E --&gt;|Apple| F[Apple Strategy Factory]
+    E --&gt;|Google| G[Google Strategy Factory]
+
+    F --&gt; H{Apple Notification Type}
+    H --&gt; I[전략 실행]
+    I --&gt; BL[비즈니스 로직 수행]
+
+    G --&gt; G1{Google Notification Type}
+    G1 --&gt; G2[세부 전략 팩토리]
+    G2 --&gt; G6{Subscription State}
+    G6 --&gt; G7[전략 실행]
+    G7 --&gt; BL
+
+    BL --&gt; DB[데이터베이스 업데이트]
+    BL --&gt;|오류 발생| Fail[BatchItemFailure]
+
+    subgraph &quot;Notification Receiver&quot;
+        GW
+        R
+        V
+        SQS
+    end
+
+    subgraph &quot;Notification Consumer&quot;
+        C
+        D
+        E
+        F
+        G
+        BL
+        DB
+    end
+
+    style Fail fill:#ffebee
+</code></pre><h2 id="24584624-3f8c-80bd-b504-d1ac2304e86b" class="">주요 기능</h2><ul id="24584624-3f8c-8009-a94a-ca1581c0e0b6" class="bulleted-list"><li style="list-style-type:disc"><strong>알림 수신 및 검증</strong>:<ul id="24584624-3f8c-80be-8263-de5687210f50" class="bulleted-list"><li style="list-style-type:circle">Apple App Store Notification V2 및 Google Play Real-time Developer Notifications 수신</li></ul><ul id="24584624-3f8c-80fc-8cfa-e469b7069054" class="bulleted-list"><li style="list-style-type:circle">JWT 기반 서명 검증을 통한 알림의 무결성 및 신뢰성 보장</li></ul></li></ul><ul id="24584624-3f8c-809c-b148-d34c072bf66d" class="bulleted-list"><li style="list-style-type:disc"><strong>메시지 큐잉</strong>:<ul id="24584624-3f8c-80b2-886a-e545b682b2b6" class="bulleted-list"><li style="list-style-type:circle">검증된 알림을 SQS FIFO 큐에 저장하여 안정적인 비동기 처리 보장</li></ul></li></ul><ul id="24584624-3f8c-8089-aa02-e58a2bcc8180" class="bulleted-list"><li style="list-style-type:disc"><strong>배치 처리</strong>:<ul id="24584624-3f8c-80e3-973e-dfbb465e92e3" class="bulleted-list"><li style="list-style-type:circle">SQS 메시지를 배치 단위로 효율적으로 처리하고, 실패한 메시지에 대한 재시도 지원</li></ul></li></ul><ul id="24584624-3f8c-8037-aa84-ca8090104718" class="bulleted-list"><li style="list-style-type:disc"><strong>전략 패턴 기반 확장성</strong>:<ul id="24584624-3f8c-8060-bf5f-d8b1ec579062" class="bulleted-list"><li style="list-style-type:circle">Apple/Google의 각 알림 유형 및 상태에 따른 처리 로직을 Strategy Pattern으로 구현하여 새로운 유형 추가에 유연하게 대응</li></ul></li></ul><ul id="24584624-3f8c-80a1-ac45-c019a27b8283" class="bulleted-list"><li style="list-style-type:disc"><strong>데이터 일관성</strong>:<ul id="24584624-3f8c-80b2-a6c5-ca6c613866b6" class="bulleted-list"><li style="list-style-type:circle"><code>upsert</code> 패턴과 데이터베이스 트랜잭션을 통해 데이터의 중복 및 불일치 방지</li></ul></li></ul><h2 id="24584624-3f8c-80b4-9d1d-cbf6942eea33" class="">처리 플로우</h2><ol type="1" id="24584624-3f8c-809c-9d0e-feccf0eaeee7" class="numbered-list" start="1"><li><strong>수신 (Receiver)</strong>: API Gateway를 통해 Apple/Google의 알림을 받아 Lambda(Receiver)에 전달합니다.</li></ol><ol type="1" id="24584624-3f8c-804a-9a06-fb98b7f0834b" class="numbered-list" start="2"><li><strong>검증 (Receiver)</strong>: 전달받은 알림의 JWT 서명을 검증하여 신뢰성을 확인합니다.</li></ol><ol type="1" id="24584624-3f8c-80f7-8ab0-dbb15d2e3fb4" class="numbered-list" start="3"><li><strong>큐잉 (Receiver)</strong>: 검증된 알림 페이로드를 Base64로 인코딩하여 SQS FIFO 큐에 전송합니다.</li></ol><ol type="1" id="24584624-3f8c-808a-8ed8-ce0899aad746" class="numbered-list" start="4"><li><strong>소비 (Consumer)</strong>: Lambda(Consumer)가 SQS 큐에서 메시지를 배치로 가져옵니다.</li></ol><ol type="1" id="24584624-3f8c-80a1-8c8c-ded4a2e268b8" class="numbered-list" start="5"><li><strong>디코딩 및 초기화 (Consumer)</strong>: Base64 메시지를 디코딩하고, <code>ServiceContainer</code>를 통해 <code>ConfigService</code>, <code>PrismaService</code> 등 필요한 서비스를 초기화합니다.</li></ol><ol type="1" id="24584624-3f8c-804c-81a2-fc514d4b23aa" class="numbered-list" start="6"><li><strong>전략 선택 (Consumer)</strong>: 알림 제공자(Apple/Google)와 알림 유형(예: <code>SUBSCRIBED</code>, <code>DID_RENEW</code>)에 맞는 처리 전략(Strategy)을 팩토리(Factory)에서 가져옵니다.</li></ol><ol type="1" id="24584624-3f8c-80c4-b18b-e440a091b4f4" class="numbered-list" start="7"><li><strong>비즈니스 로직 실행 (Consumer)</strong>: 선택된 전략이 Use Case를 호출하여 비즈니스 로직을 실행합니다. 이 과정에서 <code>SubscriptionPurchaseEvent</code> 저장, <code>OriginalSubscriptionPurchase</code> 업데이트, <code>SubscriptionMembership</code> 동기화 등이 이루어집니다.</li></ol><ol type="1" id="24584624-3f8c-803d-a35d-d9b5bbb0af4c" class="numbered-list" start="8"><li><strong>결과 처리 (Consumer)</strong>: 성공적으로 처리되면 메시지를 큐에서 제거합니다. 오류 발생 시, 해당 메시지만 실패로 표시하여 SQS가 재처리하도록 합니다.</li></ol><h2 id="24584624-3f8c-80a0-8cd7-ca13a48f6290" class="">데이터 모델</h2><h3 id="24584624-3f8c-800d-ad97-f9fefcd51064" class=""><code>SubscriptionPurchaseEvent</code></h3><p id="24584624-3f8c-801b-bd16-e02480d3ca73" class="">모든 스토어(Apple/Google)에서 발생하는 구독 관련 이벤트(신규 구독, 갱신, 만료 등)를 기록하는 핵심 테이블입니다. 이벤트를 수신할 때마다 <code>upsert</code> 로직을 통해 생성되거나 업데이트됩니다.</p><ul id="24584624-3f8c-80a4-bff4-cffc32260bd4" class="bulleted-list"><li style="list-style-type:disc"><code><strong>provider</strong></code>: <code>APPLE</code> 또는 <code>GOOGLE</code></li></ul><ul id="24584624-3f8c-800c-ab35-f081e0d7033c" class="bulleted-list"><li style="list-style-type:disc"><code><strong>purchaseId</strong></code>: 이벤트의 고유 식별자. Apple의 <code>transactionId</code>, Google의 <code>orderId</code>에 해당합니다.</li></ul><ul id="24584624-3f8c-8065-8a18-c5d978183215" class="bulleted-list"><li style="list-style-type:disc"><code><strong>originalPurchaseId</strong></code>: 최초 구독의 고유 식별자.</li></ul><ul id="24584624-3f8c-8023-84d8-e3a23c995889" class="bulleted-list"><li style="list-style-type:disc"><code><strong>productId</strong></code>: 상품 ID.</li></ul><ul id="24584624-3f8c-8025-92cc-ce9542e315fa" class="bulleted-list"><li style="list-style-type:disc"><code><strong>expiresAt</strong></code>: 구독 만료 일시.</li></ul><ul id="24584624-3f8c-80e2-9aeb-fc514e7bd24d" class="bulleted-list"><li style="list-style-type:disc"><code><strong>isTestPurchase</strong></code>: 테스트 환경에서 발생한 이벤트인지 여부.</li></ul><ul id="24584624-3f8c-80ad-8134-c4c8b8ee2623" class="bulleted-list"><li style="list-style-type:disc"><code><strong>verifiedReceipt</strong></code>: <strong>검증된 알림 페이로드 원본 (JSON 타입)</strong>. 이벤트를 발생시킨 스토어 알림의 전체 데이터가 저장됩니다. 디버깅 및 데이터 분석에 매우 중요한 필드입니다.</li></ul><h3 id="24584624-3f8c-8003-b0ca-ce49b5e48c23" class=""><code>verifiedReceipt</code> 상세 구조</h3><p id="24584624-3f8c-80f4-8969-d26a40776c14" class=""><code>verifiedReceipt</code> 필드에는 스토어 제공자에 따라 다른 구조의 JSON 데이터가 저장됩니다.</p><h3 id="24584624-3f8c-8039-ae37-e35deea212c0" class="">1. Apple (<code>AppleReceipt</code>)</h3><p id="24584624-3f8c-80f9-bb44-cad6203b2a7d" class="">Apple의 <code>ResponseBodyV2DecodedPayload</code>를 기반으로 하며, 검증 과정에서 디코딩된 <code>JWSTransactionDecodedPayload</code>와 <code>JWSRenewalInfoDecodedPayload</code>가 포함됩니다.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="24584624-3f8c-807d-a3cd-e33442c1b139" class="code code-wrap"><code class="language-TypeScript" style="white-space:pre-wrap;word-break:break-all">// store-server-notification-consumer/src/apple.types.ts
+interface DecodedAppleStoreNotification&lt;N extends NotificationTypeV2&gt;
+  extends Omit&lt;ResponseBodyV2DecodedPayload, &#x27;data&#x27;&gt; {
+  readonly notificationType: N;
+  readonly data: Omit&lt;
+    ResponseBodyV2DecodedPayload[&#x27;data&#x27;],
+    &#x27;signedRenewalInfo&#x27; | &#x27;signedTransactionInfo&#x27;
+  &gt; &amp; {
+    // 디코딩된 트랜잭션 정보
+    readonly decodedTransactionInfo: JWSTransactionDecodedPayload;
+    // 디코딩된 갱신 정보 (존재하는 경우)
+    readonly decodedRenewalInfo?: JWSRenewalInfoDecodedPayload;
+  };
+}
+</code></pre><ul id="24584624-3f8c-8082-8cbd-c3dfedbe08d4" class="bulleted-list"><li style="list-style-type:disc"><code><strong>notificationType</strong></code>: <code>SUBSCRIBED</code>, <code>DID_RENEW</code> 등 알림의 종류.</li></ul><ul id="24584624-3f8c-802e-9a24-fa4dac6ba15c" class="bulleted-list"><li style="list-style-type:disc"><code><strong>decodedTransactionInfo</strong></code>: 거래와 관련된 상세 정보(소유권, 상품 ID, 구매일, 만료일 등).</li></ul><ul id="24584624-3f8c-801a-ba4d-d29f25f8e384" class="bulleted-list"><li style="list-style-type:disc"><code><strong>decodedRenewalInfo</strong></code>: 자동 갱신 구독의 상태와 관련된 정보.</li></ul><h3 id="24584624-3f8c-804c-a193-d172d964ebf3" class="">2. Google (<code>GoogleReceipt</code>)</h3><p id="24584624-3f8c-8072-922e-d9860e3601ef" class="">Google의 <code>DecodedGoogleDeveloperNotification</code> 타입을 따르며, 알림 유형(예: <code>SUBSCRIPTION_PURCHASE</code>)에 따라 다른 페이로드 구조를 가집니다.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="24584624-3f8c-80a6-bc31-cc12c992ba92" class="code code-wrap"><code class="language-TypeScript" style="white-space:pre-wrap;word-break:break-all">// store-server-notification-consumer/src/use-case/verified-receipt.ts
+export type DecodedGoogleDeveloperNotification =
+  | androidpublisher_v3.Schema$SubscriptionPurchaseV2
+  | ({
+      type: GoogleDeveloperNotificationType
+      // ...
+    } &amp; (
+      | {
+          type: GoogleDeveloperNotificationType.SUBSCRIPTION_PURCHASE
+          subscriptionPurchase: androidpublisher_v3.Schema$SubscriptionPurchaseV2
+          isTestPurchase: boolean
+        }
+      // ...
+    ))
+</code></pre><ul id="24584624-3f8c-8099-baf2-eada5e9e0a77" class="bulleted-list"><li style="list-style-type:disc"><code><strong>subscriptionPurchase</strong></code>: <code>SubscriptionPurchaseV2</code> 리소스로, 구독의 현재 상태(활성, 취소, 만료 등)와 관련된 모든 정보를 포함합니다.</li></ul><ul id="24584624-3f8c-807b-8613-ee5bddae9446" class="bulleted-list"><li style="list-style-type:disc"><code><strong>lineItems</strong></code>: 구독에 포함된 상품 목록.</li></ul><ul id="24584624-3f8c-8063-8a7e-d457edea4515" class="bulleted-list"><li style="list-style-type:disc"><code><strong>subscriptionState</strong></code>: <code>SUBSCRIPTION_STATE_ACTIVE</code> 등 현재 구독의 상태.</li></ul><h3 id="24584624-3f8c-80ce-bf3a-dd1f49cabcea" class=""><code>OriginalSubscriptionPurchase</code></h3><p id="24584624-3f8c-8092-b340-f714dee738e1" class="">최초 구독 정보를 추적하고 현재 구독 상태를 관리합니다.</p><h3 id="24584624-3f8c-809d-a6b3-f795d86e9d4b" class=""><code>SubscriptionMembership</code></h3><p id="24584624-3f8c-8046-9dd3-e30bb949ca57" class="">사용자별 최종 구독 멤버십 상태와 만료일을 관리하여, 앱 클라이언트에게 일관된 구독 정보를 제공합니다.</p><hr id="24584624-3f8c-80c7-9a6c-c58013fcfc2f"/><h2 id="24584624-3f8c-80a4-93e9-cc8bd31001e6" class="">스토어 구독 관련 상수</h2><h3 id="24584624-3f8c-800c-94c9-fe0f3ba907bf" class="">1. Apple <code>NotificationTypeV2</code></h3><table id="24584624-3f8c-805a-b3a7-e16f652e4e00" class="simple-table"><thead class="simple-table-header"><tr id="24584624-3f8c-8061-a6dd-cd7b96850408"><th id="v`A?" class="simple-table-header-color simple-table-header">코드</th><th id="u\N;" class="simple-table-header-color simple-table-header">설명</th></tr></thead><tbody><tr id="24584624-3f8c-80c4-a6ff-fb7738202fc5"><td id="v`A?" class="">CONSUMPTION_REQUEST</td><td id="u\N;" class="">환불 요청</td></tr><tr id="24584624-3f8c-8022-b02d-c48dd5d07afa"><td id="v`A?" class="">DID_CHANGE_RENEWAL_PREF</td><td id="u\N;" class="">갱신 환경설정 변경</td></tr><tr id="24584624-3f8c-805d-82cc-f0baf168ca64"><td id="v`A?" class="">DID_CHANGE_RENEWAL_STATUS</td><td id="u\N;" class="">갱신 상태 변경</td></tr><tr id="24584624-3f8c-80d1-ab2c-e3dc30c03661"><td id="v`A?" class="">DID_FAIL_TO_RENEW</td><td id="u\N;" class="">갱신 실패</td></tr><tr id="24584624-3f8c-80b7-8fb3-de1aefe2451d"><td id="v`A?" class="">DID_RENEW</td><td id="u\N;" class="">갱신</td></tr><tr id="24584624-3f8c-803c-b38e-f8a6b3d5b007"><td id="v`A?" class="">EXPIRED</td><td id="u\N;" class="">만료</td></tr><tr id="24584624-3f8c-804c-8527-f28721e0fb68"><td id="v`A?" class="">EXTERNAL_PURCHASE_TOKEN</td><td id="u\N;" class="">외부 구매</td></tr><tr id="24584624-3f8c-803d-94f2-d63e7c8a19b7"><td id="v`A?" class="">GRACE_PERIOD_EXPIRED</td><td id="u\N;" class="">유예 만료</td></tr><tr id="24584624-3f8c-80f5-ac43-dc37727b0a2a"><td id="v`A?" class="">OFFER_REDEEMED</td><td id="u\N;" class="">요금제 변경 상환</td></tr><tr id="24584624-3f8c-80ab-976c-d4105d5928ea"><td id="v`A?" class="">ONE_TIME_CHARGE</td><td id="u\N;" class="">일회성 결제</td></tr><tr id="24584624-3f8c-80f2-be08-cbeb55abbb22"><td id="v`A?" class="">PRICE_INCREASE</td><td id="u\N;" class="">가격 인상</td></tr><tr id="24584624-3f8c-808d-ae10-fc2117a4db23"><td id="v`A?" class="">REFUND</td><td id="u\N;" class="">환불</td></tr><tr id="24584624-3f8c-804c-b9bf-c9c24817bf99"><td id="v`A?" class="">REFUND_DECLINED</td><td id="u\N;" class="">환불 거부</td></tr><tr id="24584624-3f8c-806e-a691-fa2858347aaa"><td id="v`A?" class="">REFUND_REVERSED</td><td id="u\N;" class="">환불 취소</td></tr><tr id="24584624-3f8c-8045-825b-f1ee0ba9f7bf"><td id="v`A?" class="">RENEWAL_EXTENDED</td><td id="u\N;" class="">갱신 연장 완료</td></tr><tr id="24584624-3f8c-8080-8fa4-cb51ef6bdc92"><td id="v`A?" class="">RENEWAL_EXTENSION</td><td id="u\N;" class="">갱신 연장</td></tr><tr id="24584624-3f8c-8081-8feb-e752ac32b09a"><td id="v`A?" class="">REVOKE</td><td id="u\N;" class="">해지</td></tr><tr id="24584624-3f8c-802b-8e45-cfdd5b8f7a8f"><td id="v`A?" class="">SUBSCRIBED</td><td id="u\N;" class="">구독</td></tr><tr id="24584624-3f8c-8021-965e-d933bca2a7e8"><td id="v`A?" class="">TEST</td><td id="u\N;" class="">테스트</td></tr></tbody></table><h3 id="24584624-3f8c-80f3-8ea0-d618dfe049ba" class="">2. Apple <code>Subtype</code></h3><table id="24584624-3f8c-80d2-94a0-e77be6d047bb" class="simple-table"><thead class="simple-table-header"><tr id="24584624-3f8c-8070-9db7-c0348a62d776"><th id="L&lt;jV" class="simple-table-header-color simple-table-header">코드</th><th id="CWC[" class="simple-table-header-color simple-table-header">설명</th></tr></thead><tbody><tr id="24584624-3f8c-8085-877e-e368f3340c53"><td id="L&lt;jV" class="">INITIAL_BUY</td><td id="CWC[" class="">최초 결제</td></tr><tr id="24584624-3f8c-801c-9901-cccc9194e0be"><td id="L&lt;jV" class="">RESUBSCRIBE</td><td id="CWC[" class="">재구독</td></tr><tr id="24584624-3f8c-8076-8173-c8181e1ed672"><td id="L&lt;jV" class="">DOWNGRADE</td><td id="CWC[" class="">요금제 다운그레이드</td></tr><tr id="24584624-3f8c-8079-9986-e2a7f8738dd7"><td id="L&lt;jV" class="">UPGRADE</td><td id="CWC[" class="">요금제 업그레이드</td></tr><tr id="24584624-3f8c-807e-9711-cb0b4f3f0714"><td id="L&lt;jV" class="">AUTO_RENEW_ENABLED</td><td id="CWC[" class="">구독 활성화</td></tr><tr id="24584624-3f8c-80ab-9f23-c676901eb50f"><td id="L&lt;jV" class="">AUTO_RENEW_DISABLED</td><td id="CWC[" class="">구독 비활성화</td></tr><tr id="24584624-3f8c-800f-ab7e-eadf45792244"><td id="L&lt;jV" class="">BILLING_RETRY</td><td id="CWC[" class="">유예 기간 종료</td></tr><tr id="24584624-3f8c-807d-b2b3-c26d3142d713"><td id="L&lt;jV" class="">PRICE_INCREASE</td><td id="CWC[" class="">가격 인상</td></tr><tr id="24584624-3f8c-8095-8cc5-d7b5506a1d07"><td id="L&lt;jV" class="">GRACE_PERIOD</td><td id="CWC[" class="">구독 유예</td></tr><tr id="24584624-3f8c-8008-b4dc-d79171608da9"><td id="L&lt;jV" class="">PENDING</td><td id="CWC[" class="">가격 인상 대기 중</td></tr><tr id="24584624-3f8c-808b-b3d4-d76af8556782"><td id="L&lt;jV" class="">ACCEPTED</td><td id="CWC[" class="">가격 인상 동의</td></tr><tr id="24584624-3f8c-8012-a536-e57c65134ad6"><td id="L&lt;jV" class="">BILLING_RECOVERY</td><td id="CWC[" class="">결제 수단 복구</td></tr><tr id="24584624-3f8c-80c3-ab4a-ead348d25a8a"><td id="L&lt;jV" class="">PRODUCT_NOT_FOR_SALE</td><td id="CWC[" class="">판매 중단</td></tr><tr id="24584624-3f8c-80de-87e8-da09ce0ca907"><td id="L&lt;jV" class="">SUMMARY</td><td id="CWC[" class="">갱신 날짜 연장 완료</td></tr><tr id="24584624-3f8c-805c-9eb6-c06552c6c12d"><td id="L&lt;jV" class="">FAILURE</td><td id="CWC[" class="">갱신 날짜 연장 실패</td></tr><tr id="24584624-3f8c-80d7-85da-f637396cdeea"><td id="L&lt;jV" class="">UNREPORTED</td><td id="CWC[" class="">알 수 없음</td></tr><tr id="24584624-3f8c-8075-a8b2-e2d9330b1ae2"><td id="L&lt;jV" class="">VOLUNTARY</td><td id="CWC[" class="">구독 취소</td></tr></tbody></table><h3 id="24584624-3f8c-80a9-982c-ee8fdc31072a" class="">3. Google <code>SubscriptionState</code></h3><table id="24584624-3f8c-800a-ac6c-f43273ebb7a0" class="simple-table"><thead class="simple-table-header"><tr id="24584624-3f8c-8091-b9e6-ebd91ebe82f5"><th id="BOAc" class="simple-table-header-color simple-table-header">코드</th><th id="Hlf_" class="simple-table-header-color simple-table-header">설명</th></tr></thead><tbody><tr id="24584624-3f8c-80e5-8510-d696cdb7c511"><td id="BOAc" class="">SUBSCRIPTION_STATE_UNSPECIFIED</td><td id="Hlf_" class="">알 수 없음</td></tr><tr id="24584624-3f8c-803f-8ab8-f02b65ac4ff3"><td id="BOAc" class="">SUBSCRIPTION_STATE_PENDING</td><td id="Hlf_" class="">결제 대기</td></tr><tr id="24584624-3f8c-804d-b746-f9ca35f31d94"><td id="BOAc" class="">SUBSCRIPTION_STATE_ACTIVE</td><td id="Hlf_" class="">구독 활성</td></tr><tr id="24584624-3f8c-804c-b131-cfbbe26e1c5b"><td id="BOAc" class="">SUBSCRIPTION_STATE_PAUSED</td><td id="Hlf_" class="">구독 일시중지</td></tr><tr id="24584624-3f8c-8053-b2b5-c486318eee97"><td id="BOAc" class="">SUBSCRIPTION_STATE_IN_GRACE_PERIOD</td><td id="Hlf_" class="">구독 유예</td></tr><tr id="24584624-3f8c-804a-9c70-ff2dccab266c"><td id="BOAc" class="">SUBSCRIPTION_STATE_ON_HOLD</td><td id="Hlf_" class="">결제 보류</td></tr><tr id="24584624-3f8c-80a0-bb9a-dc795b32fb28"><td id="BOAc" class="">SUBSCRIPTION_STATE_CANCELED</td><td id="Hlf_" class="">구독 취소</td></tr><tr id="24584624-3f8c-809c-a2ac-ec12aae5fe4a"><td id="BOAc" class="">SUBSCRIPTION_STATE_EXPIRED</td><td id="Hlf_" class="">구독 만료</td></tr><tr id="24584624-3f8c-800a-9443-e358c702866b"><td id="BOAc" class="">SUBSCRIPTION_STATE_PENDING_PURCHASE_CANCELED</td><td id="Hlf_" class="">결제 대기 환불</td></tr></tbody></table><h3 id="24584624-3f8c-80e1-9480-cdc4d238ff10" class="">4. <code>SubscriptionProduct</code></h3><table id="24584624-3f8c-80ea-8759-c7ff6cd56dbd" class="simple-table"><thead class="simple-table-header"><tr id="24584624-3f8c-809b-9b06-c85967a4e645"><th id="w^Ik" class="simple-table-header-color simple-table-header">Enum</th><th id="&lt;joV" class="simple-table-header-color simple-table-header">productId</th><th id="}uhx" class="simple-table-header-color simple-table-header">제품명</th><th id="}uym" class="simple-table-header-color simple-table-header">기본 가격 (KRW)</th></tr></thead><tbody><tr id="24584624-3f8c-80ec-b60f-f787ec2ff6f1"><td id="w^Ik" class="">GOLD_1M_DISCOUNTED</td><td id="&lt;joV" class="">subscription.gold.1m.discounted</td><td id="}uhx" class="">월구독 할인</td><td id="}uym" class="">7,900</td></tr><tr id="24584624-3f8c-8001-84ad-e4534f4be2ae"><td id="w^Ik" class="">GOLD_1M_REGULAR</td><td id="&lt;joV" class="">subscription.gold.1m.regular</td><td id="}uhx" class="">월구독 일반</td><td id="}uym" class="">10,000</td></tr><tr id="24584624-3f8c-8028-841f-c8e03b7f98ff"><td id="w^Ik" class="">GOLD_12M_DISCOUNTED</td><td id="&lt;joV" class="">subscription.gold.12m.discounted</td><td id="}uhx" class="">연구독 할인</td><td id="}uym" class="">49,000</td></tr><tr id="24584624-3f8c-80d1-8701-ce64e00f6a60"><td id="w^Ik" class="">GOLD_12M_REGULAR</td><td id="&lt;joV" class="">subscription.gold.12m.regular</td><td id="}uhx" class="">연구독 일반</td><td id="}uym" class="">120,000</td></tr></tbody></table><hr id="24584624-3f8c-807c-b76a-fa9aff697b56"/><h2 id="24584624-3f8c-80bf-93f9-f96931f2b3cd" class="">참고 자료</h2><ul id="24584624-3f8c-80df-b18c-e446b2060e02" class="bulleted-list"><li style="list-style-type:disc"><strong>Apple</strong>:<ul id="24584624-3f8c-8079-b5a0-c81713b12630" class="bulleted-list"><li style="list-style-type:circle"><a href="https://developer.apple.com/documentation/appstoreserverapi">App Store Server API</a></li></ul><ul id="24584624-3f8c-802c-9c43-d74b55bac56d" class="bulleted-list"><li style="list-style-type:circle"><a href="https://developer.apple.com/documentation/appstoreservernotifications">Server-to-Server Notifications</a></li></ul></li></ul><ul id="24584624-3f8c-805f-84fe-e39991573249" class="bulleted-list"><li style="list-style-type:disc"><strong>Google</strong>:<ul id="24584624-3f8c-805a-aac3-f50cd91c66cb" class="bulleted-list"><li style="list-style-type:circle"><a href="https://developer.android.com/google/play/billing/rtdn-reference">Real-time Developer Notifications</a></li></ul><ul id="24584624-3f8c-80fd-be32-de47a3de3998" class="bulleted-list"><li style="list-style-type:circle"><a href="https://developer.android.com/google/play/billing/lifecycle/subscriptions">구독 수명 주기</a></li></ul></li></ul><p id="24884624-3f8c-8042-adc4-c0b0ca8757f7" class="">
+</p><p id="24584624-3f8c-8075-b24b-e7b7b78f3ec8" class="">
+</p><p id="24884624-3f8c-80d6-b058-e6983170e17d" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
