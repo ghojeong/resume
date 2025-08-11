@@ -49,7 +49,6 @@ graph TD
 
 - AWS DMS를 활용한 Homogeneous 마이그레이션
 - DynamoDB와 같은 VPC에 있는 RDS 머신으로 이전
-- 마이그레이션된 RDS 머신을 `V2 PSQL` 이라 명명
 - 목적1: 같은 VPC로 인한 네트워크 throughput 확보
 - 목적2: 실서비스 DB와 마이그레이션 DB 머신을 분리해서 실서비스 영향이 없도록 함
 
@@ -60,7 +59,7 @@ graph TD
     PSQL_V2["V2 PostgreSQL<br/>(Migration Target)"]
     DDB["DynamoDB<br/>Database"]
     
-    PSQL_PROD -->|"Homogeneous<br/>Migration"| DMS
+    PSQL_PROD -->|"Homogeneous<br/>DMS Migration"| DMS
     DMS -->|"Data Transfer"| PSQL_V2
     PSQL_V2 -.->|"Same VPC<br/>High Throughput"| DDB
     
@@ -72,6 +71,7 @@ graph TD
 
 #### 절차 3: EC2에서 마이그레이션 프로세스 실행
 
+- Go 로 구현한 Heterogeneous 마이그레이션을 EC2에서 실행
 - BatchWrite가 아닌 Put의 attribute_not_exists 옵션을 이용해, 절차1에서 생성된 data가 덮어씌워지지 않도록 함
 - resume 기능을 만들어서 마이그레이션 프로세스 중 실패한 item에 대해서 다시 마이그레이션을 이어서 시행할 수 있도록 함
 - 목표 속도: 최소 87 Mbps (EC2 micro의 VPC 네트워크 보장 속도)
@@ -80,7 +80,7 @@ graph TD
 ```mermaid
 graph TD
     V2DB["V2 PostgreSQL<br/>Database"]
-    EC2_PROC["EC2 Migration<br/>Process"]
+    EC2_PROC["Heterogeneous<br/>EC2 Migration"]
     DDB_TARGET["DynamoDB<br/>Target"]
     
     V2DB -->|"Read Source Data"| EC2_PROC
@@ -126,7 +126,7 @@ graph TD
 
 #### 절차 5: 기존 데이터 DROP
 
-- 절차4까지 성공하면 V2 PSQL 머신과 데이터를 삭제
+- 절차4까지 성공하면 V2 PostgreSQL RDS 머신과 데이터를 삭제
 - 롤백이 필요없어지면 본래 PostgreSQL에서 데이터와 테이블들을 drop
 - DynamoDB 단일 데이터베이스로 서비스를 운영하도록 마이그레이션 완료
 
