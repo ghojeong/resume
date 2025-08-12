@@ -53,7 +53,7 @@ graph TD
 - 목적2: 실서비스 DB와 마이그레이션 DB 머신을 분리해서 실서비스 영향이 없도록 함
 
 ```mermaid
-graph TD
+graph LR
     PSQL_PROD["Production<br/>PostgreSQL"]
     DMS["AWS DMS<br/>Service"]
     PSQL_V2["V2 PostgreSQL<br/>(Migration Target)"]
@@ -69,6 +69,36 @@ graph TD
     style DDB fill:#fff3e0
 ```
 
+```mermaid
+graph LR
+    subgraph "Production VPC"
+        subgraph "Source: PostgreSQL"
+            PG[(Production Database)]
+        end
+    end
+
+    subgraph "Migration VPC"       
+        subgraph "DMS Infrastructure"
+            subgraph "DMS Endpoints"
+                SE[Source Endpoint]
+                TE[Target Endpoint]
+            end
+
+            subgraph "Replication Configs"
+                INFRA[Security Group<br/>Subnet Group<br/>IAM Roles & Policies]
+                RC[DMS Tasks]
+            end
+        end
+
+        subgraph "Target: V2 PostgreSQL"
+            PSQLV2[(Migration Database)]
+        end
+    end
+
+    PG --> SE
+    SE --> RC --> TE --> PSQLV2
+```
+
 #### 절차 3: EC2에서 마이그레이션 프로세스 실행
 
 - Go 로 구현한 Heterogeneous 마이그레이션을 EC2에서 실행
@@ -78,12 +108,12 @@ graph TD
 - Put 성능 최적화를 위해 병렬 프로그래밍
 
 ```mermaid
-graph TD
+graph LR
     V2DB["V2 PostgreSQL<br/>Database"]
     EC2_PROC["Heterogeneous<br/>EC2 Migration"]
-    DDB_TARGET["DynamoDB<br/>Target"]
+    DDB_TARGET["DynamoDB"]
     
-    V2DB -->|"Read Source Data"| EC2_PROC
+    V2DB -->|"Read Data"| EC2_PROC
     EC2_PROC -->|"Put with<br/>attribute_not_exists"| DDB_TARGET
     
     EC2_PROC -.->|"Resume on Failure"| EC2_PROC
@@ -98,6 +128,7 @@ graph TD
 - 서버 로직을 수정하여 DynamoDB에서 데이터를 Read
 - 롤백을 위해 PostgreSQL과 DynamoDB 양쪽에 데이터를 계속 저장
 - 2주간 문제가 없어서 롤백이 필요없다는 판단이 들면, PostgreSQL에 데이터 저장을 중단
+- 롤백 전략: PostgreSQL 쓰기를 병행하다가, 문제가 생기면 PostgreSQL을 읽도록 롤백
 
 ```mermaid
 graph TD
@@ -112,16 +143,11 @@ graph TD
     BE4 -->|"Response"| Client4
     
     DDB4 -.->|"Read Operations"| BE4
-    
-    subgraph "롤백 전략"
-        ROLLBACK["안정성 확신까지 PostgreSQL 쓰기를 병행<br/><br/>문제가 생기면 PostgreSQL을 읽도록 롤백"]
-    end
 
     style PSQL4 fill:#e1f5fe
     style DDB4 fill:#fff3e0
     style BE4 fill:#f3e5f5
     style Client4 fill:#e8f5e8
-    style ROLLBACK fill:#ffebee
 ```
 
 #### 절차 5: 기존 데이터 DROP
@@ -131,7 +157,7 @@ graph TD
 - DynamoDB 단일 데이터베이스로 서비스를 운영하도록 마이그레이션 완료
 
 ```mermaid
-graph TD
+graph LR
     Client5["Client Applications"]
     BE5["WAS"]
     DDB5["DynamoDB<br/>(Primary DB)"]
@@ -142,14 +168,18 @@ graph TD
     
     DDB5 -.->|"All Operations"| BE5
 
-    subgraph "Cleanup"
-        PSQL_OLD["Original PostgreSQL<br/>(Data Deleted)"]
-        PSQL_V2_DELETED["V2 PostgreSQL<br/>(Machine Deleted)"]
-    end
-
     style DDB5 fill:#fff3e0
     style BE5 fill:#f3e5f5
     style Client5 fill:#e8f5e8
+```
+
+```mermaid
+graph LR
+    subgraph "Cleanup"
+        PSQL_OLD["Production PostgreSQL<br/>(Data Deleted, Scale Down)"]
+        PSQL_V2_DELETED["Migration V2 PostgreSQL<br/>(Machine Deleted)"]
+    end
+
     style PSQL_OLD fill:#ffcdd2
     style PSQL_V2_DELETED fill:#ffcdd2
 ```
