@@ -12,7 +12,7 @@ Java, Spring, JPA 기반 6년차 개발자 고정완입니다.
   - 사용기술: TypeScript, NestJS, GraphQL, PostgreSQL, DynamoDB
   - DAU 120만명 커플 다이어리 서비스의 구독 결제와 DB의 Hash Sharding을 담당
   - 주요성과
-    - 핵심 서비스의 PostgreSQL 에서 DynamoDB 로의 무중단 점진적 마이그레이션을 책임지고 성공함
+    - 핵심 서비스의 PostgreSQL 에서 DynamoDB 로무중단 점진적 마이그레이션
     - 변경된 Storage Engine 의 동작원리에 맞추어 키와 스키마 재설계
     - 평생이용권을 월간/연간 구독으로 변경하는 백엔드 구현에 참여
 - [Dreamfora](https://github.com/ghojeong/resume/blob/main/dreamfora/README.md) 백엔드 테크리드 *(2021.08.25 - 2025.03.25)*
