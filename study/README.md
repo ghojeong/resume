@@ -23,7 +23,7 @@
 ### 공감 세미나 주니어
 
 - 기간: 2019.03 - 2019.06
-- 링크: <http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334>
+- 링크: <https://www.onoffmix.com/event/183044>
 - 설명
   - 한빛미디어 후원으로 열었던 유료 세미나입니다.
   - 본인이 직접 기획하고, 준비하고, 발표자로 참가했습니다.
