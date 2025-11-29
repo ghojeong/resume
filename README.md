@@ -4,7 +4,7 @@ Java, Spring, JPA 기반 6년차 개발자 고정완입니다.
 평균 **TPS가 3만**이 넘는 빗썸의 회원 인증 개발팀에서 백엔드 엔지니어로 재직 중입니다.  
 200만 다운로드, MAU 16만, 미국 앱스토어 피처드 B2C 목표관리 서비스인  
 드림포라의 백엔드 테크리드로 일하며 Feed 커뮤니티와 검색, 현금성 포인트와 상점을 구현했습니다.  
-**우아한테크코스**와 넥스트스텝에서 Java, Kotlin, Spring, JPA 강사로 일하며 크루와 현직자를 교육했습니다.
+넥스트스텝과 **우아한테크코스 리뷰어**로 일하며 크루와 현직자를 교육했습니다.
 
 ## 경력
 
@@ -13,11 +13,11 @@ Java, Spring, JPA 기반 6년차 개발자 고정완입니다.
   - 회원 인증 개발팀에서 고객확인 및 OAuth 시스템 개발
 - [**SumOne**](https://github.com/ghojeong/resume/blob/main/monymony/README.md) 백엔드 개발자 *(2025.05.12 - 2025.08.14)*
   - 사용기술: TypeScript, NestJS, GraphQL, PostgreSQL, DynamoDB
-  - DAU 120만명 커플 다이어리 서비스의 구독 결제와 DB의 Hash Sharding을 담당
+  - DAU 120만명 커플 다이어리 서비스의 Hash Sharding을 담당
   - 주요성과
-    - 핵심 서비스의 PostgreSQL 에서 DynamoDB 로무중단 점진적 마이그레이션
-    - 변경된 Storage Engine 의 동작원리에 맞추어 키와 스키마 재설계
-    - 평생이용권을 월간/연간 구독으로 변경하는 백엔드 구현에 참여
+    - 회원 데이터를 PostgreSQL 에서 DynamoDB로 무중단 점진적 마이그레이션
+    - 변경된 Storage Engine 의 동작원리에 맞추어 키와 스키마 재설계 후 DAO 재구현
+    - 커플 중심의 서비스이기에 커플 단위로 Spatial Locality 확보
 - [**Dreamfora**](https://github.com/ghojeong/resume/blob/main/dreamfora/README.md) 백엔드 테크리드 *(2021.08.25 - 2025.03.25)*
   - 사용기술: Java, Spring Boot, Spring Security, JPA, MariaDB
   - 미국, 영국, 인도, 러시아, 이집트 등 전세계 200만명이 사용하는 B2C 목표관리 서비스를 개발
