@@ -25,7 +25,7 @@ Java, Spring, JPA 기반 6년차 개발자 고정완입니다.
     - IDC에서 AWS 클라우드로 인프라 전환 후 **장애빈도 99%** 감소
     - 쿼리튜닝과 DB 파티셔닝 후 **서버비용 82%** 절약
     - 모놀리식에서 MSA로 리팩토링 후 테스트 커버리지 86% 달성
-    - 인증서버를 세션기반에서 토큰기반으로 변경 후 인증시간 93% 단축
+    - 인증서버를 세션기반에서 토큰기반으로 변경 후 인증시간을 8초에서 0.1초로 단축
 - [**Ecube Labs**](https://github.com/ghojeong/resume/blob/main/ecubelabs/README.md) 웹 개발자 *(2018.10.15 - 2020.12.28)*
   - 사용기술: TypeScript, React, Redux, Express.js
   - 미국 볼티모어, 일본 이치카와, 한국 고양시와 계약한 B2B 스마트 시티 SaaS 를 개발
