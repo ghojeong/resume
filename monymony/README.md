@@ -103,9 +103,7 @@ graph LR
 
 - AWS DMS Heterogeneous 마이그레이션을 실행
 - BatchWrite가 아닌 Put의 attribute_not_exists 옵션을 이용해, 절차1에서 생성된 data가 덮어씌워지지 않도록 함
-- resume 기능을 만들어서 마이그레이션 프로세스 중 실패한 item에 대해서 다시 마이그레이션을 이어서 시행할 수 있도록 함
-- 목표 속도: 최소 87 Mbps (EC2 micro의 VPC 네트워크 보장 속도)
-- Put 성능 최적화를 위해 병렬 프로그래밍
+- resume 기능을 활용해 마이그레이션 프로세스 중 실패한 item에 대해서 다시 마이그레이션을 이어서 시행할 수 있도록 함
 
 ```mermaid
 graph LR
